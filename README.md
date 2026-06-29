@@ -61,7 +61,7 @@ No one is expected to be strong from day one. What matters most is consistent pa
 
 Telegram：
 
-## Learning Materials / Course Schedule
+## Learning Materials/Course Schedule
 
 Full path:**Web3 fundamentals → on-chain interaction → smart contracts and AI-assisted development → Monad testnet practice → hackathon demo → portfolio building and opportunity matching**
 
