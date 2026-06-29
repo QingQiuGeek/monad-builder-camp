@@ -178,9 +178,6 @@ By completing the program, participants will leave with:
 - Build Logs and portfolio materials that show how you learned, thought, and pushed a real problem forward.
 - Potential follow-up opportunities, including ecosystem projects, internships, collaborations, mentor feedback, project showcases, and community support.
 
-## Additional Information
-
-more information
 
 ## Registration and Check-In Rules
 
