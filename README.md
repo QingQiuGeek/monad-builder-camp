@@ -359,7 +359,7 @@ By completing the program, participants will leave with:
 | [Ste1venn](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Ste1venn.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [jetakuxoz866-lgtm](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/jetakuxoz866-lgtm.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [wangjinghan513-png](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/wangjinghan513-png.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [Thomas-YHS](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Thomas-YHS.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [Thomas-YHS](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Thomas-YHS.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [sjxis](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/sjxis.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [10yu7ian](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/10yu7ian.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Long299792458](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Long299792458.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -802,6 +802,7 @@ By completing the program, participants will leave with:
 | [AuralRain](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/AuralRain.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [NotBadSlime](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/NotBadSlime.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
