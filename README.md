@@ -452,7 +452,7 @@ By completing the program, participants will leave with:
 | [xujingsir-sketch](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/xujingsir-sketch.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [chin0312](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/chin0312.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Yvonne-777-goodjob](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Yvonne-777-goodjob.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [Wea1her](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Wea1her.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [Wea1her](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Wea1her.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [tobaizhizhi](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/tobaizhizhi.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [echo5177](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/echo5177.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lzmlyy](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/lzmlyy.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -793,6 +793,7 @@ By completing the program, participants will leave with:
 | [henanshifandaxue](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/henanshifandaxue.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Junx20710](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Junx20710.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
