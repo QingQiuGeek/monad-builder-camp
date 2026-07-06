@@ -15,6 +15,61 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-06
+<!-- DAILY_CHECKIN_2026-07-06_START -->
+## 学习内容
 
+1、了解钱包
 
+2、了解Monad测试网、如何在测试网查询钱包地址、交易
+
+3、如何通过水龙头网站获取测试币，[https://faucet.monad.xyz/](https://faucet.monad.xyz/)
+
+4、编写留言板智能合约，利用claude code辅助
+
+5、部署留言板合约在monad testnet上：[https://testnet.monadvision.com/address/0x5407DA3398519b8E4fB6Ff96c46F36d2E1E85e40](https://testnet.monadvision.com/address/0x5407DA3398519b8E4fB6Ff96c46F36d2E1E85e40)
+
+## 产出成果
+
+1、注册metamask钱包
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Yunshiro/images/2026-07-06-1783325732799-image.png)
+
+2、简单给自己另外一个钱包转账，查询交易
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Yunshiro/images/2026-07-06-1783325756990-image.png)
+
+3、根据水龙头网站获取测试代币：
+
+![](https://cdn.nlark.com/yuque/0/2026/png/34855639/1783298654616-1909ad2a-0ebb-44d4-a5b4-73646f57e4da.png)![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Yunshiro/images/2026-07-06-1783325775814-image.png)
+
+4、
+
+提示词：
+
+-   我想要写一个留言板功能的智能合约，包含读写函数的，可以写入留言、读取留言，编译器版本使用solidity-0.8.34
+    
+-   解释一下这个留言板合约，帮助我理解一个合约的结构，并且输出markdown文档
+    
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Yunshiro/images/2026-07-06-1783325812108-image.png)
+
+5、产出成果repo：[https://github.com/Yunshiro/Monad-Buidler-Camp-Jeong/tree/main/source/messageboard](https://github.com/Yunshiro/Monad-Buidler-Camp-Jeong/tree/main/source/messageboard)
+
+包含留言板合约源码、合约解析文档、合约用法README
+
+## 今日小结
+
+今天简单体验了一下从创建数字钱包、领取代币、创建一个合约并且部署到Monad测试网，跑通了一个小的流程：需求->编码->部署->调用。
+
+在链上也是有了一个永久存在的一个留言板合约。
+
+但是对于solidity相关知识了解过少，对于其语法和相关规范还没有很熟悉，需要进一步学习。
+
+疑问点（后续自行搜索或者询问助教老师）：
+
+1、合约如果要修改代码后部署了还是同一个合约地址吗？
+
+2、为什么读取查询不消耗gas费用？
+<!-- DAILY_CHECKIN_2026-07-06_END -->
 <!-- Content_END -->
