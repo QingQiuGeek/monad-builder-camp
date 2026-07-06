@@ -370,7 +370,7 @@ By completing the program, participants will leave with:
 | [Yang1221-X](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Yang1221-X.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [guanlinfeng06-web](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/guanlinfeng06-web.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Eloise-qiu](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Eloise-qiu.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [NortySouth](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/NortySouth.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [NortySouth](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/NortySouth.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [SKY-shang1010](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/SKY-shang1010.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yue05x](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/yue05x.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [wenyaohuang](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/wenyaohuang.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -403,7 +403,7 @@ By completing the program, participants will leave with:
 | [qingweizhang661-code](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/qingweizhang661-code.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [jzhao0](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/jzhao0.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [CarterLeven](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/CarterLeven.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [surinofficial1-prog](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/surinofficial1-prog.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [surinofficial1-prog](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/surinofficial1-prog.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [abc2772687089-tech](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/abc2772687089-tech.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [zane199109](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/zane199109.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [nikka-alecto69](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/nikka-alecto69.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -757,7 +757,7 @@ By completing the program, participants will leave with:
 | [LLLay-zz](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/LLLay-zz.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [zelllphyrx](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/zelllphyrx.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [leochame](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/leochame.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [BoweiTu](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/BoweiTu.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [BoweiTu](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/BoweiTu.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [GinLiu2000](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/GinLiu2000.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Thomas-Novato](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Thomas-Novato.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Manuel-dev01](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Manuel-dev01.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -802,6 +802,7 @@ By completing the program, participants will leave with:
 | [AuralRain](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/AuralRain.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [NotBadSlime](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/NotBadSlime.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
