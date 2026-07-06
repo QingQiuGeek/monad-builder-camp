@@ -271,7 +271,7 @@ By completing the program, participants will leave with:
 | [hynfrank](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/hynfrank.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Salieri-128](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Salieri-128.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Click-75](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Click-75.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [LixinY-code](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/LixinY-code.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [LixinY-code](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/LixinY-code.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [ding-dong-dong](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/ding-dong-dong.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [playerlxl00](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/playerlxl00.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yang02140124](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/yang02140124.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -793,6 +793,7 @@ By completing the program, participants will leave with:
 | [henanshifandaxue](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/henanshifandaxue.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Junx20710](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Junx20710.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
