@@ -342,7 +342,7 @@ By completing the program, participants will leave with:
 | [yangsuper-152](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/yangsuper-152.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [aswangxi](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/aswangxi.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [ouminghai](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/ouminghai.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [zhuolinxu000-coder](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/zhuolinxu000-coder.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [zhuolinxu000-coder](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/zhuolinxu000-coder.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [jeffierw](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/jeffierw.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [wgs314](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/wgs314.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Nol4ovo](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Nol4ovo.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -807,6 +807,7 @@ By completing the program, participants will leave with:
 | [pwp041](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/pwp041.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Cool-CoCo](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Cool-CoCo.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
