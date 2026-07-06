@@ -712,7 +712,7 @@ By completing the program, participants will leave with:
 | [kvxunz](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/kvxunz.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [KellenTn](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/KellenTn.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [louish-0809](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/louish-0809.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [xzhc](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/xzhc.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [xzhc](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/xzhc.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [swen-chan](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/swen-chan.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [elioxuu](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/elioxuu.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [zhaolangchen910](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/zhaolangchen910.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -802,6 +802,7 @@ By completing the program, participants will leave with:
 | [AuralRain](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/AuralRain.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [NotBadSlime](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/NotBadSlime.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
