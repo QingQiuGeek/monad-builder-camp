@@ -297,7 +297,7 @@ By completing the program, participants will leave with:
 | [XiaoChangXuan](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/XiaoChangXuan.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [cjxh21](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/cjxh21.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [jgufyuufd](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/jgufyuufd.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [alexfanzong](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/alexfanzong.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [alexfanzong](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/alexfanzong.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Miles-ya](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Miles-ya.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [daidaidawang](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/daidaidawang.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [rainypilgrimage-beep](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/rainypilgrimage-beep.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -807,6 +807,7 @@ By completing the program, participants will leave with:
 | [pwp041](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/pwp041.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Cool-CoCo](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Cool-CoCo.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
