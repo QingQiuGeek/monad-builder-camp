@@ -31,6 +31,18 @@ Web3 暑期实习计划 - Monad Buidler Camp
     
 -   **链上产品**不是「多了一个区块链字段的 App」，而是**状态在链上、规则靠共识、操作靠签名**的另一套系统。
     
+-   Monad（Layer 1公链）
+    
+    | 核心技术 | 优势 |
+    | --- | --- |
+    | 并行执行 Parallel Execution传统 EVM 链很多交易是顺序执行的，Monad 会尝试把不冲突的交易（多笔交易）并行处理，从而提升吞吐量。除此之外，它还用了异步执行、MonadDb 自定义状态数据库、MonadBFT 共识等一整套优化，而不是只靠一个“并行执行”概念。 | 接近高性能链体验，同时保留 EVM 兼容性 |
+    
+-   文档：[https://docs.monad.xyz/](https://docs.monad.xyz/)
+    
+-   github：[https://github.com/monad-developers](https://github.com/monad-developers)
+    
+-   skills：[https://skills.devnads.com/](https://skills.devnads.com/)
+    
 
 ## Practice
 
