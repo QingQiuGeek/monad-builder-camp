@@ -443,7 +443,7 @@ By completing the program, participants will leave with:
 | [Clori001](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Clori001.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Wang-Tongfei](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Wang-Tongfei.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Aurora071008](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Aurora071008.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [bky0211](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/bky0211.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [bky0211](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/bky0211.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [kaidic84](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/kaidic84.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [P1kra](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/P1kra.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Lntano-creater](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Lntano-creater.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -798,6 +798,7 @@ By completing the program, participants will leave with:
 | [Failover97](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/Failover97.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [aiyoudiao](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/aiyoudiao.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
