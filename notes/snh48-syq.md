@@ -15,8 +15,24 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-07
+<!-- DAILY_CHECKIN_2026-07-07_START -->
+今天了解了以太坊协议层的基础知识和研究方向，
+
+![截屏2026-07-07 19.11.42.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/snh48-syq/images/2026-07-07-1783439565932-__2026-07-07_19.11.42.png)
+
+练习了ai生成投票合约代码，练习了阅读solidity代码
+
+![截屏2026-07-07 23.42.45.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/snh48-syq/images/2026-07-07-1783439626720-__2026-07-07_23.42.45.png)
+
+练习了remix合约部署和输入变量
+
+![截屏2026-07-07 23.52.52.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/snh48-syq/images/2026-07-07-1783439695889-__2026-07-07_23.52.52.png)
+<!-- DAILY_CHECKIN_2026-07-07_END -->
+
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 ![截屏2026-07-06 16.50.30.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/snh48-syq/images/2026-07-06-1783349359680-__2026-07-06_16.50.30.png)
 
 学习了本次Boot Camp的大概纲要以及达到的程度
