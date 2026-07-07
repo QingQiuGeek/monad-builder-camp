@@ -525,7 +525,7 @@ By completing the program, participants will leave with:
 | [Ding010101](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Ding010101.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [ftrding](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/ftrding.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [beautifulrem](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/beautifulrem.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [haimingni44-lang](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/haimingni44-lang.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [haimingni44-lang](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/haimingni44-lang.md) |  ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ |
 | [Qsa3Ger](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Qsa3Ger.md) | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [deerjane-bjj](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/deerjane-bjj.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Yinzhi392](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Yinzhi392.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -811,6 +811,7 @@ By completing the program, participants will leave with:
 | [blaze1128](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/blaze1128.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [nniiovoo](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/nniiovoo.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
