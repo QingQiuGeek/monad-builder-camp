@@ -15,8 +15,77 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-08
+<!-- DAILY_CHECKIN_2026-07-08_START -->
+# 1.部署在Monad Testnet的第一个合约
+
+## 合约源码：
+
+```remix-solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.24;
+
+/**
+ * @title SimpleStorage
+ * @dev Monad Buidler Camp - 最小合约实践
+ *      一个极简的链上存储合约，包含 read / write 功能
+ */
+contract SimpleStorage {
+    // ========== State Variables ==========
+    uint256 private storedValue;
+    address public owner;
+
+    // ========== Events ==========
+    event ValueChanged(uint256 oldValue, uint256 newValue, address changedBy);
+
+    // ========== Constructor ==========
+    constructor() {
+        owner = msg.sender;
+        storedValue = 0;
+    }
+
+    // ========== Write Functions ==========
+
+    /// @notice 设置存储值（write function）
+    /// @param _value 要存储的新值
+    function set(uint256 _value) public {
+        uint256 oldValue = storedValue;
+        storedValue = _value;
+        emit ValueChanged(oldValue, _value, msg.sender);
+    }
+
+    // ========== Read Functions ==========
+
+    /// @notice 获取当前存储值（read function）
+    /// @return 当前存储的值
+    function get() public view returns (uint256) {
+        return storedValue;
+    }
+
+    /// @notice 获取合约部署者地址（read function）
+    /// @return owner 地址
+    function getOwner() public view returns (address) {
+        return owner;
+    }
+}
+```
+
+部署和测试都在remix ide上进行：
+
+![屏幕截图 2026-07-08 043850.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/cecile-teardrop/images/2026-07-07-1783456745704-_____2026-07-08_043850.png)
+
+# 2.链接钱包和测速网：
+
+主要遇到的问题：链接不上钱包
+
+![屏幕截图 2026-07-08 044052.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/cecile-teardrop/images/2026-07-07-1783456861166-_____2026-07-08_044052.png)
+
+可以很明显看到钱包上是链接成功了的但是ide上显示的没有，取消连接后依然是连接不上，预测是网络问题，
+<!-- DAILY_CHECKIN_2026-07-08_END -->
+
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 # 1.交易测试
 
 测试网交易测试，测试成果[https://testnet.monadvision.com/tx/0xb286974b737b741f66218169a6f8ad1d5d7b7afcc6b56e04104982340bf267f8](https://testnet.monadvision.com/tx/0xb286974b737b741f66218169a6f8ad1d5d7b7afcc6b56e04104982340bf267f8)  
