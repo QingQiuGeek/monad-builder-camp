@@ -808,7 +808,9 @@ By completing the program, participants will leave with:
 | [Cool-CoCo](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Cool-CoCo.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [MarnieWu](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/MarnieWu.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [GamlaNyx](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/GamlaNyx.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [blaze1128](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/blaze1128.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
