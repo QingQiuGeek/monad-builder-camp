@@ -15,8 +15,18 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-07
+<!-- DAILY_CHECKIN_2026-07-07_START -->
+Day2
+
+今天的东西已经上了些难度，需要多琢磨学习
+
+后天公司还要出差，明天下班把今天差下的好好补上
+<!-- DAILY_CHECKIN_2026-07-07_END -->
+
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 Day1
 
 第一次正式的接触到了web3的领域，发现很多自己理解的概念和以前所想的不一样
