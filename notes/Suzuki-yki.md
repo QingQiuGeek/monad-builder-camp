@@ -15,8 +15,47 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-07
+<!-- DAILY_CHECKIN_2026-07-07_START -->
+## **今日学习笔记：**
+
+智能合约的运行其实是contract A调用contract B,执行 contract B的代码再返回contract A.
+
+所以智能合约之间本质就是**函数的调用**。
+
+所以区块链有两种地址：
+
+1.  **EOA**（externally Owned Account）普通钱包 ：这个就只是接收和转账
+    
+2.  **Contract account** 一个程序的地址 ：这些地址里面有代码，可以执行
+    
+
+这就要提到我今天学的关于**重入攻击(Reentrancy Attack)**是如何运行的了。
+
+之前ai一直教我说管理listings的合约必须先删除listings再操作我其实一直不理解，今天我知道了重入攻击的原理就是利用了“智能合约之间本质就是函数调用”。正常情况下我的marketplace的智能合约这样运行：
+
+调用 contract => 给seller转ETH =>给buyer转NFT，
+
+而重入攻击后则这样运行：
+
+attack contract 调用我的 contract => buyItem() 给seller转ETH =>此时这里attack contract利用receive()再次调用我的contract ，因为listings未删除，还显示存在，所以继续 transfer ETH ...如此循环
+
+历史上著名的The DAO Attack 就是利用了合约是先转再更新状态这一特点发动了攻击。
+
+所以这里就引入了**CEI（checks efffects interactives）**的知识，先delect listings然后再转ETH时，attack contract再次进行调用时因为listings不存在了，所以直接revert，无法攻击，CEI是企业设计规范（Enterprise Security Pattern）。
+
+AI告诉我一句话：**Update your own state before interacting with others** .
+
+然后我了解到只有在用到这些方法时必须需要引入Reentrancy Guard：call()，transfer()，send()，safeTransferFrom()，调用其他合约，ETH Transfer。我理解的是只要有**_外部交互_**就需要小心！
+
+今天姑且就学了这么点，**明天任务是把所有的代码都完成**。
+
+（另外我还了解到其实先转NFT再转ETH和先转ETH再转NFT两种都没区别。。。。结果昨天学的时候ai还告诉我其中一种更好，但是无论哪一种两个都属于interactions啊，所以先后顺序根本没有统一标准！！！）
+<!-- DAILY_CHECKIN_2026-07-07_END -->
+
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 ### 今日学习笔记：
 
 （主播在兼职工作所以为手机写的笔记可能不够精美）
