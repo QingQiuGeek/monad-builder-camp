@@ -353,7 +353,7 @@ By completing the program, participants will leave with:
 | [Liime-liime](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Liime-liime.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Herobrine-dream](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Herobrine-dream.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [FairyTaleBliss](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/FairyTaleBliss.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [2424389092-blip](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/2424389092-blip.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [2424389092-blip](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/2424389092-blip.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [natureloved](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/natureloved.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Likepasttimes](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Likepasttimes.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Ste1venn](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Ste1venn.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -811,6 +811,7 @@ By completing the program, participants will leave with:
 | [blaze1128](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/blaze1128.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [nniiovoo](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/nniiovoo.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
