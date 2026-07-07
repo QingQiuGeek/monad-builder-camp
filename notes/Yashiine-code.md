@@ -15,8 +15,76 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-07
+<!-- DAILY_CHECKIN_2026-07-07_START -->
+\# 2026-07-08｜Monad Testnet 智能合约部署学习笔记
+
+\## 今日目标
+
+完成 Week 1 智能合约实践任务：使用 Remix 编写并编译一个最小智能合约，将其部署到 Monad Testnet，并完成一次 read function 和一次 write function 调用。
+
+本次实践重点是理解完整链路：
+
+合约源码 → 编译 → 连接钱包 → 部署到 Monad Testnet → 获得合约地址 → 调用 read/write function → 使用交易 hash 进行验证
+
+\## 使用工具
+
+\- Remix IDE
+
+\- MetaMask 钱包
+
+\- Monad Testnet
+
+\- Monad 测试币 MON
+
+\## 合约说明
+
+本次部署的合约是一个简单的留言板 `MessageBoard`。
+
+合约支持三个主要功能：
+
+\- `postMessage(string content)`：发布一条留言，需要发起链上交易。
+
+\- `getMessageCount()`：读取当前留言数量，不需要 gas。
+
+\- `getMessage(uint256 index)`：读取指定编号的留言内容。
+
+\## 部署过程
+
+1\. 在 Remix 中创建 Solidity 合约文件。
+
+2\. 使用 Solidity 编译器完成编译。
+
+3\. 在 MetaMask 中添加并切换到 Monad Testnet。
+
+4\. 从 Faucet 领取测试 MON。
+
+5\. 在 Remix 的 Deploy 面板中选择 MetaMask 作为连接钱包。
+
+6\. 确认网络为 Monad Testnet 后部署合约。
+
+\## 部署结果
+
+\- Network: Monad Testnet
+
+\- Contract Address: `0x9fbf567e92FBf4348512f6a745389Eb96088D30E`
+
+\- Deploy Transaction Hash: `0xbedcf9bbee57888283816c77cb4828a40577e67a0a6b162e50cfc4f9c68b609a`
+
+\## 合约交互记录
+
+\### Read Function
+
+调用了：
+
+\`\`\`text
+
+getMessageCount()
+<!-- DAILY_CHECKIN_2026-07-07_END -->
+
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 ```
 今天学习了钱包地址、测试网资产、交易哈希和区块浏览器的基本用法。通过 MonadVision 查看交易时，我理解了 From 是发起交易的钱包地址，To 是接收地址，Value/Amount 是转账数量，Gas 是链上执行交易需要支付的手续费。即使是在测试网，这个流程也和真实链上交易很接近，因此操作时要注意不要泄露助记词、私钥或其他敏感信息。
 
