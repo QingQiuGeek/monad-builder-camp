@@ -15,8 +15,42 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-07
+<!-- DAILY_CHECKIN_2026-07-07_START -->
+周次: Week 1 - 认知奠基期 / 进入 Onchain World  
+Day: Day 2  
+主题: 钱包与安全  
+  
+今日完成  
+  
+1\. 对照 Week 1 Day 2 任务，明确今日主线为「钱包与安全」：安装 MetaMask / 兼容 EVM 钱包、创建专用测试钱包、离线纸笔备份助记词、记录公开地址、写 300 字概念解释。  
+2\. 整理 7 月 6 日分享会《DevRel 的成长之路 —— 从 Builder 到生态连接者》，生成结构化笔记 docs/[devrel-growth.md](http://devrel-growth.md) 与完整转录 docs/[devrel-growth-transcript.md](http://devrel-growth-transcript.md)。  
+3\. 更新项目 [README.md](http://README.md)，加入 DevRel 分享会资料入口。  
+4\. 完成 Monad 理解任务：从 Research / Tech / Ops 三个方向梳理高频交互应用场景，输出 submissions/week-01/[monad-high-frequency-app.md](http://monad-high-frequency-app.md)。  
+5\. 明确钱包安全原则：测试钱包与主资产钱包隔离；助记词 / 私钥不发给任何人、不上传云端、不复制给 AI；项目内只记录公开地址。  
+  
+今日收获  
+  
+\- 钱包不是「账号密码」模型，私钥控制资产，助记词可恢复私钥，地址只是可公开的链上身份。  
+\- Web3 学习要留下证据链：钱包地址、交易哈希、截图、学习笔记、项目文档都是 Proof of Learning / Proof of Work。  
+\- DevRel 分享让我意识到，Web3 职业入口不只纯技术岗位，也可以从 Builder 作品、社区贡献、运营、研究、生态连接逐步进入。  
+  
+今日卡点  
+  
+\- 钱包创建和助记词备份涉及安全敏感信息，必须本人操作，不能让 AI 接触助记词或私钥。  
+\- Track 方向（Tech / Ops / Research）尚未最终确定，计划先完成 Week 1 基础任务，再结合实际产出选择主线。  
+  
+明日计划  
+  
+\- 完成并核对 submissions/week-01/[wallet.md](http://wallet.md)。  
+\- 配置 Monad Testnet。  
+\- 获取 Faucet 测试币。  
+\- 保存网络配置、Faucet 链接和截图到 assets/week-01/。
+<!-- DAILY_CHECKIN_2026-07-07_END -->
+
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 今天核心学习了，monad的gas机制：
 
 ## Monad 和 Ethereum 最大区别：Gas Limit 是否会真的收费
