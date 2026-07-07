@@ -330,7 +330,7 @@ By completing the program, participants will leave with:
 | [cecile-teardrop](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/cecile-teardrop.md) | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [ruoxuanw67-star](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/ruoxuanw67-star.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Fredenbxy](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Fredenbxy.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [novaz02](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/novaz02.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [novaz02](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/novaz02.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [XGe711](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/XGe711.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Moyang2025](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Moyang2025.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [dl4987638](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/dl4987638.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -813,6 +813,7 @@ By completing the program, participants will leave with:
 | [Camino-sec](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Camino-sec.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lidahe666](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/lidahe666.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
