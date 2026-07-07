@@ -34,6 +34,66 @@ Monad 能做到这些，靠的是共识层和数据层的一系列创新：Monad
 
 # #0x01**部署你的第一个 Monad 合约**
 
+```markdown
+# MonadFanBadgeNFT 部署与交互指南
+
+本合约是一个专为粉丝经济设计的 NFT 勋章系统，支持在 Monad Testnet 上付费购买不同等级的勋章。
+
+## 1. 合约功能说明
+- **付费 Mint**: 
+  - **Bronze (青铜)**: 0.1 MON
+  - **Silver (白银)**: 0.2 MON
+  - **Gold (黄金)**: 0.3 MON
+- **自动转账**: 用户支付的资金在购买时会自动转入合约所有者（Owner）的地址。
+- **一地址一勋章**: 每个地址限购一个勋章。
+- **等级查询**: 提供 `getLevelName` 函数查询勋章等级。
+
+## 2. 部署步骤 (Remix)
+
+### A. 环境准备
+1. **添加 Monad Testnet**:
+   - 网络名称: `Monad Testnet`
+   - RPC URL: `https://testnet-rpc.monad.xyz/`
+   - 链 ID: `10143`
+   - 货币符号: `MON`
+2. **获取测试币**: 访问 [Monad Faucet](https://faucet.monad.xyz/) 领取测试用的 MON。
+
+### B. 编译
+1. 打开 [Remix IDE](https://remix.ethereum.org/)。
+2. 上传 `MonadFanBadgeNFT.sol` 文件。
+3. 在 "Solidity Compiler" 面板，选择版本 `0.8.20` 或更高，点击 **Compile**。
+
+### C. 部署
+1. 在 "Deploy & Run Transactions" 面板：
+   - **Environment**: 选择 `Injected Provider - MetaMask` (确保钱包已切换到 Monad Testnet)。
+   - **Deploy**: 展开输入框，填写参数：
+     - `name`: "Monad Fan Club"
+     - `symbol`: "MFC"
+     - `initialOwner`: 填入你的**课程专用钱包地址**（收钱地址）。
+2. 点击 **transact** 并确认交易。
+3. **记录信息**:
+   - **合约地址**: 部署成功后在下方 "Deployed Contracts" 复制。
+   - **交易 Hash**: 在控制台查看输出。
+
+## 3. 合约交互
+
+### A. 写操作 (Write Function)
+1. 找到 `buyBadge` 函数。
+2. **设置付款金额**: 
+   - 在顶部的 **Value** 框输入 `0.1`，单位选择 **Ether** (代表 0.1 MON)。
+3. **输入等级**:
+   - 在 `level` 框输入 `0` (Bronze)。
+4. 点击 **transact**。
+
+### B. 读操作 (Read Function)
+1. 找到 `addressToTokenId` 按钮，输入你的地址查询生成的 `tokenId`。
+2. 找到 `getLevelName` 按钮，输入 `tokenId` 查看等级。
+3. 找到 `owner` 按钮，验证收钱地址是否正确。
+
+## 4. 区块浏览器验证
+访问 [Monad Explorer](https://testnet.monadexplorer.com/)，搜索你的合约地址，查看 Mint 交易记录。
+```
+
 # **#0x02 为什么 Monad 体验不同**
 
 # **1.research：**
@@ -254,6 +314,7 @@ Monad 能做到这些，靠的是共识层和数据层的一系列创新：Monad
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 # **0x0.进入 Web3 与链上世界**
