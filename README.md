@@ -284,7 +284,7 @@ By completing the program, participants will leave with:
 | [eunicede](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/eunicede.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Vne-alyssa](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Vne-alyssa.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [powerful307381-lang](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/powerful307381-lang.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [849040784-oss](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/849040784-oss.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [849040784-oss](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/849040784-oss.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [213-sa](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/213-sa.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [xiqing21](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/xiqing21.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [rensheng85666-commits](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/rensheng85666-commits.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -812,6 +812,7 @@ By completing the program, participants will leave with:
 | [nniiovoo](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/nniiovoo.md) | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Camino-sec](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Camino-sec.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
