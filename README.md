@@ -595,7 +595,7 @@ By completing the program, participants will leave with:
 | [Jojo-star163](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Jojo-star163.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [ouxiu](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/ouxiu.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [boboblack9527](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/boboblack9527.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [irinaguo](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/irinaguo.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [irinaguo](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/irinaguo.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [BBBINGW](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/BBBINGW.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [ZhouYuhao0417](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/ZhouYuhao0417.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [AllureCurtain](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/AllureCurtain.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -812,6 +812,7 @@ By completing the program, participants will leave with:
 | [nniiovoo](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/nniiovoo.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Camino-sec](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Camino-sec.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
