@@ -15,8 +15,43 @@ Java后端开发工程师
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-07
+<!-- DAILY_CHECKIN_2026-07-07_START -->
+**Developer Relations（开发者关系）** 是连接**技术生态**与**开发者社区**的桥梁角色，核心使命是**让更多开发者为某一技术栈或生态持续构建应用**。
+
+### **核心职能**
+
+| 职能维度 | 具体工作内容 | 产出形式 |
+| --- | --- | --- |
+| 技术赋能 | 撰写文档、教程、入门指南 | 技术博客、视频课程、代码示例库 |
+| 社区运营 | 维护 Discord/Telegram 社群、解答技术问题 | 活跃的开发者社区、FAQ 文档 |
+| 活动组织 | 举办黑客松、线上 Workshop、线下 Meetup | 赛事、工作坊、技术沙龙 |
+| 开发者营销 | 在技术大会演讲、撰写案例研究 | 演讲 PPT、成功案例白皮书 |
+| 产品反馈 | 收集开发者痛点，向内部产品团队传递需求 | 需求文档、用户调研报告 |
+| 生态增长 | 设计激励计划（Grant、赏金任务） | 资助项目、生态基金分配 |
+
+### **Builder 的五大类型**
+
+| 类型 | 核心能力 | 典型产出 | 示例角色 |
+| --- | --- | --- | --- |
+| 技术型 Builder | 编写智能合约、前端/后端开发 | DApp、协议、基础设施工具 | Solidity 开发者、全栈工程师 |
+| 产品型 Builder | 产品设计、路线图规划、用户体验 | 产品原型、功能迭代方案 | 产品经理、创业者 |
+| 社区型 Builder | 社群运营、内容创作、活动策划 | 活跃社区、教育内容、线下活动 | 社区经理、KOL、内容创作者 |
+| 研究型 Builder | 经济模型设计、数据分析、尽职调查 | Tokenomics 白皮书、研究报告 | 研究员、数据分析师 |
+| 设计型 Builder | UI/UX 设计、品牌视觉、NFT 艺术 | 界面设计、品牌手册、数字艺术 | 设计师、艺术家 |
+
+完成vibecoding工具部署
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/AuralRain/images/2026-07-07-1783437030627-image.png)
+
+生成智能合约留言板代码
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/AuralRain/images/2026-07-07-1783438678990-image.png)
+<!-- DAILY_CHECKIN_2026-07-07_END -->
+
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 | 概念 | 技术定义与核心特征 |
 | --- | --- |
 | 1. 区块链 | 由区块通过哈希值首尾相连形成的分布式数据库。核心特征：去中心化、不可篡改、公开透明。 |
