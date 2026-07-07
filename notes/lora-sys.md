@@ -15,8 +15,24 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-07
+<!-- DAILY_CHECKIN_2026-07-07_START -->
+day2 ;测试网领取测试币
+
+开启第一笔的测试交易
+
+使用ai 制作一个onchaintodo 合约，了解详细的数据结构，gas 费消耗设计，
+
+了解gas 消耗的主要地方，状态变化多的地方，
+
+在remix 部署合约编译后，在测试网
+
+发起write 写入操作和读取操作，切实感受到monad 链的效能
+<!-- DAILY_CHECKIN_2026-07-07_END -->
+
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 day1 : 参与直播和go-learning
 
 创建metamask 钱包，领取测试币
