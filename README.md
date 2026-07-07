@@ -508,7 +508,7 @@ By completing the program, participants will leave with:
 | [1260598954-ctrl](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/1260598954-ctrl.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [marsmu1213](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/marsmu1213.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Rachel-1127](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Rachel-1127.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [xiao123-ma-arch](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/xiao123-ma-arch.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [xiao123-ma-arch](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/xiao123-ma-arch.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [suuuukie0112-lang](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/suuuukie0112-lang.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [haoshidoufasheng-dev](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/haoshidoufasheng-dev.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [tt11285](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/tt11285.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -809,6 +809,7 @@ By completing the program, participants will leave with:
 | [MarnieWu](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/MarnieWu.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [GamlaNyx](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/GamlaNyx.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
