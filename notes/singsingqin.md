@@ -15,8 +15,77 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-07
+<!-- DAILY_CHECKIN_2026-07-07_START -->
+1.  博客搭建，(10%)  
+    不想买云服务器.......
+    
+2.  任务完成:完成task1
+    
+3.  camp学习（实习手册）  
+    智能合约未完成的  
+    [智能纪要：Web3链上操作教学分享 2026年7月6日 - 豆包文档](https://feishu.doubao.com/docx/P82FdUTotoo0uSxDhhQcGmfonLh)
+    
+4.  学一下排版
+    
+
+上午x账号冻结解冻失败急哭了  
+Pasted image 20260707162756.png
+
+急哭了
+
+Pasted image 20260707162706.png
+
+Pasted image 20260707163219.png  
+排版学习：  
+Pasted image 20260707175820.png
+
+尽量可预期、可沟通、可复盘。
+
+eg：web3Careerbuild
+
+# 工具准备与 Builder 身份：我如何开始远程协作？
+
+## 学习目标
+
+-   完成 Web3 常用工具安装和账号准备。  
+    
+-   理解 DevRel / Builder / 生态连接者的角色。  
+    
+-   参与 Co-learning，开始把学习记录变成可持续的公开或半公开 proof of work。  
+    
+
+## 学习内容
+
+1.  Web3 实习手册｜Web3 工作方式 / 工具安装指南：
+    
+    -   [https://web3intern.xyz/zh/remote-work-guide/](https://web3intern.xyz/zh/remote-work-guide/)
+        
+2.  Web3 实习手册｜岗位全景图：
+    
+    -   [https://web3intern.xyz/zh/position-introduction/](https://web3intern.xyz/zh/position-introduction/)
+        
+3.  建议完成工具准备：
+    
+    -   X / Twitter：[https://x.com/](https://x.com/)  
+        
+    -   Telegram：[https://desktop.telegram.org/](https://desktop.telegram.org/)  
+        
+    -   Discord：[https://discord.com/](https://discord.com/)  
+        
+    -   GitHub：[https://github.com/](https://github.com/)  
+        
+    -   Notion / Google Docs  
+        
+    -   AI Coding 工具：Cursor / Claude Code / Codex / ChatGPT 等任选
+        
+
+然后是分享会：普通开发者如何进入以太坊协议层和co-learning
+<!-- DAILY_CHECKIN_2026-07-07_END -->
+
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 # Web3 学习 Day1｜完成第一次链上交互
 
 今天正式开启 Web3 学习之旅，感谢 XiaoHai 老师的分享交流、苏生老师的讲解。
