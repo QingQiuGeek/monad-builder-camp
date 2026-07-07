@@ -17,7 +17,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- Content_START -->
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
-Freshman Track 第01课：Vibecoding 入门笔记
+# Freshman Track 第01课：Vibecoding 入门笔记
 
 # 1\. Vibecoding 是什么
 
@@ -135,7 +135,7 @@ Prompt Injection（提示注入）
 
 替代安全和技术判断
 
-Freshman Track 第02课笔记
+# Freshman Track 第02课笔记
 
 构建并发布你的第一个应用
 
@@ -357,19 +357,13 @@ Vercel 部署
 
 # 二、产品体验优化
 
-Responsive Design（响应式设计）
+## Responsive Design（响应式设计）
 
-应用需要适配：
+应用需要适配：，手机，平板，桌面端
 
-手机
+移动端流量占比高，不能只针对电脑设计
 
-平板
-
-桌面端
-
-移动端流量占比高，不能只针对电脑设计。
-
-Favicon / Page Title
+## Favicon / Page Title
 
 提升产品完整度：
 
@@ -377,7 +371,7 @@ Favicon / Page Title
 
 搜索结果标题
 
-Accessibility（无障碍）
+## Accessibility（无障碍）
 
 让不同用户都能使用：
 
@@ -389,11 +383,11 @@ Accessibility（无障碍）
 
 # 三、让应用被发现
 
-SEO
+## SEO
 
 提高搜索引擎收录和排名。
 
-Open Graph
+## Open Graph
 
 控制应用链接分享到：
 
@@ -405,9 +399,7 @@ iMessage
 
 时显示的标题、图片和描述
 
-Analytics
-
-## 收集
+## Analytics
 
 用户数量
 
@@ -417,9 +409,9 @@ Analytics
 
 帮助判断产品情况。
 
-Custom Domain
+## Custom Domain
 
-## 使用自己的域名
+**使用自己的域名**
 
 例如：
 
@@ -427,15 +419,15 @@ Custom Domain
 
 相比平台默认域名更像正式产品。
 
-四、真实应用需要的功能
+# 四、真实应用需要的功能
 
-Database（数据库）
+## Database（数据库）
 
-解决：
+### 解决
 
 刷新后数据丢失的问题。
 
-用于保存：
+### 用于保存
 
 用户数据
 
@@ -443,17 +435,15 @@ Database（数据库）
 
 配置
 
-常见：
+### 常见
 
 Supabase
 
 Firebase
 
-\-–
+## Authentication（用户认证）
 
-Authentication（用户认证）
-
-负责：
+### 负责
 
 注册登录
 
@@ -463,15 +453,13 @@ OAuth
 
 不要自己实现。
 
-原因：
+原因
 
 密码哈希、Session 管理等容易出现安全问题。
 
-\-–
+## File Storage（文件存储）
 
-File Storage（文件存储）
-
-用于：
+### 用途
 
 图片
 
@@ -479,17 +467,15 @@ File Storage（文件存储）
 
 用户上传文件
 
-不要直接存服务器。
+**不要直接存服务器**
 
-\-–
+## Payments（支付）
 
-Payments（支付）
-
-使用第三方支付服务：
+使用第三方支付服务
 
 例如 Stripe。
 
-负责：
+### 负责
 
 支付
 
@@ -497,13 +483,11 @@ Payments（支付）
 
 税务
 
-\-–
+# 五、基础设施
 
-五、基础设施
+## Environment Variables（环境变量）
 
-Environment Variables（环境变量）
-
-敏感信息不要写进代码：
+**敏感信息不要写进代码**
 
 例如：
 
@@ -513,15 +497,13 @@ Secret
 
 Token
 
-原因：
+### 原因
 
 GitHub 上存在自动扫描机器人，泄露后可能导致安全问题。
 
-\-–
+## CI/CD
 
-CI/CD
-
-自动化流程：
+自动化流程
 
 代码提交
 
@@ -533,23 +515,19 @@ CI/CD
 
 自动部署
 
-\-–
-
-Staging Environment
+## Staging Environment
 
 生产环境之前的测试环境。
 
-用于：
+### 用途
 
 验证新功能
 
 避免影响线上用户
 
-\-–
-
 # 六、可靠性
 
-Error Handling
+## Error Handling
 
 避免用户看到空白页面。
 
@@ -565,9 +543,7 @@ Error Handling
 
 发生环境
 
-Testing
-
-包括：
+## Testing
 
 单元测试
 
@@ -575,65 +551,41 @@ Testing
 
 E2E 测试
 
-Backup
+## Backup
 
-数据库必须备份。
+**数据库必须备份**
 
-防止：
-
-数据损坏
-
-错误迁移
-
-误删除
+防止数据损坏，错误迁移，误删除
 
 # 七、安全
 
-HTTPS
+## HTTPS
 
 加密用户和服务器通信。
 
-Input Validation
+## Input Validation
 
 **永远不要信任用户输入。**
 
-防止：
+防止：SQL Injection，XSS，Rate Limiting
 
-SQL Injection
+## 限制请求次数
 
-XSS
-
-Rate Limiting
-
-限制请求次数。
-
-防止：
-
-API 被刷爆
-
-服务崩溃
-
-成本异常增加
+防止：API 被刷爆，服务崩溃，成本异常增加
 
 # 八、性能优化
 
-图片优化
+## 图片优化
 
-使用：
+使用：压缩，WebP / AVIF，合适尺寸
 
-压缩
+## Cache（缓存）
 
-WebP / AVIF
+减少重复请求，提高速度
 
-## 合适尺寸
+## Core Web Vitals
 
-Cache（缓存）
-
-减少重复请求，提高速度。
-
-Core Web Vitals
-
-Google 衡量网页体验的重要指标，会影响 SEO。
+Google 衡量网页体验的重要指标，会影响 SEO
 
 # 九、法律要求
 
@@ -642,5 +594,223 @@ Privacy Policy（隐私政策）
 Terms of Service（服务条款）
 
 Cookie Consent（Cookie 同意）
+
+# Freshman Track 第04课笔记
+
+为什么要构建去中心化应用？
+
+传统应用在生产环境中依赖大量中心化服务：
+
+数据库
+
+身份认证
+
+文件存储
+
+支付服务
+
+云服务器
+
+这些服务虽然方便，但开发者需要信任第三方平台。一旦平台出现：
+
+服务中断，政策变化，账号冻结，平台限制，应用和用户都会受到影响。
+
+## 去中心化应用（DApp）的核心价值
+
+应用运行在开放的区块链网络上，不依赖单一公司或服务器控制，因此更难被关闭、限制或篡改。
+
+## 区块链提供的能力
+
+用户真正拥有资产和数据
+
+无需许可即可参与
+
+规则由代码和协议执行
+
+应用可以长期运行
+
+典型案例：
+
+稳定币降低跨境支付成本
+
+ENS 让用户拥有链上域名
+
+Uniswap 实现无需许可的资产交换
+
+# Freshman Track 第05课笔记
+
+什么是 Monad？
+
+# 一、Monad 定位
+
+Monad 是一条 高性能 EVM 兼容区块链。
+
+## 目标
+
+在保持去中心化的同时，让去中心化应用拥有接近传统互联网应用的速度和体验。
+
+## 背景
+
+Bitcoin：证明了去中心化价值转移可行，但功能有限。
+
+Ethereum：提出“区块链作为通用计算平台”，支持智能合约和 DApp。
+
+Monad：在 Ethereum 基础上进一步优化，提高去中心化计算性能。
+
+# 二、Monad 核心指标
+
+## 1\. 高吞吐量
+
+10,000 TPS（每秒交易数）
+
+意义：可以支持，大规模用户应用，高频交互场景，接近 Web2 的体验
+
+## 2\. 快速最终确认
+
+800ms Finality
+
+Finality：交易被确认并不可逆的时间。
+
+影响：用户操作后可以快速得到反馈。
+
+## 3\. 低硬件要求
+
+目标：降低运行节点的门槛。
+
+意义：更多人可以参与验证网络，提高去中心化程度。
+
+# 三、Monad 如何实现高性能
+
+## MonadBFT
+
+Monad 使用自己的共识机制：MonadBFT
+
+作用：让多个验证者快速达成交易共识。
+
+## RaptorCast
+
+负责：高效传播区块信息。
+
+解决：大量节点之间通信效率问题。
+
+## MonadDB
+
+负责：数据存储优化。提高链上数据读取和处理效率。
+
+# 四、Monad 的去中心化设计
+
+很多高性能链会牺牲去中心化：
+
+例如：
+
+提高硬件要求
+
+限制验证者数量
+
+## Monad 的方向
+
+同时追求性能和去中心化
+
+## 主要方式
+
+### 1\. 降低节点硬件门槛
+
+普通设备也可以运行节点
+
+### 2\. 扩大 Validator 集合
+
+传统共识：节点越多，通信成本越高。
+
+MonadBFT：Fan-out → Fan-in
+
+模式
+
+Leader 分发区块
+
+↓
+
+验证者投票
+
+↓
+
+汇总结果
+
+优势：通信成本不会随着节点数量快速增长。
+
+# 五、智能合约
+
+## 智能合约
+
+\> 部署在区块链上的自动执行程序。
+
+## 传统应用
+
+服务器运行代码
+
+### 特点：
+
+公司控制
+
+可以修改
+
+可以关闭
+
+## 智能合约
+
+区块链运行代码。
+
+### 特点
+
+规则公开
+
+自动执行
+
+难以修改
+
+不依赖单一服务器
+
+类似：
+
+自动售货机。
+
+规则提前写好
+
+投入资金 → 满足条件 → 自动执行。
+
+# 六、Monad 与智能合约
+
+Monad 使用**EVM**（Ethereum Virtual Machine，以太坊虚拟机）
+
+**Monad = EVM Compatible**
+
+Ethereum 上的：Solidity 合约，开发工具和开发经验可以直接迁移到 Monad。
+
+## 优势
+
+开发者不用重新学习新的合约语言和生态。
+
+# 七、MON Token
+
+## Monad 原生代币：
+
+**MON**
+
+## 用途
+
+### 1\. Gas Fee
+
+交易手续费。
+
+例如：
+
+转账
+
+调用合约
+
+部署应用
+
+### 2\. Staking
+
+质押 MON：帮助维护网络安全，获得奖励
 <!-- DAILY_CHECKIN_2026-07-07_END -->
 <!-- Content_END -->
