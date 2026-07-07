@@ -422,7 +422,7 @@ By completing the program, participants will leave with:
 | [changzhixuan4-png](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/changzhixuan4-png.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [starrujian](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/starrujian.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [cainiao0924](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/cainiao0924.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [freetrip1](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/freetrip1.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [freetrip1](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/freetrip1.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [zhaoshuang1968-blip](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/zhaoshuang1968-blip.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [CHOICECHAIN](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/CHOICECHAIN.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [zeliawoo247](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/zeliawoo247.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -813,6 +813,7 @@ By completing the program, participants will leave with:
 | [Camino-sec](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Camino-sec.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lidahe666](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/lidahe666.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
