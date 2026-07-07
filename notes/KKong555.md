@@ -17,6 +17,8 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- Content_START -->
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+**第一部分：Jack老师分享**
+
 以太坊协议层开发看似高不可攀，但阻碍普通开发者的往往不是智力壁垒，最重要的是信息差与底层技术栈的断层。Jack老师的转型经历所证明的，普通人完全可以通过系统学习打破这一壁垒：以 EPF（以太坊协议Fellowship） 计划为核心跳板，借助 EPF Wiki与Protocol Studies GitHub规范等官方开源学习资源，补齐执行层与共识层的底层技术栈；只要具备扎实的计算机基础（如 Go/Rust、网络、操作系统），敢于从阅读客户端源码、参与边缘Bug修复或编写测试用例开始，以太坊开源社区的大门就会对每一个能持续输出确定性的开发者完全敞开。
 
 **主要就是三个词总结：先入门，能复现，再贡献。**
@@ -35,11 +37,62 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 当你能复现、能描述、能缩小一个问题的时候，贡献就已经开始了！你可以通过修 Wiki、补名词解释、在 issue 里问具体问题、甚至改个文档/警告来热身。
 
-![截屏2026-07-07 下午8.17.07.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/KKong555/images/2026-07-07-1783427946162-__2026-07-07___8.17.07.png)![截屏2026-07-07 下午8.17.19.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/KKong555/images/2026-07-07-1783427961825-__2026-07-07___8.17.19.png)![截屏2026-07-07 下午8.36.41.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/KKong555/images/2026-07-07-1783427980950-__2026-07-07___8.36.41.png)![截屏2026-07-07 下午8.36.50.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/KKong555/images/2026-07-07-1783427993604-__2026-07-07___8.36.50.png)![截屏2026-07-07 下午8.36.58.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/KKong555/images/2026-07-07-1783428007850-__2026-07-07___8.36.58.png)
+**第二部分：co-learning**
+
+本期co-learning由 Coooder老师主讲，核心主题是：如何利用AI工具+remix进行Web3开发，打通“智能合约 + 前端网页 + 钱包交互”的完整闭环。
+
+一、首先讲的是钱包安全与开发基础
+
+准备一个专门的开发测试钱包，里面只放测试币
+
+私钥/助记词只能自己看，用纸写上
+
+环境变量（.env）的正确用法：
+
+利用AI部署合约时，通常需要在一个叫 .env 的文件里配置你的开发钱包私钥。
+
+.env 相当于一个本地的“账号密码配置文件”。切记： 配合使用 .gitignore 文件，千万别把包含私钥的 .env 上传到GitHub等公开平台，否则脚本机器人会在几秒内扫走你的钱。
+
+从 Remix 转向 AI 终端（CLI）： 传统的网页端工具 Remix 虽然适合初学者了解流程，但它有些太过于技术了。现在的大趋势是利用AI编码工具（如codex等），直接在终端里通过命令行让 AI 自动化完成编译和部署，效率会更高。
+
+二、Coooder老师在现场演示了如何用 AI 一句话生成一个NFT的智能合约，并为其配上前端网页mint。
+
+1.智能合约写完并编译后，会自动生成一个JSON 格式
+
+它告诉前端网页：“我这个合约里有一个叫 mint 的功能，你需要传入什么参数才能调用我。”前端拿到这个文件，才能和链上合约正常沟通。
+
+2.前端唤起钱包与交互
+
+连接钱包： 点击网页上的“Connect Wallet”按钮，成功唤起电脑上的钱包。
+
+点击 Mint（铸造）： 点击网页上的 Mint 按钮，钱包立刻弹出了签名交易请求。
+
+这些操作都需要支付手续费gas fee。在实操时，一定要先去测试网水龙头领一些测试币。
+
+三、对于我个人非技术背景而言，不需要纠结前端好不好看、代码怎么写，更重要的是理解用 AI 快速做一套 DApp原型的完整流程
+
+Step 1：聊出 Idea
+
+想好要做什么（如：链上身份管理系统、小游戏、NFT 项目）
+
+借助AI帮想产品逻辑，规划需要哪些智能合约。
+
+Step 2：编写合约
+
+给出产品文档，让 AI 编写底层的 Solidity 合约代码。
+
+Step 3：编译与部署
+
+把合约代码编译，并部署到测试网上。
+
+Step 4：开发前端
+
+用 AI 写一个简单的网页，通过接口调用刚才部署的合约。
 <!-- DAILY_CHECKIN_2026-07-07_END -->
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 今天首先是XiaoHai老师介绍他个人前端、智能合约方面的经验，其次是web3目前需求比较多的岗位（市场、BD、运营），以及小白如何开始，比如可以从黑客松开始积累经验等。
