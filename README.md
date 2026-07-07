@@ -764,7 +764,7 @@ By completing the program, participants will leave with:
 | [Gavinwonder](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Gavinwonder.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [clairelake-dev](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/clairelake-dev.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [renyufly](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/renyufly.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [Calciux](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Calciux.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [Calciux](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Calciux.md) | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [starshipgo](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/starshipgo.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Anankequ](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Anankequ.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [zoo100130](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/zoo100130.md) | ✅ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -813,6 +813,7 @@ By completing the program, participants will leave with:
 | [Camino-sec](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Camino-sec.md) | ⭕️ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lidahe666](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/lidahe666.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
