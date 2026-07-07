@@ -15,8 +15,25 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-07
+<!-- DAILY_CHECKIN_2026-07-07_START -->
+# 学习记录
+
+1.  《普通开发者如何进入以太坊协议层》分享会及co-learning（Codex演示自动部署智能合约）
+    
+2.  学习Remix IDE的使用
+    
+3.  完成第一笔链上交易、部署solidity合约
+    
+
+# 明日计划
+
+Codex部署合约实操
+<!-- DAILY_CHECKIN_2026-07-07_END -->
+
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 # 学习记录
 
 1.  Web3实习手册文档阅读（区块链基础概念、以太坊概览）
