@@ -15,8 +15,20 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-07
+<!-- DAILY_CHECKIN_2026-07-07_START -->
+占位笔记
+
+（这两天突发有急事，笔记过两天补上更新）
+
+今天下载软件
+
+完成第一笔测试网交易
+<!-- DAILY_CHECKIN_2026-07-07_END -->
+
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 # **概念理解**
 
 ## Web3
