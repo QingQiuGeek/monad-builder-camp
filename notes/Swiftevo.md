@@ -15,8 +15,44 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-07
+<!-- DAILY_CHECKIN_2026-07-07_START -->
+**On-chain vs Off-chain**
+
+EAS 支援兩種模式：
+
+-   **On-chain attestation**：資料或其編碼結果寫進鏈上合約，公開、可組合、可被智能合約直接讀取，但需要 gas。
+    
+-   **Off-chain attestation**：由簽名產生，不一定上鏈，成本低、彈性高；需要時可以驗簽，或把 UID / timestamp 上鏈做存在性證明。
+    
+
+**eas-sdk 做什麼？**
+
+這個 SDK 是開發者和 EAS 協議互動的工具包。它提供：
+
+-   `EAS`：連接 EAS 合約、建立/查詢/撤銷 attestations
+    
+-   `SchemaRegistry`：註冊與查詢 schemas
+    
+-   `SchemaEncoder`：把 schema 對應的資料編碼成鏈上可用 bytes
+    
+-   `Offchain`：建立與驗證 off-chain attestations
+    
+-   Delegated attestation：讓 A 簽名授權，B 幫忙送交易與付 gas
+    
+-   `PrivateData`：用 Merkle tree 只公開部分資料，其他保持私密
+    
+
+安裝方式：
+
+```
+npm install @ethereum-attestation-service/eas-sdk
+```
+<!-- DAILY_CHECKIN_2026-07-07_END -->
+
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 今天在看 021 學習以太坊，了解到多個層面叠加的去中心化  
   
 综合来看，以太坊的去中心化并不是单一机制的结果，而是多层叠加的产物：  
