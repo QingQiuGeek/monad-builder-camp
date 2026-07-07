@@ -15,8 +15,28 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-07
+<!-- DAILY_CHECKIN_2026-07-07_START -->
+# D2
+
+## 以太坊协议层
+
+-   以太坊 EPF（Ethereum Protocol Fellowship）：[epf.wiki](http://epf.wiki)
+    
+-   [https://github.com/orgs/eth-protocol-fellows/repositories](https://github.com/orgs/eth-protocol-fellows/repositories)
+    
+-   [https://github.com/ethereum](https://github.com/ethereum)
+    
+-   学习路径：自驱动项目/加入discord/X上交付让epf的mentors看看/提pr（不要太大）—》〉wiki/官方specs—》〉选一个方向：共识层/执行层/客户端
+    
+-   EIP（[https://ethereum.org/zh/eips/](https://ethereum.org/zh/eips/)）：最好熟读某一个项目 [https://github.com/ethereum/EIPs](https://github.com/ethereum/EIPs)
+    
+-   选项目时，先选问题域，再选issue
+<!-- DAILY_CHECKIN_2026-07-07_END -->
+
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 # D1
 
 ## Basic Concepts
