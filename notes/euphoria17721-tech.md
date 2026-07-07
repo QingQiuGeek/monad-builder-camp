@@ -15,8 +15,18 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-07
+<!-- DAILY_CHECKIN_2026-07-07_START -->
+普通互联网产品所有数据都存在公司后台，账号、道具平台想封就封，里面的虚拟东西也只能在这个软件里用。 链上产品数据存在全网节点，改不了，资产是自己私钥说了算，平台拿不走，虚拟资产还能跨软件流转，规则提前写死没法后台暗改。
+
+今天学会了创建钱包和连接区块链，并且进行了第一笔交易
+
+![bea5c285b1515f93ffc6aeb23e81a861.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/euphoria17721-tech/images/2026-07-07-1783417566733-bea5c285b1515f93ffc6aeb23e81a861.png)![53e40f31bb01e124aefe33ebfb94a63c.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/euphoria17721-tech/images/2026-07-07-1783417577273-53e40f31bb01e124aefe33ebfb94a63c.png)
+<!-- DAILY_CHECKIN_2026-07-07_END -->
+
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 学习
 
 ![IMG_7709.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/euphoria17721-tech/images/2026-07-06-1783346226688-IMG_7709.png)
