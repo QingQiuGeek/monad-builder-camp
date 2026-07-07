@@ -15,8 +15,48 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-07
+<!-- DAILY_CHECKIN_2026-07-07_START -->
+## **今日学习内容完成情况**
+
+1.  **Web3 实习手册｜Web3 工作方式**
+    
+2.  **Web3 实习手册｜岗位全景图**
+    
+3.  **工具安装与账号准备**
+    
+
+## **关键概念学习笔记**
+
+### **Web3 岗位全景图速览**
+
+技术岗
+
+| 岗位 | 核心职责 | 常用技术栈 |
+| --- | --- | --- |
+| 前端工程师 | Dapp 界面开发、钱包连接、交易签名 | React、Vue、TypeScript、Viem、Next.js |
+| 后端工程师 | 链上数据交互、API 设计、系统架构 | Node.js、Go、Python、GraphQL、Docker |
+| 智能合约工程师 | 合约设计、开发、部署、安全审计 | Solidity、Foundry、Hardhat、Remix |
+| 合约审计工程师 | 漏洞识别、安全报告、威胁建模 | Slither、Echidna、Mythril、Tenderly |
+
+非技术岗
+
+| 岗位 | 核心职责 | 常用平台/工具 |
+| --- | --- | --- |
+| 产品运营 | 产品发布、用户增长、数据分析 | SQL、Excel、Notion |
+| 社区管理 | 社群运营、活动策划、用户互动 | Telegram、Twitter、Discord |
+| 研究分析 | 行业研究、经济模型设计、竞品分析 | Glassnode、Token Terminal、Python |
+
+## **今日学习思考：**
+
+### 通过今天的岗位学习，我对 "DevRel" 这个角色有了更立体的认识：
+
+**DevRel（开发者关系）** 不是一个纯技术岗位，也不是纯运营岗位，而是一个 **"技术 + 社区 + 内容"** 的复合型角色。它的核心是 **赋能开发者**，让更多人基于项目技术栈进行构建。
+<!-- DAILY_CHECKIN_2026-07-07_END -->
+
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 ## **今日学习内容完成情况**
 
 1.  **Web3 实习手册｜入门导读**
