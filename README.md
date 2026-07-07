@@ -199,7 +199,7 @@ By completing the program, participants will leave with:
 | [zhang1911817869](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/zhang1911817869.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Dyno-beta](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Dyno-beta.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [EEEEvelyn-hash](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/EEEEvelyn-hash.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [Kylinxin](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Kylinxin.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [Kylinxin](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Kylinxin.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [bahuang081-svg](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/bahuang081-svg.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [cheng-zhaofeng](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/cheng-zhaofeng.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [libuyi543-lang](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/libuyi543-lang.md) | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -813,6 +813,7 @@ By completing the program, participants will leave with:
 | [Camino-sec](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Camino-sec.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lidahe666](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/lidahe666.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
