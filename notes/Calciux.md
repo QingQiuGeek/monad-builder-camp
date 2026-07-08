@@ -17,11 +17,12 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- Content_START -->
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
-今日请假
+[https://github.com/Calciux/Monad-Builder-Camp](https://github.com/Calciux/Monad-Builder-Camp)
 <!-- DAILY_CHECKIN_2026-07-08_END -->
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 今日暂时无法打卡，后补
 <!-- DAILY_CHECKIN_2026-07-07_END -->
