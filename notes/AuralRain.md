@@ -15,8 +15,36 @@ Java后端开发工程师
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-08
+<!-- DAILY_CHECKIN_2026-07-08_START -->
+Transaction Hash: 交易唯一标识
+
+Status: 交易是否成功
+
+Block: 所在区块号
+
+Timestamp: 交易时间
+
+From: 发送方地址
+
+To: 接收方地址（合约地址或普通地址）
+
+Value:转账金额
+
+Transaction Fee: 交易手续费
+
+Gas Price: Gas 单价
+
+Gas Limit & Usage: Gas 限制和使用量
+
+完成留言板的信息交互测试
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/AuralRain/images/2026-07-08-1783522498835-image.png)
+<!-- DAILY_CHECKIN_2026-07-08_END -->
+
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 **Developer Relations（开发者关系）** 是连接**技术生态**与**开发者社区**的桥梁角色，核心使命是**让更多开发者为某一技术栈或生态持续构建应用**。
 
 ### **核心职能**
@@ -51,6 +79,7 @@ Java后端开发工程师
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 | 概念 | 技术定义与核心特征 |
 | --- | --- |
