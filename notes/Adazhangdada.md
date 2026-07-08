@@ -15,8 +15,152 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-08
+<!-- DAILY_CHECKIN_2026-07-08_START -->
+## DAY3 buildanything入门学习
+
+[https://buildanything.so/zh/tracks/freshman/lessons/what-is-monad](https://buildanything.so/zh/tracks/freshman/lessons/what-is-monad)
+
+### monad章节 智能合约
+
+应用到底是怎么在区块链上运行的？答案是：智能合约（smart contracts）。
+
+在传统软件里，应用逻辑运行在你控制的服务器上。你可以随时修改、下线，也可以屏蔽某些用户。正因为如此，一个账号会被封禁，一笔支付会被冻结，一个平台也可能一夜之间被关停。
+
+智能合约把这件事反过来。它是一段运行在区块链上的程序，而不是运行在某台服务器上。部署之后，任何人都不能随意更改或下线它，连作者也不行。它会按照写好的规则持续运行。
+
+你可以把它理解成一台自动售货机。你投入钱，选择商品，机器把商品给你。不需要收银员，也没有店长可以临时决定不卖给你。规则被写进机器本身。智能合约也是这样：规则写在代码里，由区块链自动执行。
+
+智能合约不关心是谁在调用、你在哪个国家，也不关心某个政府是否给数据中心发了函。**只要条件满足，它就会按代码执行，对所有人一视同仁。**
+
+在 Monad 上，智能合约使用 Solidity 编写。Monad 运行在 EVM（Ethereum Virtual Machine，以太坊虚拟机） 上，和 Ethereum 使用同一套标准。这意味着所有为 Ethereum 编写的智能合约、工具和教程，无需任何修改就能在 Monad 上使用。
+
+### 区块
+
+![](https://my.feishu.cn/space/api/box/stream/download/asynccode/?code=ZWIwYmQ1YmVlZjkyZDViMGZmMmE4NzQ4ZDJkNmY3OTRfa3BuaHU4R2g2S2VWcmJINjhPbmUzaGlrbDJZU3VaYlhfVG9rZW46UFhZNGJUeVZub2dHTWh4bjNDUWM1Nng0bnZoXzE3ODM1MTU3Njk6MTc4MzUxOTM2OV9WNA&add_watermark=true&scene_type=CCM)
+
+### Proof of Work 与 Proof of Stake
+
+达成共识的方式有很多种。其中最重要的两种是 Proof of Work（工作量证明）和 Proof of Stake（权益证明）。
+
+Proof of Work 是最早的共识机制，被 Bitcoin 和早期的 Ethereum 采用。在 PoW 里，被称为矿工的节点彼此竞争，去解一道计算上很难的数学谜题。最先解出的那个矿工有权构建下一个区块并获得奖励。这道谜题难解但容易让其他人验证——这就是它的精妙之处。它之所以安全，是因为攻击网络需要巨量的计算资源，成本极高。
+
+它的代价是：消耗巨量电能。Ethereum 一直使用 Proof of Work 直到 2022 年，在一个被称为 The Merge 的事件中切换到了 Proof of Stake——能耗下降了大约 99.95%。
+
+Proof of Stake 是 Ethereum 现在使用的机制，Monad 也是。验证者不再比做题速度，而是用 ETH（在 Monad 上则是 MON）作为抵押（即他们的「stake」）来参与区块生产。他们会被随机抽取去提议新的区块，并对其他人提议的区块进行投票。
+
+抵押是关键。如果一个验证者作弊——比如提议无效交易、或在状态上撒谎——他们就会失去自己质押的 ETH。这被称为 slashing（罚没）。失去质押资产的财务风险，让作恶变得极其昂贵，从而在不烧大量电的前提下保持网络安全。
+
+### Gas
+
+Gas（手续费）是你在区块链上执行交易所支付的费用。
+
+你不会直接用 gas units 付费——你支付的是 ETH，在 Monad 上则是 MON。Gas 费的计算方式是：
+
+```Plain
+gas fee = gas units used x gas price
+```
+
+Gas price 会根据网络需求波动。当大量用户同时想交易时，gas price 上升；当网络冷清时则下降。这也是为什么你有时会看到 Ethereum 在大型 NFT 发售或市场剧烈波动等高流量事件期间，gas 费用突然飙升。
+
+Gas 有两个作用。第一，它支付给处理你交易的验证者。第二，它防止垃圾信息——既然每笔交易都要花钱，就没法免费往网络里灌垃圾。
+
+### Mainnet 与 Testnet
+
+在所有事情之前，你要先搞清楚自己在和哪一个 Monad 网络交互。每条区块链都有多个网络，从外面看长得一样，行为却差别很大：
+
+Monad Mainnet（主网）。 真实网络。真的 MON 代币、真的交易、真的成本。当你要把产品交付给真实用户时，就在这里。
+
+Monad Testnet（测试网）。 一条单独的链，用于测试。Testnet 上的代币没有真实价值。你可以在这里无风险地试。
+
+经验法则：所有实验都进行在 testnet 上。任何涉及真钱的东西才在 mainnet 上。 你不会希望在合约还没测过的情况下，就把真钱押上 mainnet 部署一遍。
+
+### Faucet
+
+Faucet（水龙头） 是一个免费发放 testnet 代币的网站。之所以需要 faucet，是因为 testnet 代币没有真实价值，所以没人会卖。Monad 团队会把它们送出来，让开发者可以测试。
+
+你连接钱包或粘贴自己的地址，点一个按钮，过几秒钟就会有一小笔 testnet MON 到你的钱包。这样你就可以部署合约、发送交易、反复测试，而不必花真钱。
+
+官方 Monad faucet： [faucet.monad.xyz](http://faucet.monad.xyz)
+
+如果你在别处见到过更老的 HackQuest 上提供的 Monad faucet，跳过它。它已经不可靠了。用上面这个官方版本就好。
+
+### 区块浏览器（Block Explorer）
+
+Block explorer（区块浏览器） 是一个让你查询链上任何东西的网站：交易、钱包、合约、区块。它是你查看链上正在发生什么的窗口。
+
+你会一直用 explorer：
+
+-   「我那笔交易上链了吗？」 把 tx hash 粘进 explorer，看状态、消耗的 gas，以及任何报错。
+    
+-   「这个合约长什么样？」 把合约地址粘进去，如果它已经验证过，就能看代码，并查到所有针对它的交易。
+    
+-   「这个钱包里有多少 MON？」 把钱包地址粘进去，就能看到余额和完整的交易历史。
+    
+
+Explorer 也是你确认自己在「正确的链上」最快的方式。如果你正在调试 testnet 的部署，结果却看着 mainnet 的 explorer，你会看到一个空钱包然后纳闷哪里出了错。那不是 bug，是 explorer 用错了。
+
+-   Monad Explorer（mainnet）： [monadscan.com](http://monadscan.com)
+    
+-   Monad Explorer（testnet）： [testnet.monadscan.com](http://testnet.monadscan.com)
+    
+
+### 把这些串起来
+
+这些概念就像一条链一样彼此咬合：
+
+交易被打包进 **区块**。节点用 **共识** 机制——在 Ethereum 和 Monad 这里就是 **Proof of Stake**——来就哪些区块有效达成一致。验证者因为质押的抵押品，以及 slashing（罚没） 的风险，被迫保持诚实。用户支付 **gas** 用来酬谢验证者并防止垃圾信息。当足够多的区块被确认后，交易就达到了 **最终性**，从此永久。
+
+**实用工具集**是你真正与上面这一切打交道的方式：**chain ID** 告诉钱包用哪条网络，**RPC** 承载你的请求，**faucet** 给你 **testnet 代币**玩，**explorer** 让你看到链上正在发生什么。
+
+每当你与你的应用互动——调用合约、把数据存上链、转代币——这整套系统都在背后运转。开发时你不必时刻想着它。但知道它就在那里、也知道它为什么这样运作，正是「在区块链上做产品的人」和「真正理解自己在什么基础上做产品的人」之间的差别。
+
+### L9加密钱包
+
+加密钱包
+
+加密钱包（crypto wallet）是用来管理你区块链账号的软件。它存储你的凭证、代表你签署交易，并把你连接到去中心化应用。可以把它理解为你和区块链之间的接口。
+
+其实用另外一个东西类比会很好：浏览器。浏览器本身并不包含整个互联网，它只是为你提供访问互联网的入口。加密钱包也不持有你的代币，它只是为你提供访问区块链账号的入口——你的代币真正存在的地方是区块链。
+
+当你第一次打开钱包时，它会生成一个账号（account）。一个账号由两部分组成：一个地址（address）和一个私钥（private key）。
+
+地址
+
+地址是你在区块链上的身份。它是一串通过密码学生成的文本，可以完全公开地分享。当有人给你转代币时，他们会把代币发送到你的地址。当你与应用交互时，应用看到的也是你的地址。
+
+地址看起来是这样的：`0x71C7656EC7ab88b098defB751B7401B5f6d8976F`
+
+每个账号只对应一个地址，且这个地址是你独有的。
+
+私钥
+
+私钥（private key）是地址的对应物。如果说地址是你的用户名，那么私钥就是你的密码。
+
+私钥看起来是这样的：E9873D79C6D87DC0FB6A5778633389F4453213303DA61F20BD67FC233AA33262
+
+任何拿到你私钥的人，都可以用你的账号发起交易。没有找回流程。没有客服。区块链是去中心化的，这意味着没有任何机构能撤销一笔交易，也没有任何机构能为你重置凭证。如果你弄丢了私钥，你就丢了这个账号。如果有人偷了私钥，你的资产也就没了。
+
+永远不要把你的私钥告诉任何人。
+
+写给开发者：你会在代码库里使用私钥来部署智能合约（smart contract）和发送交易。请使用一个不持有真实资产的开发专用钱包。新手开发者经常因为不小心把私钥推到公开仓库而损失资金。
+
+助记词
+
+你的钱包可以管理多个账号。每个账号都有自己的地址和私钥。但钱包本身还有一个总凭证：助记词（seed phrase）。
+
+助记词是你第一次创建钱包时生成的一组 12 个或 24 个单词。它看起来是这样的：
+
+`dove lumber quote board young robust kit invite plastic regular skull history`
+
+助记词可以生成你钱包里所有的账号。如果你失去了对钱包的访问权，仅凭助记词就可以恢复每一个账号。如果有人拿到了你的助记词，他就拿到了钱包里每一个账号的访问权。
+
+助记词是你最敏感的凭证。请离线保存。不要截图。不要把它粘贴到任何网站。任何正规的应用都永远不会向你索要助记词。
+<!-- DAILY_CHECKIN_2026-07-08_END -->
+
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 # DAY2 转账
 
 ![](https://my.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2ZiYTYxZmNiMjRmYzI3MzNlNWY4YzFjZmRmYjk5OTdfaDdBYkxTM0pFRUxtSzN5bmF2bzBKd3VURkljbm93WUxfVG9rZW46S3pkS2JUU3JTb1Q4QWN4a011TGNjbFVOblRoXzE3ODM0MzM1MjI6MTc4MzQzNzEyMl9WNA&add_watermark=true&scene_type=CCM)
@@ -28,6 +172,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 DAY1 希望坚持！
 
