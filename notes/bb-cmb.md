@@ -15,13 +15,20 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-08
+<!-- DAILY_CHECKIN_2026-07-08_START -->
+今天学会了从AI生成合约源码 →在Remix中编译和用MataMask钱包成功部署 →生成合约地址并能在Monad Explorer中查看到合约部署记录 → 在Remix中进行read / write 调用 ，并在Monad Explorer的合约地址中查到write记录→ 区块浏览器验证的全部过程。
+<!-- DAILY_CHECKIN_2026-07-08_END -->
+
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 今天用了MataMask创建了一个课程专用钱包，并学会了添加Monad Testnet并在Monad Testnet网络条件下使用Monad区块浏览器，并用钱包地址搜到自己的钱包，在Monad Faucet领取了测试币，体验到了在虚拟平台上实现测试网交易（链上产品），并在区块浏览器上查到了交易状态，学会了看交易状态里的内容代表了什么。
 <!-- DAILY_CHECKIN_2026-07-07_END -->
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 今天学习了Web3入门知识。基础层面掌握区块链底层、以太坊生态体系，看懂行业专业术语；岗位技能分两条路线学习，技术向钻研智能合约开发、链上开发实操，非技术向学习社区运营、项目内容、产品相关工作方法。同时学习行业职业规划、简历优化、面试技巧，掌握求职整套流程。
 
