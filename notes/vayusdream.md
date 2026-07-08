@@ -27,6 +27,8 @@ Web3 暑期实习计划 - Monad Buidler Camp
     
 -   skill：Read and install [https://fluxapay.xyz/skill.md](https://fluxapay.xyz/skill.md)
     
+-   运行在Base链上，使用USDC作为支付货币；关键卖点是不需要管理私钥
+    
 -   fluxa与coinbase是生态伙伴
     
 -   支付方式：目前是一次性的卡支付（agent card法币结算）/区块链形式，agent没有identity（B端做完）
@@ -47,13 +49,14 @@ Web3 暑期实习计划 - Monad Buidler Camp
     
 -   数字人民币：🈚️的原因主要是需求不够，单纯靠政策推动远远不够
     
--   Jack [Xiao邮箱：jackxiao@fluxapay.xyz](mailto:Xiao邮箱：jackxiao@fluxapay.xyz)
+-   Jack [Xiao邮箱：jackxiao@fluxapay.xyz](mailto:Xiao%E9%82%AE%E7%AE%B1%EF%BC%9Ajackxiao@fluxapay.xyz)
     
 -   体验链接：[https://agentwallet.fluxapay.xyz/](https://agentwallet.fluxapay.xyz/)
 <!-- DAILY_CHECKIN_2026-07-08_END -->
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 # D2
@@ -75,6 +78,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
