@@ -15,8 +15,104 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-08
+<!-- DAILY_CHECKIN_2026-07-08_START -->
+# 课程笔记：Agent 如何高效、安全地花钱（FluxA · AI-Native Payment Infrastructure）
+
+## 主题
+
+把支付基础设施**从"为人设计"改成"为 agent 设计"**——让 AI agent 能自主、安全、即时地收付钱，同时不把人类用户暴露在金融风险里。定位是"**the checkout layer for AI agents**"。
+
+## 1、核心痛点：传统支付逻辑撑不住 agent
+
+Agent 已经从"被动聊天机器人"变成"能规划、推理、用工具、执行多步任务的自主经济体"。但**一到付钱那一步就撞墙**。原因是传统支付的五个前提对 agent 全部失效：
+
+| 需求 | 传统世界 | Agent 的现实 |
+| --- | --- | --- |
+| 身份 Identity | 人的身份证 / KYC | agent 没有法律身份（你记的"没有身份证"） |
+| 授权 Authorization | 人手动点击、签名 | 需要自主执行，不能每笔都等人点 |
+| 凭证 Credentials | 表单里填卡号 | 卡号出现在 prompt 里极不安全（敏感信息安全性） |
+| 速度 Speed | T+1 到 T+3 | 需要毫秒级响应 |
+| 颗粒度 Granularity | 最低 $0.50 起 | 需要 $0.001 级微支付（支付颗粒度） |
+
+→ 这就是"支付链路的痛点"：**没有身份、不能自主授权、凭证不安全、太慢、颗粒度太粗**。
+
+## 2、产品形态：一个给 agent 的"共管钱包"（Co-wallet）
+
+关键设计哲学：**不是自托管，也不是纯托管，而是"共管"（Co-managed）——人定规则，agent 在规则内自主操作。**
+
+对比传统：
+
+| 能力 | 传统 | FluxA |
+| --- | --- | --- |
+| 花钱控制 | 全有或全无 | 每笔限额（per-tx limits） |
+| 撤销 | 改代码 | 一键撤销 |
+| 离线审批 | 做不到 | 预授权策略 |
+| 审计 | 手动记录 | 自动追踪（可读的账本） |
+
+一句话：**Set one budget, approve one mandate**（设一次预算、批一次授权），agent 就能到处花钱，还留一份你真能看懂的账本。
+
+## 3、最关键的安全思想：签"目的"，不签"每一笔"（Intent-Pay）
+
+这是解决"敏感信息安全 + 授权"的核心机制，也是最值得记的一页：
+
+-   **传统**：每笔支付都要人点一下 → agent 停下、等待、丢失上下文 → 本质是"带卡号表单的聊天机器人"。
+    
+-   **Intent-Pay**：只打断你**一次**，之后 agent 自己跑：
+    
+    1.  **Draft** — agent 读懂任务，提出一个支付意图（预算 + 用途）
+        
+    2.  **Sign Once** — 用户批准这个意图，意图内的每笔由钱包自动签，无需逐笔审批
+        
+    3.  **Harness** — 风险引擎兜底：**符合任务的放行，偏离任务的在钱包层直接拦截**
+        
+
+→ "签目的不签每笔"，让主动型 AI 保持主动，同时守住风险边界。
+
+## 4、凭证安全怎么做：一次性卡 AgentCard
+
+针对"卡号在 prompt 里不安全"这个痛点，桥接传统信用卡结账：
+
+1.  agent 判断需要一笔 $450 机票支出
+    
+2.  向钱包申请一张**锁定 $450**的 AgentCard
+    
+3.  立即签发一次性 Visa/Master 卡号
+    
+4.  agent 在商家结账页填卡
+    
+5.  支付成功 → **卡自动销毁**，未用余额退回钱包
+    
+
+三条安全属性：**金额锁定**（不能被多扣）、**单次使用**（泄露也没用）、**零凭证泄露**（真实金融信息永不进入 agent 上下文）。
+
+## 5、协议层：AEP2（Agent Embedded Payment Protocol）
+
+把支付**直接嵌进 agent 请求里**——给 x402 / A2A / MCP / tool call 附上一次性签名支付授权（signed mandate）。核心 5 步：**Authorize（签一次性授权）→ Verify（链下验证）→ Serve（不等链上确认就服务）→ Settle（延迟结算）→ Batch（批量结算、支持微支付）**。
+
+## 6、Agent 能做的 8 件事（能力全景）
+
+Identity（Agent ID）· Spending Budget（预算授权）· x402 Payment · Payment Link（收款）· Payout（转账）· Agent Card（一次性卡）· Paid API/MCP（付费调用）· Earn（接 A2A 任务赚钱）。
+
+## 7、商业化 & 市场
+
+-   **收钱侧 Agent Charge** 三种模式：Monetize Gateway（零代码代理网关，每次调用自动扣费）/ x402 Payment Link（动态金额收款链接）/ Pay to Agent（按 Agent ID 直接转 USDC）。
+    
+-   **Monetize**：把任意 script / API / MCP 几分钟变成"付费 skill"——零代码网关、按次计费（如 $0.01/次）、无需 key 无需 auth。
+    
+-   **Traction**：注册 agent 钱包 110K+、日峰值交易 30K+、ODP 支付延迟 0.28s（相比传统 x402 的 4.4–4.9s，约 15× 提升）。
+    
+-   **生态**：Coinbase、Cloudflare、Ant Group、Qwen、MoonPay；工具集成 Claude、Cursor、Codex。团队背景是前阿里 / 蚂蚁高管。
+    
+
+## 8、总
+
+Agent 高效安全花钱的关键 = **给它一个身份（Agent ID）+ 一次授权一个目的（Intent-Pay）+ 用一次性凭证隔离敏感信息（AgentCard）+ 风险引擎在钱包层兜底 + 微支付级颗粒度**。让 AI agent 成为"一等的经济公民"，但人始终握着规则和一键撤销。
+<!-- DAILY_CHECKIN_2026-07-08_END -->
+
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 # 普通开发者如何进入以太坊协议层（EPF7）
 
 ## 1、核心心法
