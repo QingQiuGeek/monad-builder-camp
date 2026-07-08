@@ -290,7 +290,7 @@ By completing the program, participants will leave with:
 | [rensheng85666-commits](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/rensheng85666-commits.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [USDHGwang](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/USDHGwang.md) | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lilexi-bot](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/lilexi-bot.md) | ⭕️ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [howardzhou989](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/howardzhou989.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [howardzhou989](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/howardzhou989.md) | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [millarxixi-afk](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/millarxixi-afk.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [wodeche](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/wodeche.md) | ⭕️ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [timmy937](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/timmy937.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -723,7 +723,7 @@ By completing the program, participants will leave with:
 | [gonghuiitng](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/gonghuiitng.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [flowwalker](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/flowwalker.md) | ✅ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [liud3929-cell](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/liud3929-cell.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [MIKEA666](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/MIKEA666.md) | ⭕️ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [MIKEA666](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/MIKEA666.md) | ⭕️ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [zhiyong1997](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/zhiyong1997.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [kassymoon](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/kassymoon.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [wqw845950341-cell](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/wqw845950341-cell.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -814,6 +814,7 @@ By completing the program, participants will leave with:
 | [lidahe666](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/lidahe666.md) | ⭕️ | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yoona333](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/yoona333.md) | ⭕️ | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
