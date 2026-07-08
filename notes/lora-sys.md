@@ -15,8 +15,18 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-08
+<!-- DAILY_CHECKIN_2026-07-08_START -->
+day3 : 今日制作自己的dao app onchaintodo app
+
+在ai 帮助下，成功 部署合约到 monad 测试网
+
+部署应用到vercel,体验全流程
+<!-- DAILY_CHECKIN_2026-07-08_END -->
+
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 day2 ;测试网领取测试币
 
 开启第一笔的测试交易
@@ -32,6 +42,7 @@ day2 ;测试网领取测试币
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 day1 : 参与直播和go-learning
 
