@@ -17,11 +17,12 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- Content_START -->
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
-占位
+今天听了co-learning，yoona的学习经历，然后在AI的帮助下完成了一些任务，但是不是很懂，需要把基础补上
 <!-- DAILY_CHECKIN_2026-07-08_END -->
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 今天听了两次会：现在进入web3很困难，xiaohai老师说打黑客松，给项目贡献快速积累项目经验，找到工作；然后看苏老师速通任务
 <!-- DAILY_CHECKIN_2026-07-06_END -->
