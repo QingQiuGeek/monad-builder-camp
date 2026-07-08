@@ -15,8 +15,28 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-08
+<!-- DAILY_CHECKIN_2026-07-08_START -->
+学习buildanything
+
+今天在buildanything网站上学习，了解到了vibe coding这个概念，学习了怎么用vibe coding去开发，维护一个应用。
+
+维护一个应用，需要：数据库、身份认证（Auth）、文件存储、支付、邮件、错误追踪。
+
+而这些需求都是一个你无法控制的外部服务。它们都有可能宕机、被攻击、冻结你的账号，或者一夜之间消失。所以我们需要开发一个去中心化掉应用。 然后学习了区块链的相关概念：
+
+> 交易被打包进 区块。节点用 共识 机制——在 Ethereum 和 Monad 这里就是 Proof of Stake——来就哪些区块有效达成一致。验证者因为质押的抵押品，以及 slashing（罚没） 的风险，被迫保持诚实。用户支付 gas 用来酬谢验证者并防止垃圾信息。当足够多的区块被确认后，交易就达到了 最终性，从此永久。
+> 
+> 实用工具集是你真正与上面这一切打交道的方式：chain ID 告诉钱包用哪条网络，RPC 承载你的请求，faucet 给你 testnet 代币玩，explorer 让你看到链上正在发生什么。
+
+monad像是以太坊一样的区块链系统生态，可以让很多web3应用运行在上面，但monad拥有更高的性能。mon是这条链的代币。  
+
+![QQ20260708-233039.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Foreon/images/2026-07-08-1783525034675-QQ20260708-233039.png)
+<!-- DAILY_CHECKIN_2026-07-08_END -->
+
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 ## 完成第一笔交易
 
 1.  Transaction hash：0xe3862356c253773e48beb9e2a2ddf80b9a53ce53335c441dc4d5ff492a7bfa9c
@@ -265,6 +285,7 @@ contract MessageBoard {
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 # Day1
 
