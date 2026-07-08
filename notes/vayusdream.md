@@ -15,8 +15,40 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-08
+<!-- DAILY_CHECKIN_2026-07-08_START -->
+# D3
+
+## AI Agent支付
+
+[https://fluxapay.xyz/](https://fluxapay.xyz/)
+
+-   智能体经济：针对不同场景探索（OPC/研究机构/不同行业B端/自动抢红包抢票）发挥agent支付潜力
+    
+-   skill：Read and install [https://fluxapay.xyz/skill.md](https://fluxapay.xyz/skill.md)
+    
+-   fluxa与coinbase是生态伙伴
+    
+-   支付方式：目前是一次性的卡支付（agent card法币结算）/区块链形式，agent没有identity（B端做完）
+    
+-   实现形式：只要两方link装的同样skill，就可以通过payment link付款（点对点直接转账）；或者创建mandate让对方安装转账
+    
+-   稳定币usdc目前是最大的链，现在有ousd，哪条链无所谓，看agent更支持哪个。目前支持跨链。
+    
+-   未来一定会走上主流，所以需要与visa等传统发卡机构合作。
+    
+-   从业agent payment：engineering/懂流程
+    
+-   如何让自己的资料或产品能让ai更容易找到，从而成为塔常用付费的商户？——与百度合作
+    
+-   未来希望实现的场景：自动交水电费
+    
+-   Jack Xiao邮箱：jackxiao@fluxapay.xyz
+<!-- DAILY_CHECKIN_2026-07-08_END -->
+
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 # D2
 
 ## 以太坊协议层
@@ -36,6 +68,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 # D1
 
