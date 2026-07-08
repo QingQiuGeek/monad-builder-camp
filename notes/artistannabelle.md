@@ -15,8 +15,57 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-08
+<!-- DAILY_CHECKIN_2026-07-08_START -->
+-   **AI Agent支付产品Flux A核心方案**
+    
+    -   **现有Agent支付链路核心痛点**
+        
+        -   传统支付适配缺陷：传统银行账户需身份证、手动操作，无对应Agent身份主体，无法适配Agent自主操作需求。
+            
+        -   结算与安全风险：传统 T+1 / T+3 结算时效无法满足Agent实时执行需求，聊天框输入银行卡信息存在泄露风险。
+            
+        -   微支付能力缺失：传统支付手续费高于 0.01-0.1 美元级微支付金额，无法支撑Agent按需调用工具的小额付费场景。
+            
+        
+        ![](https://my.feishu.cn/space/api/box/stream/download/asynccode/?code=NTE2ZTkzNjg2ZTdiZDEwNDI1YWU2ZTAyZGE4MTY3YzVfbkhCU1VRS1hwSWZ6cWNBVlI5UHVCcTdyOFBwQXRDVFBfVG9rZW46WTdMMGJjUGJwb3Zla1B4c1NxVWNvV0FybkVoXzE3ODM1MjU5MzI6MTc4MzUyOTUzMl9WNA&add_watermark=true&scene_type=CCM_DOUBAO)
+    -   **Flux A产品体系核心设计**
+        
+        -   产品定位：并非单一钱包产品，是覆盖身份、预算、风控、可撤销、审计全链路的Agent支付协议，核心团队来自蚂蚁支付风控团队。
+            
+        -   核心架构分层：底层对接法币、稳定币双支付链路，中间层提供身份标识、预算约束、风控引擎、交易可追溯能力。
+            
+        -   核心功能模块：包含与VISA合作的Agent Card虚拟卡、开发者货币化网关、收付结算体系三大核心功能模块。
+            
+        -   结算机制设计：采用预授权额度模式，用户设定预算后Agent自主执行交易，周期集中结算，类Layer2模式提升处理效率。
+            
+    -   **Flux A落地进展与合作生态**
+        
+        -   平台运营数据：当前平台注册Agent数量已突破13万，与蚂蚁、百度智能云、千问、VISA等均达成深度战略合作。
+            
+        -   开发者支持能力：开发者无需代码基础，即可将API、MCP、Skill上架平台实现货币化，所有收益直接归属对应开发者。
+            
+        -   已落地场景：覆盖Agent抢红包社交、百度Skill分发、任务结算、票务预订、行业调研报告付费调用等多个场景。
+            
+    -   **Agent支付相关答疑共识**
+        
+        -   身份与充值体系：支持Google账号授权生成链上钱包，同时支持Stripe法币充值兑换为平台积分，双体系并行。
+            
+        -   生态合作关系：与Coinbase、Ripple等为生态合作伙伴，基于Coinbase X402协议做定制化优化，非直接竞争关系。
+            
+        -   基础设施选择：当前优先基于Base链USDC搭建支付体系，后续将根据生态需求支持其他公链及跨链操作。
+            
+        -   合规规划安排：后续将逐步上线KYC/KYB体系，与持牌支付机构合作解决支付牌照、反洗钱相关合规问题。
+            
+        -   行业发展判断：Agent支付是Agent商业生态的核心基础设施，当前处于早期阶段，用户信任建立需周期，先从微支付切入。
+            
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/artistannabelle/images/2026-07-08-1783526021092-image.png)
+<!-- DAILY_CHECKIN_2026-07-08_END -->
+
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 # 【1】创建专用钱包
 
 > 1\. 创建或准备一个**课程专用钱包**，不要使用主力钱包。 2. 添加 Monad Testnet 网络。 3. 打开 Monad Explorer 或相关区块浏览器，确认可以查询地址。 4. 用自己的话简单说明：链上产品和普通互联网产品有什么不同。
