@@ -15,8 +15,32 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-08
+<!-- DAILY_CHECKIN_2026-07-08_START -->
+今日完成：  
+1\. 根据 Week 1 Day 3 任务，整理 Monad Testnet 配置清单：RPC URL、Chain ID、Explorer、Faucet。  
+2\. 在本地项目建立/更新了网络配置提交物 submissions/week-01/[network-config.md](http://network-config.md) 和实验记录 experiments/monad-wallet-setup/[README.md](http://README.md)。  
+3\. 计划在钱包中手动添加 Monad Testnet，并从官方 Faucet 领取测试币。  
+4\. 确认安全边界：私钥/助记词由本人离线保管，项目文件中只记录公开地址和网络参数。  
+  
+今日收获：  
+\- Testnet 是主网的平行测试环境，代币无真实价值，但配置流程和主网一致。  
+\- 链上交互前必须确认四个基础参数：RPC、Chain ID、Explorer、Faucet。  
+\- 网络参数会随时间变化，养成从官方文档验证的习惯，而不是照抄旧教程。  
+  
+今日卡点：  
+\- 钱包添加网络和领水需要本人在浏览器操作，AI 不能代为完成。  
+\- 昨天（Day 2）的测试钱包地址尚未回填到项目，今天需要一并补齐。  
+  
+明日计划：  
+\- 完成第一笔 Monad Testnet 链上交易。  
+\- 记录交易哈希、Explorer 链接和交互反思。  
+\- 为 Week 1 后续任务（AI 工具、Monad 技术基础）做准备。
+<!-- DAILY_CHECKIN_2026-07-08_END -->
+
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 周次: Week 1 - 认知奠基期 / 进入 Onchain World  
 Day: Day 2  
 主题: 钱包与安全  
@@ -50,6 +74,7 @@ Day: Day 2
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 今天核心学习了，monad的gas机制：
 
