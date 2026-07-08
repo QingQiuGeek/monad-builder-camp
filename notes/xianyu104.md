@@ -25,6 +25,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
 
+
 今天听了老师的分享，以太坊方面的，没有太理解，然后看老师使用codex做demo
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/xianyu104/images/2026-07-07-1783438885030-image.png)
@@ -32,6 +33,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
