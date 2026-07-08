@@ -15,8 +15,32 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-08
+<!-- DAILY_CHECKIN_2026-07-08_START -->
+# DevRel的成长之路 — 从 Builder 到生态链接者
+
+## 成长经历
+
+24 年 9 月份有了第一份工作。**智能合约工作不是很好找。**
+
+什么是 DevRel
+
+即开发者关系，感觉像是带有技术背景的运营人员
+
+SVP 是一个 AI Native 链，有 agent的 mcp 能够有强力的安全边界。
+
+现在运营的话工作机会会更多一些。
+
+对于新人来说智能合约一般没有工作机会，得要 3～5 年的
+
+### 黑客松冠军经验
+
+项目背景: 是万物皆可预测的项目
+<!-- DAILY_CHECKIN_2026-07-08_END -->
+
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 # Web3 暑期实习计划 - Monad Buidler Camp
 
 **21 天做出你的第一个链上产品，第 4 周进入 Monad Hackathon，第 5 周整理成作品集。适合想进入 Web3 / AI × Crypto 方向的开发、运营、研究和内容创作者。**
