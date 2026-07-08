@@ -1,5 +1,5 @@
 ---
-timezone: UTC-5
+timezone: UTC-0
 ---
 
 # Jade
