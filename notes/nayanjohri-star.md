@@ -15,8 +15,16 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-08
+<!-- DAILY_CHECKIN_2026-07-08_START -->
+今天学习了两场直播：第一场是 FluxA 关于 AI Agent 支付体系的分享，理解了 Agent 支付为什么需要身份、预算、风控、审计、撤销和结算能力，也了解了 X402、人机共管钱包、AgentCard、Monetize Gateway、Payment Link、Pay to Agent 等概念。
+
+第二场 Co-Learning 重点是 Web3 入行经验，强化了 Git/GitHub、`.env` 安全、AI 辅助开发、项目经验、远程工作和接单风险意识。明天会继续进入 Remix / Solidity / Monad 合约部署，把今天的概念落到一个可验证的小项目里。、Pay to Agent 等概念。
+<!-- DAILY_CHECKIN_2026-07-08_END -->
+
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 今天完成了 Monad Builder Camp Week 1 的链上交互最小闭环：创建并使用课程测试钱包，添加 Monad Testnet，领取 Testnet MON，并完成了一笔 Monad Testnet 转账测试。
 
 链上验证记录：
