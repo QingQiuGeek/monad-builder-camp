@@ -15,8 +15,18 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-08
+<!-- DAILY_CHECKIN_2026-07-08_START -->
+1.  Dapp 的架构主要由三个核心部分组成：**前端，智能合约，数据检索器**
+    
+2.  DeFi是基于区块链技术建立的金融体系
+    
+3.  NFT 代表一个唯一的数字资产
+<!-- DAILY_CHECKIN_2026-07-08_END -->
+
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 -   monad公链高性能EVM兼容L1
     
 -   并行EVM＋异步流水线执行
@@ -26,6 +36,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 1.  区块链：不可篡改/公开透明/匿名/快速交易/去中心化/不可篡改
     
