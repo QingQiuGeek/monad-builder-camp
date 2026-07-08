@@ -15,8 +15,16 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-08
+<!-- DAILY_CHECKIN_2026-07-08_START -->
+今天学习了remix如何部署/交互，连接metamask钱包，部署到monad测试网上，并且部署交互合约
+
+![截屏2026-07-08 17.50.17.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/snh48-syq/images/2026-07-08-1783522578595-__2026-07-08_17.50.17.png)
+<!-- DAILY_CHECKIN_2026-07-08_END -->
+
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 今天了解了以太坊协议层的基础知识和研究方向，
 
 ![截屏2026-07-07 19.11.42.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/snh48-syq/images/2026-07-07-1783439565932-__2026-07-07_19.11.42.png)
@@ -32,6 +40,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 ![截屏2026-07-06 16.50.30.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/snh48-syq/images/2026-07-06-1783349359680-__2026-07-06_16.50.30.png)
 
