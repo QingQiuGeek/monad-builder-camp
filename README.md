@@ -241,7 +241,7 @@ By completing the program, participants will leave with:
 | [N109-cat](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/N109-cat.md) | ✅ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Ttttt7777](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Ttttt7777.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [NeoWeb3Nova](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/NeoWeb3Nova.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [Silence-dream](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Silence-dream.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [Silence-dream](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Silence-dream.md) | ⭕️ | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lainxalice](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/lainxalice.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Yujie418](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Yujie418.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [NashNode](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/NashNode.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -814,6 +814,7 @@ By completing the program, participants will leave with:
 | [lidahe666](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/lidahe666.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yoona333](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/yoona333.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
