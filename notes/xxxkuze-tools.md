@@ -17,17 +17,17 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- Content_START -->
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
-听了Coooder老师的co learning，今天学习使用AI Coding来做一个智能合约项目，首先我选择codex来做，首先创建一个文件目录，用来存放项目，然后导入进去codex，在这个项目里面与它对话，内容：**帮我做一个发行nft的智能合约，**等待codex完成（过程中有些指令需要确认）
+听了Coooder老师的co learning，今天学习使用AI Coding来做一个智能合约项目，首先我选择codex来做，首先创建一个文件目录，用来存放项目，然后导入进去codex，在这个项目里面与它对话，内容：\*\*帮我做一个发行nft的智能合约，\*\*等待codex完成（过程中有些指令需要确认）
 
-![image.png](https://cdn.nlark.com/yuque/0/2026/png/50461568/1783519546645-3d79b54e-fa77-472c-9f7f-f776a53f725c.png?x-oss-process=image%2Fformat%2Cwebp)![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/xxxkuze-tools/images/2026-07-09-1783579549303-image.png)
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/xxxkuze-tools/images/2026-07-09-1783579549303-image.png)
 
 执行过程：检查项目目录，写入文件，编码，安装依赖，部署吗，测试，最终生成结果
 
-![image.png](https://cdn.nlark.com/yuque/0/2026/png/50461568/1783519849690-36733178-60d3-4074-b141-934d4929b41f.png?x-oss-process=image%2Fformat%2Cwebp)![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/xxxkuze-tools/images/2026-07-09-1783579856430-image.png)
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/xxxkuze-tools/images/2026-07-09-1783579856430-image.png)
 
 接着继续对话：**需要部署到monad的测试网**
 
-![image.png](https://cdn.nlark.com/yuque/0/2026/png/50461568/1783520134787-d573f237-d9c0-4a13-8b79-4ab11f86b325.png?x-oss-process=image%2Fformat%2Cwebp)![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/xxxkuze-tools/images/2026-07-09-1783579900446-image.png)
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/xxxkuze-tools/images/2026-07-09-1783579900446-image.png)
 
 这里需要把密钥填写到`.env.example`，这里需要复制一份.`env`
 
@@ -37,15 +37,15 @@ copy .env.example .env
 
 打开`.env`文件，这里的`PRIVATE_KEY`需要填写，密钥需要在钱包里面，找到账户，账户详情，点击私钥
 
-![image.png](https://cdn.nlark.com/yuque/0/2026/png/50461568/1783525178247-6009fcc6-2b9c-48d4-af88-45bd68e5209c.png?x-oss-process=image%2Fformat%2Cwebp)![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/xxxkuze-tools/images/2026-07-09-1783581002696-image.png)
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/xxxkuze-tools/images/2026-07-09-1783581002696-image.png)
 
-跟codex对话，**帮我运行命令，**这里会发现部署失败，是因为我的密钥不是`0x`开头的，需要叫codex改
+跟codex对话，\*\*帮我运行命令，\*\*这里会发现部署失败，是因为我的密钥不是`0x`开头的，需要叫codex改
 
-![image.png](https://cdn.nlark.com/yuque/0/2026/png/50461568/1783525491032-048f47e8-3f55-47c1-b989-b17544f3ac2e.png?x-oss-process=image%2Fformat%2Cwebp)![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/xxxkuze-tools/images/2026-07-09-1783581617481-image.png)
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/xxxkuze-tools/images/2026-07-09-1783581617481-image.png)
 
 接着对话codex，**我的私钥不是0x开头的，我是metamask钱包**
 
-![image.png](https://cdn.nlark.com/yuque/0/2026/png/50461568/1783525657705-c4c8f5ca-ff00-4032-b638-0ab267afca9e.png?x-oss-process=image%2Fformat%2Cwebp)![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/xxxkuze-tools/images/2026-07-09-1783581631997-image.png)
+![image.png](https://cdn.nlark.com/yuque/0/2026/png/50461568/1783525657705-c4c8f5ca-ff00-4032-b638-0ab267afca9e.png?x-oss-process=image%2Fformat%2Cwebp)
 
 再次叫codex执行命令，经过了几轮的对话，终于是部署成功了
 
@@ -57,6 +57,7 @@ copy .env.example .env
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
 
+
 今天学习用 AI 生成一个最小 Solidity 合约，我选择了每日打卡合约，写了个提示词，让chatgpt给我生成 Solidity ^0.8.20 的代码，CheckIn包含totalCount（累计打卡次数），lastCheckIn（最后打卡时间），streak（连续打卡天数），然后是三个函数，checkIn() -> 用户每天只能打卡一次，canCheckIn() -> 判断今天是否还能打卡，getMyRecord() -> 查看自己的打卡信息，AI生成的合约代码，人工检查了Remix 能编译通过，三个函数与 Prompt 一致，数据类型正确，没有不必要的库，变量命名和注释读得懂。然后部署到Remix。大概的流程：Remix 新建 `ChecklnContract.sol` → 编译 `0.8.20` → **Deploy & Run Transactions** → Browser Extension 连 Rabby → 选 Monad Testnet → Deploy，交互Remix **Deployed Contracts** 里：蓝点函数 **call**（如 getMyRecord），橙点函数 **transact**（如 checkIn）。Write 后在区块链浏览器查看确认交易 Status 为 Success。
 <!-- DAILY_CHECKIN_2026-07-08_END -->
 
@@ -64,11 +65,13 @@ copy .env.example .env
 <!-- DAILY_CHECKIN_2026-07-07_START -->
 
 
+
 听了7.6晚上参加「Co-learning」线上活动，自己尝试在浏览器上安装MetaMask插件，创建钱包，添加 Monad Testnet 网络，添加成功之后，复制钱包地址，打开区块浏览器，我看到的页面信息，**Address**：我的钱包地址，一串 `0x` 开头的字符，**Balance**：当前账户余额，刚创建时应该是 `0 MON`**，Transactions：**历史交易列表，空钱包时这里是空的。从而**我理解链上产品和普通互联网产品最大的区别是**：普通互联网产品的数据主要存在平台自己的服务器里，而链上产品的关键操作会记录在区块链上，可以通过区块浏览器查询。接着继续了解**行业赛道全览和Web3 工作方式。**
 <!-- DAILY_CHECKIN_2026-07-07_END -->
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
