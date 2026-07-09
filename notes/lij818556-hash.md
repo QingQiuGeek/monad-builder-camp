@@ -386,6 +386,7 @@ AI Agent 在 Web3 场景中的风险，本质上来自四个方面：
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
 
+
 # 1.Fluxa公司（由前蚂蚁团队创办）推出AI智能体专属支付工具Agent Wallet，堪称“龙虾（OpenClaw）版支付宝”。
 
 该工具彻底解决了AI Agent付费场景的“最后一公里”痛点，支持OpenClaw、[Claude Code](https://www.chooseai.net/tools/107/)、CodeX等主流AI Agent一键接入，让智能体具备自主支付、参与经济活动的能力，甚至能通过抢红包、参赛赚钱“反哺”人类，标志着AI Agent从“工具”向“具备经济行为能力的数字个体”跨越。
@@ -677,6 +678,7 @@ Agent Card 底层仍然离不开传统发卡和支付体系，但产品设计上
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 [https://zcn6rqjg1z5s.feishu.cn/wiki/HiupwekhEiAaJ1kT28ucM2CEnad?from=from\_copylink](https://zcn6rqjg1z5s.feishu.cn/wiki/HiupwekhEiAaJ1kT28ucM2CEnad?from=from_copylink)
