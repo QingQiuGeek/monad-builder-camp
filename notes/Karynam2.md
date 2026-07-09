@@ -15,8 +15,14 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-10
+<!-- DAILY_CHECKIN_2026-07-10_START -->
+7-10
+<!-- DAILY_CHECKIN_2026-07-10_END -->
+
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 7.8+7.9当天笔记📒
 
 4.2 Bein和Yoona和huahua和苏生老师co- learning
@@ -281,6 +287,7 @@ Web3 找机会不能只靠投简历。
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
 
+
 Day2
 
 重新进入训练营啦！  
@@ -438,6 +445,7 @@ Day2
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
