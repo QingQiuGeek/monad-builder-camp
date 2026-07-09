@@ -15,8 +15,14 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-09
+<!-- DAILY_CHECKIN_2026-07-09_START -->
+![d29537f5872e4c196fd8962d7eaac88f.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Momo-Yiming/images/2026-07-09-1783611499742-d29537f5872e4c196fd8962d7eaac88f.jpg)
+<!-- DAILY_CHECKIN_2026-07-09_END -->
+
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 区块链学习笔记
 
 一、区块链基础概念
