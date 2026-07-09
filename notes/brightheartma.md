@@ -15,8 +15,66 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-09
+<!-- DAILY_CHECKIN_2026-07-09_START -->
+## **今日进度：BuildAnything 初中课程 3/13**
+
+课程地址：[https://buildanything.so/zh/tracks/sophomore](https://buildanything.so/zh/tracks/sophomore)
+
+学完初中前三课（Vibecoding 原理、Skills、EVM 原理），主线是给之前「会用」的东西打开引擎盖。
+
+## **核心收获**
+
+**1\. 编程智能体的分层结构**
+
+-   所有编程智能体底层相同：模型 + 上下文窗口 + 系统提示 + 工具 + 智能体循环 + harness。出问题先问是哪一层，行为就从「魔法」变成「可调试」。
+    
+-   模型无状态，不在上下文里的东西对它就不存在——好的 vibecoding 本质是把智能体指向正确的文件。
+    
+
+**2\. 智能体循环与委托**
+
+-   引擎是「思考 → 行动 → 观察 → 重复」直到任务完成；sub-agent 用独立上下文干脏活、只返回总结，保持主对话干净。
+    
+-   持久化靠 `CLAUDE.md` 和 memory；Skills / Hooks / `settings.json` 属于 harness 层；MCP 是接外部系统的标准插头。
+    
+
+**3\. Skills 与 Monskills**
+
+-   skill 就是一份 markdown：description 决定何时触发，正文决定怎么做，把泛化助手变成领域专家。Monskills 六件套覆盖 Monad 构建全流程，明确要求助手不许凭空猜合约地址、私钥不落明文。
+    
+-   恶意 skill 可泄露私钥、跑任意脚本——安装前查作者、读源码，纪律同「不往终端粘贴陌生脚本」。
+    
+
+**4\. EVM 核心模型**
+
+-   Ethereum 是分布式状态机：每笔交易触发一次**确定性**状态转换，所有节点独立执行、结果必然一致，trustless 的根源在此。
+    
+-   Solidity 编译成 opcode 执行；memory 交易内临时（便宜），storage 上链永久（贵，因为要写到全球所有节点）。
+    
+
+**5\. Monad 兼容性与合约安全**
+
+-   Monad 跑同一个 EVM，工具链零修改，区别只在吞吐——「同一个 EVM，快得多的轨道」。
+    
+-   严肃警告：合约错误不可变、可能损失真金白银，AI 写 Solidity 比写前端更不可靠。持有真实资金的合约，未经审计绝不部署。
+    
+
+## **个人思考**
+
+-   分层框架正好解释了我在 Claude Code 里做的配置：`settings.json`、CLAUDE.md 都是 harness 层，过去照文档配，现在知道每项作用在哪一层。
+    
+-   「恶意 skill」和我之前调 Raycast prompt 踩的 instruction-data boundary 泄漏是同类问题：文本会被当指令执行，信任边界就必须前置。
+    
+-   EVM 确定性状态转换是我做 indexer 的地基：节点重放结果必然一致，事件日志才配当唯一数据源。
+    
+
+明天继续初中第 4 课起。
+<!-- DAILY_CHECKIN_2026-07-09_END -->
+
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 ## 今日进度：BuildAnything 新生课程 10/10 完结 ✅
 
 课程地址：[https://buildanything.so/zh/tracks/freshman](https://buildanything.so/zh/tracks/freshman)
@@ -77,6 +135,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
 
+
 \## Week 1 打卡｜部署 NFTBadge 到 Monad Testnet
 
 \### 今天做了什么
@@ -116,6 +175,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 **今日学习内容**
