@@ -15,8 +15,36 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-09
+<!-- DAILY_CHECKIN_2026-07-09_START -->
+前情提要：由于remix做的一直连不上钱包，换桌面版登录之后，找不到之前的文件了，ai额度也用完了，所以不用remix了，打算重新做。
+
+1、确定需求：我想做一个基于monad测试网络的留言板，把需求发给ai之后，它给出的提示词如下：
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/yys1initiate/images/2026-07-09-1783598002570-image.png)
+
+检查过后没有什么大问题，于是让ai帮我写一个智能合约，并且做一个对应的ui；结构如下，主要分为合约和ui两个方面，MessageBoard.sol就是智能合约的源码，Deploy.s.sol是脚本的部署文件，然后还需要有一个环境变量，环境变量需要根据自己的实际情况更改
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/yys1initiate/images/2026-07-09-1783598098756-image.png)
+
+由于我下载不了foundry，所以选择改写合约，换成hardhast的，
+
+2、需要我们把合约上链，选择了用npm去部署合约，在合约过程中先输入：npm run compile 对它进行编译，然后运行 npm run deploy对它进行部署，然后部署成功了
+
+ps：记得还要把私钥改成自己的
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/yys1initiate/images/2026-07-09-1783602584247-image.png)
+
+3、然后在ui界面还要重下npm， contracts/ 和 ui/ 是两个独立的项目，各有各的 package.json：
+
+4、前端页面各种报错 终于解决了......
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/yys1initiate/images/2026-07-09-1783604397668-image.png)
+<!-- DAILY_CHECKIN_2026-07-09_END -->
+
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 今天主要学习了以太坊，和回顾了昨天的内容。
 
 1、老师先是带领我们回顾了一下钱包的设置，推荐了一个好用的钱包phantom；
@@ -40,6 +68,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 今日co-learning:
 
