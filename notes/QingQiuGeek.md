@@ -125,4 +125,201 @@ Monad 的设计哲学：**在不牺牲去中心化的前提下，通过工程优
 4. 在 MonadVision 区块浏览器查看交易详情
 5. 学习交易底层原理（nonce、gas、data 字段）
 <!-- DAILY_CHECKIN_2026-07-07_END -->
+<!-- DAILY_CHECKIN_2026-07-09_START -->
+## Day 4 | Week 1 | AI + Solidity + 合约部署：在 Monad 上部署第一个智能合约
+
+### 今日学习内容
+
+今天的核心任务是用 AI 辅助编写 Solidity 智能合约，并在 Monad Testnet 上完成部署。这是从"理解区块链"到"动手构建"的关键一步。
+
+**Solidity 基础语法回顾：**
+
+Solidity 是以太坊虚拟机（EVM）兼容链的主力智能合约语言，Monad 完全兼容 EVM，因此 Solidity 合约可以直接部署到 Monad 上。
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.24;
+
+contract Gmonad {
+    string public greeting;
+    
+    constructor(string memory _greeting) {
+        greeting = _greeting;
+    }
+    
+    function setGreeting(string calldata _greeting) external {
+        greeting = _greeting;
+    }
+}
+```
+
+这个简单的合约展示了 Solidity 的核心概念：
+- **状态变量**：`greeting` 是一个 string 类型的公共状态变量，存储在链上
+- **构造函数**：`constructor` 在合约部署时执行一次，用于初始化状态
+- **外部函数**：`setGreeting` 是一个 external 函数，允许外部调用修改状态
+- **public 自动生成 getter**：声明为 `public` 的变量会自动生成一个同名的只读函数
+
+**AI 辅助合约开发实践：**
+
+使用 AI 工具辅助编写了一个更完整的合约，包含事件发射、访问控制和错误处理：
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.24;
+
+contract MonadGreeter {
+    string public greeting;
+    address public owner;
+    uint256 public updateCount;
+    
+    event GreetingUpdated(address indexed updater, string newGreeting, uint256 timestamp);
+    
+    error OnlyOwner();
+    error EmptyGreeting();
+    
+    constructor(string memory _greeting) {
+        if (bytes(_greeting).length == 0) revert EmptyGreeting();
+        greeting = _greeting;
+        owner = msg.sender;
+        updateCount = 0;
+    }
+    
+    function setGreeting(string calldata _greeting) external {
+        if (bytes(_greeting).length == 0) revert EmptyGreeting();
+        greeting = _greeting;
+        updateCount++;
+        emit GreetingUpdated(msg.sender, _greeting, block.timestamp);
+    }
+    
+    function getGreeting() external view returns (string memory) {
+        return greeting;
+    }
+}
+```
+
+改进点：
+- **事件（Event）**：`GreetingUpdated` 记录每次更新，方便链下索引
+- **自定义错误**：`OnlyOwner()` 和 `EmptyGreeting()` 比 require 更省 Gas
+- **计数器**：`updateCount` 追踪更新次数
+- **view 函数**：`getGreeting()` 不消耗 Gas（只读操作）
+
+### Monad 深度解析：合约部署在 Monad 上的特殊之处
+
+**1. 合约大小限制**
+
+| 参数 | 以太坊 | Monad | 意义 |
+|------|--------|-------|------|
+| 最大合约代码大小 | 24 KB | **128 KB** | 可部署更复杂的合约 |
+| 最大 init code 大小 | 48 KB | **256 KB** | 构造函数可以更复杂 |
+
+Monad 将合约大小限制提升到 128 KB（以太坊的 5 倍），这意味着可以在单个合约中实现更复杂的逻辑，而不需要拆分成多个合约或使用代理模式。
+
+**2. Gas 计费差异**
+
+这是 Monad 与以太坊最重要的区别之一：
+
+| 维度 | 以太坊 | Monad |
+|------|--------|-------|
+| 收费基准 | gas_used（实际消耗） | **gas_limit（设置的上限）** |
+| 退款机制 | 未消耗的 Gas 退还 | **不退还** |
+| 建议 | 可以设置较高 gas_limit | **必须精确设置** |
+
+在 Monad 上，如果设置 gas_limit = 100,000 但实际只用了 50,000，仍然会收取 100,000 的费用。因此：
+- 对于固定操作（如转账），直接硬编码 gas_limit = 21,000
+- 对于合约调用，使用 `eth_estimateGas` 获取精确值
+- MetaMask 在合约调用 revert 时会设置极高的 gas_limit，在 Monad 上这会导致高额费用
+
+**3. Monad Testnet 网络配置**
+
+| 参数 | 值 |
+|------|-----|
+| 网络名称 | Monad Testnet |
+| Chain ID | 10143 |
+| 货币符号 | MON |
+| RPC URL | https://testnet-rpc.monad.xyz |
+| 区块浏览器 | https://testnet.monadvision.com |
+| 水龙头 | https://faucet.monad.xyz |
+| 当前版本 | v0.14.5 / MONAD_NINE |
+
+**4. Monad 已部署的 canonical 合约**
+
+Monad Testnet 上已经部署了一些标准合约：
+
+| 合约 | 用途 |
+|------|------|
+| Wrapped MON | MON 的 ERC-20 包装版本 |
+| Multicall3 | 批量调用工具（地址与以太坊相同） |
+| EntryPoint v0.6/0.7/0.8 | ERC-4337 账户抽象入口 |
+| Permit2 | Uniswap 的通用授权合约 |
+| Safe v1.4.1 | 多签钱包合约 |
+
+**5. 公共 RPC 端点对比**
+
+| 提供商 | 速率限制 | Batch 请求 | Archive 支持 |
+|--------|----------|-----------|-------------|
+| QuickNode | 50 rps | ✅ 100 | ✅ |
+| Ankr | 300 reqs/10s | ✅ 100 | ❌ |
+| Monad Foundation | 20 rps | ❌ | ✅ |
+
+### 实操记录
+
+**Step 1：获取测试币**
+
+访问 https://faucet.monad.xyz，连接钱包后领取 MON 测试币。每个地址每天可领取一定数量的 MON。
+
+**Step 2：在 Remix 中部署合约**
+
+1. 打开 https://remix.ethereum.org/
+2. 创建新文件 `MonadGreeter.sol`
+3. 粘贴合约代码
+4. 编译器选择 0.8.24
+5. 点击 "Compile MonadGreeter.sol"
+6. 在 Deploy 面板选择 "Injected Provider"（连接 MetaMask）
+7. 确认 MetaMask 连接到 Monad Testnet
+8. 输入构造函数参数（如 "gmonad"）
+9. 点击 Deploy → MetaMask 确认
+
+**Step 3：与合约交互**
+
+部署成功后，在 "Deployed Contracts" 区域：
+- 点击 `greeting` 按钮读取当前值 → 输出 "gmonad"
+- 在 `setGreeting` 输入框输入新值 "gmonad molandak"
+- 点击 transact → MetaMask 确认
+- 再次点击 `greeting` → 输出 "gmonad molandak"
+
+**Step 4：在区块浏览器查看**
+
+在 MonadVision (https://testnet.monadvision.com) 搜索合约地址，可以查看：
+- 合约创建交易
+- 所有调用记录
+- 状态变化
+
+### 关键知识点对比
+
+| 概念 | 以太坊 | Monad | 开发者影响 |
+|------|--------|-------|-----------|
+| 合约大小限制 | 24 KB | 128 KB | 可以写更复杂的合约 |
+| Gas 收费方式 | 按实际消耗 | 按设置上限 | 必须精确设置 gas_limit |
+| 出块时间 | 12 秒 | 1 秒 | 交易确认更快 |
+| 编译器 | solc | 完全兼容 solc | 无需修改代码 |
+| EVM 版本 | 最新 | 完全兼容 | 现有合约可直接部署 |
+| 水龙头 | 各网络不同 | faucet.monad.xyz | 统一入口 |
+
+### 今日思考
+
+Solidity 的学习曲线比预期要平缓。核心概念就是状态变量、函数、事件、修饰符这几个。AI 工具在写合约时很有用，能快速生成模板代码，但需要人工审查安全性。
+
+Monad 的合约大小限制放宽到 128 KB 是个大利好。在以太坊上，复杂的 DeFi 合约经常需要拆分成多个合约或使用代理模式来绕过 24 KB 限制。在 Monad 上，可以更自由地组织代码结构。
+
+Gas 按 limit 收费的设计需要特别注意。这意味着在 Monad 上，"宁可少设不要多设"。如果合约调用可能 revert，设置过高的 gas_limit 会直接损失 MON。这对钱包开发和 DApp 前端都是新的挑战。
+
+### 明日计划
+
+1. 学习 Monad 的历史数据访问限制和索引器方案
+2. 了解 Multicall3 在 Monad 上的使用
+3. 尝试用 Hardhat 本地部署合约到 Monad Testnet
+4. 学习 ERC-20 代币合约的基本实现
+5. 整理 Week 1 的 Build Log
+
+<!-- DAILY_CHECKIN_2026-07-09_END -->
 <!-- Content_END -->
