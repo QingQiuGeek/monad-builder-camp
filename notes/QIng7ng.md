@@ -15,8 +15,18 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-09
+<!-- DAILY_CHECKIN_2026-07-09_START -->
+[https://kitten-namer-delight--yamentin1313.replit.app/](https://kitten-namer-delight--yamentin1313.replit.app/)
+
+生成了一个可以根据猫的种类、喜欢的风格、相遇时间以及猫的颜色生成小猫名字的网站。
+
+今天下载了git、nodejs、hardhat，尝试运行手册中的一个合约失败了，明天再好好研究一下。
+<!-- DAILY_CHECKIN_2026-07-09_END -->
+
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 今天把工具都准备了一下，目前不知道telegram怎么登陆上去，因为收不到短信验证码。。。明天再详细看看攻略。
 
 ### **记录定义：**
@@ -41,6 +51,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 一、区块链基础概念
 
