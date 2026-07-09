@@ -15,8 +15,42 @@ Java后端开发工程师
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-09
+<!-- DAILY_CHECKIN_2026-07-09_START -->
+合约源码 (Source Code)
+
+Solidity/Vyper 代码（`.sol` 文件）。
+
+用来编译生成 ABI 和 Bytecode（字节码）。
+
+ABI (Application Binary Interface)
+
+JSON 格式的接口描述文件（包含函数名、参数类型、返回值类型）。
+
+ABI 由源码编译生成。ABI 不是合约地址的一部分，它是链下（Off-chain）的工具。前端（DApp）需要 ABI 才能知道如何格式化数据，去调用链上的合约。
+
+合约地址 (Contract Address)
+
+一串 `0x...` 哈希值，部署时根据你的钱包地址和 Nonce 计算得出。
+
+合约地址是链上（On-chain）的唯一标识。地址 + ABI = 可用的 API
+
+Read / Write Function
+
+Read (Call)：读取数据（如查询余额），不消耗 Gas，不需要签名。Write (Send)：写入数据/修改状态（如转账），消耗 Gas，需要私钥签名。
+
+Transaction Hash (交易哈希)
+
+当你发送一笔 Write 交易后，生成的唯一 `0x...` 哈希值。
+
+完成应用的前端开发，并进行完整的交易流程
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/AuralRain/images/2026-07-09-1783610122005-image.png)![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/AuralRain/images/2026-07-09-1783610208065-image.png)
+<!-- DAILY_CHECKIN_2026-07-09_END -->
+
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 Transaction Hash: 交易唯一标识
 
 Status: 交易是否成功
@@ -44,6 +78,7 @@ Gas Limit & Usage: Gas 限制和使用量
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 **Developer Relations（开发者关系）** 是连接**技术生态**与**开发者社区**的桥梁角色，核心使命是**让更多开发者为某一技术栈或生态持续构建应用**。
 
@@ -79,6 +114,7 @@ Gas Limit & Usage: Gas 限制和使用量
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 | 概念 | 技术定义与核心特征 |
