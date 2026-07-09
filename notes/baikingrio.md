@@ -15,8 +15,50 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-09
+<!-- DAILY_CHECKIN_2026-07-09_START -->
+今天主要围绕 ERC-4337 Account Abstraction 做了三组连续实验，把智能账户从“能执行 UserOperation”继续扩展到更接近真实应用体验的能力，重点学习和实践了三个方向：
+
+1\. counterfactual deployment / initCode
+
+我通过 CREATE2 factory 实验理解了“账户还没部署，但地址已经可以提前确定”的机制。实际场景可以理解为：一个新用户第一次进入链上活动 App 时，前端可以先计算出他的智能账户地址，这个地址虽然还没有部署合约，但已经可以先接收测试币、空投或活动资产。等用户第一次真正点击领取徽章、签到或转账时，UserOperation 带上 initCode，EntryPoint 会在同一笔 handleOps 中先部署账户，再执行操作。
+
+这让我理解到，initCode 的作用不是普通 calldata，而是“第一次 UserOperation 里携带的账户部署说明书”。
+
+2\. Paymaster / sponsored UserOp
+
+我又做了一个简单的 Paymaster 概念验证，用来理解“项目方替用户支付 gas”的流程。实验中，Paymaster 先往 EntryPoint 的 deposit 里充值，然后 UserOperation 通过 paymasterAndData 指向这个 Paymaster。用户仍然需要自己签名授权操作，但 gas 费用由 Paymaster 的 deposit 承担。
+
+我用“链上活动 App 赞助新用户第一次签到”来理解这个功能：用户不需要先准备 MON，也可以完成第一次链上操作。这个能力很适合新用户 onboarding、免费领取徽章、积分任务、游戏新手任务等场景。
+
+同时也意识到 Paymaster 不是“无限免费 gas”，生产环境一定要设计规则，比如赞助哪些账户、哪些函数、每个用户赞助几次、是否需要后端签名、防重放和额度限制等。
+
+3\. Session Key / 受限权限
+
+最后我做了一个 session key 实验。这个实验中，owner 仍然保留完整权限，但额外授权了一个临时 session key。这个 session key 只能调用指定合约的 checkIn(string) 函数，不能转 MON，不能调用其他合约，也不能替代 owner。
+
+我用“链游 / 活动 App 的每日签到”来理解这个功能：如果用户每次签到、移动、领取积分都要弹钱包签名，体验会很差。session key 可以让前端在低风险范围内帮用户签 UserOperation，同时不交出完整账户控制权。
+
+今天的链上 proof 包括：
+
+\- Counterfactual / initCode：预测地址、预充值、首次 UserOperation 部署账户并执行成功
+
+\- Paymaster / sponsored UserOp：Paymaster deposit 充值成功，UserOperation gas 由 Paymaster 赞助
+
+\- Session Key / 受限权限：session key 只调用允许的 checkIn(string)，checkInCount = 1，nativeSpent = 0
+
+本地测试也从 5 个增加到 12 个，覆盖了 factory、Paymaster、session key 权限限制等关键路径。
+
+今天最大的收获是：ERC-4337 不只是把 EOA 换成智能合约账户，而是把“账户创建、gas 支付、操作权限”都变成可以编程的产品能力。结合 Monad 这种高性能 EVM 链，这些能力很适合链游、任务平台、活动签到、积分系统、社交应用等高频交互场景。
+
+但同时也要注意安全边界：体验优化不能等于无限授权。无论是 Paymaster 还是 Session Key，都必须有明确的白名单、额度、有效期、防重放、可撤销机制和监控。
+
+今日学习笔记：[https://github.com/baikingrio/monad-builder-camp/blob/main/daily/2026-07-09.md](https://github.com/baikingrio/monad-builder-camp/blob/main/daily/2026-07-09.md)
+<!-- DAILY_CHECKIN_2026-07-09_END -->
+
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 今天继续做链上实践和学习记录，重点做了 ERC-4337 最小实践，从 EntryPoint v0.7 迁移到 Monad Testnet 官方 EntryPoint v0.8，并记录两者差异。
 
 合约实验项目：  
@@ -71,6 +113,7 @@ Explorer：  
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
 
+
 今天学习了 ERC-4337 Account Abstraction 和 thirdweb 的 Session Keys 文档，重点理解了智能账户、UserOperation、Bundler、EntryPoint、Paymaster 之间的关系。
 
 我的理解是，ERC-4337 让钱包不再只是一个由私钥控制的 EOA，而是可以变成有自定义验证逻辑和权限管理能力的智能账户。用户发起的不是普通交易，而是 UserOperation，由 Bundler 打包，再通过 EntryPoint 统一验证和执行。Paymaster 可以在特定条件下帮用户代付 gas，从而改善新用户进入链上应用时必须先准备 gas 的体验。
@@ -86,6 +129,7 @@ Explorer：  
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 今天是 Monad Builder Camp 的 Day 1，我先搭建了独立学习仓库，并在 `experiments/monad-playground` 里创建了一个 Foundry 实验项目。
