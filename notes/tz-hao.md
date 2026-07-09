@@ -15,8 +15,14 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-09
+<!-- DAILY_CHECKIN_2026-07-09_START -->
+打卡
+<!-- DAILY_CHECKIN_2026-07-09_END -->
+
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 加深之前的学习、了解  
 **1\. Web3 行业赛道**  
 主要赛道包括 DeFi、NFT、DAO、MEME，以及它们的组合创新。
@@ -56,11 +62,13 @@ Web3 岗位大致分为技术岗和非技术岗。
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
 
+
 听了jack老师的讲解，对eth协议方面有了更深的了解
 <!-- DAILY_CHECKIN_2026-07-07_END -->
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 今天听了xiaohai老师的分享，对行业认知更加清晰一点
