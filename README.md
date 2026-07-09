@@ -729,7 +729,7 @@ By completing the program, participants will leave with:
 | [wqw845950341-cell](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/wqw845950341-cell.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [sea77126](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/sea77126.md) | ✅ | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [KevinYZH](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/KevinYZH.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [Dawnener](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Dawnener.md) | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [Dawnener](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Dawnener.md) | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [NauxGB](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/NauxGB.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [San-Y108](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/San-Y108.md) | ✅ | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Asenlan](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Asenlan.md) | ⭕️ | ✅ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -814,6 +814,7 @@ By completing the program, participants will leave with:
 | [lidahe666](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/lidahe666.md) | ⭕️ | ⭕️ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yoona333](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/yoona333.md) | ⭕️ | ⭕️ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
