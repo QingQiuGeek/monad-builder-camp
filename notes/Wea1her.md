@@ -17,11 +17,18 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- Content_START -->
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
-打卡
+今日目标：
+
+参加会议：**AI Agent 高危案例解析与安全防线构建**
+
+co-learning
+
+构思黑客松项目
 <!-- DAILY_CHECKIN_2026-07-09_END -->
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 传统支付体系不是“不能支付”，而是**不适合让 AI Agent 高频、自主、跨平台、低金额、可审计地支付**。
 
@@ -42,6 +49,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- DAILY_CHECKIN_2026-07-07_START -->
 
 
+
 今日目标：
 
 1.  参加**普通开发者如何进入以太坊协议层**线上meeting
@@ -51,6 +59,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
