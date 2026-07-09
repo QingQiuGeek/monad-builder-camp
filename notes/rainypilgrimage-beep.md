@@ -15,8 +15,20 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-09
+<!-- DAILY_CHECKIN_2026-07-09_START -->
+-   完成智能合约实践，部署第一个 Monad 合约
+    
+-   按进度学习BuildAnything
+    
+-   整理分享会纪要
+    
+-   梳理buildlog
+<!-- DAILY_CHECKIN_2026-07-09_END -->
+
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 完成了 Monad Testnet 上的第一笔测试网交易，获取并使用测试网 MON，向另一个测试账户转账
 
 在区块浏览器中查看交易详情，确认交易状态为 Success，理解 transaction hash 是交易的唯一编号，from / to 分别表示发送方和接收方，value 表示转账金额。
@@ -28,6 +40,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 -   完成 Week 1 前置准备任务进入 Web3 与链上世界。
     
@@ -48,6 +61,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 1.  创建项目集合 记录群内信息
