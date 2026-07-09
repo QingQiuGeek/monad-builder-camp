@@ -15,8 +15,73 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-09
+<!-- DAILY_CHECKIN_2026-07-09_START -->
+**Day 4**
+
+今天第一个智能合约上链了。还学会了一点点怎么用github，全程都是跟着Claude学的。
+
+**完整链路走通**
+
+写Prompt让AI生成每日打卡合约 → 人工审查 → Remix编译 → 部署到Monad Testnet → read(false)→ write(checkIn)→ read(true)→ 区块浏览器验证 → README + GitHub
+
+合约地址:`0xC4E5F1D3d4A0Fe87A515d4C9bAE2B25B0E03bC57` 仓库: [https://github.com/caigua838/monad-daily-checkin/tree/main](https://github.com/caigua838/monad-daily-checkin/tree/main)
+
+**📊**
+
+| 操作 | Gas花费 |
+| --- | --- |
+| 纯转账 | 0.0022 MON |
+| 调用 checkIn | 0.01125 MON |
+| 部署合约 | 0.03598 MON |
+
+部署要把整段字节码写上链,所以最贵。
+
+**⚠️ 四个踩出来的知识点**
+
+**1️⃣ 差点部署到假链上。** Remix默认Environment是"Remix VM",给你100个假ETH,部署了也只存在浏览器内存里,刷新就没。识别信号:余额是整数、账户不是自己的、Environment写着VM。真上链要选 Browser Extension 连钱包。
+
+**2️⃣ 自己写的require拦住了自己。** 重复点checkIn,Remix直接弹窗:`execution reverted: "Already checked in today"`。这是我写在代码里那道防线在说话。顺带发现:gas预估会在花钱前预演一遍交易,所以注定失败的交易大多根本发不出去——"失败也扣gas"通常发生在预检通过、上链时条件才变的场景。
+
+**3️⃣ 透明 ≠ 可读。** Remix日志显示Sourcify验证成功,但MonadVision用自己的验证服务,合约页面依然显示 "Contract not verified",只能看到一坨十六进制字节码。链上数据永远透明,但要人类读得懂,依赖ABI和源码验证这层翻译。不同浏览器认不同的验证服务,这是我今天最意外的发现。
+
+**4️⃣ tx hash 不是 block hash。** 写README时差点填错。Remix终端日志里那个 `hash:` 是**区块**hash,交易hash要去区块浏览器的 Creation Txn 字段拿。教训:**本地工具的日志和链上记录冲突时,信链上。链是唯一真相源。**
+
+**🤖 关于用AI写代码**
+
+最大的收获不是"我会写合约了"(我不会),是**我知道该在哪里不信AI**:
+
+-   **业务边界**:它默认按UTC日切,没提这对东八区用户意味着早8点才算新一天
+    
+-   **权限范围**:必须人工列出所有能改状态的函数,逐个确认谁能调、影响谁
+    
+-   **安全假设**:"低风险"这个结论本身要人走完检查才能下,不能默认
+    
+
+AI能生成技术上正确但业务上未必合适的隐含决策。这三处必须人来定。
+
+**💡 嘉宾分享:AI Agent 安全风险**
+
+提示词注入是Agent最现实的攻击面,而且零技术门槛:把恶意指令藏进Agent会读到的内容里(网页、GitHub仓库、文档),Agent就可能当成用户命令执行。真实案例包括GitHub植入指令诱导安装恶意软件、Grok账号被诱导转移资产。
+
+反直觉的结论:**Agent能力越强(能调API、能转账、能改文件),被注入的后果越严重——自主性和风险是同一条曲线的两端。**
+
+而这跟昨天讲的Agent支付正好构成完整图景:这个赛道最大的障碍不是"能不能让Agent付钱",是"怎么让它别被人骗着付钱"。x402的Agent Card做一次性预存额度、AgentGuard做运行时拦截,都是在给自主性套缰绳。
+
+有意思的今天Claude教我Remix的README上传Github时也有做提醒说，不要把token截图给它只要直接复制粘贴在remix就可以了。
+
+做运营的人看到的是同一个道理:**外部内容进来时,第一反应应该是"这是数据",不是"这是指令"。** 人和Agent面对的是同一类攻击面。
+
+**遗留问题**:合约部署后不可修改,那真实项目是怎么升级的?代理合约?
+
+**明日计划：**
+
+学习buildanything第二章，自学资料的进度慢慢赶。文科生的笨鸟慢飞。vibecoding和学习新知识真的很有意思。
+<!-- DAILY_CHECKIN_2026-07-09_END -->
+
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 **Day 3**
 
 今天从"读代码"跨到"部署代码",完整走通了一次链上开发全链路。
@@ -50,6 +115,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
 
+
 **Day 2 | Monad Builder Camp 共学打卡**
 
 **嘉宾分享:以太坊协议开发经验**
@@ -80,6 +146,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 今日收获：
