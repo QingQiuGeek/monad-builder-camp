@@ -15,8 +15,34 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-09
+<!-- DAILY_CHECKIN_2026-07-09_START -->
+需要学习技术栈清单
+
+Node/Go/Python、Viem、GraphQL、MySQL、Docker/K8s
+
+### 智能合约工程师（Web3 核心高薪岗，门槛最高）
+
+核心工作
+
+Solidity 合约开发（DeFi/NFT/DAO）、多链部署、Gas 优化、单元测试、跨团队对接前后端。
+
+硬性门槛
+
+1.  熟练 Solidity/Yul，掌握 EVM 全生态（ETH/Arbitrum/Base/Polygon）；
+    
+2.  精通开发框架：Foundry（行业新标准）、Hardhat、Remix；
+    
+3.  安全基础：重入、溢出、权限绕过等常见攻击防御；
+    
+4.  标准协议：ERC20/721/1155、IPFS、DID；
+    
+5.  3 年以上合约开发经验（实习可放宽至独立写 NFT / 代币合约）
+<!-- DAILY_CHECKIN_2026-07-09_END -->
+
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 今天所学
 
 -   系统梳理了 Web3 行业技术岗 4 类、非技术岗 3 类的完整岗位体系，明确了技术 / 非技术两条入行路径；
@@ -30,6 +56,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 # EPF（Ethereum Protocol Fellowship）协议层学习与贡献经验分享笔记
 
@@ -761,6 +788,7 @@ Consensus / Execution Layer
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 学习到合约是运行在区块链上的执行规则，因为开发者不能随意修改自己已经部署的内容，所以比传统后端（可能会被公司删改数据、封号）要更可靠。
