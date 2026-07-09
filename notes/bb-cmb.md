@@ -15,13 +15,20 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-10
+<!-- DAILY_CHECKIN_2026-07-10_START -->
+在Github中归纳了Monad 全流程实操模板，新手可复刻操作、规避常见 bug；明确 AI 代码与人工审计分工，树立链上安全意识；对比以太坊梳理底层特性，学会判断赛道适配性；以标准化文档归档实操凭证，沉淀可用于赛道研究、简历作品集的学习成果。
+<!-- DAILY_CHECKIN_2026-07-10_END -->
+
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 今天整理了几天做出的成果，包括MataMask钱包交易，最小Solidity合约demo(Mini Demo 0)等，并决定了后续方向
 <!-- DAILY_CHECKIN_2026-07-09_END -->
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 今天学会了从AI生成合约源码 →在Remix中编译和用MataMask钱包成功部署 →生成合约地址并能在Monad Explorer中查看到合约部署记录 → 在Remix中进行read / write 调用 ，并在Monad Explorer的合约地址中查到write记录→ 区块浏览器验证的全部过程。
 <!-- DAILY_CHECKIN_2026-07-08_END -->
@@ -30,11 +37,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- DAILY_CHECKIN_2026-07-07_START -->
 
 
+
 今天用了MataMask创建了一个课程专用钱包，并学会了添加Monad Testnet并在Monad Testnet网络条件下使用Monad区块浏览器，并用钱包地址搜到自己的钱包，在Monad Faucet领取了测试币，体验到了在虚拟平台上实现测试网交易（链上产品），并在区块浏览器上查到了交易状态，学会了看交易状态里的内容代表了什么。
 <!-- DAILY_CHECKIN_2026-07-07_END -->
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
