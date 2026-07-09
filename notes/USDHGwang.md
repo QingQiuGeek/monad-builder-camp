@@ -15,8 +15,24 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-09
+<!-- DAILY_CHECKIN_2026-07-09_START -->
+**2026-07-09 — Day 4｜Agent 安全框架 vs 自己的 AIP/EIV**
+
+-   **Agent Guard 四能力**：Discover（資產發現）/ Red-Team（模擬攻擊）/ Defend（運行時攔截 allow-warn-approve-block）/ Govern（治理儀表盤）。它是**廣而淺**的通用平台，橫跨 prompt injection、RAG 洩露、MCP 提權這些層——正好是我 AIP/EIV **刻意 scope out 的感知/推理層**。
+    
+-   **關鍵差異在「攔截時機」**：Agent Guard 的 Defend 是 off-chain 本地護欄，屬於 advisory/攔截層——如果 agent 本身被攻陷，這層可能被繞過。AIP 的差異化在**鏈上原子 enforce**：就算 off-chain agent 完全被欺騙，on-chain hook 仍把執行綁死在授權參數內。這正是我研究方向的核心（被攻陷也越不了授權邊界）。
+    
+-   **概念收斂**：Agent Guard 兩大核心機制（最小權限 + HITL）跟我 AIP V2→V6 對抗式強化的結論一致——EIP-712 簽章 = HITL 批准綁定，執行目標 allowlist = 最小權限。不同團隊各自收斂到同一組 invariant。
+    
+-   **一個定位提醒**：Agent Guard 直接打「AI Agent 安全」大旗。我的論文正是因為 overclaim「AI security」被拒兩次。EIV 是 **authorization compliance**（授權符合性），不是 AI security——這個界線得守住，別被這類框架的框架帶回去。
+    
+-   **收穫**：這份框架是個外部驗證——問題空間商業上是真的（有人做成平台）；而它最淺的地方（Web3 合約風險只靠 GoPlus 黑名單）正是 AIP/EIV 做深的地方。
+<!-- DAILY_CHECKIN_2026-07-09_END -->
+
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 # **Daily Note — 2026-07-08**
 
 ## **Today's Events**
@@ -49,6 +65,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
 
+
 **2026-07-07 — Day 2**
 
 -   今天在整理 agent 發展框架的路徑時想到：ML/DL 演算法本身有價值但不是技術核心，agent 的價值來自「堆疊」出來的工程概念——prompt engineering → context engineering → harness engineering → loop engineering，是一層層疊上去的，不是取代關係（prompts → context/memory → skill）
@@ -60,6 +77,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 **2026-07-06 — Day 1｜工具準備與 Builder 身份**
