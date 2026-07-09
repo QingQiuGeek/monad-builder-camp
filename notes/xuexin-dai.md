@@ -15,8 +15,22 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-09
+<!-- DAILY_CHECKIN_2026-07-09_START -->
+今天学习AI + Solidity + 合约部署，非常之难。学习Python或者SQL的时候觉得语言还是能理解，这个不用ai都不会。
+
+所以今天是AI+
+
+* * *
+
+补充下觉得有用的内容
+
+![截屏2026-07-07 20.23.30.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/xuexin-dai/images/2026-07-09-1783622394795-__2026-07-07_20.23.30.png)
+<!-- DAILY_CHECKIN_2026-07-09_END -->
+
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 今天学习了如何创建钱包，如何保持安全以及操作了第一笔测试网交易。
 
 为了保持钱包的安全，不能将私钥发给别人。在进行测试网交易的时候，我发现交易的过程非常的快，并没有平时生活中交易时的输入密码以及生物识别等，感觉安全性就只能靠私钥，危。
@@ -26,6 +40,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 今天配置了Web3的常用工具以及账号。
 
