@@ -19,6 +19,8 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- DAILY_CHECKIN_2026-07-09_START -->
 # AI Agent安全+Web3线上共学分享会总结
 
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Tuskiand/images/2026-07-09-1783604121362-image.png)
+
 ### （一）AI Agent核心安全痛点
 
 AI Agent安全攻防已从传统自动化转向自主化，其核心风险被定义为“无法审计的自主性”，也是AI时代的核心安全隐患。区别于常规工具，AI Agent具备自主决策能力，风险无明显前兆、难以提前干预，同时模型概率性输出的特性易产生内容幻觉、脱离用户指令自主执行操作，极易引发失控事故。AI在大幅提升工作效率的同时，也会成倍放大操作失误与安全风险。
@@ -32,6 +34,8 @@ AI Agent安全攻防已从传统自动化转向自主化，其核心风险被定
 3\. **恶意工具风险**：主流AI工具平台存在大量风险插件，抽检显示超两成工具存在高危、严重漏洞，部分攻击者通过刷量登顶榜单，以高信任背书诱导用户下载，窃取私钥、API密钥、服务器凭证等核心数据。
 
 4\. **底层不可控风险**：涵盖Agent网关高危漏洞、AI幻觉引发的DOS攻击、第三方依赖包供应链投毒、平台业务逻辑漏洞等底层问题，波及范围广，包括OpenAI、Meta等主流平台均曾受相关风险影响。
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Tuskiand/images/2026-07-09-1783604009743-image.png)
 
 ### （三）通用安全防护规范与产品能力
 
@@ -70,6 +74,7 @@ AI Agent安全攻防已从传统自动化转向自主化，其核心风险被定
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 # **AI 辅助开发｜用 AI 生成一个最小 Solidity 合约**
 
@@ -172,6 +177,7 @@ ai输出：[https://chatgpt.com/s/t\_6a4e5d42d15881918e8208bc0de8e0fa](https://c
 <!-- DAILY_CHECKIN_2026-07-07_START -->
 
 
+
 1.  了解到了链上产品和普通互联网产品有什么不同：
     
     普通互联网产品的数据和规则主要由公司服务器控制；链上产品的数据和规则部分放到了区块链上，由代码和网络共同维护。链上产品和普通互联网产品最大的区别是“东西放在哪里、谁说了算”。普通 App 的数据和资产都放在公司的服务器里，公司负责管理；而链上产品把重要数据记录在区块链上，由网络共同维护，用户通过钱包管理自己的数字资产。传统互联网更像“租用平台服务”，Web3 更强调“用户自己拥有和控制”。
@@ -187,6 +193,7 @@ ai输出：[https://chatgpt.com/s/t\_6a4e5d42d15881918e8208bc0de8e0fa](https://c
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
