@@ -15,8 +15,74 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-09
+<!-- DAILY_CHECKIN_2026-07-09_START -->
+# 行业赛道
+
+-   DeFi
+    
+    -   DEX 去中心化交易所
+        
+    -   去中心化借贷协议
+        
+    -   **稳定币系统**
+        
+        -   MakerDAO 是一个去中心化的借贷协议，它允许用户通过超额抵押资产来生成 **DAI**，一种与美元挂钩的稳定币。DAI 的价值稳定在 1 美元左右，因此可以作为一个避险工具或支付手段。MakerDAO 通过智能合约管理抵押资产，并利用 **稳定费率** 来调整系统中 DAI 的供需关系。
+            
+-   NFT 数字所有权
+    
+    -   每个 NFT 代表一个唯一的数字资产，并且在区块链上存有不可篡改的记录。
+        
+    -   重要技术：**智能合约**
+        
+        -   在 NFT 交易中，智能合约可以设定当你转售该 NFT 时，原作者会自动获得一定比例的转售收入（“版税”）。这个过程是自动化的，根本不需要依赖传统的艺术经纪人或拍卖行。
+            
+    -   CryptoPunks
+        
+        ![CryptoPunks](https://web3intern.xyz/assets/cryptopunks-CZb6OZAj.jpg)
+    -   OpenSea NFT 交易平台
+        
+-   DAO Decentralized Autonomous Organization 去中心化自治组织
+    
+-   MEME
+    
+    -   以网络文化为基础的代币，比如 DOGE（狗狗币）、PEPE（青蛙币）、SHIB（柴犬币）等。
+        
+    -   社交属性＞技术/使用属性
+        
+-   Others/交叉
+    
+    -   DeFi+NFT
+        
+        -   NFT抵押借贷
+            
+    -   DAO+MEME
+        
+    -   AI+DeFi
+        
+        -   智能策略与组合管理
+            
+        -   风险监测与异常检测
+            
+            -   Forta：基于链上监测网络识别可疑交易与安全风险，部分场景使用机器学习方法。
+                
+            -   Chaos Labs / Gauntlet：更偏向仿真建模与风险参数调优，帮助协议做风控决策。
+                
+        -   AI 代理与交互体验
+            
+            -   [Fetch.ai](http://Fetch.ai)：探索可自主执行任务的链上代理网络。
+                
+            -   自然语言交互工具（持续演进中）：让用户用更低门槛方式完成查询、策略执行与多步骤操作。
+                
+    -   RWA资产上链
+        
+
+# Web3工具
+<!-- DAILY_CHECKIN_2026-07-09_END -->
+
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 # AI agent支付领域的产品探索
 
 -   **已落地试点案例**
@@ -69,6 +135,7 @@ DAO ：Decentralized Autonomous Organization
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
 
+
 # 普通人如何进入以太坊协议链
 
 ## 学习路径（建地图 → 懂流程 → 找入口）
@@ -105,6 +172,7 @@ DAO ：Decentralized Autonomous Organization
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 # 开营仪式回看
