@@ -15,8 +15,14 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-09
+<!-- DAILY_CHECKIN_2026-07-09_START -->
+我认识到裸奔状态下的智能体存在提示词注入、越权工具调用、自主执行不可控等高危风险，了解了对Agent做权限管控、结构化输出约束、流程校验的安全构建思路。
+<!-- DAILY_CHECKIN_2026-07-09_END -->
+
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/gexugg-wq/images/2026-07-08-1783509612025-image.png)
 
 ```
@@ -31,11 +37,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 ![faf35fdce29f9006cf9b3549f2863e3b.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/gexugg-wq/images/2026-07-07-1783406763416-faf35fdce29f9006cf9b3549f2863e3b.jpg)
 <!-- DAILY_CHECKIN_2026-07-07_END -->
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
