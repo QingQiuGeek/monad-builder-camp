@@ -15,8 +15,94 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-09
+<!-- DAILY_CHECKIN_2026-07-09_START -->
+## **今日学习内容完成情况**
+
+### **Web3 实习手册｜智能合约开发**
+
+1.  理解 Dapp 架构（前端 + 智能合约 + 检索器 + 区块链）
+    
+2.  学习 Dapp 开发流程（需求分析 → 合约开发 → 检索器 → 前端 → 部署）
+    
+3.  了解开发环境搭建（Foundry、Hardhat、Remix）
+    
+4.  理解 RPC 节点服务的作用与配置
+    
+5.  学习 Solidity 基础语法（数据类型、函数修饰符、合约结构）
+    
+
+### **Solidity 官方文档**
+
+1.  了解 Solidity 语言特点（面向对象、静态类型、继承）
+    
+2.  浏览语言基础部分，为后续深入学习打基础
+    
+
+### **OpenZeppelin Contracts**
+
+1.  了解 OpenZeppelin 合约库的作用（标准化、安全、可复用）
+    
+2.  浏览常用合约模块（ERC20、ERC721、访问控制、治理等）
+    
+
+## **核心概念学习笔记**
+
+### **Dapp 架构图**
+
+```
+用户
+  ↓
+前端 (React/Vue) ←→ 钱包 (MetaMask)
+  ↓                           ↓
+检索器 (Indexer) ←→ 智能合约 (Solidity)
+  ↓                           ↓
+数据库 (PostgreSQL) ←→ 区块链 (Ethereum/Monad)
+```
+
+### **合约源码 → 部署 → 交互的完整链路**
+
+```
+1. 编写合约源码 (.sol)
+   ↓
+2. 编译 → ABI (Application Binary Interface) + Bytecode
+   ↓
+3. 部署 → 获得 合约地址 (Contract Address)
+   ↓
+4. 交互
+   ├── 读取 (Read) → 调用 view/pure 函数 → 不需要 Gas
+   └── 写入 (Write) → 调用修改状态的函数 → 需要 Gas → 产生交易哈希
+```
+
+### **Solidity 合约源码**
+
+```
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.24;
+
+contract Gmonad {
+    // 状态变量：存储在链上
+    string public greeting;
+
+    // 构造函数：部署时执行一次
+    constructor(string memory _greeting) {
+        greeting = _greeting;
+    }
+
+    // 写入函数：修改状态，消耗 Gas
+    function setGreeting(string calldata _greeting) external {
+        greeting = _greeting;
+    }
+
+    // 读取函数：view 修饰，不消耗 Gas（自动生成，因为 greeting 是 public）
+    // function greeting() public view returns (string memory)
+}
+```
+<!-- DAILY_CHECKIN_2026-07-09_END -->
+
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 ## **今日学习内容完成情况**
 
 1.  **Web3 实习手册｜安全与合规**
@@ -82,6 +168,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
 
+
 ## **今日学习内容完成情况**
 
 1.  **Web3 实习手册｜Web3 工作方式**
@@ -121,6 +208,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 ## **今日学习内容完成情况**
