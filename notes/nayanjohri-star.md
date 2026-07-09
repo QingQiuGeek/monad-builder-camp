@@ -15,8 +15,38 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-09
+<!-- DAILY_CHECKIN_2026-07-09_START -->
+\## 2026-07-09 Web3 学习打卡
+
+今天主要完成了 Solidity 合约从编写、编译到 Monad Testnet 部署的完整流程。
+
+学习内容包括：使用 AI 生成一个最小留言板合约 `MessageBoard`，理解合约中的 `struct`、数组存储、事件 `event`、写入函数 `postMessage`、读取函数 `getMessageCount` 和 `getMessage`。随后在 Remix 中完成编译，并连接 MetaMask 的 Monad Testnet 环境进行部署。
+
+实践中我确认了部署网络不是 Remix VM，而是 Monad Testnet；部署时 Value 为 0，合约成功创建。部署后在 Remix 中看到 `Deployed Contracts 1`，并通过 MonadVision 查询到交易状态为 `Success`。
+
+今日部署结果：
+
+\- 合约名`MessageBoard`
+
+\- 网络：Monad Testnet
+
+\- 合约地址`0x2E1b2776877b5d10238F5Cde30F9f70919E99adC`
+
+\- 交易哈希`0xa8193f11431c7bd3c0f2e269a77b7f72cbe73f252cc4b3ced2eb7bed0e047069`
+
+今天也进一步理解了链上产品和普通互联网产品的区别：链上产品的数据和操作结果会公开记录在区块链上，交易需要钱包签名并消耗 Gas，用户需要自行保管资产和私钥，产品设计也必须更重视公开性、不可篡改性和安全边界。
+
+人工检查方面，我重点确认了合约是否满足任务要求、是否部署到正确网络、是否避免加入复杂权限控制，并检查了 AI 生成代码中可能存在的权限、越界读取、Gas 成本、隐私泄露和时间戳使用等问题。
+
+明天计划继续学习合约交互、读取链上数据，并尝试调用自己部署的合约发布一条留言。
+
+![cf8784af7772e29d6fc696f33d76ba51.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/nayanjohri-star/images/2026-07-09-1783606940985-cf8784af7772e29d6fc696f33d76ba51.png)![65dcfc34a3e864d9ea20f06e0f1adb5b.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/nayanjohri-star/images/2026-07-09-1783606956033-65dcfc34a3e864d9ea20f06e0f1adb5b.png)
+<!-- DAILY_CHECKIN_2026-07-09_END -->
+
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 今天学习了两场直播：第一场是 FluxA 关于 AI Agent 支付体系的分享，理解了 Agent 支付为什么需要身份、预算、风控、审计、撤销和结算能力，也了解了 X402、人机共管钱包、AgentCard、Monetize Gateway、Payment Link、Pay to Agent 等概念。
 
 第二场 Co-Learning 重点是 Web3 入行经验，强化了 Git/GitHub、`.env` 安全、AI 辅助开发、项目经验、远程工作和接单风险意识。明天会继续进入 Remix / Solidity / Monad 合约部署，把今天的概念落到一个可验证的小项目里。、Pay to Agent 等概念。
@@ -24,6 +54,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 今天完成了 Monad Builder Camp Week 1 的链上交互最小闭环：创建并使用课程测试钱包，添加 Monad Testnet，领取 Testnet MON，并完成了一笔 Monad Testnet 转账测试。
 
