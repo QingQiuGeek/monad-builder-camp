@@ -15,8 +15,18 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-09
+<!-- DAILY_CHECKIN_2026-07-09_START -->
+![Screenshot 2026-07-09 at 23.48.33.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/yaoyaodata/images/2026-07-09-1783604939880-Screenshot_2026-07-09_at_23.48.33.png)
+
+今天有尝试在Remix IDE 在 Monad 测试网上部署智能合约，是一个简单的greeting合约，包含greeting字符串变量以及读取和设置他的办法。部署合约的具体步骤有，创建代码文件，写好代码后，切换至“Deploy & run transactions”选项卡，然后在Environment 连接钱包，最后在部署前设置初始的问候语，点击“Deploy”并确认钱包弹出的交易。
+
+部署成功后，可以在“Deployed Contracts”部分看到合约地址，也可以通过点击 `greeting` 按钮读取当前消息，使用 `setGreeting` 函数可以修改存储在合约中的消息。
+<!-- DAILY_CHECKIN_2026-07-09_END -->
+
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 Part 1 创建钱包+领取测试币
 
 ![Screenshot of Testnet 2026-07-07 at 02.06.33.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/yaoyaodata/images/2026-07-08-1783520129398-Screenshot_of_Testnet_2026-07-07_at_02.06.33.png)
@@ -41,6 +51,7 @@ Part 2 ai agent支付
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 今天学习到了一些新知识(^-^)
 
