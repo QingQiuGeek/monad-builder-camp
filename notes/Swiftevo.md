@@ -15,8 +15,105 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-09
+<!-- DAILY_CHECKIN_2026-07-09_START -->
+好，下一步學 **讀取一筆真實的 attestation**。
+
+這一步的重點是：**只讀鏈上資料，不寫鏈、不花 gas、不需要私鑰。**
+
+你前面已經知道：
+
+```
+schema UID + encoded data -> decode -> 有意義的資料
+```
+
+現在我們把它接到真實世界：
+
+```
+attestation UID -> 讀取 attestation -> 取得 schema UID 和 data -> decode
+```
+
+一筆 EAS attestation 大概長這樣：
+
+```
+{
+  uid: "0x...",
+  schema: "0x...",
+  recipient: "0x...",
+  attester: "0x...",
+  time: 1234567890,
+  expirationTime: 0,
+  revocable: true,
+  revoked: false,
+  data: "0x..."
+}
+```
+
+這裡最重要的是三個欄位：
+
+```
+uid      = 這筆 attestation 的唯一 ID
+schema   = 這筆資料使用哪個 schema
+data     = 依 schema 編碼後的 0x bytes
+```
+
+讀取流程是：
+
+```
+1. 用 attestation UID 查 attestation
+2. 從 attestation.schema 拿到 schema UID
+3. 用 schema UID 查 schema string
+4. 用 SchemaEncoder(schema string) decode attestation.data
+5. 得到真正資料
+```
+
+概念上像這樣：
+
+```
+const attestation = await eas.getAttestation(attestationUID);
+
+const schemaUID = attestation.schema;
+const encodedData = attestation.data;
+
+const schemaRecord = await schemaRegistry.getSchema({ uid: schemaUID });
+
+const encoder = new SchemaEncoder(schemaRecord.schema);
+
+const decodedData = encoder.decodeData(encodedData);
+```
+
+這一步你要建立的直覺是：
+
+**EAS 的一筆 attestation 不是只看** `data`**，而是看** `schema + data + attester + recipient`**。**
+
+因為同一串資料，真正有價值的是：
+
+```
+誰簽發的？ attester
+簽給誰？ recipient
+根據什麼格式？ schema
+內容是什麼？ data
+有沒有過期？ expirationTime
+有沒有被撤銷？ revoked
+```
+
+所以 EAS 不只是「存資料」，而是「存一份可驗證的聲明」。
+
+下一步如果你要真的動手，就會需要：
+
+```
+1. 安裝 SDK
+2. 找一個公開的 EAS 合約地址
+3. 找一筆真實 attestation UID
+4. 寫程式讀它
+```
+
+這仍然不需要錢包、不需要私鑰、不花 gas，只需要 RPC provider。
+<!-- DAILY_CHECKIN_2026-07-09_END -->
+
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 意思是：我們先只學 **EAS 怎麼把「人看得懂的資料」轉成「鏈上合約看得懂的 bytes」**。
 
 EAS 的 `SchemaEncoder` 做的事情很單純：
@@ -419,6 +516,7 @@ schemaUID -> 找 schema -> decode data
 
 
 
+
 **On-chain vs Off-chain**
 
 EAS 支援兩種模式：
@@ -454,6 +552,7 @@ npm install @ethereum-attestation-service/eas-sdk
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
