@@ -15,8 +15,16 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-09
+<!-- DAILY_CHECKIN_2026-07-09_START -->
+今天听了苏生老师找实习的方法分享以及区块链在养猫方面的应用，在分享会了解了agent遇到的安全问题
+
+主要是继续学习go语言开发，争取后面能深入学习go以太坊开发
+<!-- DAILY_CHECKIN_2026-07-09_END -->
+
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 完成了这周的任务
 
 [https://github.com/gitgdut/Intern-plan-2026-summer/tree/main/Summary-of-Each-Weeks/Week1](https://github.com/gitgdut/Intern-plan-2026-summer/tree/main/Summary-of-Each-Weeks/Week1)
@@ -31,6 +39,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
 
+
 完成了一部分任务：[https://github.com/gitgdut/Intern-plan-2026-summer/tree/main/daily-checkin](https://github.com/gitgdut/Intern-plan-2026-summer/tree/main/daily-checkin)
 
 参加了colearning，因为我有一定的经验，所以对这些基础的内容没有听太多。
@@ -40,6 +49,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 今天是学习的第一天，由于我已经有了Web3的学习经验，我在今天规划了很多重要的事情：
