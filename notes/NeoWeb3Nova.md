@@ -15,8 +15,54 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-09
+<!-- DAILY_CHECKIN_2026-07-09_START -->
+今天是 Web3 Summer Internship Program / Monad Builder Camp 的 Day 4，主题是“第一笔 Monad Testnet 链上交易准备”。  
+  
+今日完成：  
+1\. 提交并整理了当前 Monad Builder Camp 项目仓库，形成两次本地提交：  
+\- e297688 docs: update monad builder camp learning notes  
+\- 1de3756 docs: prepare day 4 monad testnet transaction  
+2\. 从 Monad 官方文档确认 Testnet 网络参数：  
+\- Network Name: Monad Testnet  
+\- Chain ID: 10143 / 0x279f  
+\- Currency Symbol: MON  
+\- RPC URL: [https://testnet-rpc.monad.xyz](https://testnet-rpc.monad.xyz)  
+\- Faucet: [https://faucet.monad.xyz](https://faucet.monad.xyz)  
+\- Explorer: [https://testnet.monadvision.com](https://testnet.monadvision.com) / [https://testnet.monadscan.com](https://testnet.monadscan.com)  
+3\. 用 JSON-RPC 实测 Monad Testnet RPC，确认 eth\_chainId 返回 0x279f，与官方文档一致。  
+4\. 更新了网络配置文档：  
+\- submissions/week-01/[network-config.md](http://network-config.md)  
+5\. 更新了钱包配置实验记录：  
+\- experiments/monad-wallet-setup/[README.md](http://README.md)  
+6\. 创建了第一笔链上交易记录模板：  
+\- submissions/week-01/[first-tx.md](http://first-tx.md)  
+  
+今日收获：  
+链上任务的关键不是“知道参数”，而是形成一条可验证的 Proof of Work 证据链：  
+  
+官方文档 → RPC 实测 → 钱包配置 → Faucet 领水 → 交易哈希 → Explorer 链接。  
+  
+Testnet 虽然没有真实资产价值，但流程非常接近真实链上开发：网络配置、RPC、钱包签名、Gas、Explorer 查询，每一步都对应真实产品开发中的基础能力。  
+  
+今日卡点：  
+1\. Web3Career 学习面板需要登录后才能查看每日任务，未登录状态下只能看到项目概览。  
+2\. 钱包添加网络、Faucet 领水和交易签名必须由本人完成，AI 不能接触私钥或助记词，也不能代替签名。  
+3\. 下一步需要手动完成第一笔 Monad Testnet 转账或 Remix 合约部署，并回填交易哈希。  
+  
+下一步计划：  
+1\. 在钱包中添加 Monad Testnet。  
+2\. 从 [https://faucet.monad.xyz](https://faucet.monad.xyz) 领取测试 MON。  
+3\. 完成一笔小额测试网转账，或使用 Remix 部署 Gmonad.sol 合约。  
+4\. 记录交易哈希、Explorer 链接和截图，补全 submissions/week-01/[first-tx.md](http://first-tx.md)。  
+  
+一句话总结：  
+今天把 Monad Testnet 的网络参数和交易记录模板准备好了，下一步就是用真实钱包签名，把学习记录推进成可验证的链上 Proof of Work。
+<!-- DAILY_CHECKIN_2026-07-09_END -->
+
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 今日完成：  
 1\. 根据 Week 1 Day 3 任务，整理 Monad Testnet 配置清单：RPC URL、Chain ID、Explorer、Faucet。  
 2\. 在本地项目建立/更新了网络配置提交物 submissions/week-01/[network-config.md](http://network-config.md) 和实验记录 experiments/monad-wallet-setup/[README.md](http://README.md)。  
@@ -40,6 +86,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 周次: Week 1 - 认知奠基期 / 进入 Onchain World  
 Day: Day 2  
@@ -74,6 +121,7 @@ Day: Day 2
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 今天核心学习了，monad的gas机制：
