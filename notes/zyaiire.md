@@ -15,8 +15,18 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-09
+<!-- DAILY_CHECKIN_2026-07-09_START -->
+很早之前用过 okx wallet，第一次用小狐狸。  
+  
+之前还是主要通过交易的用户用钱包，完全没有想过区块链底层技术有这么多的方向。  
+  
+后续从技术角度感觉前端+ui 反而比智能合约工程师之类的更好找工作
+<!-- DAILY_CHECKIN_2026-07-09_END -->
+
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 # DevRel的成长之路 — 从 Builder 到生态链接者
 
 ## 成长经历
@@ -40,6 +50,7 @@ SVP 是一个 AI Native 链，有 agent的 mcp 能够有强力的安全边界。
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 # Web3 暑期实习计划 - Monad Buidler Camp
 
