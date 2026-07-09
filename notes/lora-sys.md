@@ -15,8 +15,22 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-09
+<!-- DAILY_CHECKIN_2026-07-09_START -->
+day 4 :
+
+阅读[https://nft.myfirst.io/](https://nft.myfirst.io/)
+
+了解 加密货币，区块基础概念
+
+阅读同质化代币，和非同质化代币的区别，并跟随教程，自己制作自己的nft,
+
+深入理解nft 的 魔力
+<!-- DAILY_CHECKIN_2026-07-09_END -->
+
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 day3 : 今日制作自己的dao app onchaintodo app
 
 在ai 帮助下，成功 部署合约到 monad 测试网
@@ -26,6 +40,7 @@ day3 : 今日制作自己的dao app onchaintodo app
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 day2 ;测试网领取测试币
 
@@ -42,6 +57,7 @@ day2 ;测试网领取测试币
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 day1 : 参与直播和go-learning
