@@ -127,10 +127,120 @@ value: 1n
 ```
 
 不是錯誤，也不是多了一個字母。
+
+對，你這個理解很準。
+
+EAS / 鏈上資料是公開的，所以如果你直接放：
+
+```
+note = "Alice completed private medical course..."
+```
+
+任何人都可以讀到。  
+但如果你只放：
+
+```
+evidenceHash = 0xabc...
+```
+
+陌生人只能看到一個 hash，看不到原文內容。
+
+而且 `bytes32` 固定只有 32 bytes。真實內容可以很大，例如：
+
+```
+一份 PDF
+一本書
+一張證書圖片
+一整份 JSON
+一段課程完成紀錄
+```
+
+鏈上只存它的 hash。
+
+驗證流程就是你說的：
+
+```
+1. 拿到鏈下原始內容
+2. 對原始內容做 hash
+3. 得到 hashResult
+4. 比對 hashResult 是否等於 EAS 裡的 evidenceHash
+5. 一樣 = 內容沒有被改過
+```
+
+例如：
+
+```
+鏈下內容：
+Finished EAS basics
+
+hash 後：
+0x1234...
+
+EAS 鏈上記錄：
+evidenceHash = 0x1234...
+
+比對相同，所以可以證明：
+這份鏈下內容就是當初 attestation 指向的內容
+```
+
+但有兩個重要補充。
+
+第一，hash 是**驗證完整性**，不是加密。
+
+```
+hash 可以隱藏內容
+但如果原文很容易猜，就可能被猜出來
+```
+
+例如如果原文只有：
+
+```
+yes
+```
+
+別人可以自己 hash `"yes"`，然後比對你的 hash，就猜到內容。
+
+所以隱私資料不要只靠簡單 hash。可以加 salt：
+
+```
+hash(secretSalt + originalContent)
+```
+
+或用真正的加密。
+
+第二，hash 只能證明「內容沒變」，不能自動證明「內容是真的」。
+
+它能證明：
+
+```
+這份文件 = 當初被 attestation 承諾的那份文件
+```
+
+但「這份文件是不是可信」，還要看：
+
+```
+誰簽發 attestation？ attester
+簽給誰？ recipient
+schema 是什麼？
+有沒有 revoked？
+有沒有過期？
+```
+
+所以完整信任邏輯是：
+
+```
+hash 驗證內容一致
+attester 驗證誰背書
+recipient 驗證對象
+revoked / expirationTime 驗證是否仍有效
+```
+
+一句話：**對，把大內容放鏈下，把** `bytes32 hash` **放 EAS，之後重新 hash 原文來比對，就能驗證內容是否和當初記錄的一樣，同時省 gas 並避免直接公開原文。**
 <!-- DAILY_CHECKIN_2026-07-10_END -->
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 好，下一步學 **讀取一筆真實的 attestation**。
 
@@ -228,6 +338,7 @@ const decodedData = encoder.decodeData(encodedData);
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 意思是：我們先只學 **EAS 怎麼把「人看得懂的資料」轉成「鏈上合約看得懂的 bytes」**。
@@ -634,6 +745,7 @@ schemaUID -> 找 schema -> decode data
 
 
 
+
 **On-chain vs Off-chain**
 
 EAS 支援兩種模式：
@@ -669,6 +781,7 @@ npm install @ethereum-attestation-service/eas-sdk
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
