@@ -15,8 +15,14 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-10
+<!-- DAILY_CHECKIN_2026-07-10_START -->
+从优秀同学们的笔记分享中学到了东西。
+<!-- DAILY_CHECKIN_2026-07-10_END -->
+
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 已学习。
 
 核心风险：AI 获得权限后，无法审计的自主性使其从“工具”变为“威胁”——效率可放大十倍，失误可放大万倍。
@@ -57,11 +63,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
 
+
 7月8日已学习。
 <!-- DAILY_CHECKIN_2026-07-08_END -->
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 7.6 web3学习第一天打卡
