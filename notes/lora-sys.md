@@ -15,8 +15,14 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-10
+<!-- DAILY_CHECKIN_2026-07-10_START -->
+day5 今天参与 分享会 看见小伙伴的作品 感觉很厉害 自己重新学习合约的详细设计 设计我自己的dao app ui 用户交互 ui ux 提升体验感
+<!-- DAILY_CHECKIN_2026-07-10_END -->
+
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 day 4 :
 
 阅读[https://nft.myfirst.io/](https://nft.myfirst.io/)
@@ -31,6 +37,7 @@ day 4 :
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
 
+
 day3 : 今日制作自己的dao app onchaintodo app
 
 在ai 帮助下，成功 部署合约到 monad 测试网
@@ -40,6 +47,7 @@ day3 : 今日制作自己的dao app onchaintodo app
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 day2 ;测试网领取测试币
@@ -57,6 +65,7 @@ day2 ;测试网领取测试币
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
