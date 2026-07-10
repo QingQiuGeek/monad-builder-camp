@@ -251,4 +251,279 @@ Monad 对账户抽象有额外约束：
 4. 整理 Week 1 Build Log
 
 <!-- DAILY_CHECKIN_2026-07-09_END -->
+
+<!-- DAILY_CHECKIN_2026-07-10_START -->
+## Day 5 | Week 1 | Monad 深度理解：架构、Gas 机制与以太坊全面对比
+
+### 今日学习内容
+
+今天是 Monad Builder Camp 第一周的最后一天，主题聚焦于深入理解 Monad 的核心架构与运行机制。经过前四天对 Web3 基础、钱包操作、测试网交互和 AI+Solidity 的学习，今天终于进入 Monad 的技术内核。
+
+**Monad 的核心定位**
+
+Monad 是一条 Layer-1 区块链，其核心愿景是打破"去中心化与高性能不可兼得"的传统认知。与许多通过加重硬件要求来提升性能的链不同，Monad 的性能提升来自纯软件架构创新，同时保持对普通硬件的友好——任何人都可以运行节点。Monad 的代码库完全开源（共识层 `monad-bft` 和执行层 `monad` 均在 GitHub 上，采用 GPL-3.0 许可证），主要使用 C++ 和 Rust 编写，追求极致性能。
+
+**五大架构创新**
+
+Monad 在五个关键领域引入了创新：
+
+1. **MonadBFT**：前沿的 BFT 共识机制，解决了 tail-forking 问题。传统 BFT 共识在面对网络分区时容易产生尾部分叉，MonadBFT 通过新颖的设计解决了这一痛点，同时保持了快速响应和抗分叉特性。
+
+2. **RaptorCast**：高效的区块传播机制。在高吞吐量场景下，如何快速将区块广播到全球节点是一个关键瓶颈。RaptorCast 利用喷泉码（Fountain Code）技术实现高效的数据分发，确保即使部分数据包丢失，接收方也能完整重建区块。
+
+3. **异步执行（Asynchronous Execution）**：这是 Monad 最关键的创新之一。在传统区块链中，共识和执行是串行的——先执行交易，再达成共识。Monad 将共识和执行解耦为流水线（pipeline），共识先完成投票，执行随后异步进行，从而大幅提升了执行的时间预算。
+
+4. **并行执行（Parallel Execution）与 JIT 编译**：Monad 支持交易的并行执行，同时引入即时编译（JIT Compilation / Native Compilation），将 EVM 字节码编译为本地机器码，进一步提升执行效率。
+
+5. **MonadDb**：专为以太坊状态存储优化的数据库。以太坊的状态数据量巨大，传统的 LevelDB/RocksDB 方案存在瓶颈，MonadDb 从底层重新设计了状态存储架构。
+
+**实际性能参数**
+
+- 吞吐量：10,000 TPS（每秒交易数）
+- 出块频率：400ms（以太坊约 12 秒）
+- 最终确认时间：800ms（以太坊约 12-15 分钟达到合理最终性）
+- 区块 Gas 上限：200M gas（以太坊约 30M）
+- 单笔交易 Gas 上限：30M gas（以太坊约 30M）
+- 最小 base fee：100 MON-gwei
+
+### Monad 深度解析
+
+**Gas 定价机制的关键差异**
+
+Monad 的 Gas 机制与以太坊存在几个根本性差异，这是开发者必须深刻理解的：
+
+1. **按 Gas Limit 收费而非 Gas Used**：这是最重要的区别。在以太坊中，用户实际只支付消耗的 gas（`gas_used * price_per_gas`），未使用的 gas 会退还。但在 Monad 中，收费基于 `gas_limit`（`gas_limit * price_per_gas`）。
+
+   这个设计决策源于异步执行的需求：由于区块在执行之前就需要达成共识，如果按 gas_used 收费，恶意用户可以提交一个 gas_limit 极高但实际消耗极少的交易来占用区块空间而不付费，形成 DoS 攻击向量。因此，开发者必须精确设置 gas limit，避免过度设置导致不必要的费用浪费。
+
+2. **Base Fee 控制器差异**：Monad 采用了一个比以太坊更复杂的 base fee 控制器。该控制器包含趋势（trend）和动量（momentum）两个维度：
+   - 目标区块填充率：80%（160M gas，区块上限为 200M）
+   - 最大步长：1/28
+   - 平滑系数 β：0.96
+   - 设计原则：增加更慢，减少更快——避免 base fee 过高导致区块空间浪费
+
+3. **EIP-1559 兼容**：Monad 支持 EIP-1559 类型交易，`price_per_gas = min(base_price_per_gas + priority_price_per_gas, max_price_per_gas)`，与以太坊的定价公式一致。
+
+4. **无全局 Mempool**：与以太坊的全局交易池不同，Monad 没有全局 mempool，交易仅转发给接下来的几个 leader，这是为了效率优化。
+
+**EVM 兼容性细节**
+
+Monad 实现了完整的 EVM 字节码兼容，但在某些参数上有调整：
+- 合约代码大小上限：128 KB（以太坊为 24 KB）
+- Init code 大小上限：256 KB（以太坊为 48 KB）
+- 部分 opcode 和 precompile 的 gas 价格经过重新调整
+- 新增 `secp256r1`（P256）验证 precompile（地址 `0x0100`），支持链上 WebAuthn/Passkey 签名验证
+- 不支持 EIP-4844（blob 交易）
+
+**Reserve Balance 机制**
+
+Monad 引入了储备余额（Reserve Balance）机制，确保所有被共识层包含的交易都能被支付。这意味着：
+- 由于 EIP-7702 委托的 EOA 余额不能低于 10 MON
+- 交易可能在链上被包含但最终执行失败（但仍支付 gas），这与以太坊中 reverting 交易的行为一致，但在 Monad 的异步执行模型下更为常见
+
+### 实操记录
+
+**1. 测试网配置（Monad Testnet）**
+
+```javascript
+// MetaMask / WalletConnect 网络配置
+const monadTestnet = {
+  chainId: 10143,
+  chainName: "Monad Testnet",
+  currencySymbol: "MON",
+  rpcUrls: ["https://testnet-rpc.monad.xyz"],  // Monad Foundation RPC
+  blockExplorerUrls: ["https://monadvision.com"]
+};
+
+// 添加到 MetaMask
+await window.ethereum.request({
+  method: 'wallet_addEthereumChain',
+  params: [monadTestnet]
+});
+```
+
+**2. 使用 viem 连接 Monad Testnet**
+
+```typescript
+import { createPublicClient, http, parseEther } from 'viem';
+
+const monadTestnet = {
+  id: 10143,
+  name: 'Monad Testnet',
+  network: 'monad-testnet',
+  nativeCurrency: { name: 'MON', symbol: 'MON', decimals: 18 },
+  rpcUrls: {
+    default: { http: ['https://testnet-rpc.monad.xyz'] },
+  },
+  blockExplorers: {
+    default: { name: 'MonadVision', url: 'https://monadvision.com' },
+  },
+};
+
+const client = createPublicClient({
+  chain: monadTestnet,
+  transport: http(),
+});
+
+// 查询最新区块
+const blockNumber = await client.getBlockNumber();
+console.log('Latest block:', blockNumber);
+```
+
+**3. Gas 估算最佳实践（Monad 特别注意）**
+
+```typescript
+// ❌ 不推荐：每次调用 eth_estimateGas（Monad 上要注意钱包行为）
+const gasEstimate = await client.estimateGas({...});
+
+// ✅ 推荐：已知固定 gas 操作直接硬编码
+const txHash = await walletClient.sendTransaction({
+  to: recipient,
+  value: parseEther('0.1'),
+  gasLimit: BigInt(21000),  // 转账固定 21000 gas
+  // ⚠️ Monad 按 gasLimit 收费，不要设置过高！
+});
+```
+
+**4. 批量 RPC 调用优化**
+
+```typescript
+// 使用 Multicall3 合约（Monad 主网和测试网均已部署）
+import { multicall3Abi } from './abis';
+
+const MULTICALL3_ADDRESS = '0xcA11bde05977b3631167028862bE2a173976CA11';
+
+// 或使用 viem 的内置 multicall
+import { publicClient } from './client';
+
+const results = await publicClient.multicall({
+  contracts: [
+    { address: tokenA, abi: erc20Abi, functionName: 'balanceOf', args: [wallet] },
+    { address: tokenB, abi: erc20Abi, functionName: 'balanceOf', args: [wallet] },
+    { address: tokenA, abi: erc20Abi, functionName: 'allowance', args: [wallet, spender] },
+  ],
+});
+```
+
+**5. 并发交易提交**
+
+```typescript
+// ✅ Monad 最佳实践：并发提交多笔交易
+const BATCH_SIZE = 5;
+const nonce = await client.getTransactionCount({ address: account.address });
+
+const txPromises = Array(BATCH_SIZE).fill(null).map(async (_, i) => {
+  return await walletClient.sendTransaction({
+    to: recipient,
+    value: parseEther('0.01'),
+    gasLimit: BigInt(21000),
+    baseFeePerGas: BigInt(100_000_000_000), // 100 gwei (Monad min base fee)
+    nonce: nonce + i,
+  });
+});
+
+const hashes = await Promise.all(txPromises);
+console.log('Transaction hashes:', hashes);
+```
+
+### 关键知识点对比
+
+| 概念 | 以太坊 | Monad | 优势分析 |
+|------|--------|-------|---------|
+| 共识机制 | Gasper (Casper FFG + LMD-GHOST) | MonadBFT | 解决 tail-forking，更快响应 |
+| 出块时间 | ~12 秒 | 400ms | 30 倍提升，用户体验显著改善 |
+| 最终确认 | ~12-15 分钟 | 800ms | 从分钟级到亚秒级，DeFi 场景更友好 |
+| 吞吐量 | ~15-30 TPS | 10,000 TPS | 超过 300 倍提升 |
+| Gas 计费 | 按 gas_used | 按 gas_limit | 防 DoS，但需开发者注意精准设置 |
+| 区块 Gas 上限 | ~30M | 200M | 6.7 倍，支持更多交易打包 |
+| 最小 Base Fee | 动态（~1 gwei 量级） | 100 MON-gwei | Monad 明确最低值，定价更可预测 |
+| 状态存储 | LevelDB/RocksDB | MonadDb | 专为高吞吐优化的存储引擎 |
+| 交易执行 | 串行执行 | 并行执行 + JIT 编译 | 充分利用多核 CPU，大幅加速 |
+| Mempool | 全局 mempool | 本地 mempool（仅转发给后续 leader） | 减少网络开销，提升效率 |
+| 合约大小上限 | 24 KB | 128 KB | 5 倍，允许部署更复杂的合约 |
+| Blob 交易 (EIP-4844) | 支持 | 不支持 | Monad 用原生扩容替代 L2 blob 路径 |
+| 历史状态访问 | 全节点支持任意历史状态 | 不支持任意历史状态 | 需使用 indexer 查询历史数据 |
+| WebAuthn 支持 | EIP-7951 提案中 | 原生支持 P256 precompile | 更好的账户抽象和安全签名 |
+
+### 代码片段
+
+**Reserve Balance 检查（Monad 特有逻辑）**
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+/// @title MonadReserveChecker
+/// @notice 在 Monad 上部署合约前检查余额是否满足 Reserve Balance 要求
+contract MonadReserveChecker {
+    // Monad 要求 EOA 账户在 EIP-7702 委托后保持至少 10 MON
+    uint256 constant MIN_RESERVE_BALANCE = 10 ether; // 10 MON
+
+    function checkReserve(address account) external view returns (bool sufficient) {
+        uint256 balance = account.balance;
+        return balance >= MIN_RESERVE_BALANCE;
+    }
+
+    // 在 Monad 上，gasLimit 就是实际收费量，不要盲目设置高值
+    function estimateActualCost(
+        uint256 gasLimit,
+        uint256 baseFeePerGas,
+        uint256 priorityFeePerGas
+    ) external pure returns (uint256 cost) {
+        uint256 pricePerGas = baseFeePerGas + priorityFeePerGas;
+        // ⚠️ Monad: cost = gasLimit * pricePerGas（不是 gasUsed）
+        return gasLimit * pricePerGas;
+    }
+}
+```
+
+**Hardhat 配置（Monad Testnet）**
+
+```javascript
+// hardhat.config.js
+require("@nomicfoundation/hardhat-toolbox");
+
+module.exports = {
+  solidity: "0.8.20",
+  networks: {
+    monadTestnet: {
+      url: "https://testnet-rpc.monad.xyz",
+      chainId: 10143,
+      accounts: [process.env.PRIVATE_KEY],
+      gasPrice: 100000000000, // 100 gwei (Monad minimum)
+    },
+  },
+};
+```
+
+### 今日思考
+
+**1. 异步执行的深远影响**
+
+Monad 的异步执行模型是其最核心的创新，但也带来了开发范式的根本变化。按 gas_limit 收费意味着开发者必须像管理资金一样精确管理 gas 设置。在以太坊上，设置过高的 gas limit 只是"锁定"资金，多余的会退还；但在 Monad 上，这直接意味着真金白银的损失。这要求我们在开发 DApp 时建立更严格的 gas 估算流程，甚至需要为每种操作类型建立 gas 基准数据库。
+
+**2. 安全视角的思考**
+
+从 Web3 安全合规的角度来看，Monad 的高性能带来了新的安全考量。10,000 TPS 意味着攻击面也相应扩大——闪电贷攻击可能在 400ms 的出块时间内完成更复杂的操作序列。同时，无全局 mempool 的设计改变了 MEV 的形态，传统以太坊上的 MEV 策略（如三明治攻击）在 Monad 上需要完全重新设计。
+
+从法律合规角度，中国对 Web3 的监管基调为"全面封堵金融属性，有限容忍技术创新"。在 Monad 上进行开发时，技术研究和学习是被允许的，但需要注意：不要参与代币发行融资，不要设计带有赌博、传销特征的机制，出金操作务必通过合规渠道。Web3 开发者应该像任何其他软件开发者一样，关注代码质量、安全审计和用户保护。
+
+**3. 生态建设的思考**
+
+Monad 已于 2025 年 11 月 24 日启动公共主网，测试网也已重置并稳定运行（当前版本 v0.14.5）。生态中已部署了大量标准化合约（Multicall3、Permit2、Safe v1.4.1 等），这意味着开发者可以直接复用以太坊生态的成熟工具和库，真正实现"无缝迁移"。对于 Builder Camp 的参与者来说，这是一个巨大的优势——我们可以专注于创新应用，而非基础设施适配。
+
+**4. 数据索引的重要性**
+
+由于 Monad 的高吞吐量，全节点不提供任意历史状态访问，这与以太坊有本质区别。这意味着在构建 DApp 时，必须将 indexer（如 Allium、Envio HyperIndex、The Graph、thirdweb Insight）作为基础设施的一部分，而非可选组件。这是一个需要在项目架构设计初期就考虑的问题。
+
+### 明日计划
+
+明天进入 Day 6（Week 1 复盘），计划：
+1. 整理本周五天的学习笔记，建立知识图谱
+2. 复习 Wallet 创建、测试网交互的完整流程
+3. 总结 Monad 与以太坊的核心差异要点清单
+4. 尝试在 Monad Testnet 上部署一个简单的 ERC-20 合约
+5. 梳理 Monad 的 gas 机制要点，编写一份开发注意事项 Checklist
+
+<!-- DAILY_CHECKIN_2026-07-10_END -->
 <!-- Content_END -->
