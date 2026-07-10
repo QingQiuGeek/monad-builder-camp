@@ -15,8 +15,16 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-10
+<!-- DAILY_CHECKIN_2026-07-10_START -->
+参加了例会，学到了很多新的学习方法
+
+学习了web3的行业全览
+<!-- DAILY_CHECKIN_2026-07-10_END -->
+
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 学习了vibecoding
 
 Dapp开发
@@ -24,6 +32,7 @@ Dapp开发
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 参加了两个线上课程
 
