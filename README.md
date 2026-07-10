@@ -299,7 +299,7 @@ By completing the program, participants will leave with:
 | [jgufyuufd](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/jgufyuufd.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [alexfanzong](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/alexfanzong.md) | ✅ | ✅ | ⭕️ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Miles-ya](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Miles-ya.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [daidaidawang](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/daidaidawang.md) | ⭕️ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [daidaidawang](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/daidaidawang.md) | ⭕️ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [rainypilgrimage-beep](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/rainypilgrimage-beep.md) | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [bb-cmb](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/bb-cmb.md) | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [hhhuang5w3](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/hhhuang5w3.md) | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -815,6 +815,7 @@ By completing the program, participants will leave with:
 | [yoona333](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/yoona333.md) | ⭕️ | ⭕️ | ✅ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [summer-sheep](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/summer-sheep.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
