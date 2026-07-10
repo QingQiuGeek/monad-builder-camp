@@ -15,8 +15,43 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-10
+<!-- DAILY_CHECKIN_2026-07-10_START -->
+# Remix IDE开发
+
+-   **环境要求**：确保加密钱包（如 MetaMask）已添加并切换至 **Monad Testnet** 网络。
+    
+
+### 1\. 创建与编译合约
+
+-   **新建文件**：在 Remix 浏览器的 `contracts` 目录下创建 `Gmonad.sol` 文件，给出对应的 Solidity 源码。
+    
+-   **编译代码**：切换到左侧的“Solidity compiler”面板，选择代码指定的编译器版本，点击编译按钮。成功后会显示绿色对勾。
+    
+
+### 2\. 部署上链
+
+-   **连接钱包**：进入左侧“Deploy & run transactions”面板，在 Environment（环境）下拉菜单中选择 **Injected Provider**，唤起钱包并授权连接。
+    
+-   **确认环境**：检查面板上显示的钱包地址、余额以及 Chain ID 是否正确对应 Monad 测试网。
+    
+-   **执行部署**：由于合约需要在部署时传入初始信息，在 Deploy 按钮旁的输入框填写问候语（例如 `"gmonad"`），点击 **Deploy** 并在钱包弹窗中确认交易。
+    
+-   **部署成功**：交易确认后，合约地址及实例会出现在左下角的“Deployed Contracts”列表中。
+    
+
+### 3\. 与合约交互
+
+可以测试以下两个核心功能：
+
+-   **读取数据（免费读）**：直接点击 `greeting` 按钮，可以在终端展开查看当前链上存储的问候语。
+    
+-   **修改数据（消耗 Gas 写）**：在 `setGreeting` 函数旁的输入框填入新内容（例如 `"gmonad molandak"`），点击 **transact** 按钮。在钱包中确认这笔状态修改交易后，再次点击 `greeting` 按钮即可验证内容已成功更新。
+<!-- DAILY_CHECKIN_2026-07-10_END -->
+
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 # 智能合约开发
 
 ### 一、 Dapp 架构与开发流程
@@ -137,6 +172,7 @@ Solidity 是状态机编程，每一行代码的执行都需要消耗资源（Ga
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
 
+
 # 第一次测试网整个交易过程
 
 ### 交易详情解析
@@ -170,6 +206,7 @@ Solidity 是状态机编程，每一行代码的执行都需要消耗资源（Ga
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 # **以太坊概览**
@@ -252,6 +289,7 @@ Solidity 是状态机编程，每一行代码的执行都需要消耗资源（Ga
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
