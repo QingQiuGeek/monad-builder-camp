@@ -31,10 +31,13 @@ Day05（2026-07-10）学习记录：
 **文档研读与知识积累**
 
 1.  **复习Web3实习手册**：系统学习智能合约的基础开发流程、新手常见错误，并了解了合约安全审计的基本要点，具备了规避基础安全漏洞的意识。
+    
+    ![Day05学习部分任务截图（14）.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Cool-CoCo/images/2026-07-10-1783699233087-Day05_________14_.png)
 <!-- DAILY_CHECKIN_2026-07-10_END -->
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 Day04学习记录：
 
@@ -91,6 +94,7 @@ Day04学习记录：
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 补充下昨天即2026-0-07未提交到Web3 Career Build上面的学习笔记：
@@ -240,6 +244,7 @@ Day04学习记录：
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
