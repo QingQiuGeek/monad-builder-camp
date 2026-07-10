@@ -15,13 +15,33 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-10
+<!-- DAILY_CHECKIN_2026-07-10_START -->
+### **从“交易”到“合约”的思维跃迁**
+
+在 DAY 3，你通过钱包发起了一笔**转账交易**。今天，你将部署一个**智能合约**，它本质上是一段**自动执行、不可篡改的代码**，被永久存储在区块链上。理解以下核心概念的关联，是今天学习的关键。
+
+| 概念 | 它是... | 作用 | 在今天实践中的体现 |
+| --- | --- | --- | --- |
+| 合约源码 | 你编写或AI生成的 .sol 文件（如 SimpleStorage.sol）。 | 定义合约的逻辑、状态变量和函数。 | 你在 Remix 中编辑和查看的代码。 |
+| ABI (Application Binary Interface) | 合约的 “使用说明书” 或**“接口字典”**。 | 以 JSON 格式精确描述了合约有哪些函数、每个函数的参数类型和返回值类型。 | Remix 在编译后自动生成。钱包和 DApp 前端需要通过它来知道如何与你的合约对话。 |
+| 合约地址 | 合约部署到区块链后生成的唯一链上标识。 | 指向这段特定代码和其存储状态的位置。类似于一个 DApp 的“网址”。 | 你在 Remix 中点击“部署”后，终端显示的绿色地址。 |
+| Read/Write Function | 合约中定义的函数。 | view/pure 函数 (Read)：只读取链上数据，免费，不产生交易。非 view/pure 函数 (Write)：会修改链上状态（如变量值、转账），需要支付 Gas，并产生交易哈希。 | 在 Remix 的“Deploy & Run Transactions”面板中，蓝色按钮是 Read，橙色按钮是 Write。 |
+| Transaction Hash | 一次 写入操作（状态变更） 的唯一凭证。 | 用于在区块浏览器中查询该操作的详情和最终状态。 | 你调用一个写入函数后，MetaMask 弹窗确认后生成的哈希值。 |
+
+> 💡 **核心关系链**： `你的 Solidity 源码` --(编译)--> `ABI + 字节码` --(部署交易)--> `合约地址`  
+> `用户/前端` --(通过 ABI 构造调用数据)--> `钱包签名` --(发送交易到合约地址)--> `产生新的交易哈希`
+<!-- DAILY_CHECKIN_2026-07-10_END -->
+
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/SelinaAnn/images/2026-07-09-1783601532564-image.png)
 <!-- DAILY_CHECKIN_2026-07-09_END -->
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 ### **硬核解读：用 Block Explorer 拆解交易**
 
@@ -48,11 +68,13 @@ Block Explorer（区块浏览器）是链上的“搜索引擎”，它将底层
 <!-- DAILY_CHECKIN_2026-07-07_START -->
 
 
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/SelinaAnn/images/2026-07-07-1783431460944-image.png)
 <!-- DAILY_CHECKIN_2026-07-07_END -->
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
