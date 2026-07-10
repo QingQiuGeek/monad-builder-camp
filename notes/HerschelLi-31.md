@@ -15,8 +15,20 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-10
+<!-- DAILY_CHECKIN_2026-07-10_START -->
+Week1总结:
+
+这一周我在 Monad Testnet 上进行了 Web3 基础实践。我从钱包连接、领取测试币、完成测试网交易开始，逐步学习如何在区块浏览器中查看 transaction hash，并最终使用 Remix 部署了一个 Solidity 智能合约。
+
+在 Day4，我通过 Remix 和 MetaMask 将一个名为 MyFirstDapp 的最小 Solidity 合约部署到了 Monad Testnet。这个 demo 帮助我理解了 Solidity 源码、ABI、合约地址、钱包地址、部署交易和 transaction hash 之间的关系。
+
+我使用 AI 辅助生成了一个最小 Solidity 合约，同时检查了 Solidity 编译器版本是否匹配，确认代码中没有 delegatecall、selfdestruct、tx.origin 等新手阶段不应随意使用的危险模式，并区分了哪些函数是 read function，哪些函数是 write function。也记录了 transaction hash，方便之后复盘。
+<!-- DAILY_CHECKIN_2026-07-10_END -->
+
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 下面是一份可以直接提交/整理到学习记录里的 **Day 4 学习笔记**。你可以把后面 `transaction hash`、截图链接、区块浏览器查询结果再补进去。
 
 * * *
@@ -184,6 +196,7 @@ gas = 部署合约消耗的计算费用
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
 
+
 完成discord，telegram，notion，codex的安装和准备
 
 安全与合规: 常见攻击方式包括：假面试软件、假奖学金空投、假客服、假 HR、群聊钓鱼链接、恶意浏览器插件、剪贴板劫持、地址污染等。最危险的是下载“专用面试软件”、连接钱包签名、输入助记词/私钥，或者安装来路不明的插件。
@@ -193,6 +206,7 @@ gas = 部署合约消耗的计算费用
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 区块链可以理解为很多节点共同维护的一本账本，交易被打包进区块，区块之间用哈希连接，所以历史记录很难被篡改。它的可信不是来自某个公司，而是来自分布式网络、共识机制和代币激励。比特币说明了“去中心化货币”如何运行，而公链、联盟链、私链的区别主要在于开放程度和控制权。
