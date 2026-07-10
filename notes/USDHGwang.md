@@ -15,8 +15,38 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-10
+<!-- DAILY_CHECKIN_2026-07-10_START -->
+2026-07-10 — Day 5｜Monad 理解 + on-chain agent 探索
+
+\- 完成 Task 5 的思考：Monad 對我的意義不是「更快的 EVM」，是 agent 載體。
+
+agent 的行為模式是持續的 sense→decide→act loop，交易密度天生比人高；
+
+亞秒級出塊把 agent 之間的反應迴路從十幾秒壓到 ~1s，multi-agent 協調從不可行變可行。
+
+\- 延伸探索：Bittensor / DePIN / fully on-chain agent。修正了自己一個誤解——
+
+Bittensor 的鏈沒有聚合算力，訓練在鏈下，鏈聚合的是評分、stake、支付（proof of intelligence）。
+
+DePIN 同一個骨架：鏈下幹活，鏈上驗證分錢。
+
+\- on-chain agent 的階梯：條件觸發 → 策略型（trading bot）→ 多 agent 互動。
+
+AMM 其實是史上最成功的 fully on-chain agent（確定性做市、零鏈下依賴），只是沒人這樣叫它。
+
+主動 agent 有 tick 缺口：EVM 合約不會自己醒來，解法只有 keeper / permissionless bounty / lazy evaluation。
+
+\- 量化了「LLM 上鏈」的 gap：整條 Monad 的等效算力約等於一張 H100 的千萬分之一，
+
+7B 權重寫上鏈要吃掉全鏈 8 小時容量。「on-chain 發包 → off-chain 處理」是物理分工不是妥協。
+
+設計空間被一個問題切分：鏈怎麼知道 off-chain 沒作弊（冗餘評分 / 樂觀挑戰 / zk證明 / TEE）。
+<!-- DAILY_CHECKIN_2026-07-10_END -->
+
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 **2026-07-09 — Day 4｜Agent 安全框架 vs 自己的 AIP/EIV**
 
 -   **Agent Guard 四能力**：Discover（資產發現）/ Red-Team（模擬攻擊）/ Defend（運行時攔截 allow-warn-approve-block）/ Govern（治理儀表盤）。它是**廣而淺**的通用平台，橫跨 prompt injection、RAG 洩露、MCP 提權這些層——正好是我 AIP/EIV **刻意 scope out 的感知/推理層**。
@@ -32,6 +62,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 # **Daily Note — 2026-07-08**
 
@@ -66,6 +97,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- DAILY_CHECKIN_2026-07-07_START -->
 
 
+
 **2026-07-07 — Day 2**
 
 -   今天在整理 agent 發展框架的路徑時想到：ML/DL 演算法本身有價值但不是技術核心，agent 的價值來自「堆疊」出來的工程概念——prompt engineering → context engineering → harness engineering → loop engineering，是一層層疊上去的，不是取代關係（prompts → context/memory → skill）
@@ -77,6 +109,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
