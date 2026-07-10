@@ -17,13 +17,14 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- Content_START -->
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
-![a63eccc2-3ad9-4739-a793-99f123eebcea.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/kaidic84/images/2026-07-10-1783663454572-a63eccc2-3ad9-4739-a793-99f123eebcea.png)
+![f23c1ba5-78fc-44f4-a41e-fe9b04474e41.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/kaidic84/images/2026-07-10-1783670442843-f23c1ba5-78fc-44f4-a41e-fe9b04474e41.png)
 
 观看周三的分享会影片，学习了如何在让AI Agent拥有支付能力的同时保持安全性、风控以及高效地花钱。
 <!-- DAILY_CHECKIN_2026-07-10_END -->
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 ![a3c03d2e-4bed-41ff-b350-c8ca93ef918f.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/kaidic84/images/2026-07-09-1783590249882-a3c03d2e-4bed-41ff-b350-c8ca93ef918f.png)
 
@@ -32,6 +33,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
