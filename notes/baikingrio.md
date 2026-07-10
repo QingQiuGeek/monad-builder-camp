@@ -15,8 +15,24 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-10
+<!-- DAILY_CHECKIN_2026-07-10_START -->
+今天继续完善 Monad Testnet 上的 ERC-4337 实验，并学习和实践了 ERC-1363。
+
+在 ERC-4337 部分，我进一步理解了 Paymaster 的作用不只是代付 Gas，更重要的是限制赞助的范围和风险。通过把账户、调用内容、nonce、有效期等信息绑定到 sponsor 授权中，可以避免授权被复用到其他交易里。
+
+在 ERC-1363 部分，我完成了一个“质押 + 收益分红”的练习。用户可以通过 transferAndCall 在转入 Token 的同时完成质押，减少一次 approve 和 stake 的交互。分红则按照用户的质押份额累计，用户可以领取收益，也可以提取本金。
+
+这次实践让我更清楚地感受到：ERC-4337 主要改善账户和 Gas 体验，ERC-1363 则适合把 Token 支付和后续业务逻辑放到同一笔交易中。后面我想继续完善前端交互，并把 ERC-4337 的 sponsor 和 ERC-1363 的业务场景结合起来，探索更顺畅的链上使用体验。
+
+今日学习笔记：
+
+[https://github.com/baikingrio/monad-builder-camp/blob/main/daily/2026-07-10.md](https://github.com/baikingrio/monad-builder-camp/blob/main/daily/2026-07-10.md)
+<!-- DAILY_CHECKIN_2026-07-10_END -->
+
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 今天主要围绕 ERC-4337 Account Abstraction 做了三组连续实验，把智能账户从“能执行 UserOperation”继续扩展到更接近真实应用体验的能力，重点学习和实践了三个方向：
 
 1\. counterfactual deployment / initCode
@@ -58,6 +74,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 今天继续做链上实践和学习记录，重点做了 ERC-4337 最小实践，从 EntryPoint v0.7 迁移到 Monad Testnet 官方 EntryPoint v0.8，并记录两者差异。
 
@@ -114,6 +131,7 @@ Explorer：  
 <!-- DAILY_CHECKIN_2026-07-07_START -->
 
 
+
 今天学习了 ERC-4337 Account Abstraction 和 thirdweb 的 Session Keys 文档，重点理解了智能账户、UserOperation、Bundler、EntryPoint、Paymaster 之间的关系。
 
 我的理解是，ERC-4337 让钱包不再只是一个由私钥控制的 EOA，而是可以变成有自定义验证逻辑和权限管理能力的智能账户。用户发起的不是普通交易，而是 UserOperation，由 Bundler 打包，再通过 EntryPoint 统一验证和执行。Paymaster 可以在特定条件下帮用户代付 gas，从而改善新用户进入链上应用时必须先准备 gas 的体验。
@@ -129,6 +147,7 @@ Explorer：  
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
