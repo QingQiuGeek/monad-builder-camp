@@ -15,13 +15,20 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-10
+<!-- DAILY_CHECKIN_2026-07-10_START -->
+今天各位老师详细分享各个领域开发 应用 以及生态知识 显示在aiweb3时代各种成本大幅度降低 不再受到web2开发路线 方式 opc已经来了
+<!-- DAILY_CHECKIN_2026-07-10_END -->
+
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 本次会议alu老师分享aiagent安全方面知识从多个方面介绍 详细步骤 以及面对挑战 一个落洞导致资产被盗 例如之前龙虾需要高度授权 但是风险也大 aiagnet以及整个生态围绕它做发现资产 红队验证 运行防御 统一管理 才能把攻防一体体系化闭环
 <!-- DAILY_CHECKIN_2026-07-09_END -->
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 本次Jack老师分享aiagent详细支付流程 应用授权 a2a支付方式等过程 还介绍生态建设重要支付体现以及新业务拓展依托usdt 、ustc 等稳定币发展
 <!-- DAILY_CHECKIN_2026-07-08_END -->
@@ -31,11 +38,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 本次会议Jack老师分享了eth协议详细内容从会学习 会复现 会提问等步骤到贡献逐步推进 以及epf的核心不是上课 而是自我推动项目逐步开发完善 EPF更向真实开源工作预演 没人替你学习 但是有人能帮包方向我是落实
 <!-- DAILY_CHECKIN_2026-07-07_END -->
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
