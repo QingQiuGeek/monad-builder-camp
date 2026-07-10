@@ -15,8 +15,57 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-10
+<!-- DAILY_CHECKIN_2026-07-10_START -->
+## Week 1 总结
+
+### 学习内容
+
+-   了解 Monad 的核心特点：高性能、低延迟、EVM 兼容。
+    
+-   学习 Solidity 基础语法，包括状态变量、函数、事件和映射（Mapping）。
+    
+-   完成 OnchainTodo 智能合约练习，熟悉智能合约开发与部署流程。
+    
+-   思考哪些应用场景更适合部署在 Monad 上。
+    
+
+### 产品调研
+
+选择 **Meme Arena（链上 Meme PK 排行榜）** 作为高频交互 Demo。
+
+原因：
+
+-   用户会频繁进行投票、排行榜刷新和任务领取。
+    
+-   需要低延迟、低成本的链上交互体验。
+    
+-   链上记录投票、积分和奖励，保证数据公开透明。
+    
+
+### 技术方案
+
+计划使用：
+
+-   **Solidity**：开发智能合约
+    
+-   **Monad Testnet**：部署和测试合约
+    
+-   **React + Ethers.js/Viem**：实现钱包连接和前端交互
+    
+
+### 本周收获
+
+1.  理解了 Monad 更适合高频交互型 Web3 应用，而不仅仅是“更快”。
+    
+2.  熟悉了 Solidity 智能合约开发的基本流程。
+    
+3.  学会从产品需求出发，思考哪些数据需要上链、哪些数据适合由数据库管理。
+<!-- DAILY_CHECKIN_2026-07-10_END -->
+
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 ## **Day4 | Monad 高频交互应用设计：Meme Arena（链上 Meme 对战排行榜）**
 
 ### **1\. Research（约 300 字）**
@@ -157,6 +206,7 @@ Badge 全部 NFT 化。
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 ## **Day 3 —— 编写并部署第一个 Solidity 智能合约（OnchainTodo）**
@@ -410,6 +460,7 @@ Sourcify Verified
 
 
 
+
 ### **前置准备｜进入 Web3 与链上世界**
 
 **Summary**
@@ -453,6 +504,7 @@ Metamask创建钱包，并记住私钥
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
