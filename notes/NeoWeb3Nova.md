@@ -15,8 +15,34 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-10
+<!-- DAILY_CHECKIN_2026-07-10_START -->
+今天是 Web3 Summer Internship Program / Monad Builder Camp 的 Day 5，主题是「AI 工具与 Vibe Coding 入门」。  
+  
+今日完成：  
+1\. 根据 Week 1 Day 5 任务，准备 AI 学习记录提交物 submissions/week-01/[ai-learning.md](http://ai-learning.md)。  
+2\. 明确 Vibe Coding 的核心：人用自然语言驱动 AI 写代码，但人必须审查、判断和修正输出。  
+3\. 规划今日学习路径：选择一个 AI coding / learning 工具；选一个 Web3 概念让 AI 解释；用 AI 生成 3-5 个 Monad DApp / 合约想法；记录 prompt、输出、人类判断和修正。  
+4\. 更新本地项目每日学习日志 daily/[2026-07-10.md](http://2026-07-10.md)。  
+  
+今日收获：  
+\- AI-native Builder 的关键不是会用 AI 写代码，而是能记录「AI 帮了什么、我验证了什么、我做了什么判断」。  
+\- 链上学习要留下证据链：钱包地址、交易哈希、网络配置、AI 协作记录都会成为 Proof of Learning / Proof of Work。  
+\- 对 AI 输出做修正和说明，才是自己的学习成果。  
+  
+今日卡点：  
+\- 具体 AI 工具和概念尚未选定，需要根据个人环境决定。  
+\- 嘉宾分享和 Co-learning 需要登录平台或等待回放。  
+  
+明日计划：  
+\- 完成 AI 概念解释与 DApp 想法列表。  
+\- 把 prompt、输出、修正写进 submissions/week-01/[ai-learning.md](http://ai-learning.md)。  
+\- 阅读 docs/[monad-technical-notes.md](http://monad-technical-notes.md)，为 Day 6 技术基础做准备。
+<!-- DAILY_CHECKIN_2026-07-10_END -->
+
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 今天是 Web3 Summer Internship Program / Monad Builder Camp 的 Day 4，主题是“第一笔 Monad Testnet 链上交易准备”。  
   
 今日完成：  
@@ -63,6 +89,7 @@ Testnet 虽然没有真实资产价值，但流程非常接近真实链上开发
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
 
+
 今日完成：  
 1\. 根据 Week 1 Day 3 任务，整理 Monad Testnet 配置清单：RPC URL、Chain ID、Explorer、Faucet。  
 2\. 在本地项目建立/更新了网络配置提交物 submissions/week-01/[network-config.md](http://network-config.md) 和实验记录 experiments/monad-wallet-setup/[README.md](http://README.md)。  
@@ -86,6 +113,7 @@ Testnet 虽然没有真实资产价值，但流程非常接近真实链上开发
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 周次: Week 1 - 认知奠基期 / 进入 Onchain World  
@@ -121,6 +149,7 @@ Day: Day 2
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
