@@ -15,8 +15,54 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-10
+<!-- DAILY_CHECKIN_2026-07-10_START -->
+### 今日继续学习 智能合约开发 (Smart Contract Development)
+
+智能合约是部署在区块链网络上的自执行代码，其本质是运行在去中心化状态机（如 EVM）上的程序，通过网络中的事务（Transaction）触发状态转移，践行了 Web3 的“Code is Law”原则 。
+
+1\. 核心技术特性
+
+-   **开发语言 (Solidity)**：当前 EVM 生态最主流的高级编程语言 。它是面向对象、静态类型的，专为数字资产和去中心化状态流转设计 。
+    
+-   **部署与不可篡改性**：合约的字节码一旦部署上链，即获得不可篡改属性 。除了在架构初期预置复杂的代理模式（Proxy Pattern）逻辑外，原生代码无法进行热更新，这对代码的鲁棒性提出了极高要求 。
+    
+-   **计算与存储成本 (Gas)**：网络节点执行指令与存储状态需要消耗 Gas 。由于区块链的链上存储（Storage）极其昂贵，开发者必须在代码层进行严格优化，以降低执行复杂度与存储开销 。
+    
+
+2\. Solidity 合约的标准架构
+
+根据 Solidity 开发规范，一份标准合约通常包含以下核心结构 ：
+
+-   **编译指令 (Pragma)**：声明编译器版本限制（如 `pragma solidity ^0.8.0;`），这在底层直接影响编译器的优化规则与内置安全特性 。
+    
+-   **状态变量 (State Variables)**：永久存储于区块链上的数据结构，直接决定了合约的全局持久化状态 。
+    
+-   **函数 (Functions)**：合约的执行逻辑实体。
+    
+    -   **可见性控制**：通过 `public`/`private`/`external`/`internal` 严格界定函数的调用作用域。
+        
+    -   **状态可变性**：通过 `view` 或 `pure` 声明不消耗 Gas 的链下只读调用；通过 `payable` 允许该函数接收原生代币入账 。
+        
+-   **修饰器 (Modifiers)**：提取并复用前置条件校验逻辑，通常包含 `require` 断言，最常用于权限收敛与状态前置检查（如 `onlyOwner`） 。
+    
+-   **事件 (Events)**：利用 EVM 的日志（Logs）基础设施，将状态变更信息低成本地抛出至链下，供前端 DApp 或索引节点（如 The Graph）进行监听和同步 。
+    
+
+3\. 安全工程与防御实践
+
+由于智能合约管理着核心资产且字节码全网开源，上线前必须经过专业的代码审计（Audit） 。以下是三大核心安全考量：
+
+-   **重入攻击 (Reentrancy)**：当合约通过 `call` 调用外部不受信任的地址时，攻击者可利用回退函数（Fallback）劫持执行流，在当前状态尚未更新前反复重入当前函数提款。**防御规范**：必须遵循 检查-生效-交互（Checks-Effects-Interactions, CEI）模式，或在函数级引入防重入锁（如 OpenZeppelin 的 `ReentrancyGuard`） 。
+    
+-   **访问控制 (Access Control)**：未受保护的敏感管理函数被恶意调用。**防御规范**：针对高危接口实施严格的鉴权，通过 `Ownable` 修饰符或基于角色的访问控制树（Role-Based Access Control）进行隔离 。
+    
+-   **算术溢出 (Integer Overflow/Underflow)**：早期版本（< 0.8.0）的算术运算可能导致数值环绕漏洞。**防御规范**：自 Solidity 0.8.0 起，编译器已默认开启了运算的溢出与下溢检查，发生异常会自动触发 `revert`，开发者应尽量使用 0.8.0 及以上版本的编译器 。
+<!-- DAILY_CHECKIN_2026-07-10_END -->
+
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 学习了怎么写智能合约，搭建了本地开发环境，基本上能看懂简单的合约，各种不同的语言都了解了一下。  
 
 1. 什么是智能合约？ —— “不会耍赖的自动售货机” 
@@ -55,6 +101,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
 
+
 跟着web3实习手册学习，查漏补缺，逐个击破，夯实基础
 
 学习了TEE和ZK，在解决信任场景的时候可以搭配使用
@@ -66,12 +113,14 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- DAILY_CHECKIN_2026-07-07_START -->
 
 
+
 1，写简单的合约，部署合约，Remix（直接用AI也行，反正以后合约都是AI写）  
 2，听了老师分享会，学习了关于EPF (Ethereum Protocol Fellowship) 和 EIP（Ethereum Improvement Proposal），学习路线、研究方向等等
 <!-- DAILY_CHECKIN_2026-07-07_END -->
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
