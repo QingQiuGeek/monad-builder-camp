@@ -259,7 +259,7 @@ By completing the program, participants will leave with:
 | [Marco-comm-UO](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Marco-comm-UO.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lipanABC](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/lipanABC.md) | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [qpoinsdovas](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/qpoinsdovas.md) | ✅ | ✅ | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [caigua838](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/caigua838.md) | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [caigua838](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/caigua838.md) | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [antony819](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/antony819.md) | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [JimmyZhou0505](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/JimmyZhou0505.md) | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [BIGrice66](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/BIGrice66.md) | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -815,6 +815,7 @@ By completing the program, participants will leave with:
 | [yoona333](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/yoona333.md) | ⭕️ | ⭕️ | ✅ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [summer-sheep](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/summer-sheep.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
