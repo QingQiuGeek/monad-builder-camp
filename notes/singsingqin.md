@@ -15,8 +15,624 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-10
+<!-- DAILY_CHECKIN_2026-07-10_START -->
+结合你提供的课程大纲、分享会内容、Demo 演示（Monad Buddy）、以及几场 Co-learning 的技术分享，可以看出这一周的目标并不是**教会大家所有 Web3 技术**，而是**建立一个 Web3 Builder 的完整学习闭环**：从认知 → 工具 → 钱包 → 链上交互 → 合约开发 → Demo → Build Log。
+
+下面是一份可以作为 Week1 总结分享或 Build Log 的总结。
+
+* * *
+
+# Week 1 总结：从 Web2 使用者到 Web3 Builder
+
+## 一、Week1 的学习主线
+
+这一周并不是简单学习区块链知识，而是按照真实 Builder 的成长路径进行实践。
+
+整个流程可以概括为：
+
+> **理解 Web3 → 建立 Builder 身份 → 学会链上交互 → 编写智能合约 → 完成第一个 DApp Demo → 输出 Build Log**
+
+整个学习过程围绕三个关键词：
+
+-   Learn（学习）
+    
+-   Build（实践）
+    
+-   Share（分享）
+    
+
+* * *
+
+# Day1：理解 Web3 与 Vibe Coding
+
+## 学习目标
+
+建立 Web3 的整体认知，而不是直接开始写代码。
+
+主要学习内容包括：
+
+-   Web3 与 Web2 的区别
+    
+-   Blockchain
+    
+-   Ethereum
+    
+-   Wallet
+    
+-   Address
+    
+-   Transaction
+    
+-   Gas
+    
+-   Smart Contract
+    
+
+同时开始了解：
+
+> 为什么需要去中心化应用（DApp）
+
+以及：
+
+> 为什么 Builder 要开始使用 AI。
+
+* * *
+
+## Vibe Coding
+
+第一天分享会上介绍了 **Vibe Coding** 的理念。
+
+核心思想并不是：
+
+> AI 帮我写代码
+
+而是：
+
+> AI 帮我快速验证想法（Idea → Prototype）。
+
+真正重要的是：
+
+Builder 应该：
+
+-   会描述需求（Prompt）
+    
+-   会拆解问题
+    
+-   会验证 AI 输出
+    
+-   会修改 AI 生成代码
+    
+
+而不是完全依赖 AI。
+
+因此这一周大量使用：
+
+-   ChatGPT
+    
+-   Claude
+    
+-   Cursor
+    
+-   Codex
+    
+
+进行协作开发。
+
+* * *
+
+# Day2：Builder 身份建立
+
+第二天重点不是技术，而是：
+
+## 建立远程协作能力
+
+需要完成：
+
+-   GitHub
+    
+-   X(Twitter)
+    
+-   Discord
+    
+-   Telegram
+    
+-   Notion
+    
+
+等工具准备。
+
+因为 Web3 的工作方式几乎全部采用：
+
+Remote + Open Source。
+
+所以 Builder 身份不仅仅是一个钱包地址，还包括：
+
+-   GitHub
+    
+-   社区身份
+    
+-   社交账号
+    
+-   Build Log
+    
+
+大家开始了解：
+
+DevRel
+
+Builder
+
+Research
+
+Ops
+
+这些岗位分别负责什么。
+
+* * *
+
+# Day3：钱包、安全与第一笔链上交易
+
+这是第一天真正进入链上的实践。
+
+完成了：
+
+-   MetaMask 创建
+    
+-   新钱包建立
+    
+-   助记词保存
+    
+-   Monad Testnet 添加
+    
+-   Faucet 获取测试币
+    
+-   第一笔 Testnet Transaction
+    
+
+重点学习：
+
+钱包其实不是存钱。
+
+钱包真正保存的是：
+
+> 私钥。
+
+区块链资产一直都保存在链上。
+
+钱包只是：
+
+身份 + 签名工具。
+
+* * *
+
+## 学会阅读交易
+
+大家第一次理解：
+
+Transaction 包括：
+
+-   From
+    
+-   To
+    
+-   Gas
+    
+-   Nonce
+    
+-   Hash
+    
+
+并学会使用：
+
+Explorer
+
+查看交易。
+
+这也是第一次真正理解：
+
+链上数据为什么公开透明。
+
+* * *
+
+# Day4：AI + Solidity + 智能合约
+
+第四天开始真正开发。
+
+学习内容：
+
+Solidity
+
+Remix
+
+OpenZeppelin
+
+Monad Testnet
+
+完成：
+
+AI 生成 Solidity 合约
+
+↓
+
+阅读代码
+
+↓
+
+人工检查
+
+↓
+
+Compile
+
+↓
+
+Deploy
+
+↓
+
+Read Function
+
+↓
+
+Write Function
+
+↓
+
+Transaction Hash
+
+大家第一次真正理解：
+
+一个 DApp 包括：
+
+前端
+
+↓
+
+调用 ABI
+
+↓
+
+钱包签名
+
+↓
+
+发送 Transaction
+
+↓
+
+智能合约执行
+
+↓
+
+链上状态更新
+
+* * *
+
+## 学到的重要概念
+
+包括：
+
+ABI
+
+Contract Address
+
+Function
+
+Read
+
+Write
+
+Event
+
+Storage
+
+Gas
+
+Transaction Hash
+
+这些概念之间的关系。
+
+* * *
+
+# Day5：Monad 与 Mini Demo
+
+第五天重点开始理解：
+
+Monad 为什么快。
+
+课程介绍了：
+
+Monad 与 Ethereum 的区别。
+
+包括：
+
+-   并行执行
+    
+-   更高 TPS
+    
+-   更低 Gas
+    
+-   更好的 Builder Experience
+    
+
+进一步思考：
+
+如果 TPS 足够高，
+
+那么：
+
+很多过去无法实现的交互，
+
+未来都可能成为新的产品。
+
+* * *
+
+## Mini Demo
+
+课程要求完成：
+
+Mini Demo 0。
+
+不是商业产品。
+
+而是：
+
+把：
+
+钱包
+
+↓
+
+交易
+
+↓
+
+智能合约
+
+↓
+
+AI 协作
+
+↓
+
+Build Log
+
+串联起来。
+
+* * *
+
+# 分享会收获
+
+除了课程内容之外，
+
+这一周几场分享会的信息量也非常大。
+
+* * *
+
+## ① Monad Buddy Demo
+
+分享会上展示了：
+
+Monad Buddy
+
+一个非常典型的：
+
+AI + Web3 + DApp Demo。
+
+其整体流程包括：
+
+Builder 身份
+
+↓
+
+连接 X
+
+↓
+
+连接钱包
+
+↓
+
+Mint Buddy
+
+↓
+
+完成链上任务
+
+↓
+
+获得 XP
+
+↓
+
+成长系统
+
+这是一个典型的：
+
+GameFi + On-chain Identity
+
+结合案例。
+
+也体现了：
+
+Monad 高性能网络适合做：
+
+高频交互应用。
+
+* * *
+
+## ② AI 学习 Web3 的方法
+
+分享会上提出一个非常重要的观点：
+
+AI 不应该只是：
+
+帮你总结资料。
+
+而应该：
+
+帮助建立学习机制。
+
+例如：
+
+先分析知识短板
+
+↓
+
+制定学习计划
+
+↓
+
+持续提问
+
+↓
+
+记录 Build Log
+
+↓
+
+不断迭代
+
+相比：
+
+直接生成答案，
+
+这种学习方式更加适合长期成长。
+
+* * *
+
+## ③ Vibe Coding 工作流
+
+老师分享了：
+
+Idea
+
+↓
+
+AI
+
+↓
+
+Prototype
+
+↓
+
+Deploy
+
+↓
+
+Feedback
+
+↓
+
+Iteration
+
+这就是 Builder 最重要的一套工作流。
+
+重点不是：
+
+代码一定写得漂亮。
+
+而是：
+
+快速验证产品。
+
+* * *
+
+## ④ AI Knowledge Base
+
+另一场分享介绍了：
+
+AI 知识库管理。
+
+包括：
+
+三种文件：
+
+-   Raw Resource（原始资料）
+    
+-   Schema（规则）
+    
+-   Wiki（知识）
+    
+
+以及三个操作：
+
+-   Ingest（摄取）
+    
+-   Query（查询）
+    
+-   Lint（审查）
+    
+
+同时介绍了：
+
+搜索方式：
+
+-   Index
+    
+-   Log
+    
+-   RAG
+    
+
+这说明：
+
+未来 Builder 不只是写代码，
+
+还需要管理自己的知识系统。
+
+* * *
+
+# 本周完成的实践
+
+这一周已经完成了比较完整的一套 Web3 Builder 入门实践：
+
+-   完成 Web3 基础概念学习（区块链、以太坊、钱包、Gas、智能合约）。
+    
+-   学习 Vibe Coding，掌握 AI 辅助开发与快速验证产品思路。
+    
+-   搭建 Builder 身份，配置 GitHub、X、Discord、Telegram 等协作工具。
+    
+-   创建课程专用钱包，完成 Monad Testnet 配置与测试币领取。
+    
+-   完成第一笔测试网交易，并能够借助区块浏览器分析交易详情。
+    
+-   使用 AI 生成并人工检查 Solidity 合约，在 Remix 编译、部署并完成读写交互。
+    
+-   体验 Monad Buddy Demo，理解链上身份、钱包连接、XP 成长系统等 DApp 设计思路。
+    
+-   学习 AI 知识库管理方法（Raw Resource、Schema、Wiki）及 Ingest、Query、Lint 工作流。
+    
+-   建立 Week1 Build Log，记录学习过程、Prompt、错误及修复过程，为后续持续迭代打下基础。
+    
+
+* * *
+
+# 核心收获
+
+经过第一周的学习，我最大的收获并不是掌握了多少 API 或 Solidity 语法，而是建立了一套完整的 **Web3 Builder 思维**：
+
+-   **认知层**：理解区块链、智能合约、钱包与交易的底层逻辑，以及去中心化应用存在的价值。
+    
+-   **实践层**：完成钱包创建、测试网交易、智能合约部署等链上操作，真正从“看懂”走向“动手”。
+    
+-   **AI 协作层**：学会利用 AI 辅助学习、编程和调试，但始终坚持人工验证与理解，而不是盲目依赖生成结果。
+    
+-   **工程层**：认识到一个 DApp 的完整开发流程，体验从产品想法、代码实现到链上部署和 Demo 展示的全过程。
+    
+-   **成长层**：通过 Build Log、公开分享和 Co-learning，将学习过程沉淀为可复用、可展示的 Proof of Work，为后续参与开源协作和 Web3 实习奠定基础。
+    
+
+**一句话总结 Week1：**
+
+> 从一名 Web3 初学者，逐步完成了 Builder 身份建立、链上实践、AI 协作开发和 Demo 验证，开始具备独立探索和构建去中心化应用的基础能力。
+<!-- DAILY_CHECKIN_2026-07-10_END -->
+
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 # 个人学习打卡日志（优化排版 + 完整补充 Web3 DApp 前端学习规划）
 
 ## 一、长期个人目标定位
@@ -248,6 +864,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
 
+
 [BuildAnything](https://buildanything.space/)
 
 1.  闲鱼：发布信息5条，发布一个上线连接
@@ -468,6 +1085,7 @@ AI Agent
 <!-- DAILY_CHECKIN_2026-07-07_START -->
 
 
+
 1.  博客搭建，(10%)  
     不想买云服务器.......
     
@@ -536,6 +1154,7 @@ eg：web3Careerbuild
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
