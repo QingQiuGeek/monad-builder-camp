@@ -15,19 +15,27 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-11
+<!-- DAILY_CHECKIN_2026-07-11_START -->
+对自己初步构思的web3产品进行了深入思考，争取明天做出初版的demo
+<!-- DAILY_CHECKIN_2026-07-11_END -->
+
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 根据提供的资料，更深入地了解了Monad的特点。根据任务的指引，思考并尝试构建了一个简单的适合Monad的交互场景。
 <!-- DAILY_CHECKIN_2026-07-10_END -->
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
 
+
 根据分享和Co-Learning中的内容，了解了一些新东西；继续了解Monad
 <!-- DAILY_CHECKIN_2026-07-09_END -->
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 对于AI Agent在web3支付领域的应用有了初步了解
@@ -38,11 +46,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 用ai agent写了第一份智能合约，并完成了部署
 <!-- DAILY_CHECKIN_2026-07-07_END -->
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
