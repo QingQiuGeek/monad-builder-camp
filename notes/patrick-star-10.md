@@ -15,8 +15,46 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-11
+<!-- DAILY_CHECKIN_2026-07-11_START -->
+1\. 我完成了什么
+
+本周主要完成了 Solidity 智能合约开发环境的搭建，并在 Monad Testnet 上部署了多个简单合约，包括 ValueVault、MessageBoard 和 SimpleVote 等合约，熟悉了 Remix、MetaMask、Monad 测试网以及链上交易流程。
+
+除此之外，我还结合 AI 生成了一个简化版 AMM（Automated Market Maker）合约，重点学习了流动性池、代币交换以及恒定乘积做市模型（x \* y = k）的基本思想。虽然目前实现的是教学版本，但让我对 Uniswap V2 的核心机制有了更直观的理解。
+
+我还阅读了部分 AMM 协议源码和《精通以太坊》的相关章节，对 EVM、交易执行流程、执行层与共识层客户端的职责有了初步认识。
+
+2\. 我遇到了什么问题
+
+开发过程中遇到了几个问题：
+
+部署合约时忘记给构造函数（constructor）传入初始化参数，导致部署失败。
+
+一开始混淆了交易哈希（Transaction Hash）和合约地址（Contract Address），提交作业时填写了错误的部署交易哈希。
+
+对执行层客户端、共识层客户端以及 RPC 节点之间的关系理解不够清晰。
+
+阅读 AMM 合约时，虽然能够理解整体流程，但对于流动性计算、价格滑点等数学部分仍需要进一步学习。
+
+3\. AI 帮助我完成了什么
+
+AI 在整个学习过程中主要承担了辅助学习和知识解释的角色，而不是直接替代开发。
+
+具体包括：
+
+帮助定位 Solidity 合约部署失败的原因，并指出构造函数参数必须在部署时传入。
+
+帮助区分交易哈希、合约地址以及函数调用交易。
+
+生成了一个简化版 AMM 合约，用于理解 AMM 的整体架构和资金流转过程。
+
+解释了执行层客户端、共识层客户端、RPC 节点以及 Geth 等概念，使我能够建立更加完整的 Web3 技术体系。
+<!-- DAILY_CHECKIN_2026-07-11_END -->
+
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 这几天都在学习golang的基础语法，尝试调用rpc去查询链上信息
 <!-- DAILY_CHECKIN_2026-07-10_END -->
 
@@ -24,11 +62,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- DAILY_CHECKIN_2026-07-09_START -->
 
 
+
 打卡
 <!-- DAILY_CHECKIN_2026-07-09_END -->
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -41,11 +81,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 **_今天学习了怎么使用monad浏览器进行交易查询，同时也体验到了monad的交易速度确实很快相比于以太坊网络_**
 <!-- DAILY_CHECKIN_2026-07-07_END -->
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
