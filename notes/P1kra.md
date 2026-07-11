@@ -15,19 +15,27 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-11
+<!-- DAILY_CHECKIN_2026-07-11_START -->
+周六打卡，美好的周末我来了。今天准备去尝试用ai做一个链上的小游戏然后部署上去。
+<!-- DAILY_CHECKIN_2026-07-11_END -->
+
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 令人期待的每周例会来了，已经迫不及待想要知道优秀学员的分享了
 <!-- DAILY_CHECKIN_2026-07-10_END -->
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
 
+
 今天学习了AI Agent的安全原理，很实在，我觉得以后我会参与其中。
 <!-- DAILY_CHECKIN_2026-07-09_END -->
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 看到今天课程讲的是AI Agent 如何拥有支付能力，我提前做了预习，期待今天的课程。
@@ -38,11 +46,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 今天也是很充实的一天啊，吃了我最喜欢的照烧鸡排饭，然后也看了直播课
 <!-- DAILY_CHECKIN_2026-07-07_END -->
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
