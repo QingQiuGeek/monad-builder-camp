@@ -15,8 +15,20 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-11
+<!-- DAILY_CHECKIN_2026-07-11_START -->
+分享一下今天的学习成果，从零搭了一个预测市场 DApp，已经上线了：
+
+[https://prediction-market-dapp.vercel.app/](https://prediction-market-dapp.vercel.app/)
+
+「特朗普能否赢得中期选举」，连钱包下注 Yes 或 No，结果出来后赢家瓜分全部奖池。Sepolia 测试网
+
+![c9eab26e552fbf4c6f965982fc56b4a4.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/elliothunter32-star/images/2026-07-11-1783758327579-c9eab26e552fbf4c6f965982fc56b4a4.png)
+<!-- DAILY_CHECKIN_2026-07-11_END -->
+
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 ## 一、账户与身份体系
 
 传统互联网产品中，每个 App 都需要注册一个独立账号（手机号、邮箱、密码），你的身份由平台管理和验证。忘记密码了可以找回，账号被盗了可以冻结，一切依赖平台这个"中间人"。
@@ -68,6 +80,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
 
+
 ![a672f12f-102a-4ea0-bd4a-38f9327668ac.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/elliothunter32-star/images/2026-07-09-1783605084886-a672f12f-102a-4ea0-bd4a-38f9327668ac.png)![12eaf9c6-c760-4770-a0ae-35d2ccda8daf.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/elliothunter32-star/images/2026-07-09-1783605100079-12eaf9c6-c760-4770-a0ae-35d2ccda8daf.png)
 
 1.agent高风险实例 过度授权 建议经常审查权限清单 使用agent guard工具 对于敏感操作使用人工复核  
@@ -81,6 +94,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 ![cb2e9382af2db6f6146bc1f17762cdb1.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/elliothunter32-star/images/2026-07-08-1783509776518-cb2e9382af2db6f6146bc1f17762cdb1.png)
