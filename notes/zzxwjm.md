@@ -1,5 +1,5 @@
 ---
-timezone: UTC-7
+timezone: UTC+8
 ---
 
 # Zixie Zheng
@@ -10,7 +10,7 @@ timezone: UTC-7
 
 ## Self-introduction
 
-从Measurement到web3.
+Web3 暑期实习计划 - Monad Buidler Camp
 
 ## Notes
 
