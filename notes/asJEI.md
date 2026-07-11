@@ -19,19 +19,79 @@ timezone: UTC+8
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-11
+<!-- DAILY_CHECKIN_2026-07-11_START -->
+0\. 背景介绍
+
+在参加 Monad Builder Camp 之前，我对于 Web3 的理解主要停留在区块链、钱包、智能合约等概念层面。因此 Week 1 的目标不是单纯完成任务，而是尝试建立 Web2 开发经验与 Web3 系统之间的联系。
+
+通过这一周的钱包实践、链上交易、智能合约部署，我逐渐从“应用开发者”的视角转向理解 Web3 中的“状态、身份和规则”。
+
+1\. Week 1 完成的链上实践
+
+1钱包创建与 Monad Testnet 配置：
+
+首先创建了 Monad Builder Camp 专用钱包，并完成 Monad Testnet 网络配置。我使用了如下内容：
+
+钱包：Rabby Wallet
+
+网络：Monad Testnet
+
+Chain ID：10143
+
+RPC：[testnet-rpc.monad.xyz](http://testnet-rpc.monad.xyz)
+
+通过配置测试网络，我完整理解了钱包地址是什么、私钥和签名的作用、钱包如何作为 Web3 身份入口。相比 Web2 的账号密码体系，钱包并不是账号，而是一种基于密码学证明身份的方式。
+
+2 第一笔 Monad Testnet 链上交易：
+
+测试币领取之后，我进行了第一次 Monad Testnet 转账。
+
+交易信息：
+
+From：课程测试钱包
+
+To：个人测试地址
+
+Amount：4 MON
+
+Transaction Hash：
+
+0xc67a286420da659ab9d7afb4676fb5fd741ef2ba111b62d4072feeb53b8353c9
+
+然后通过 Monad Explorer 查看了交易详情，让我第一次真正理解到了链上交易不是简单调用 API，而是：
+
+用户签名 → 网络验证 → 状态改变 → 永久记录
+
+的多个连续步骤
+
+3 Solidity 合约编写与部署
+
+完成钱包和交易实践后，我进一步尝试使用 AI 辅助生成简单 Solidity 合约，并在 Remix 环境完成部署。
+
+关于分轨问题
+
+我的首选是 Research。因为我的技术背景主要集中在 AI 应用开发和全栈开发方向，过去参与过 AI Agent、LLM 应用以及开发者工具相关项目。在接触 Web3 之前，我更多关注的是如何利用技术解决实际问题。而且我对于分析文章或者说撰写教程指导这一类也比较有兴趣
+
+备选/辅学Tech。原因也简单，我认为研究不能脱离实际构建。通过实际 Build 验证 Research 中提出的想法是一种很有成就感的事情
+<!-- DAILY_CHECKIN_2026-07-11_END -->
+
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 已完成本日大学习
 <!-- DAILY_CHECKIN_2026-07-09_END -->
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
 
+
 晚上要赶火车先占位打卡一下
 <!-- DAILY_CHECKIN_2026-07-08_END -->
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 ———————————————————— 一、今日任务完成情况 ————————————————————
@@ -149,6 +209,7 @@ Gas 不足可去 [faucet.monad.xyz](http://faucet.monad.xyz) 领测试 MON。
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
