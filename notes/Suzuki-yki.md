@@ -15,8 +15,267 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-11
+<!-- DAILY_CHECKIN_2026-07-11_START -->
+# **今日学习笔记：**
+
+### **1.1 核心概念：什么是Dapp？**
+
+去中心化应用，运行在区块链网络上，核心特点是**去中心化**，逻辑和数据不由单一实体控制。
+
+### **1.2 Dapp 架构四层结构**
+
+| 层级 | 组件 | 作用 |
+| --- | --- | --- |
+| 1. 前端 | HTML/CSS/JS, React/Vue | 用户界面。通过钱包（如MetaMask）或RPC节点与区块链交互。 |
+| 2. 智能合约 | Solidity | 核心业务逻辑，部署在区块链上，自动执行，透明且不可篡改。 |
+| 3. 数据检索器 | Ponder, Subgraph (The Graph) | 监听并索引智能合约的事件（Events），将链上数据存入传统数据库（如PostgreSQL），供前端快速查询。 |
+| 4. 区块链与存储 | Ethereum, IPFS, Arweave | 存储状态数据和交易记录；去中心化存储解决大文件（如图片）的存储问题。 |
+
+### **1.3 Dapp 开发标准流程**
+
+1.  **需求分析与规划**：确定功能，选择区块链平台，设计用户体验。
+    
+2.  **智能合约开发**：编写Solidity代码 -> 编写测试 -> 安全审计。
+    
+3.  **检索器开发**：确定前端所需数据 -> 使用TypeScript编写事件处理与入库逻辑 -> 部署运维。
+    
+4.  **前端开发**：选择框架（React/Vue）-> 集成钱包 -> 从链上和检索器获取数据 -> 处理交易签名。
+    
+5.  **部署与上线**：部署合约（Hardhat/Foundry）-> 部署前端（IPFS/Vercel）-> 发布和维护。
+    
+
+* * *
+
+## **第二章：开发环境与工具链**
+
+### **2.1 基础环境**
+
+-   **Node.js**：建议使用 `nvm` 进行版本管理。
+    
+-   **包管理器**：`npm` 或 `yarn`。
+    
+-   **Git**：版本控制。
+    
+
+### **2.2 核心开发框架**
+
+| 框架 | 特点 | 适用场景 |
+| --- | --- | --- |
+| Foundry | Rust实现，极快。包含Forge（测试/部署）、Anvil（本地节点）、Cast（CLI交互）。 | 对速度和性能有高要求的专业项目。 |
+| Hardhat | Node.js实现，插件丰富，生态成熟，文档完善。 | 大多数项目的首选，特别是初学者和需要复杂集成的项目。 |
+| Remix IDE | 基于浏览器的在线IDE，无需安装，快速上手。 | 编写测试合约、学习Solidity、快速原型验证。 |
+
+### **2.3 RPC节点服务**
+
+-   **是什么**：连接Dapp与区块链的桥梁，通过JSON-RPC协议通信。
+    
+-   **作用**：读取链上数据、发送交易、监听事件、切换网络。
+    
+-   **主流服务商**：
+    
+    -   **Alchemy**：企业级，稳定性高，适合生产环境。
+        
+    -   **Infura**：老牌，ConsenSys旗下，适合开发测试。
+        
+    -   **QuickNode**：高性能，低延迟。
+        
+    -   **Public Node** / **Ankr**：免费或社区版，适合学习。
+        
+-   **最佳实践**：
+    
+    -   **保护API Key**：使用 `.env` 环境变量，勿提交至Git。
+        
+    -   **实现重试与故障转移**：配置多个RPC节点，一个失败自动切换。
+        
+    -   **速率限制管理**：了解服务商限制，实现请求节流。
+        
+
+* * *
+
+## **第三章：Solidity 核心语法精要**
+
+### **3.1 基础语法**
+
+-   **版本声明**：`pragma solidity ^0.8.0;`
+    
+-   **数据类型**：
+    
+    -   **值类型**：`bool`, `uint`/`int` (常用`uint256`), `address`, `bytes`(定长/动态)。
+        
+    -   **引用类型**：数组 (`T[]`, `T[5]`), 映射 (`mapping(Key => Value)`), 结构体 (`struct`)。
+        
+-   **函数修饰符**：
+    
+    -   **可见性**：`public`, `external` (仅外部), `internal`, `private`。
+        
+    -   **状态可变性**：`view` (只读), `pure` (不读不写), `payable` (可接收ETH)。
+        
+
+### **3.2 合约结构**
+
+solidity
+
+```
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract MyContract {
+    // 1. 状态变量
+    uint256 public myNumber;
+    address public owner;
+    mapping(address => uint256) public balances;
+
+    // 2. 事件 (用于日志和前端监听)
+    event NumberChanged(uint256 newNumber);
+
+    // 3. 构造函数 (部署时执行一次)
+    constructor() {
+        owner = msg.sender;
+        myNumber = 100;
+    }
+
+    // 4. 函数
+    function setNumber(uint256 _number) public {
+        myNumber = _number;
+        emit NumberChanged(_number);
+    }
+
+    // 5. 修饰器 (Modifier)
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Not the owner");
+        _;
+    }
+}
+```
+
+### **3.3 关键机制**
+
+-   **事件 (Events)**：用于记录重要状态变化，是**检索器**和**前端**获取链上数据更新的核心方式。
+    
+-   **继承 (Inheritance)**：支持单继承和多继承，使用 `virtual` 和 `override` 关键字。
+    
+-   **接口 (Interfaces)**：定义合约间交互的标准，如 `IERC20`。
+    
+
+* * *
+
+## **第四章：智能合约安全最佳实践**
+
+> **核心原则**：合约一旦部署便无法修改，安全性是第一位。
+
+### **4.1 常见攻击与防御**
+
+| 攻击类型 | 原理 | 防护措施 |
+| --- | --- | --- |
+| 重入攻击 (Reentrancy) | 恶意合约在fallback中反复调用提款函数，在状态更新前多次提款。 | 1. Checks-Effects-Interactions模式（先更新状态，后外部调用）。2. 使用 ReentrancyGuard 修饰器（重入锁）。 |
+| 访问控制缺失 | 敏感函数（如提款、修改参数）未做权限校验。 | 使用 onlyOwner (Ownable) 或基于角色的 AccessControl。 |
+| 整数溢出/下溢 | 变量值超出类型范围导致数值异常环绕（<0.8.0版本默认不检查）。 | 1. 使用Solidity 0.8+（默认检查）。2. 旧版本使用 SafeMath 库。 |
+| 预言机操纵 | 攻击者通过影响DEX价格等外部数据源，操纵依赖价格的合约。 | 使用去中心化预言机（如 Chainlink），采用时间加权平均价格（TWAP）。 |
+| 三明治攻击 | 攻击者在用户交易前后分别买入/卖出，利用滑点套利。 | 设置合理的滑点容忍度，使用隐私交易或RFQ（Request for Quote）模式。 |
+
+* * *
+
+## **第五章：实战案例 - 链上留言板**
+
+### **5.1 项目核心逻辑**
+
+-   **功能**：用户连接钱包后，可以留下和查看消息。
+    
+-   **数据**：使用 `mapping(address => string[])` 存储每个地址的留言列表。
+    
+-   **事件**：`event NewMessage(address indexed sender, string message)` 用于前端实时更新。
+    
+
+### **5.2 全流程开发步骤**
+
+1.  **编写合约**：在Remix中创建 `messageboard.sol`。
+    
+2.  **编译**：选择合适的Solidity编译器版本。
+    
+3.  **部署到测试网**：
+    
+    -   通过MetaMask切换到 **Sepolia** 测试网络。
+        
+    -   从水龙头领取测试ETH。
+        
+    -   在Remix中使用 **“Injected Provider - MetaMask”** 环境部署合约。
+        
+4.  **验证**：在 **Sepolia Etherscan** 上通过交易哈希或合约地址查看部署详情。
+    
+5.  **前端交互**：
+    
+    -   **连接钱包**：调用 `window.ethereum.request({method: 'eth_requestAccounts'})`。
+        
+    -   **合约实例化**：使用 `web3.eth.Contract(ABI, 合约地址)`。
+        
+    -   **写操作**：`contract.methods.leaveMessage(msg).send({from: account})` (需Gas)。
+        
+    -   **读操作**：`contract.methods.getMessageCount(address).call()` (免费)。
+        
+
+* * *
+
+## **第六章：Gas 优化与高阶开发**
+
+### **6.1 Gas优化技巧**
+
+-   **减少存储（SSTORE）操作**：尽量使用 `memory` 变量，缓存 `storage` 变量的值。
+    
+-   **优化循环**：将 `array.length` 缓存到局部变量，使用 `++i` 代替 `i++`。
+    
+-   **使用位压缩**：将多个小变量打包到一个 `uint256` 中。
+    
+-   **函数可见性**：`external` 比 `public` 更省Gas。
+    
+
+### **6.2 审计流程**
+
+1.  **静态分析**：使用 `Slither`, `MythX` 等工具扫描代码缺陷。
+    
+2.  **动态测试**：使用 `Foundry` 进行模糊测试（Fuzzing），模拟极端情况。
+    
+3.  **人工审查**：由专业审计师检查业务逻辑漏洞。
+    
+4.  **生成报告**：列出所有发现的问题及修复建议。
+    
+
+### **6.3 开发协作规范**
+
+-   **Git工作流**：采用 `main` (主) + `develop` (开发) + `feature/xxx` (功能分支) 模式。
+    
+-   **提交信息**：遵循 `类型: 简要描述` 格式（如 `feat: 添加质押功能`）。
+    
+-   **PR流程**：需通过所有测试、经过至少一位Reviewer审查，严禁自审自合。
+    
+
+* * *
+
+## **第七章：Layer 2 (L2) 开发入门**
+
+### **7.1 为何需要L2？**
+
+解决以太坊主网**高Gas费**和**低吞吐量**问题，将计算和数据压缩后放在链下处理，再提交结果到主网。
+
+### **7.2 主流L2技术对比**
+
+| 技术 | 方案 | 优点 | 缺点 |
+| --- | --- | --- | --- |
+| Optimistic Rollup | 乐观假设交易有效，设有挑战期。 | EVM完全兼容，开发工具成熟（如Arbitrum, Optimism）。 | 提现到主网有1-2周的延迟。 |
+| ZK Rollup | 使用零知识证明验证交易有效性。 | 提现快，安全性高（如zkSync, Starknet）。 | 开发难度大，EVM兼容性不如Optimistic方案。 |
+
+### **7.3 开发要点**
+
+-   **环境准备**：使用目标L2的专用CLI（如zkSync CLI）或Hardhat/Foundry插件。
+    
+-   **部署注意**：部分L2不支持 `CREATE2` 或有不同的Gas上限。
+    
+-   **跨链交互**：需要通过官方或第三方桥接器（如LayerZero）转移资产和数据。
+<!-- DAILY_CHECKIN_2026-07-11_END -->
+
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 ## **今日学习笔记：**
 
 （弥补前三天未学习的内容！今天是第一天，明天补充day2和day3还有day4的还有day5的！）
@@ -91,6 +350,7 @@ EVM（Ethereum Virtual Machine）是 **以太坊的"大脑"**，是专门用来\
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
 
+
 # 今日学习日记：
 
 我看web3实习手册其实有点不太理解pow和pos，然后今天我在buildanything里面学习了我发现这个教学我更能理解是什么意思了。
@@ -129,6 +389,7 @@ EVM（Ethereum Virtual Machine）是 **以太坊的"大脑"**，是专门用来\
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -204,6 +465,7 @@ Marketplace 比较： owner == msg.sender
 
 
 
+
 ## **今日学习笔记：**
 
 智能合约的运行其实是contract A调用contract B,执行 contract B的代码再返回contract A.
@@ -242,6 +504,7 @@ AI告诉我一句话：**Update your own state before interacting with others** 
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
