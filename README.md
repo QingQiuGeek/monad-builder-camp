@@ -503,7 +503,7 @@ By completing the program, participants will leave with:
 | [baikingrio](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/baikingrio.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [gexugg-wq](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/gexugg-wq.md) | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [xl892477-byte](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/xl892477-byte.md) | ⭕️ | ✅ | ✅ | ⭕️ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [Foreon](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Foreon.md) | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [Foreon](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Foreon.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [bboybachelor](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/bboybachelor.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [1260598954-ctrl](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/1260598954-ctrl.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [marsmu1213](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/marsmu1213.md) | ⭕️ | ✅ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -815,6 +815,7 @@ By completing the program, participants will leave with:
 | [yoona333](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/yoona333.md) | ⭕️ | ⭕️ | ✅ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [summer-sheep](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/summer-sheep.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
