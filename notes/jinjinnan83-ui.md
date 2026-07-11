@@ -15,8 +15,24 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-11
+<!-- DAILY_CHECKIN_2026-07-11_START -->
+web3的基础概念
+
+DEfi：去中心化实践
+
+uniswap：恒定乘积公式，调节市场
+
+LP：流动性贡献者
+
+Compound：去中心化借贷协议，DAI币，超额抵押系统
+
+NFT：数字产权
+<!-- DAILY_CHECKIN_2026-07-11_END -->
+
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 Monad 钱包配置指南
 
 任选一个钱包
@@ -179,6 +195,7 @@ Amount 不仅能看到转账金额，还有当次交易付给
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
 
+
 音频围绕 AI Agent 支付基础设施的架构、落地进展、生态布局及行业趋势展开分享答疑，核心内容如下：
 
 -   **Agent 支付核心架构**
@@ -252,6 +269,7 @@ Amount 不仅能看到转账金额，还有当次交易付给
 <!-- DAILY_CHECKIN_2026-07-08_START -->
 
 
+
 -   **Agent 支付核心架构**
     
     -   **全链路能力分层**
@@ -321,6 +339,7 @@ Amount 不仅能看到转账金额，还有当次交易付给
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
