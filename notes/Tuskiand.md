@@ -15,8 +15,192 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-11
+<!-- DAILY_CHECKIN_2026-07-11_START -->
+# **链上待办合约**
+
+> 主题：从零完成一个「个人链上待办 DApp」——Solidity 合约 + 单文件前端 + 部署上线。 范围：覆盖合约原理、前端交互、部署链路，以及若干容易混淆的概念澄清。
+
+* * *
+
+## **一、项目概览**
+
+本项目由三部分组成，可独立理解、独立部署：
+
+| 模块 | 内容 | 位置 |
+| --- | --- | --- |
+| 智能合约 | PersonalDeadlineOnchainTodo | contracts/PersonalDeadlineOnchainTodo.sol |
+| 前端 DApp | 单文件 HTML + ethers.js v6 | frontend/index.html |
+| 部署链路 | GitHub 仓库 + Vercel 静态托管 | README.md / frontend/DEPLOY.md |
+
+当前真实部署状态：合约已部署到 **Monad 测试网**（Chain ID `10143`），前端配置已填好待上线。
+
+* * *
+
+## **二、智能合约（Solidity）知识点**
+
+### **2.1 合约骨架**
+
+```
+ // SPDX-License-Identifier: MIT
+ pragma solidity ^0.8.20;
+ ​
+ struct Todo {
+     uint256 id;
+     string content;
+     uint256 deadline;   // Unix 时间戳（秒）
+     bool completed;
+ }
+ ​
+ mapping(address => Todo[]) private userTodos;
+```
+
+-   `pragma solidity ^0.8.20`：限定编译器版本，避免新版破坏行为。
+    
+-   `SPDX-License-Identifier`：源码许可声明，方便他人复用。
+    
+
+### **2.2 四个公开函数**
+
+| 函数 | 关键逻辑 | 学习点 |
+| --- | --- | --- |
+| addTodo(string content, uint256 deadline) | require(deadline >= block.timestamp)；newId = myTodos.length；push | 时间戳校验防止过去时间；用数组长度做自增 id |
+| getMyTodos() external view | return userTodos[msg.sender] | view 不消耗 gas；只返回调用者自己的数据 |
+| completeTodo(uint256 todoId) | 越界校验后 completed = true | 只能改自己的数据 |
+| deleteTodo(uint256 todoId) | 末位覆盖 + pop() | gas 优化删除 |
+
+### **2.3 设计要点（核心价值）**
+
+NaN.  **隐私隔离靠** `msg.sender`：所有写操作都以 `msg.sender` 为身份，用户只能操作自己地址下的数据，看不到别人的待办。
+      
+NaN.  `private` **变量的语义**：`userTodos` 标为 `private` 仅表示「外部合约/直接读取不可见」，但通过 `getMyTodos()` 仍可读取——它与「保密」无关，是访问控制手段。
+      
+NaN.  **删除为何用「末位覆盖 + pop」**：Solidity 动态数组若从中间删除并前移元素，gas 成本随数组长度线性增长；用最后一项覆盖目标项再 `pop()`，只需一次写操作，省 gas。代价是：被移动的末项 `id` 会变为被删项的下标，需在覆盖后修正 `id` 以保持 `id == 下标`。
+      
+NaN.  **时间用 Unix 时间戳**：`block.timestamp` 与前端 `Date.now()` 单位均为秒（前端注意 `Date.now()` 是毫秒，需 `/1000`）。
+      
+
+* * *
+
+## **三、前端 DApp（ethers.js v6）知识点**
+
+### **3.1 单文件架构**
+
+-   一个 `index.html` 内含 HTML + CSS + JS，无构建步骤，双击即可在浏览器打开。
+    
+-   ethers.js v6 通过 CDN 引入；v6 与 v5 API 差异较大（`BrowserProvider` 替代 `Web3Provider`，`ethers.isAddress` 等）。
+    
+-   合约地址与链 ID 硬编码于文件顶部常量，普通用户连接钱包即用，无需输入地址。
+    
+
+```
+ const CONTRACT_ADDRESS = "0x3bEd71932240266608Ef0e84bD9f96796261E7C9";
+ const CONTRACT_CHAIN_ID = 10143;
+```
+
+### **3.2 钱包连接（MetaMask）**
+
+```
+ const provider = new ethers.BrowserProvider(window.ethereum);
+ const signer = await provider.getSigner();
+```
+
+-   `window.ethereum` 是 MetaMask 注入的对象；未安装时需引导用户安装。
+    
+-   监听 `accountsChanged` / `chainChanged` 事件以刷新界面状态。
+    
+
+### **3.3 读操作与写操作**
+
+-   **读（view）**：`await contract.getMyTodos()` 直接返回数据，不弹钱包、不消耗 gas。
+    
+-   **写（state-changing）**：`const tx = await contract.addTodo(...)` 返回交易对象，`await tx.wait()` 等待上链确认后再刷新界面。
+    
+
+### **3.4 状态展示逻辑**
+
+-   **已逾期**：`deadline < 当前时间` 且未完成。
+    
+-   **即将到期 / 已完成**：分别按时间窗口与 `completed` 标记。
+    
+-   统计卡片（全部 / 进行中 / 已完成 / 已逾期）由前端计算，不依赖链上聚合。
+    
+
+* * *
+
+## **四、部署全流程**
+
+### **4.1 部署合约（Remix → 链上）**
+
+NaN.  Remix 编译合约，环境选 **Injected Provider - MetaMask**，连接目标网络。
+      
+NaN.  点击 Deploy，钱包确认交易；交易上链后合约获得固定地址。
+      
+NaN.  从 Remix 的 Deployed Contracts 复制地址，填入前端常量。
+      
+
+> 关键认知：部署是**一笔链上交易**，确认后即永久存在于该链，与 Remix 网页是否打开无关。
+
+### **4.2 推送到 GitHub**
+
+-   本地 `git init -b main` → `add` → `commit`；`.gitignore` 排除 `.workbuddy` 本地数据。
+    
+-   推送凭证使用环境变量 `GITHUB_TOKEN`，命令只引用变量名，真实 token 不写入仓库、remote 配置或文件；推送后 remote URL 不含 token。
+    
+
+### **4.3 部署前端到 Vercel**
+
+NaN.  Vercel 用 GitHub 登录，Import 该仓库。
+      
+NaN.  **Framework 选** `Other`**，Root Directory 指向** `frontend/`（否则找不到 `index.html`）。
+      
+NaN.  Deploy 后获得 `xxx.vercel.app`；之后 `git push` 自动重新部署。
+      
+
+* * *
+
+## **五、关键概念澄清（避坑）**
+
+| 误区 | 正解 |
+| --- | --- |
+| 关掉 Remix 网页会取消部署 | 不会。部署是链上交易，确认后永久存在；仅 Remix 内置的 JavaScript VM 环境关掉会丢失（那是内存模拟，非真实链） |
+| 合约地址/链 ID/ABI 写进公开仓库会泄露隐私 | 不会。这些本就是公开链上数据，区块浏览器可查；真正敏感的是私钥、助记词、API Key，本项目均不含 |
+| 别人拿到合约地址能改我的待办 | 不会。所有函数按 msg.sender 隔离，他人只能操作自己钱包名下的数据 |
+| MetaMask 默认就有 Monad 测试网 | 不是。Monad 测试网（10143）需手动添加或由 chainlist 一键添加 |
+
+* * *
+
+## **六、当前配置记录**
+
+-   **合约地址**：`0x3bEd71932240266608Ef0e84bD9f96796261E7C9`
+    
+-   **网络**：Monad 测试网（Chain ID `10143`，原生代币 `MON`）
+    
+-   **RPC**：`https://testnet-rpc.monad.xyz`
+    
+-   **区块浏览器**：`https://testnet.monadscan.com/`
+    
+-   **水龙头**：`https://faucet.monad.xyz`（领 MON 付 gas）
+    
+-   **GitHub 仓库**：`Tuskiand/personal-onchain-todo`（public）
+    
+
+* * *
+
+## **七、核心收获**
+
+NaN.  **一条完整链路**：合约编写 → Remix 部署拿地址 → 前端填入配置 → GitHub → Vercel 上线分享，每一步都可独立验证。
+      
+NaN.  **心智模型**：DApp = 链上合约（状态与逻辑）+ 前端（通过 ABI 调用合约）；前端本身不含业务逻辑，只负责组装交易与展示。
+      
+NaN.  **公开 ≠ 泄露**：区块链是公开账本，地址/ABI/交易均透明；隐私靠合约逻辑（`msg.sender` 隔离）+ 私钥不暴露来保障。
+      
+NaN.  **测试网注意事项**：需手动配网络、领水龙头；测试网可能重置导致地址失效，正式长期服务应部署到稳定网络。
+<!-- DAILY_CHECKIN_2026-07-11_END -->
+
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 ## 一、今日学习主题
 
 本次参与Monad Builder Camp共学营第一周全员例会，聚焦**新人Web3零基础实操落地、AI辅助学习与开发、链上产品设计、行业入门求职**四大核心方向，有多位学员分享实操经验、周度学习规划与研究项任务解读，完成第一周体系化知识复盘与后续学习路径梳理。
@@ -110,6 +294,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
 
+
 # AI Agent安全+Web3线上共学分享会总结
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Tuskiand/images/2026-07-09-1783604121362-image.png)
@@ -167,6 +352,7 @@ AI Agent安全攻防已从传统自动化转向自主化，其核心风险被定
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -273,6 +459,7 @@ ai输出：[https://chatgpt.com/s/t\_6a4e5d42d15881918e8208bc0de8e0fa](https://c
 
 
 
+
 1.  了解到了链上产品和普通互联网产品有什么不同：
     
     普通互联网产品的数据和规则主要由公司服务器控制；链上产品的数据和规则部分放到了区块链上，由代码和网络共同维护。链上产品和普通互联网产品最大的区别是“东西放在哪里、谁说了算”。普通 App 的数据和资产都放在公司的服务器里，公司负责管理；而链上产品把重要数据记录在区块链上，由网络共同维护，用户通过钱包管理自己的数字资产。传统互联网更像“租用平台服务”，Web3 更强调“用户自己拥有和控制”。
@@ -288,6 +475,7 @@ ai输出：[https://chatgpt.com/s/t\_6a4e5d42d15881918e8208bc0de8e0fa](https://c
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
