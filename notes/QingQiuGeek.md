@@ -526,4 +526,226 @@ Monad 已于 2025 年 11 月 24 日启动公共主网，测试网也已重置并
 5. 梳理 Monad 的 gas 机制要点，编写一份开发注意事项 Checklist
 
 <!-- DAILY_CHECKIN_2026-07-10_END -->
+
+<!-- DAILY_CHECKIN_2026-07-11_START -->
+# Monad Builder Camp Day 6 — Week 1 复盘：从 Ethereum 到 Monad 的核心差异深度解析
+
+> 📅 日期：2026-07-11  
+> 🏷️ 阶段：Week 1 复盘（Day 6/33）  
+> 📖 主题：以太坊 vs Monad 架构对比、Gas 机制深度分析、安全合规回顾
+
+---
+
+## 一、Week 1 学习脉络回顾
+
+过去五天（7/6-7/10），我从零开始搭建了 Monad 开发环境，完成了钱包配置、测试网交互和基础智能合约部署。今天作为 Week 1 的复盘日，我重新梳理了 Monad 文档中的核心架构设计，重点关注 **Monad 与以太坊的关键差异**，以及在实际开发中必须注意的坑。
+
+---
+
+## 二、Monad 核心架构：五大技术创新
+
+Monad 并非简单的"更快的 EVM"，而是从底层重新设计了区块链的执行管线。文档明确列出了五个核心创新：
+
+### 1. MonadBFT — 解决尾部分叉问题
+
+Monad 采用自研的 BFT 共识机制 MonadBFT，专门解决了传统 BFT 中的 **tail-forking** 问题。尾部分叉是指在共识过程中，最后一个区块的提议者恶意行为导致链分叉，MonadBFT 通过优化投票和超时机制来防止这种情况。
+
+### 2. RaptorCast — 高效区块传播
+
+使用 Raptor 码（一种喷泉码变体）进行区块数据传播，确保即使部分数据包丢失，验证者也能高效重建完整区块。
+
+### 3. 异步执行（Asynchronous Execution）
+
+这是 Monad 最关键的设计之一。在以太坊中，区块提议者必须**先执行交易**才能验证区块的有效性。而 Monad 将共识和执行**解耦**：
+
+- Leader 构建区块后，**不等待执行完成**就开始共识投票
+- 验证者在投票时只验证区块的合法性（签名、格式等），不执行交易
+- 执行在后台异步进行
+
+这意味着共识的时间预算不再受执行时间限制，大幅提升吞吐量。
+
+### 4. 并行执行 + JIT 编译
+
+交易并行执行，配合即时编译（JIT Compilation），大幅提升 EVM 字节码的执行效率。
+
+### 5. MonadDb — 高效状态存储
+
+专为以太坊状态存储优化的数据库，使用 C++ 和 Rust 编写，解决 I/O 瓶颈。
+
+---
+
+## 三、Ethereum vs Monad 核心参数对比
+
+| 特性 | Ethereum | Monad |
+|------|----------|-------|
+| **TPS** | ~15-30 | 10,000 |
+| **出块时间** | 12 秒 | 400ms |
+| **最终性** | ~12 分钟（2 epochs） | 800ms |
+| **Gas 收费方式** | 按 `gas_used` 收费 | 按 `gas_limit` 收费 |
+| **区块 Gas 上限** | 30M | 200M |
+| **交易 Gas 上限** | 无硬限制 | 30M |
+| **最低 Base Fee** | 动态（可接近 0） | 100 MON-gwei |
+| **Base Fee 控制器** | EIP-1559 标准 | 自定义（慢升快降） |
+| **EIP-1559 兼容** | 原生 | 完全兼容 |
+| **共识机制** | Gasper (Casper FFG + LMD GHOST) | MonadBFT |
+| **执行模型** | 顺序执行 | 并行执行 + JIT |
+| **节点语言** | Go/Rust（多客户端） | C++/Rust（双客户端） |
+
+---
+
+## 四、Gas 机制深度分析：最容易踩坑的地方
+
+### 4.1 收费逻辑的根本差异
+
+以太坊：
+```
+gas_paid = gas_used * price_per_gas
+```
+
+Monad：
+```
+gas_paid = gas_limit * price_per_gas
+```
+
+**这是开发者最容易踩的坑。** 在 Monad 上，即使你的交易实际只消耗了 21,000 gas，如果你设置了 100,000 的 gas limit，你就要为 100,000 gas 付费。
+
+为什么这样设计？因为异步执行。在 Monad 中，Leader 在构建区块时不知道交易的实际 gas 消耗，它只能根据 gas limit 来计算区块是否超限。如果按 gas_used 收费，恶意用户可以提交一个 gas_limit 极高但实际消耗极少的交易来 DoS 网络。
+
+### 4.2 EIP-1559 兼容但有差异
+
+Monad 完全支持 EIP-1559 Type 2 交易：
+
+```
+price_per_gas = min(base_price_per_gas + priority_price_per_gas, max_price_per_gas)
+```
+
+但 base fee 控制器不同。Monad 的控制器设计目标是**慢升快降**：
+- **慢升**：避免因短暂拥堵导致 base fee 飙升
+- **快降**：避免区块空间因 base fee 过高而浪费
+
+参数对比：
+- `max_step_size` = 1/28
+- `target` = 160M gas（80% 的 200M 区块上限）
+- `β` = 0.96（趋势衰减因子）
+- `min_base_price_per_gas` = 100 MON-gwei
+
+### 4.3 开发建议
+
+**1. 对于固定 gas 操作，直接硬编码 gas limit**
+
+```typescript
+// ✅ 推荐：固定 gas 的操作直接设置
+const tx = await wallet.sendTransaction({
+  to: recipient,
+  value: parseEther("0.1"),
+  gasLimit: 21000,  // ETH 转账固定 21000
+});
+```
+
+这样做的好处：
+- 减少一次 `eth_estimateGas` 调用的延迟
+- 避免钱包在合约 revert 时设置异常高的 gas limit
+
+**2. 批量操作使用 Multicall3**
+
+Monad 上 `Multicall3` 已部署在标准地址 `0xcA11bde05977b3631167028862bE2a173976CA11`，可以将多个 `eth_call` 合并为一次调用：
+
+```typescript
+// 使用 viem 的 multicall
+const results = await client.multicall({
+  contracts: [
+    { address: tokenA, abi: erc20Abi, functionName: 'balanceOf', args: [wallet] },
+    { address: tokenB, abi: erc20Abi, functionName: 'balanceOf', args: [wallet] },
+    { address: router, abi: routerAbi, functionName: 'getAmountsOut', args: [amount, path] },
+  ],
+});
+```
+
+**3. 并发提交交易时管理 nonce**
+
+由于 Monad 400ms 出块，并发提交交易时必须本地管理 nonce，不能依赖 `eth_getTransactionCount`：
+
+```typescript
+const baseNonce = await client.getTransactionCount({ address: wallet.address });
+const promises = txs.map((tx, i) =>
+  wallet.sendTransaction({ ...tx, nonce: baseNonce + i })
+);
+const hashes = await Promise.all(promises);
+```
+
+---
+
+## 五、测试网信息速查
+
+| 项目 | 值 |
+|------|-----|
+| 网络名 | Monad Testnet |
+| Chain ID | 10143 |
+| 货币符号 | MON |
+| 水龙头 | https://faucet.monad.xyz |
+| 区块浏览器 | MonadVision / Monadscan |
+| App Hub | https://testnet.monad.xyz/ |
+| 当前版本 | v0.14.5 / MONAD_NINE |
+
+RPC 提供商限制：
+- **QuickNode**: 50 rps, batch 100, 支持 archive
+- **Ankr**: 300 reqs/10s, batch 100, 不支持 archive, 不允许 debug_*
+- **Monad Foundation**: 20 rps, 不允许 batch, 支持 archive
+
+已部署的标准合约包括：Wrapped MON、CreateX、Multicall3、Permit2、Safe v1.4.1 全套、EntryPoint v0.6/0.7/0.8。
+
+---
+
+## 六、踩坑记录
+
+### 踩坑 1：MetaMask 的 gas limit 陷阱
+
+MetaMask 在 `eth_estimateGas` 调用的合约 revert 时，会将 gas limit 设置为一个非常高的值。在以太坊上这通常问题不大（因为只收实际消耗），但在 Monad 上这意味着你会被收一大笔钱。
+
+**解决方案**：对于已知 gas 消耗的交易，始终手动设置 gasLimit。
+
+### 踩坑 2：Batch Request 在 Monad Foundation RPC 上不被允许
+
+如果你习惯用 JSON-RPC batch request（将多个请求打包成一个数组），在使用 Monad Foundation 的公共 RPC 时会被拒绝。需要改用 QuickNode 或 Ankr 的端点。
+
+### 踩坑 3：eth_call 并发不等于批量
+
+多个并发的 `eth_call` 是独立的 HTTP 请求，在 Monad 上虽然延迟很低，但如果要查询多个合约状态，用 Multicall3 一次 `eth_call` 搞定效率更高。
+
+---
+
+## 七、安全合规思考
+
+本周还回顾了 Web3 安全与合规的知识，作为在中国大陆的开发者，以下几点必须牢记：
+
+1. **代币发行的法律风险**：中国明确禁止 ICO/IEO/IDO，参与代币模型设计、空投逻辑配置、合约部署等环节，即使只是技术人员，也可能被视为"共同行为人"。
+
+2. **智能合约安全**：在 Monad 上部署合约前，必须进行充分的测试。虽然 Monad 兼容 EVM，但并行执行可能引入新的并发安全问题——如果两个交易并发修改同一 storage slot，时序可能与顺序执行不同。
+
+3. **出金合规**：薪酬中如果包含虚拟货币，通过 C2C 出金时务必选择可信渠道，避免接收来路不明的资金导致银行卡冻结。
+
+4. **FATF Travel Rule**：超过 1000 美元/欧元的虚拟资产转账，VASP 需要收集和传输发送方/接收方信息，这对 DeFi 应用的合规设计提出了要求。
+
+---
+
+## 八、Week 2 展望
+
+下周（Day 8-14）进入智能合约进阶和前端交互阶段。计划：
+- 用 Foundry 在 Monad testnet 上部署一个完整的 DeFi 合约
+- 实现前端与合约的交互（viem + React）
+- 探索 Monad 的并行执行对合约设计的影响
+- 研究 Monad 上的 indexer 方案（Envio、The Graph、Goldsky）
+
+---
+
+## 九、今日收获总结
+
+1. 深入理解了 Monad 异步执行的设计动机和对 gas 机制的影响
+2. 掌握了 Monad 与以太坊的 8 个关键参数差异
+3. 建立了 Monad 开发的最佳实践：硬编码 gas、Multicall3、本地 nonce 管理
+4. 复习了 Web3 安全合规要点，特别是国内开发者的法律边界
+
+> 💡 核心认知：Monad 的高性能不是靠堆硬件实现的，而是通过软件架构的五个创新点（MonadBFT、RaptorCast、异步执行、并行执行、MonadDb）在普通硬件上实现的。这与 Solana 的"硬件换性能"路线完全不同，是对去中心化的坚持。
+
+<!-- DAILY_CHECKIN_2026-07-11_END -->
 <!-- Content_END -->
