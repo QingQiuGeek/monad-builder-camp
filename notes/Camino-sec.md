@@ -16,8 +16,197 @@ Web3小趴菜一枚^ ^
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-11
+<!-- DAILY_CHECKIN_2026-07-11_START -->
+# 2026-07-11 Daily Note
+
+> 今日金句：Solidity 的世界里没有"差不多就行"，每一 bit 都关系到钱。
+
+* * *
+
+## 今天做了什么
+
+### 一、Harberger Tax NFT — 安全修复复盘
+
+回顾了 GitHub 仓库（Camino-sec/Harberger-Title-NFT）的 11 个 commit，总结了项目的安全迭代过程：
+
+-   🔒 **零押金窗口漏洞**：AI 辅助发现 + 人工验证，修复方案为 `buyout`/`claimForeclosed` 新增 `depositAmount` 参数
+    
+-   🛡️ 加入 `ReentrancyGuard` + Checks-Effects-Interactions
+    
+-   🧪 新增回归测试
+    
+-   📝 README 重构（问题-解法表格、链上操作表、安全审计清单）
+    
+-   📂 Obsidian 笔记已同步更新（Hackathon-Ideas-Vault）
+    
+
+### 二、Ghast AI 项目研究
+
+研究了 0G APAC Hackathon 的标杆项目 Ghast AI（幽灵人工智能）：
+
+-   首个完全去中心化的链上 AI 助手浏览器扩展
+    
+-   基于 0G Network 去中心化计算+存储
+    
+-   405 注册用户，零资金纯自然增长
+    
+-   📂 归档到 Hackathon-Ideas-Vault（04\_Events/）
+    
+
+### 三、PhD 求职经验文章
+
+读了 UW NLP PhD Alisa Wuffles 的求职经验博客：
+
+-   11 家公司、57 场面试的完整复盘
+    
+-   七种面试类型（ML Coding 最常见，行为面试最容易翻车）
+    
+-   薪资谈判：初始 offer 默认有谈判空间
+    
+-   📂 同步到两个库：
+    
+    -   Web3-Internship-Vault/05-Knowledge/AI/
+        
+    -   Web3\_Vault/02\_Career\_Lab/
+        
+
+* * *
+
+## 核心收获
+
+### 1\. Harberger Tax NFT — AI+人工的安全协作模式
+
+今天最让我有收获的是复盘了安全修复的**完整流程**：
+
+```
+AI 审查（Claude）发现零押金窗口问题
+    ↓
+人工读代码交叉验证
+    ↓
+判断严重性：Monad 出块极快，这是真实可利用的漏洞
+    ↓
+设计修复方案：改函数签名（breaking change）
+    ↓
+实现：buyout(price, depositAmount) 原子操作
+    ↓
+回归测试验证
+```
+
+**关键判断**：
+
+-   选择改签名而不是仅文档提醒 → **安全问题不能靠"小心点"解决**
+    
+-   depositAmount 可以为 0 → **把选择权交给用户，不要强制**
+    
+-   加 nonReentrant → **纵深防御，即使当前逻辑安全也要加**
+    
+
+这个流程本身就是一份很好的"AI 辅助开发"案例——**AI 能发现问题，但严重性判断和修复决策是人做的**。
+
+* * *
+
+### 2\. Ghast AI — 产品设计的启发
+
+这个项目有几个点值得学习：
+
+| 特点 | 做法 | 启发 |
+| --- | --- | --- |
+| 降低门槛 | 浏览器扩展 > CLI，连接钱包 > 注册账号 | 形态选择很重要 |
+| 去中心化 | 用 0G 分布式基础设施，不是噱头 | 技术选型要匹配产品理念 |
+| 增长方式 | 零资金，Discord 社区运营，1500+ 成员 | 社区驱动 > 砸钱买量 |
+| 迭代速度 | 黑客松期间 6 个版本 | 持续交付能力 > 完美主义 |
+
+* * *
+
+### 3\. PhD 求职 — 底层通用逻辑
+
+虽然不是 PhD 求职场景，但有几个底层逻辑是通用的：
+
+-   **建立专业深度**：作者靠"tokenization"这个细分领域脱颖而出。不管是 Web3 还是 AI，找到一个点深挖
+    
+-   **社交网络的力量**：内推 > 海投。在社群里主动交流
+    
+-   **行为面试要提前准备**：别觉得"我人没问题就不会翻车"——作者第一次行为面试就翻车了
+    
+-   **学习本身有 side benefit**：面试准备的知识反过来提升了研究能力。今天在 Monad Builder Camp 学的东西，未来某个地方会派上用场
+    
+
+* * *
+
+## 红绿灯自评
+
+| 内容 | 掌握度 | 备注 |
+| --- | --- | --- |
+| bool 值 | 🟢 | 逻辑清楚，和日常思维一致 |
+| 整型运算 | 🟢 | 边界和溢出保护理解了 |
+| 位运算基础 | 🟡 | 操作懂了，实际应用还需多看 |
+| 位运算在合约中的应用 | 🟡 | 知道能省 Gas，具体怎么用还要练 |
+| Harberger 安全修复逻辑 | 🟢 | 流程和决策判断都理解了 |
+| Ghast AI 产品分析 | 🟢 | 产品思路清晰，可借鉴 |
+| PhD 求职经验 | 🟢 | 底层逻辑通用 |
+
+* * *
+
+## 还没搞懂的
+
+-   位运算在真实合约里的典型用法（除了权限掩码还有什么？）
+    
+-   `unchecked` 块什么时候该用、什么时候不该用
+    
+-   0G Network 的去中心化计算具体是怎么运作的？
+    
+
+* * *
+
+## 完成的小任务
+
+-   Harberger Tax NFT 安全修复复盘 + Obsidian 同步更新
+    
+-   Ghast AI 项目研究 + 归档到 Hackathon-Ideas-Vault
+    
+-   PhD 求职文章整理 + 同步到两个 Obsidian 库
+    
+-   创建 0G APAC Hackathon 赛事记录（赛事模板）
+    
+
+* * *
+
+## 回顾
+
+今天做了四件不同的事，但有一个共同主题：**从别人的项目和经验中提炼可复用的模式**。
+
+Solidity 的位运算教会我"越底层越高效"；Harberger NFT 的安全修复教会我"AI 发现问题，人做决策"；Ghast AI 教会我"降低用户门槛比技术炫酷更重要"；PhD 求职文章教会我"建立深度比广撒网更有效"。
+
+* * *
+
+## 明天计划
+
+-   继续 Solidity 实验 1.6+（address / string / mapping？）
+    
+-   Harberger Tax NFT：考虑部署到测试网
+    
+-   关注 Monad Builder Camp 新课程内容
+    
+-   整理本周 SOP 周报
+    
+
+* * *
+
+## 相关笔记
+
+-   [Solidity 基础实战专题](Solidity基础实战专题)
+    
+-   [Harberger Tax NFT 项目](Harberger-Tax-NFT)
+    
+-   [PhD 求职经验](PhD工业界求职指南)
+    
+-   [0G APAC Hackathon 赛事记录](0G-APAC-Hackathon)
+<!-- DAILY_CHECKIN_2026-07-11_END -->
+
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 # 2026-07-10
 
 ## 今天做了什么
@@ -347,6 +536,7 @@ function canDelete() public view returns (bool) {
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
 
+
 # 2026-07-09
 
 ## 今日任务
@@ -417,6 +607,7 @@ function canDelete() public view returns (bool) {
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 # 2026-07-08
@@ -882,6 +1073,7 @@ To（接收方）: 0x7f1a8...524db（我的账户1）
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
