@@ -15,8 +15,16 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-11
+<!-- DAILY_CHECKIN_2026-07-11_START -->
+重新复盘听完本节课内容，系统梳理了AI智能体自主支付的完整底层基础设施。明晰了通过搭建人机共管钱包、配套风控框架，能够有效管控AI自主操作，避免无序支出；同时熟悉了各类支付相关产品、实际落地应用场景，对行业后续的发展趋势也有了整体认知。
+
+![IMG_7852.jpeg](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/euphoria17721-tech/images/2026-07-11-1783778463090-IMG_7852.jpeg)
+<!-- DAILY_CHECKIN_2026-07-11_END -->
+
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 我使用 Remix 编写并编译了一个最小化的 `MessageBoard` 留言板智能合约，通过课程专用钱包连接 Monad Testnet 后完成了合约部署，并记录了部署后的合约地址和部署交易 hash。部署完成后，我调用了 `message()` 等 read function 读取链上留言内容，又调用 `setMessage()` write function 修改留言，并再次读取确认链上状态已经更新。通过这次操作，我完整体验了从 Solidity 合约源码、编译、部署、链上交互到区块浏览器验证的全过程。
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/euphoria17721-tech/images/2026-07-10-1783649245388-image.png)
@@ -24,6 +32,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/euphoria17721-tech/images/2026-07-09-1783564839294-image.png)![bfef306100b3094ecd492b7707f8f629.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/euphoria17721-tech/images/2026-07-09-1783564846939-bfef306100b3094ecd492b7707f8f629.png)
 
@@ -52,6 +61,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- DAILY_CHECKIN_2026-07-08_START -->
 
 
+
 学会get测试币，会看transaction 的 detail了
 
 ![a0c4f59d6e4b1c087ca59258fdf65ba6.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/euphoria17721-tech/images/2026-07-08-1783517225187-a0c4f59d6e4b1c087ca59258fdf65ba6.png)![a0c4f59d6e4b1c087ca59258fdf65ba6.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/euphoria17721-tech/images/2026-07-08-1783517266853-a0c4f59d6e4b1c087ca59258fdf65ba6.png)
@@ -59,6 +69,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
@@ -71,6 +82,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
