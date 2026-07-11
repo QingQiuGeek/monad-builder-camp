@@ -15,8 +15,19 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-11
+<!-- DAILY_CHECKIN_2026-07-11_START -->
+完成基于Monad的链上实时社交应用产品方向分析的相应文档的撰写；
+
+|   |   |   |
+| --- | --- | --- |
+|   |   |   |
+|   |   |   |
+<!-- DAILY_CHECKIN_2026-07-11_END -->
+
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 完成区块链合约的部署和写入调用
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/yeliang0815-design/images/2026-07-10-1783674704201-image.png)
@@ -25,6 +36,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
 
+
 完成钱包和第一次交易的实现；
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/yeliang0815-design/images/2026-07-09-1783593443886-image.png)
@@ -32,6 +44,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 了解Monad的相关概念以及课程钱包的创建
@@ -44,6 +57,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 对于产品与商业化的概念的思考。
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/yeliang0815-design/images/2026-07-07-1783426425967-image.png)
@@ -51,6 +65,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
