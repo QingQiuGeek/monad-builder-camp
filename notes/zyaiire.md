@@ -15,8 +15,56 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-11
+<!-- DAILY_CHECKIN_2026-07-11_START -->
+# AI Agent 如何拥有支付能力？
+
+## 嘉宾自我介绍
+
+来自 FluxA，负责基础生态。让 Agent 能够非常安全的花钱是非常重要的。而且对于 Agent 来说它需要完成一系列的操作。比如 Agent 会进行一些小微的操作（比如 0.01USD），这对于传统支付来说手续费特别贵，同时 Agent 也有一个问题是它没有身份证（鉴权问题），这个体系是没法办银行卡的。主要分享的内容是为了达到这个目的，需要做哪些**基础设施。（让 Agent 走进商户，个人的实际支付场景）**
+
+## 现状
+
+目前 Agent 进行支付场景存在如下问题：
+
+1.  Identity
+    
+2.  Authorization
+    
+3.  Credentials
+    
+4.  Speed
+    
+5.  Granularity
+    
+
+比如在 chatbox 上输入自己的身份信息是比较危险的
+
+FluxA 不仅包含了钱包，而是一整套协议（最重要的是风控），主要涉及如下的场景
+
+1.  Agent to Agent
+    
+2.  Agent to Merchant
+    
+3.  Agent to Tool
+    
+4.  Transfers and Tipping
+    
+
+核心团队是蚂蚁出来的
+
+我觉得比较有新意的是 mandates，有点像给 agent 一部分预算，然后预算内的消费都由 agent 自行处理
+
+其中比较有意思的是 x402 payment。
+
+这是一次性的 agent card
+
+layer 2 和 layer 1 之间的关系是什么（嘉宾说 layer 2 处理的交易会最后集中到 layer 1 进行确认）
+<!-- DAILY_CHECKIN_2026-07-11_END -->
+
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 epf都是自学的，epf 和智能合约相比更偏向于密码学和数学的知识，会更难。  
 可以做执行层和共识层去找上面的 issue 然后去进行修。
 
@@ -39,6 +87,7 @@ metamask 等钱包就是构建在以太坊之上的应用
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
 
+
 很早之前用过 okx wallet，第一次用小狐狸。  
   
 之前还是主要通过交易的用户用钱包，完全没有想过区块链底层技术有这么多的方向。  
@@ -48,6 +97,7 @@ metamask 等钱包就是构建在以太坊之上的应用
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 # DevRel的成长之路 — 从 Builder 到生态链接者
@@ -73,6 +123,7 @@ SVP 是一个 AI Native 链，有 agent的 mcp 能够有强力的安全边界。
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
