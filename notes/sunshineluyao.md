@@ -15,19 +15,27 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-12
+<!-- DAILY_CHECKIN_2026-07-12_START -->
+Week 1 复盘：全面复习 Week 1 五项任务的完整链路，完成时间打卡，并通关 [https://buildanything.so/zh/tracks](https://buildanything.so/zh/tracks) 新手课程全模块——钱包配置、链上交易、AI 辅助合约开发、高频场景分析与首个 Monad 合约部署，全部完成闭环验证。
+<!-- DAILY_CHECKIN_2026-07-12_END -->
+
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 **This week I bridged theory and practice: mastering wallet mechanics and transaction fundamentals, then executing my first testnet interaction and verifying it independently on-chain—establishing the verification habit that will anchor the rest of this course.**
 <!-- DAILY_CHECKIN_2026-07-11_END -->
 
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
 
+
 DAY 5 的学习重点是理解 Monad 如何通过高性能与低成本支持更高频的链上交互体验，并将第一周的钱包、交易、合约部署、AI 协作与安全实践整理为 Build Log，完成 Mini Demo 0，同时明确 Week 2 的 Tech / Ops / Research 主攻方向。
 <!-- DAILY_CHECKIN_2026-07-10_END -->
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 
 DAY 4：借助 AI 生成并理解最小 Solidity 智能合约，在 Remix 完成编译、部署与交互，掌握合约源码、ABI、合约地址、读写函数和交易哈希之间的关系，迈出从链上交易到智能合约开发实践的第一步。
@@ -38,11 +46,13 @@ DAY 4：借助 AI 生成并理解最小 Solidity 智能合约，在 Remix 完成
 
 
 
+
 DAY 3｜已完成课程专用钱包创建、Monad Testnet 添加、测试币领取与第一笔测试网交易，并通过区块浏览器查看 transaction hash，理解了钱包安全、交易、gas 与链上记录的基本流程。
 <!-- DAILY_CHECKIN_2026-07-08_END -->
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
