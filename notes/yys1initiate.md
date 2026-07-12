@@ -15,8 +15,44 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-12
+<!-- DAILY_CHECKIN_2026-07-12_START -->
+这次将我的项目部署到了github上，上传了我的第一个项目，刚开始原本是打算让claude替我完成的，但是api接的deepseek可能是能力不足，一直失败，所以选择手动部署，遇到问题问ai，这里记录下一些心得什么的：
+
+### 1、进入你要部署的目录：cd
+
+### 2、执行git init 初始化本地仓库
+
+### 3、把文件提交到暂存区并提交
+
+-   git add . （注意是add .）
+    
+-   git commit -m "first commit"
+    
+
+### 4、创建主分支：git branch -M main
+
+5、关联远程仓库：git remote add origin [https://用户名：token@github.com/你的用户名/仓库名.git](https://github.com/你的用户名/仓库名.git)
+
+-   遇到的问题，github现在有个什么精细分支，没设对它的权限，就一直报错，解决了很久
+    
+-   ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/yys1initiate/images/2026-07-12-1783836510075-image.png)
+-   解决方法：用回classic，勾选repo，然后成功就关联上了
+    
+
+### 5、推送到github：git push -u origin main
+
+-   orign是什么？可以理解为变量名
+    
+
+### 6、其他：git status、git rm -r --cached .（清除缓存）
+
+心得：自己过了一遍之后，确实更明白了一点
+<!-- DAILY_CHECKIN_2026-07-12_END -->
+
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 休息日ing
 <!-- DAILY_CHECKIN_2026-07-11_END -->
 
@@ -24,11 +60,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- DAILY_CHECKIN_2026-07-10_START -->
 
 
+
 今天没学什么，但是打个卡
 <!-- DAILY_CHECKIN_2026-07-10_END -->
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 
 
@@ -65,6 +103,7 @@ ps：记得还要把私钥改成自己的
 
 
 
+
 今天主要学习了以太坊，和回顾了昨天的内容。
 
 1、老师先是带领我们回顾了一下钱包的设置，推荐了一个好用的钱包phantom；
@@ -88,6 +127,7 @@ ps：记得还要把私钥改成自己的
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
