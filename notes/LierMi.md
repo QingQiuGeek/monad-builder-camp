@@ -15,8 +15,36 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-12
+<!-- DAILY_CHECKIN_2026-07-12_START -->
+### 智能合约标准化部署 SOP
+
+为了确保线上资产的安全与合约执行的可靠性，规范的工程部署须严格遵从以下四步工作流：
+
+-   **第一步：代码编译与底层优化（Compile & Optimize）** 确保 `pragma` 版本锁定一致。在配置文件中开启编译器优化（如 `optimizer: { enabled: true, runs: 200 }`），以降低实际部署时的 Gas 消耗和用户未来的调用成本。
+    
+-   **第二步：环境变量与密钥隔离（Environment & Security）** 严禁将私钥直接硬编码在业务脚本中。必须结合 `.env` 配置文件与环境变量管理工具（如 `dotenv`），通过读取 `process.env.PRIVATE_KEY` 或 Foundry 的加密 KeyStore 导入敏感凭证。
+    
+-   **第三步：节点连接与网络估算（RPC & Gas Estimation）** 接入可靠的去中心化节点服务商（如 Alchemy 或 Infura）获取稳健的 JSON-RPC 接口。在发送部署交易前，利用开发工具的 Gas 估算接口评估当前网络基准费用，确保部署账户内保有充足的原生代币（如 ETH）用于支付矿工费。
+    
+-   **第四步：上链广播与开源验证（Broadcast & Verification）** 交易确认上链后，立刻使用工具的插件（如 `@nomicfoundation/hardhat-verify` 或 `forge verify-contract`），传入 Etherscan API Key 和精确的构造函数参数。这能将链上的二进制字节码反编译映射为开源的 Solidity 源代码，为社区和用户提供代码透明度与可信度。
+    
+
+### 部署工程安全红线与自检清单
+
+-   \[ \] **构造函数检查**：确认初始化参数（如 `initialOwner` 或初始代币铸造数量、接收地址）在脚本中传参准确无误。
+    
+-   \[ \] **权限转移验证**：若使用了 OpenZeppelin 的 `Ownable` 或 `AccessControl`，需确认部署后管理员权限是否需要从部署账户（Deployer）转移至多签钱包（Multisig/Gnosis Safe）或 DAO 治理合约。
+    
+-   \[ \] **测试网先行原则**：任何主网部署前，必须在 Sepolia 等测试网上进行完整的部署-调用-升级（若为代理合约）全链路闭环验证。
+    
+
+智能合约一旦部署完成便具备不可篡改性，“落子无悔”的特性决定了部署不仅是写完代码后的最后一步操作，更是连接本地开发与去中心化主网状态最严肃的安全关口。严格执行自动化、模块化且具备完备验证链条的部署流程，是衡量一名成熟 Web3 合约工程师的核心标准。
+<!-- DAILY_CHECKIN_2026-07-12_END -->
+
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 ### 今日继续学习 智能合约开发 (Smart Contract Development)
 
 智能合约是部署在区块链网络上的自执行代码，其本质是运行在去中心化状态机（如 EVM）上的程序，通过网络中的事务（Transaction）触发状态转移，践行了 Web3 的“Code is Law”原则 。
@@ -63,6 +91,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
 
+
 学习了怎么写智能合约，搭建了本地开发环境，基本上能看懂简单的合约，各种不同的语言都了解了一下。  
 
 1. 什么是智能合约？ —— “不会耍赖的自动售货机” 
@@ -102,6 +131,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- DAILY_CHECKIN_2026-07-08_START -->
 
 
+
 跟着web3实习手册学习，查漏补缺，逐个击破，夯实基础
 
 学习了TEE和ZK，在解决信任场景的时候可以搭配使用
@@ -114,12 +144,14 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 1，写简单的合约，部署合约，Remix（直接用AI也行，反正以后合约都是AI写）  
 2，听了老师分享会，学习了关于EPF (Ethereum Protocol Fellowship) 和 EIP（Ethereum Improvement Proposal），学习路线、研究方向等等
 <!-- DAILY_CHECKIN_2026-07-07_END -->
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
