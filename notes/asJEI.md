@@ -19,8 +19,14 @@ timezone: UTC+8
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-12
+<!-- DAILY_CHECKIN_2026-07-12_START -->
+水一天
+<!-- DAILY_CHECKIN_2026-07-12_END -->
+
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 0\. 背景介绍
 
 在参加 Monad Builder Camp 之前，我对于 Web3 的理解主要停留在区块链、钱包、智能合约等概念层面。因此 Week 1 的目标不是单纯完成任务，而是尝试建立 Web2 开发经验与 Web3 系统之间的联系。
@@ -79,6 +85,7 @@ Transaction Hash：
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
 
+
 已完成本日大学习
 <!-- DAILY_CHECKIN_2026-07-09_END -->
 
@@ -86,11 +93,13 @@ Transaction Hash：
 <!-- DAILY_CHECKIN_2026-07-08_START -->
 
 
+
 晚上要赶火车先占位打卡一下
 <!-- DAILY_CHECKIN_2026-07-08_END -->
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
@@ -209,6 +218,7 @@ Gas 不足可去 [faucet.monad.xyz](http://faucet.monad.xyz) 领测试 MON。
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
