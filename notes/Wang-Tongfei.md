@@ -15,8 +15,183 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-12
+<!-- DAILY_CHECKIN_2026-07-12_START -->
+## **Wagmi**
+
+> Wagmi 是 React 的 Web3 工具库，基于 Viem，提供类型安全的 Hooks 与合约交互。
+
+* * *
+
+### **1\. 安装**
+
+bash
+
+```
+npm install wagmi viem @tanstack/react-query
+```
+
+* * *
+
+### **2\. 配置**
+
+**2.1 定义链（以 Monad 为例）**
+
+ts
+
+```
+// wagmi.ts
+import { createConfig, http } from 'wagmi';
+import { defineChain } from 'viem';
+
+export const monad = defineChain({
+  id: 10143,
+  name: 'Monad Testnet',
+  nativeCurrency: { name: 'Monad', symbol: 'MON', decimals: 18 },
+  rpcUrls: { default: { http: ['https://testnet-rpc.monad.xyz'] } },
+});
+
+export const config = createConfig({
+  chains: [monad],
+  transports: { [monad.id]: http() },
+});
+```
+
+**2.2 包裹 Provider**
+
+tsx
+
+```
+// main.tsx
+import { WagmiProvider } from 'wagmi';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { config } from './wagmi';
+
+const queryClient = new QueryClient();
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <WagmiProvider config={config}>
+    <QueryClientProvider client={queryClient}>
+      <App />
+    </QueryClientProvider>
+  </WagmiProvider>
+);
+```
+
+* * *
+
+### **3\. 核心 Hooks**
+
+### `useAccount`
+
+获取当前连接地址及连接状态。
+
+tsx
+
+```
+const { address, isConnected } = useAccount();
+```
+
+### `useConnect`
+
+连接钱包（MetaMask 等）。
+
+tsx
+
+```
+const { connect, connectors } = useConnect();
+// 使用：connect({ connector: connectors[0] })
+```
+
+### `useDisconnect`
+
+断开连接。
+
+tsx
+
+```
+const { disconnect } = useDisconnect();
+```
+
+### `useReadContract`
+
+读取合约数据（只读）。
+
+tsx
+
+```
+const { data, refetch } = useReadContract({
+  address: contractAddress,
+  abi,
+  functionName: 'balanceOf',
+  args: [address],
+  query: { enabled: !!address },   // 条件启用
+});
+```
+
+### `useWriteContract`
+
+写入合约（发起交易）。
+
+tsx
+
+```
+const { writeContract, data: hash, isPending } = useWriteContract();
+
+// 调用
+writeContract({
+  address: contractAddress,
+  abi,
+  functionName: 'vote',
+  args: [memeId],
+});
+```
+
+### `useWaitForTransactionReceipt`
+
+等待交易确认。
+
+tsx
+
+```
+const { isLoading: isConfirming } = useWaitForTransactionReceipt({
+  hash: writeData,   // 来自 useWriteContract 的 data
+});
+```
+
+* * *
+
+## **4\. 组合示例（投票 + 刷新）**
+
+tsx
+
+```
+const { writeContract, data: writeData, isPending } = useWriteContract();
+const { isLoading: isConfirming } = useWaitForTransactionReceipt({ hash: writeData });
+
+const { refetch } = useReadContract({ ... });
+
+useEffect(() => {
+  if (writeData && !isConfirming) refetch();
+}, [writeData, isConfirming]);
+```
+
+* * *
+
+### **5\. 重要提醒**
+
+-   **ABI 必须** `as const` 以获得类型推断。
+    
+-   `args` **条件传递**：当参数可能为 `undefined` 时，使用 `args: address ? [address] : undefined` 配合 `enabled`。
+    
+-   **QueryClient** 必须放在 `WagmiProvider` 内部。
+    
+-   所有读写操作均基于 Viem，类型安全。
+<!-- DAILY_CHECKIN_2026-07-12_END -->
+
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 ## **Meme Battle 应用开发笔记**
 
 ### **📌 项目概述**
@@ -137,6 +312,7 @@ meme-battle/
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
 
+
 ## Week 1 总结
 
 ### 学习内容
@@ -185,6 +361,7 @@ meme-battle/
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 
 ## **Day4 | Monad 高频交互应用设计：Meme Arena（链上 Meme 对战排行榜）**
@@ -327,6 +504,7 @@ Badge 全部 NFT 化。
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -584,6 +762,7 @@ Sourcify Verified
 
 
 
+
 ### **前置准备｜进入 Web3 与链上世界**
 
 **Summary**
@@ -627,6 +806,7 @@ Metamask创建钱包，并记住私钥
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
