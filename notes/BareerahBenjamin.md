@@ -15,13 +15,20 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-12
+<!-- DAILY_CHECKIN_2026-07-12_START -->
+今天整理了本周的学习内容，完成了本周剩下的两个任务
+<!-- DAILY_CHECKIN_2026-07-12_END -->
+
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 晚点发笔记，打卡先补个
 <!-- DAILY_CHECKIN_2026-07-10_END -->
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 # 本地内存池 **Local Mempool**
 
@@ -386,6 +393,7 @@ Monad 在设计时对比了两种签名方式的优缺点：
 <!-- DAILY_CHECKIN_2026-07-08_START -->
 
 
+
 # RaptorCast
 
 ### 1\. 什么是 RaptorCast？
@@ -508,6 +516,7 @@ Monad 提供的部分快速实时数据源会直接报告 **Proposed** 状态下
 
 
 
+
 # 异步 I / O（**Asynchronous I/O）**
 
 CPU 在通信进行的同时继续并发执行其它操作。
@@ -593,6 +602,7 @@ Unhappy Path（Fault Handling）
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
