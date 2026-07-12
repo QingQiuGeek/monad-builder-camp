@@ -15,8 +15,34 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-12
+<!-- DAILY_CHECKIN_2026-07-12_START -->
+今天主要学习并实践了 ERC-7702，也继续梳理了 ERC-4337 Sponsor 授权的安全边界。
+
+Sponsor 部分让我更明确了一点：Sponsor 不替用户授权，而是判断“是否愿意为这笔具体请求付 Gas”。所以后端签名必须绑定完整的 UserOperation，不能只看 sender 或某一个业务参数。
+
+今天更重要的是，我没有只停留在本地模拟，而是在 Monad Testnet 上完成了一笔真实的 ERC-7702 type 0x04 交易。
+
+这次的流程是：课程 EOA 签署委托授权，独立 relayer 提交交易并支付 Gas，EOA 委托给一个受限 Executor。随后 Executor 以该 EOA 的上下文，在同一笔交易中对固定 Target 连续执行了两次 checkIn。
+
+我通过公开 RPC 读取确认：
+
+\- checkInCount = 2
+
+\- lastActor 是被委托 EOA
+
+\- EOA 的 code 已变成指向 Executor 的 delegation indicator
+
+今天最大的收获是，ERC-7702 的难点不只是“让 EOA 能执行合约代码”，而是要把签授权、付 Gas、可调用范围分开设计。Monad 对已委托 EOA 有余额规则，所以这次由 relayer 付 Gas；同时 Executor 只允许固定 relayer 调用固定 Target 两次，不提供任意 calldata 或转账入口。
+
+下一步我会继续研究 ERC-7702 和 session key、Paymaster 的组合方式，并重点补齐授权范围、重放保护、限额、认证和审计这些安全边界。
+
+今日学习笔记：[https://github.com/baikingrio/monad-builder-camp/blob/main/daily/2026-07-12.md](https://github.com/baikingrio/monad-builder-camp/blob/main/daily/2026-07-12.md)
+<!-- DAILY_CHECKIN_2026-07-12_END -->
+
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 今天继续完善 Monad 上的 ERC-4337 学习实践，重点是 Sponsor Authorization 的安全边界。
 
 我做了一个只在服务端运行的 Sponsor 授权接口。它的作用是为符合规则的 UserOperation 签发 Paymaster 授权，但不会直接广播交易，也不提供公开的 Relay 或 Bundler。
@@ -45,6 +71,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
 
+
 今天继续完善 Monad Testnet 上的 ERC-4337 实验，并学习和实践了 ERC-1363。
 
 在 ERC-4337 部分，我进一步理解了 Paymaster 的作用不只是代付 Gas，更重要的是限制赞助的范围和风险。通过把账户、调用内容、nonce、有效期等信息绑定到 sponsor 授权中，可以避免授权被复用到其他交易里。
@@ -60,6 +87,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 
 今天主要围绕 ERC-4337 Account Abstraction 做了三组连续实验，把智能账户从“能执行 UserOperation”继续扩展到更接近真实应用体验的能力，重点学习和实践了三个方向：
@@ -103,6 +131,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -163,6 +192,7 @@ Explorer：  
 
 
 
+
 今天学习了 ERC-4337 Account Abstraction 和 thirdweb 的 Session Keys 文档，重点理解了智能账户、UserOperation、Bundler、EntryPoint、Paymaster 之间的关系。
 
 我的理解是，ERC-4337 让钱包不再只是一个由私钥控制的 EOA，而是可以变成有自定义验证逻辑和权限管理能力的智能账户。用户发起的不是普通交易，而是 UserOperation，由 Bundler 打包，再通过 EntryPoint 统一验证和执行。Paymaster 可以在特定条件下帮用户代付 gas，从而改善新用户进入链上应用时必须先准备 gas 的体验。
@@ -178,6 +208,7 @@ Explorer：  
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
