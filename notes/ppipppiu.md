@@ -15,8 +15,60 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-12
+<!-- DAILY_CHECKIN_2026-07-12_START -->
+## 今日完成
+
+今天主要整理了 Week 1 Mini Demo 0 的提交内容，并确认之前完成的 Onchain Todo 可以作为本周作品提交。
+
+## 目前已经完成：
+
+1.  使用 Solidity 编写 Onchain Todo 智能合约。
+    
+2.  在 Remix 中完成合约编译。
+    
+3.  将合约部署到 Monad Testnet。
+    
+4.  完成 createTodo、getMyTodos 和 completeTodo 等交互。
+    
+5.  保存合约地址、交易哈希和区块浏览器截图。
+    
+6.  整理 Mini Demo 0 的 README 结构。
+    
+7.  确认 Week 2 选择 Tech 方向。
+    
+
+## 今日理解
+
+Mini Demo 0 不要求是完整产品，重点是让别人能够看懂：
+
+-   做了什么。
+    
+-   哪些部分是真实链上操作。
+    
+-   哪些部分由 AI 辅助完成。
+    
+-   自己做了哪些人工检查和判断。
+    
+-   下一阶段准备继续推进什么。
+    
+
+README 不只是代码说明，还需要完整记录项目背景、功能、链上交互证据、AI 使用情况和人工判断。
+
+## Week 2 方向
+
+我选择 Tech 方向。
+
+接下来计划把目前只能通过 Remix 操作的 Onchain Todo 合约，扩展为一个带有钱包连接、Todo 创建、查询和完成状态更新功能的轻量 DApp。
+
+## 今日收获
+
+通过整理提交材料，我进一步理解了一个 Web3 Demo 不只是完成智能合约，还需要保留链上证据，并通过 README 清晰展示开发过程、功能逻辑和项目价值。
+<!-- DAILY_CHECKIN_2026-07-12_END -->
+
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 ## 1\. 任务选择
 
 本次选择的合约方向为：**Onchain Todo**
@@ -424,6 +476,7 @@ require(
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
 
+
 ## 一、Monad 为什么不仅仅是“更快”
 
 ### 1\. Monad 与 Ethereum 的区别
@@ -622,6 +675,7 @@ Monad：
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 
 ## 一、学习目标
@@ -1100,6 +1154,7 @@ Transaction Hash 是一笔交易的唯一编号。
 
 
 
+
 ## 一、学习目标
 
 本节主要学习 Web3 钱包、测试网、交易和区块浏览器的基础使用流程，并完成一次测试网交互。
@@ -1370,6 +1425,7 @@ Block：交易被打包进哪个区块。
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
@@ -1730,6 +1786,7 @@ Web3 不只是“写智能合约”或“炒币”，而是一个包含技术、
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
