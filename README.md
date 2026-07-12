@@ -201,7 +201,7 @@ By completing the program, participants will leave with:
 | [EEEEvelyn-hash](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/EEEEvelyn-hash.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Kylinxin](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Kylinxin.md) | ✅ | ✅ | ⭕️ | ✅ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [bahuang081-svg](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/bahuang081-svg.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [cheng-zhaofeng](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/cheng-zhaofeng.md) | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [cheng-zhaofeng](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/cheng-zhaofeng.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [libuyi543-lang](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/libuyi543-lang.md) | ⭕️ | ✅ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [GnarALI](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/GnarALI.md) | ⭕️ | ✅ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [calla7777777](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/calla7777777.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -815,6 +815,7 @@ By completing the program, participants will leave with:
 | [yoona333](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/yoona333.md) | ⭕️ | ⭕️ | ✅ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [summer-sheep](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/summer-sheep.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
