@@ -15,8 +15,14 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-12
+<!-- DAILY_CHECKIN_2026-07-12_START -->
+复习colearning和agent设计
+<!-- DAILY_CHECKIN_2026-07-12_END -->
+
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 Week1总结:
 
 这一周我在 Monad Testnet 上进行了 Web3 基础实践。我从钱包连接、领取测试币、完成测试网交易开始，逐步学习如何在区块浏览器中查看 transaction hash，并最终使用 Remix 部署了一个 Solidity 智能合约。
@@ -28,6 +34,7 @@ Week1总结:
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 下面是一份可以直接提交/整理到学习记录里的 **Day 4 学习笔记**。你可以把后面 `transaction hash`、截图链接、区块浏览器查询结果再补进去。
 
@@ -197,6 +204,7 @@ gas = 部署合约消耗的计算费用
 <!-- DAILY_CHECKIN_2026-07-07_START -->
 
 
+
 完成discord，telegram，notion，codex的安装和准备
 
 安全与合规: 常见攻击方式包括：假面试软件、假奖学金空投、假客服、假 HR、群聊钓鱼链接、恶意浏览器插件、剪贴板劫持、地址污染等。最危险的是下载“专用面试软件”、连接钱包签名、输入助记词/私钥，或者安装来路不明的插件。
@@ -206,6 +214,7 @@ gas = 部署合约消耗的计算费用
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
