@@ -15,8 +15,572 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-12
+<!-- DAILY_CHECKIN_2026-07-12_START -->
+# 学习记录
+
+Chatgpt生成NFT Badge合约并部署
+
+```
+// SPDX-License-Identifier: MIT
+```
+
+```
+pragma solidity ^0.8.20;
+```
+
+```
+/**
+```
+
+```
+ * Minimal NFT Badge
+```
+
+```
+ * No external libraries
+```
+
+```
+ */
+```
+
+```
+contract NFTBadge {
+```
+
+```
+    string public name = "Minimal Badge";
+```
+
+```
+    string public symbol = "BADGE";
+```
+
+```
+    address public owner;
+```
+
+```
+    uint256 private nextTokenId = 1;
+```
+
+```
+    // tokenId => owner
+```
+
+```
+    mapping(uint256 => address) private owners;
+```
+
+```
+    // owner => balance
+```
+
+```
+    mapping(address => uint256) private balances;
+```
+
+```
+    // tokenId => metadata URI
+```
+
+```
+    mapping(uint256 => string) private tokenURIs;
+```
+
+```
+    event Transfer(
+```
+
+```
+        address indexed from,
+```
+
+```
+        address indexed to,
+```
+
+```
+        uint256 indexed tokenId
+```
+
+```
+    );
+```
+
+```
+    modifier onlyOwner() {
+```
+
+```
+        require(msg.sender == owner, "Not contract owner");
+```
+
+```
+        _;
+```
+
+```
+    }
+```
+
+```
+    constructor() {
+```
+
+```
+        owner = msg.sender;
+```
+
+```
+    }
+```
+
+```
+    /**
+```
+
+```
+     * Mint a badge NFT
+```
+
+```
+     */
+```
+
+```
+    function mint(
+```
+
+```
+        address to,
+```
+
+```
+        string memory uri
+```
+
+```
+    )
+```
+
+```
+        external
+```
+
+```
+        onlyOwner
+```
+
+```
+        returns(uint256)
+```
+
+```
+    {
+```
+
+```
+        require(to != address(0), "Invalid address");
+```
+
+```
+        uint256 tokenId = nextTokenId;
+```
+
+```
+        nextTokenId++;
+```
+
+```
+        owners[tokenId] = to;
+```
+
+```
+        balances[to]++;
+```
+
+```
+        tokenURIs[tokenId] = uri;
+```
+
+```
+        emit Transfer(
+```
+
+```
+            address(0),
+```
+
+```
+            to,
+```
+
+```
+            tokenId
+```
+
+```
+        );
+```
+
+```
+        return tokenId;
+```
+
+```
+    }
+```
+
+```
+    /**
+```
+
+```
+     * Transfer badge
+```
+
+```
+     */
+```
+
+```
+    function transfer(
+```
+
+```
+        address to,
+```
+
+```
+        uint256 tokenId
+```
+
+```
+    )
+```
+
+```
+        external
+```
+
+```
+    {
+```
+
+```
+        require(
+```
+
+```
+            owners[tokenId] == msg.sender,
+```
+
+```
+            "Not token owner"
+```
+
+```
+        );
+```
+
+```
+        require(
+```
+
+```
+            to != address(0),
+```
+
+```
+            "Invalid address"
+```
+
+```
+        );
+```
+
+```
+        owners[tokenId] = to;
+```
+
+```
+        balances[msg.sender]--;
+```
+
+```
+        balances[to]++;
+```
+
+```
+        emit Transfer(
+```
+
+```
+            msg.sender,
+```
+
+```
+            to,
+```
+
+```
+            tokenId
+```
+
+```
+        );
+```
+
+```
+    }
+```
+
+```
+    /**
+```
+
+```
+     * Query NFT owner
+```
+
+```
+     */
+```
+
+```
+    function ownerOf(
+```
+
+```
+        uint256 tokenId
+```
+
+```
+    )
+```
+
+```
+        external
+```
+
+```
+        view
+```
+
+```
+        returns(address)
+```
+
+```
+    {
+```
+
+```
+        require(
+```
+
+```
+            owners[tokenId] != address(0),
+```
+
+```
+            "Token does not exist"
+```
+
+```
+        );
+```
+
+```
+        return owners[tokenId];
+```
+
+```
+    }
+```
+
+```
+    /**
+```
+
+```
+     * Query balance
+```
+
+```
+     */
+```
+
+```
+    function balanceOf(
+```
+
+```
+        address user
+```
+
+```
+    )
+```
+
+```
+        external
+```
+
+```
+        view
+```
+
+```
+        returns(uint256)
+```
+
+```
+    {
+```
+
+```
+        return balances[user];
+```
+
+```
+    }
+```
+
+```
+    /**
+```
+
+```
+     * Metadata URI
+```
+
+```
+     */
+```
+
+```
+    function tokenURI(
+```
+
+```
+        uint256 tokenId
+```
+
+```
+    )
+```
+
+```
+        external
+```
+
+```
+        view
+```
+
+```
+        returns(string memory)
+```
+
+```
+    {
+```
+
+```
+        require(
+```
+
+```
+            owners[tokenId] != address(0),
+```
+
+```
+            "Token does not exist"
+```
+
+```
+        );
+```
+
+```
+        return tokenURIs[tokenId];
+```
+
+```
+    }
+```
+
+```
+    /**
+```
+
+```
+     * Transfer contract ownership
+```
+
+```
+     */
+```
+
+```
+    function transferContractOwnership(
+```
+
+```
+        address newOwner
+```
+
+```
+    )
+```
+
+```
+        external
+```
+
+```
+        onlyOwner
+```
+
+```
+    {
+```
+
+```
+        require(
+```
+
+```
+            newOwner != address(0),
+```
+
+```
+            "Invalid owner"
+```
+
+```
+        );
+```
+
+```
+        owner = newOwner;
+```
+
+```
+    }
+```
+
+```
+}
+```
+<!-- DAILY_CHECKIN_2026-07-12_END -->
+
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 # 学习记录
 
 1.Web3实习手册文档阅读
@@ -30,6 +594,7 @@ AI生成NFT Badge合约并部署，完成Week1课程任务
 
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 
 # 学习记录
 
@@ -46,6 +611,7 @@ AI生成NFT Badge合约并部署，完成Week1课程任务
 <!-- DAILY_CHECKIN_2026-07-09_START -->
 
 
+
 # 学习记录
 
 1.AI高危案例分享会及Co-learning
@@ -59,6 +625,7 @@ AI生成NFT Badge合约并部署，完成Week1课程任务
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -82,6 +649,7 @@ AI生成NFT Badge合约并部署，完成Week1课程任务
 
 
 
+
 # 学习记录
 
 1.  《普通开发者如何进入以太坊协议层》分享会及co-learning（Codex演示自动部署智能合约）
@@ -98,6 +666,7 @@ Codex部署合约实操
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
