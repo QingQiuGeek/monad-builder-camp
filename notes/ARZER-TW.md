@@ -15,8 +15,14 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-12
+<!-- DAILY_CHECKIN_2026-07-12_START -->
+假日水個打卡
+<!-- DAILY_CHECKIN_2026-07-12_END -->
+
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 **Historical Data**
 
 **•** 先把兩種資料分開：ledger data（區塊、交易、receipt、event、trace）和 state data（交易依序套用後的世界狀態，存在 merkle trie）。Monad full node 提供完整歷史 ledger data，但不提供任意舊區塊的 state
@@ -39,11 +45,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
 
+
 先打卡晚點補充筆記
 <!-- DAILY_CHECKIN_2026-07-10_END -->
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 **Local Mempool**
@@ -74,6 +82,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
@@ -123,6 +132,7 @@ warm access 維持 100 不變。受影響的是 BALANCE、EXTCODE 系列、CALL 
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
