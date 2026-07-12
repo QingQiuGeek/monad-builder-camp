@@ -15,8 +15,42 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-12
+<!-- DAILY_CHECKIN_2026-07-12_START -->
+今天完成了 Week 1 的学习复盘和 Mini Demo 0 整理。我把本周的钱包创建、Monad Testnet 普通交易、MessageBoard 合约编译部署`postMessage` 写入`getMessageCount()` 与 `getMessage(0)` 读取过程整理成完整 Build Log，并复盘了网络确认、Remix 交互异常、区块哈希与交易哈希混淆等问题及修复过程。
+
+同时，我把 MessageBoard v0.1 整理成 Mini Demo 0：补齐作品说明、真实链上操作、AI 辅助部分、人工判断与修改、公开交易链接、README 和截图证据。我进一步明确了 AI 可以帮助生成代码、解释概念和整理材料，但钱包签名、网络与交易核对、代码安全、链上隐私和链上/链下边界必须由人判断。
+
+我确认 Week 2 继续走 Tech / Dev 技术路线。下一步计划把 MessageBoard 升级为 v0.2，先设计“每个地址对同一条留言只能点赞一次”的最小功能，并学习使用 Foundry 或 Hardhat 编写自动化测试，再继续完成前端事件监听和可展示 Demo。
+
+\## 今日完成
+
+\- \[x\] Week 1 Build Log 初稿。
+
+\- \[x\] 回顾本周链上实践、问题、AI 帮助和人工判断。
+
+\- \[x\] 整理 3 条核心学习收获和 3 个求助问题。
+
+\- \[x\] MessageBoard v0.1 Mini Demo 0 提交稿。
+
+\- \[x\] 补齐作品链接、方向选择、作品集一句话和 Week 2 问题。
+
+\- \[ \] Week 1 复盘任务平台提交。
+
+\- \[ \] Mini Demo 0 平台提交。
+
+\## 本周最重要的收获
+
+1\. 链上开发需要同时保存源码、合约地址、交易哈希、浏览器结果和读取证据。
+
+2\. AI 可以提高生成和排错效率，但交易签名、安全检查和产品边界不能交给 AI 决定。
+
+3\. Monad 的高性能只有放进高频、低成本、可验证的产品场景中，才会转化为真实用户体验。
+<!-- DAILY_CHECKIN_2026-07-12_END -->
+
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 今天主要完成了三部分：
 
 1.  **MessageBoard v0.1 读写闭环**
@@ -47,11 +81,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
 
+
 今天复盘了 AI Agent 安全课程，并参加 Week 1 Co-Learning。理解了 Agent 安全不能只依赖 Prompt，而要通过最小权限、人工审批、工具层拦截、沙箱、审计和恢复建立模型外防线。通过同学的 DApp 和 Monad Buddy 案例，我进一步区分了前端演示与真实链上交互：真实上链需要钱包签名、正确网络、可查询交易和合约状态变化。下一步完成 MessageBoard 读写闭环，并选择 Week 2 的 Research / Ops / Dev 方向。
 <!-- DAILY_CHECKIN_2026-07-10_END -->
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 
 \## 2026-07-09 Web3 学习打卡
@@ -86,6 +122,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 今天学习了两场直播：第一场是 FluxA 关于 AI Agent 支付体系的分享，理解了 Agent 支付为什么需要身份、预算、风控、审计、撤销和结算能力，也了解了 X402、人机共管钱包、AgentCard、Monetize Gateway、Payment Link、Pay to Agent 等概念。
 
 第二场 Co-Learning 重点是 Web3 入行经验，强化了 Git/GitHub、`.env` 安全、AI 辅助开发、项目经验、远程工作和接单风险意识。明天会继续进入 Remix / Solidity / Monad 合约部署，把今天的概念落到一个可验证的小项目里。、Pay to Agent 等概念。
@@ -93,6 +130,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
