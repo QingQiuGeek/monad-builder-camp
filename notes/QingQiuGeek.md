@@ -748,4 +748,228 @@ MetaMask 在 `eth_estimateGas` 调用的合约 revert 时，会将 gas limit 设
 > 💡 核心认知：Monad 的高性能不是靠堆硬件实现的，而是通过软件架构的五个创新点（MonadBFT、RaptorCast、异步执行、并行执行、MonadDb）在普通硬件上实现的。这与 Solana 的"硬件换性能"路线完全不同，是对去中心化的坚持。
 
 <!-- DAILY_CHECKIN_2026-07-11_END -->
+
+# 2026-07-12
+<!-- DAILY_CHECKIN_2026-07-12_START -->
+# Monad Builder Camp Day 7 — Week 1 复盘总结
+
+> 日期：2026-07-12 | 主题：Week 1 知识复盘与总结（Day 1-5 全面回顾）
+
+---
+
+## 一、Week 1 学习脉络回顾
+
+Week 1（7/6-7/10）覆盖了从 Web3 入门到 Monad 核心架构理解的完整路径。这五天的节奏非常紧凑，从钱包配置、测试网交互到 AI+Solidity 合约编写，最后落到 Monad 的底层架构深度理解。今天是复盘日，正好把前面零散吸收的知识做一次系统性梳理。
+
+回顾下来，最大的感受是：Monad 不是在以太坊上做简单修补，而是从共识层到执行层到存储层都做了系统性重构，同时保持了 EVM 字节码级兼容。这种"大改底层、不动上层"的设计哲学，是我这周最大的认知收获。
+
+---
+
+## 二、以太坊 vs Monad 核心参数对比
+
+这是本周学习中我最关注的部分。整理成表格后，差异一目了然：
+
+| 参数 | Ethereum | Monad |
+|------|----------|-------|
+| TPS | ~15-30 | 10,000 |
+| 出块时间 | 12s | 400ms |
+| 最终性 | ~12min (2 epoch) | 800ms |
+| 区块 Gas 上限 | 30M | 200M |
+| 单笔交易 Gas 上限 | ~30M | 30M |
+| 最低 Base Fee | 动态 (通常 ~1 gwei) | 100 MON-gwei |
+| 合约代码大小限制 | 24 KB | 128 KB |
+| Init Code 大小限制 | 48 KB | 256 KB |
+| Gas 计费方式 | 按 gas_used | 按 gas_limit |
+| 共识机制 | Gasper (Casper FFG + LMD-GHOST) | MonadBFT |
+| 执行模式 | 顺序执行 | 并行执行 + JIT 编译 |
+| 存储层 | LevelDB/PebbleDB | MonadDb (定制化) |
+| 区块传播 | libp2p gossip | RaptorCast (喷泉码) |
+| EIP-4844 (Blob) | ✅ 支持 | ❌ 不支持 |
+| 全局 Mempool | ✅ 有 | ❌ 无（Local Mempool） |
+| MMR (区块承诺) | ❌ | ✅ (Append-Only MMR) |
+| secp256r1 预编译 | ❌ | ✅ (EIP-7951) |
+
+几个关键差异值得展开说：
+
+**1. Gas 计费：按 limit 还是按 used？**
+
+这是 Monad 和以太坊最容易踩坑的区别。以太坊上交易只收取实际消耗的 gas（gas_used），未消耗的部分会退还。但 Monad 收取的是 gas_limit 的全额，无论实际用了多少。
+
+这是为异步执行（Asynchronous Execution）服务的设计决策。因为在 Monad 中，Leader 构建区块时还未执行交易，如果按 gas_used 收费，攻击者可以提交一个 gas_limit 很高但实际消耗极少的交易来占用区块空间，形成 DoS 攻击。所以 Monad 直接按 gas_limit 收费，消除了这个攻击向量。
+
+**对开发者的影响：** 不要随意把 gas_limit 设得很高！在以太坊上这无非是多冻结一点额度，用不完会退。但在 Monad 上，设多了就真扣了。最佳实践是对于已知固定 gas 消耗的操作（如 ETH/MON 转账恒定 21,000），直接硬编码 gas_limit，不要调用 eth_estimateGas。
+
+**2. 区块 Gas 上限：30M vs 200M**
+
+Monad 的区块 Gas 上限是以太坊的约 6.7 倍。这意味着每个区块能容纳的交易量大幅提升，配合 400ms 的出块时间，才有了 10,000 TPS 的吞吐量。
+
+**3. 合约大小限制：24KB vs 128KB**
+
+Monad 把合约代码上限从 24KB 提升到了 128KB。这对开发者来说是个好消息——复杂的 DeFi 协议不需要再费尽心思做合约拆分和 delegatecall 拼接。但也要注意，更大的合约意味着更大的部署成本和更长的验证时间，不能滥用。
+
+---
+
+## 三、Monad 核心架构深度复盘
+
+本周花了大量时间研究 Monad 的五大核心创新，这里逐一整理：
+
+### 3.1 MonadBFT — 共识层
+
+MonadBFT 是一种前沿的 BFT 共识机制，解决了 tail-forking 问题。传统 BFT 共识在面对恶意 leader 时，需要等待完整的 2/3 投票才能确认区块。MonadBFT 通过优化的消息传递和投票聚合机制，实现了更快的响应速度和更强的抗分叉能力。
+
+关键特性：
+- 基于 HotStuff 的改进变体
+- 解决 tail-forking 问题
+- 验证者网络分布广泛（可参考 gmonads.com 的验证者地图）
+
+### 3.2 RaptorCast — 区块传播
+
+RaptorCast 使用喷泉码（Fountain Code）来高效传播区块数据。传统的 gossip 协议在大区块场景下带宽消耗大、延迟高。RaptorCast 通过编码技术，让验证者只需收到足够多的编码片段就能恢复完整区块，大幅降低了传播延迟。
+
+### 3.3 异步执行 — 共识与执行解耦
+
+这是 Monad 最核心的创新之一。在以太坊中，共识和执行是同步的——Leader 先执行交易、计算状态根，然后才出块。Monad 把这两个阶段解耦：
+
+- Leader 在共识阶段不需要执行交易，直接打包
+- 执行在共识确认后异步进行
+- 下一个区块的共识可以和上一个区块的执行并行
+
+这就是为什么 Monad 需要按 gas_limit 收费的原因——共识阶段无法知道实际 gas 消耗。
+
+### 3.4 并行执行 + JIT 编译
+
+Monad 的执行引擎支持并行交易执行。传统 EVM 交易是严格串行的，Monad 通过乐观并行执行（Optimistic Parallel Execution）来突破这个限制：
+
+- 多个 CPU 核心同时执行不同交易
+- 如果出现冲突（读写同一状态），通过调度重试解决
+- JIT（Just-In-Time）编译将热点字节码编译为本地机器码，提升执行效率
+
+### 3.5 MonadDb — 定制化存储
+
+MonadDb 是专门为区块链状态存储设计的数据库。以太坊使用 LevelDB/PebbleDB 作为通用存储引擎，I/O 效率成为瓶颈。MonadDb 针对区块链的读写模式做了深度优化：
+
+- 针对 MPT（Merkle Patricia Trie）的访问模式优化
+- 更高效的 SSD I/O 利用率
+- 支持 Monad 的并行执行需求
+
+---
+
+## 四、Monad 测试网与开发环境配置
+
+本周实际操作的部分，整理关键信息：
+
+### 4.1 网络信息
+
+| 项目 | 值 |
+|------|-----|
+| Chain ID (Testnet) | 10143 |
+| Chain ID (Mainnet) | 143 |
+| 货币符号 | MON |
+| 测试网水龙头 | https://faucet.monad.xyz |
+| 测试网应用中心 | https://testnet.monad.xyz/ |
+| 区块浏览器 | MonadVision / Monadscan |
+| 主网上线日期 | 2025-11-24 |
+
+### 4.2 RPC 端点
+
+| 提供商 | 速率限制 | 批量请求 | 归档支持 |
+|--------|---------|---------|---------|
+| QuickNode | 50 rps | 100 | ✅ |
+| Ankr | 300 reqs/10s | 100 | ❌ |
+| Monad Foundation | 20 rps | 不支持 | ✅ |
+
+### 4.3 核心合约地址（测试网）
+
+- Multicall3: `0xcA11bde05977b3631167028862bE2a173976CA11`
+- Permit2: 已部署
+- EntryPoint v0.6/v0.7/v0.8: 已部署
+- Safe v1.4.1 全套合约: 已部署
+- Wrapped MON: 已部署
+
+### 4.4 Foundry 配置
+
+Monad 提供了自定义的 Monad Foundry，确保本地开发环境与链上行为一致。这点很重要——普通的 Foundry 可能无法准确模拟 Monad 的 gas 计费差异。
+
+---
+
+## 五、踩坑记录
+
+### 坑 1：MetaMask 的 gas limit 陷阱
+
+在测试网交互时，有一次调用合约方法 revert 了，MetaMask 自动把 gas limit 设到了一个极大的值（看起来是放弃了估算）。在以太坊上这不是问题，revert 后未使用的 gas 会退还。但在 Monad 上，这意味着你为一个失败的交易付了天价 gas。**最佳实践：对于已知 gas 消耗的操作，一定要手动设置 gas limit。**
+
+### 坑 2：eth_estimateGas 的延迟
+
+多次串行调用 eth_estimateGas 会显著拖慢钱包交互体验。在高 TPS 的 Monad 上，这种延迟更加明显。解决方案：对于固定 gas 操作直接硬编码，对于需要估算的场景使用 Multicall 合并请求。
+
+### 坑 3：历史数据不可用
+
+由于 Monad 的高吞吐量，全节点不提供任意历史状态查询。这意味着不能像在以太坊上那样调用 `eth_getStorageAt(blockTag)` 来查询任意区块的状态。需要使用索引器（Allium、Envio、The Graph 等）来处理历史数据查询。
+
+### 坑 4：并发交易的 nonce 管理
+
+在 Monad 上提交多笔交易时，如果依赖 `eth_getTransactionCount` 来获取 nonce，可能因为网络延迟导致 nonce 冲突。必须在本地维护 nonce 计数器，特别是在批量发送交易时。
+
+---
+
+## 六、安全思考
+
+本周在学习 Web3 基础的同时，也深入研究了 Web3 安全与合规。结合 https://web3intern.xyz/zh/security/ 的内容，整理几个关键安全要点：
+
+### 6.1 智能合约安全基础
+
+- **重入攻击（Reentrancy）**：依然是最常见的漏洞类型。在 Monad 的并行执行环境下，重入攻击的模式可能有新的变化，需要持续关注。
+- **整数溢出/下溢**：Solidity 0.8+ 已内置检查，但 unchecked 块中仍需小心。
+- **访问控制**：确保关键函数有正确的权限修饰符。
+
+### 6.2 Monad 特有的安全考量
+
+- **Gas limit 而非 gas_used 计费**：这意味着合约中的 gas 优化变得更加重要，因为你无法通过"实际消耗少"来省钱。
+- **并行执行冲突**：在设计合约时，如果多个交易频繁修改同一状态变量，可能导致大量执行冲突和重试，影响性能。
+- **EIP-7702 代理限制**：如果 EOA 被 EIP-7702 委托，余额不能低于 10 MON，且被调用时不能使用 CREATE/CREATE2。
+
+### 6.3 合规意识
+
+作为开发者，需要了解：
+- 中国法律禁止代币发行融资（ICO/IEO/IDO）
+- 虚拟货币不具有法偿性
+- 涉及赌博、传销、洗钱机制的项目有刑事风险
+- 技术人员参与代币模型设计也可能被追责
+
+这不是吓唬人，而是每个 Web3 开发者必须有的底线意识。在 Monad 上开发 DApp 时，要确保项目设计不触碰这些红线。
+
+---
+
+## 七、个人总结与下周展望
+
+### Week 1 收获
+
+1. **技术认知升级**：从"知道 Monad 是个高性能 L1"升级到理解其五大核心创新的原理和相互关系。
+2. **开发环境搭建**：钱包、测试网、Foundry 全部配置完毕，可以开始实际开发。
+3. **安全意识建立**：不只是会写合约，还要知道怎么写安全的合约，以及法律合规的边界在哪里。
+4. **踩坑经验积累**：gas 计费差异、历史数据不可用、并发 nonce 管理——这些都是在实际开发中会遇到的真实问题。
+
+### Week 2 展望
+
+下周进入智能合约进阶、前端交互和 AI 辅助开发。期待能把 Week 1 的理论知识转化为实际的 DApp 开发能力。特别是在 Monad 的高 TPS 环境下，如何设计高效的前端交互模式、如何利用 AI 工具加速开发，是接下来的重点。
+
+---
+
+## 八、参考资源
+
+- Monad 官方文档：https://docs.monad.xyz/
+- Monad 与以太坊差异：https://docs.monad.xyz/developer-essentials/differences
+- Gas 定价机制：https://docs.monad.xyz/developer-essentials/gas-pricing
+- 最佳实践：https://docs.monad.xyz/developer-essentials/best-practices
+- 网络信息：https://docs.monad.xyz/developer-essentials/testnets
+- 以太坊 Gas 文档：https://ethereum.org/en/developers/docs/gas/
+- Web3 安全合规指南：https://web3intern.xyz/zh/security/
+- Monad GitHub（共识）：https://github.com/category-labs/monad-bft
+- Monad GitHub（执行）：https://github.com/category-labs/monad
+
+---
+
+*Monad Builder Camp Day 7 打卡完成。Week 1 从入门到架构理解，打好了基础。下周开始写真正的合约和 DApp。*
+
+<!-- DAILY_CHECKIN_2026-07-12_END -->
 <!-- Content_END -->
