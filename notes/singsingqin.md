@@ -15,8 +15,510 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-12
+<!-- DAILY_CHECKIN_2026-07-12_START -->
+结合你这几天的学习记录，以及你的长期目标（**前端 DApp 开发 → GitHub 开源 → Web3 Builder → AI Coding**），我建议你 **Week 2 完全走 Dev（Tech）方向**。
+
+你的目标不应该只是完成课程任务，而是把 Week 2 变成一周的**作品集（Portfolio）建设**。
+
+* * *
+
+# Week 2（Tech / Dev Builder）总体目标
+
+> **定位：Frontend Web3 Builder + AI Coding Developer**
+
+Week2 最终产出：
+
+✅ Personal Website（个人博客）
+
+✅ Obsidian Web3 知识库（持续维护）
+
+✅ GitHub 每日 Commit
+
+✅ DApp Demo
+
+✅ Github 开源项目阅读/复刻
+
+✅ AI Coding Workflow
+
+✅ Docker 部署
+
+最后形成一个完整 Portfolio。
+
+* * *
+
+# 周一（DAY1）计划
+
+## 上午（9:00-12:00）
+
+# ① Role Choice Card（课程任务）
+
+建议直接这样写：
+
+## 我选择哪个方向？
+
+> Dev Builder（Frontend DApp Developer）
+
+* * *
+
+## 为什么？
+
+原因：
+
+-   本身就是前端开发
+    
+-   想进入 Web3 前端方向
+    
+-   喜欢 AI Coding
+    
+-   想以后参加 Hackathon
+    
+-   希望未来能够独立开发 DApp
+    
+
+* * *
+
+## 本周最小产出
+
+-   搭建个人博客
+    
+-   部署一个 DApp
+    
+-   阅读一个 GitHub 开源项目
+    
+-   使用 AI 完成一次完整 Coding Workflow
+    
+
+* * *
+
+## Week3 承担角色
+
+Frontend
+
+AI Coding
+
+Web3 Integration
+
+UI
+
+* * *
+
+参考资料
+
+-   Monad Docs
+    
+-   Solidity Docs
+    
+-   Moss
+    
+-   GitHub
+    
+-   Cursor
+    
+-   ChatGPT
+    
+
+* * *
+
+这一份直接就是课程提交。
+
+预计：
+
+30min
+
+* * *
+
+# ② 建立 Week2 Role Log
+
+建议直接建一个 Obsidian 文件夹：
+
+```
+Week2/
+
+    Day1.md
+
+    Day2.md
+
+    Day3.md
+
+    AI Log.md
+
+    Prompt.md
+
+    Github.md
+
+    Learn.md
+
+```
+
+每天记录：
+
+今天学了什么
+
+遇到什么 Bug
+
+AI 帮了什么
+
+GitHub
+
+心得
+
+以后全部放这里。
+
+预计：
+
+20min
+
+* * *
+
+# ③ AI Collaboration Log
+
+今天建议写：
+
+例如：
+
+> 我让 ChatGPT 帮我拆解 Github Moss 项目结构。
+
+AI 做了：
+
+-   阅读 README
+    
+-   总结目录
+    
+-   解释代码
+    
+
+人工：
+
+-   核查代码
+    
+-   自己运行
+    
+-   修改 Prompt
+    
+
+不能交给 AI：
+
+-   Git 判断
+    
+-   架构设计
+    
+-   Debug
+    
+
+20min
+
+* * *
+
+# 下午（13:30-18:00）
+
+## ④ 开始搭建个人博客（重点）
+
+建议不要 WordPress。
+
+建议：
+
+```
+Astro
+
++
+Tailwind
+
++
+Markdown
+
+```
+
+原因：
+
+以后写博客非常舒服。
+
+最终：
+
+```
+GitHub
+
+↓
+
+Vercel
+
+↓
+
+个人网站
+```
+
+博客里面准备：
+
+```
+Home
+
+About
+
+Projects
+
+Blog
+
+Notes
+
+Resume
+
+```
+
+这里以后全部放：
+
+Web3
+
+AI
+
+DApp
+
+Github
+
+学习记录
+
+* * *
+
+预计：
+
+3~4小时
+
+* * *
+
+## ⑤ GitHub 项目阅读（Moss）
+
+你发的：
+
+```
+https://github.com/nishuzumi/moss
+```
+
+建议不是直接复刻。
+
+建议：
+
+第一天：
+
+只阅读。
+
+输出：
+
+```
+README
+
+项目结构
+
+依赖
+
+运行流程
+
+技术栈
+
+我学到了什么
+```
+
+做一篇：
+
+```
+Github Reading Note
+```
+
+预计：
+
+1小时
+
+* * *
+
+# 晚上（19:30-22:30）
+
+## ⑥ AI Coding Workflow
+
+例如：
+
+今天练：
+
+```
+ChatGPT
+
+↓
+
+Claude
+
+↓
+
+Cursor
+
+↓
+
+Github Copilot
+
+↓
+
+自己Review
+
+```
+
+记录：
+
+Prompt
+
+修改
+
+最终代码
+
+预计：
+
+1小时
+
+* * *
+
+## ⑦ 英语
+
+建议不要背单词。
+
+建议：
+
+每天：
+
+30min
+
+阅读：
+
+Github README
+
+Monad Docs
+
+Ethereum Docs
+
+把不会的记录到：
+
+```
+English.md
+```
+
+例如：
+
+```
+deploy
+
+compile
+
+contract
+
+wallet
+
+fork
+
+upstream
+
+pull request
+
+issue
+
+```
+
+以后就是 Web3 英语。
+
+* * *
+
+## ⑧ 今日总结
+
+写：
+
+```
+Today
+
+Done
+
+Tomorrow
+
+Problems
+
+Reflection
+```
+
+15min
+
+* * *
+
+# 未来两天（博客）
+
+建议完成：
+
+## Day1
+
+完成框架
+
+```
+Astro
+
+Tailwind
+
+Vercel
+
+Github
+```
+
+* * *
+
+## Day2
+
+完善页面
+
+```
+About
+
+Projects
+
+Blog
+
+Notes
+
+Resume
+```
+
+并部署上线。
+
+* * *
+
+# 本周任务拆分（建议）
+
+| 时间 | 学习重点 | 输出成果 |
+| --- | --- | --- |
+| 周一 | Role Choice、博客初始化、Moss 阅读 | Role Choice Card、Role Log、博客框架、GitHub Reading Note |
+| 周二 | 完成博客部署、Obsidian 知识库整理（第 1 天） | 博客上线、知识库初版 |
+| 周三 | 完成 Obsidian 知识库整理（第 2 天）、AI 工作流实践 | 知识库 v1、AI Collaboration Log 更新 |
+| 周四 | GitHub DApp 项目复刻（从简单项目开始） | DApp Demo、复刻记录 |
+| 周五 | Docker 学习与部署、完善博客内容 | Docker 部署实践、博客更新 |
+| 周六 | 简历制作（突出 Web3 / DApp / AI）、英语阅读 | Web3 简历 v1、英语笔记 |
+| 周日 | 周总结、整理作品集、准备 Week 3 | Portfolio、Week 2 总结 |
+
+* * *
+
+## 这周的核心目标（按优先级）
+
+建议按照下面的优先级推进，而不是平均分配时间：
+
+1.  **个人博客（Astro + GitHub + Vercel）**——作为你的作品展示入口。
+    
+2.  **Obsidian 知识库（2 天完成）**——沉淀学习成果，形成可持续的知识体系。
+    
+3.  **GitHub 开源项目阅读与复刻（Moss + DApp Demo）**——培养真实项目阅读和协作能力。
+    
+4.  **AI Coding Workflow（ChatGPT + Claude + Cursor）**——形成自己的开发工作流。
+    
+5.  **Docker 部署**——掌握基础部署能力，为后续项目上线做准备。
+    
+6.  **简历优化**——围绕「Web3 前端开发 + AI Coding」更新项目经历。
+    
+7.  **英语学习**——每天 30 分钟，重点阅读 Web3 文档和 GitHub README，而不是泛背单词。
+    
+
+如果坚持完成这些内容，到 Week 3 组队时，你将不仅完成课程要求，还会拥有一个可以直接展示给队友和面试官的个人作品集，包括博客、知识库、GitHub 提交记录、DApp Demo、AI 工作流记录以及一份面向 Web3 前端岗位的简历。
+<!-- DAILY_CHECKIN_2026-07-12_END -->
+
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 结合你目前的学习路线（**前端 → DApp → Web3 → AI Coding**）以及今天的内容（**Claude Code 使用、合约部署**），我建议你的 Tech 学习方向可以围绕 **「DApp 前端复刻 + GitHub 开源项目学习」** 展开，而不是只做零散的知识点学习。
 
 下面是一份适合作为每日学习计划、Build Log 和长期 Roadmap 的整理。
@@ -385,6 +887,7 @@ Monad
 
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 
 结合你提供的课程大纲、分享会内容、Demo 演示（Monad Buddy）、以及几场 Co-learning 的技术分享，可以看出这一周的目标并不是**教会大家所有 Web3 技术**，而是**建立一个 Web3 Builder 的完整学习闭环**：从认知 → 工具 → 钱包 → 链上交互 → 合约开发 → Demo → Build Log。
 
@@ -1003,6 +1506,7 @@ AI 知识库管理。
 <!-- DAILY_CHECKIN_2026-07-09_START -->
 
 
+
 # 个人学习打卡日志（优化排版 + 完整补充 Web3 DApp 前端学习规划）
 
 ## 一、长期个人目标定位
@@ -1236,6 +1740,7 @@ AI 知识库管理。
 
 
 
+
 [BuildAnything](https://buildanything.space/)
 
 1.  闲鱼：发布信息5条，发布一个上线连接
@@ -1458,6 +1963,7 @@ AI Agent
 
 
 
+
 1.  博客搭建，(10%)  
     不想买云服务器.......
     
@@ -1526,6 +2032,7 @@ eg：web3Careerbuild
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
