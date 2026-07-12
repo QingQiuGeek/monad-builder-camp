@@ -15,8 +15,20 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-12
+<!-- DAILY_CHECKIN_2026-07-12_START -->
+今天构思了一下后续黑客松做什么内容：
+
+1、链上五子棋继续优化，添加AI Agent对战功能
+
+2、链上德州扑克
+
+3、链上质押打卡
+<!-- DAILY_CHECKIN_2026-07-12_END -->
+
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 做了一个链上五子棋，游玩地址：[https://gomoku-onchain.vercel.app/](https://gomoku-onchain.vercel.app/)
 
 github repo：[https://github.com/Yunshiro/gomoku-contract](https://github.com/Yunshiro/gomoku-contract)
@@ -25,11 +37,13 @@ github repo：[https://github.com/Yunshiro/gomoku-contract](https://github.com/Y
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
 
+
 今天晚上参加例会分享，小白从0到1部署你的第一个Dapp
 <!-- DAILY_CHECKIN_2026-07-10_END -->
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 
 今天做了一个需求清单，链上五子棋：[https://github.com/Yunshiro/Monad-Buidler-Camp-Jeong/blob/main/notes/链上五子棋需求清单.md](https://github.com/Yunshiro/Monad-Buidler-Camp-Jeong/blob/main/notes/链上五子棋需求清单.md)
@@ -40,11 +54,13 @@ github repo：[https://github.com/Yunshiro/gomoku-contract](https://github.com/Y
 
 
 
+
 今天整理了一个周五分享笔记，repo地址：[https://github.com/Yunshiro/Monad-Buidler-Camp-Jeong/blob/main/notes/小白从0-1上线一个留言板dapp.md](https://github.com/Yunshiro/Monad-Buidler-Camp-Jeong/blob/main/notes/小白从0-1上线一个留言板dapp.md)
 <!-- DAILY_CHECKIN_2026-07-08_END -->
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
@@ -62,6 +78,7 @@ repo地址：[Yunshiro/message-board-ui](https://github.com/Yunshiro/message-boa
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
