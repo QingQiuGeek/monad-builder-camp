@@ -15,13 +15,80 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-13
+<!-- DAILY_CHECKIN_2026-07-13_START -->
+### 2026.07.13
+
+主題：共識層架構（MonadBFT、區塊狀態、RaptorCast）
+
+**MonadBFT 基本屬性**
+
+-   衍生自 pipelined HotStuff 家族的 BFT 協定，n = 3f+1，容忍 f 個拜占庭節點
+    
+-   單輪達成投機終局性（speculative finality），兩輪達成完全終局性
+    
+-   happy path 為線性訊息與簽章複雜度，支撐上百節點的共識集
+    
+-   optimistic responsiveness：依實際收到的訊息推進回合，不依賴固定 timeout；僅在故障恢復時才使用較重的通訊
+    
+-   出塊間隔 0.4 秒；區塊 N 於 N+2 提案時完成 finalize，約 0.8–1 秒
+    
+
+**Pipeline 運作方式**
+
+-   每輪一位 leader；提案內容 = 新 payload + 前一提案的 QC（由前輪投票聚合而成）
+    
+-   驗證者驗證提案後，直接將票送給下一輪的指定 leader
+    
+-   驗證者收到第 K+2 輪提案（內含對 K+1 的 QC，即對 K 的 QC²）時，將第 K 輪區塊標記為 Finalized、K+1 為 Voted、K+2 為 Proposed
+    
+-   每一輪同時推進三個高度的區塊狀態
+    
+
+**Tail-forking 問題與對策**
+
+-   定義：pipelined 協定中，前一區塊的第二階段訊息搭載在下一位 leader 的提案上；若下一位 leader 離線或作惡，即使前一區塊已獲超級多數投票仍會被丟棄
+    
+-   影響：誠實 leader 損失出塊獎勵；產生跨區塊重排交易的 MEV 空間；讀取 Voted 狀態的應用會遇到回滾
+    
+-   MonadBFT 規則：接任 leader 必須 repropose 已獲足夠支持的前一區塊；欲提出全新區塊，須附上超級多數簽署的 No-Endorsement Certificate（NEC），證明前一區塊確實未獲足夠支持
+    
+-   若接任 leader 完全未提案，該輪 timeout，由再下一位 leader 接手
+    
+
+**區塊狀態進程**
+
+-   Proposed → Voted → Finalized → Verified
+    
+-   Voted：提案後約 0.5 秒；此狀態僅在 leader equivocation（可證明並可懲罰）時回滾，實務上可視為近似安全
+    
+-   Finalized：兩輪後，交易順序不可變；Monad 的終局性定義在共識層，不等執行
+    
+-   Verified：Finalized 後再過 D=3 個區塊，delayed merkle root 確認全網執行結果一致（state root finality）
+    
+-   文件建議：涉及大量鏈下金融邏輯的系統（交易所、跨鏈橋、穩定幣/RWA 發行方）應以 Verified 為準
+    
+
+**RaptorCast**
+
+-   問題：MonadBFT 要求 leader 直接送區塊給所有驗證者；以 10,000 tx/s × 200 bytes 估算約 2 MB/s，直發 200 個驗證者需約 400 MB/s（3.2 Gbps）上傳頻寬，不可行
+    
+-   解法：區塊經 erasure coding 切成多個 chunk，chunk 總量大於原始資料，但以幾乎任意組合湊滿原始大小即可還原
+    
+-   傳播採兩層 broadcast tree，每個其他驗證者皆為第一層節點，負責轉發部分 chunk
+    
+-   傳輸層用 UDP，以 Raptor code 補資料完整性、對 merkle root 簽章做訊息認證，整體效率優於 TCP
+<!-- DAILY_CHECKIN_2026-07-13_END -->
+
 # 2026-07-12
 <!-- DAILY_CHECKIN_2026-07-12_START -->
+
 假日水個打卡
 <!-- DAILY_CHECKIN_2026-07-12_END -->
 
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 
 **Historical Data**
 
@@ -46,11 +113,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- DAILY_CHECKIN_2026-07-10_START -->
 
 
+
 先打卡晚點補充筆記
 <!-- DAILY_CHECKIN_2026-07-10_END -->
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -82,6 +151,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
@@ -132,6 +202,7 @@ warm access 維持 100 不變。受影響的是 BALANCE、EXTCODE 系列、CALL 
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
