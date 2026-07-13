@@ -972,4 +972,286 @@ Monad 提供了自定义的 Monad Foundry，确保本地开发环境与链上行
 *Monad Builder Camp Day 7 打卡完成。Week 1 从入门到架构理解，打好了基础。下周开始写真正的合约和 DApp。*
 
 <!-- DAILY_CHECKIN_2026-07-12_END -->
+# Monad Builder Camp Day 8 — 智能合约进阶：深入理解 Monad 的 Gas 机制与高性能开发实践
+
+**日期**: 2026-07-13  
+**主题**: Week 2 — 智能合约进阶、前端交互、AI 辅助开发  
+**打卡人**: QingQiuGeek
+
+---
+
+## 一、今日学习内容
+
+今天是 Monad Builder Camp 的第八天，正式进入 Week 2。今天的核心主题是**智能合约进阶**，我重点深入研究了 Monad 与以太坊在 Gas 机制、交易处理、合约部署等关键维度的差异，并结合 Monad 官方文档和 Web3 安全实践手册，梳理了在 Monad 上进行高性能 DApp 开发的核心要点。
+
+---
+
+## 二、Monad vs 以太坊：Gas 机制深度对比
+
+### 2.1 Gas 计费方式的根本性差异
+
+这是 Monad 与以太坊最核心的区别之一，也是开发者最容易踩坑的地方。
+
+| 维度 | 以太坊 | Monad |
+|------|--------|-------|
+| **Gas 收费基准** | 按 `gas_used`（实际消耗）收费 | 按 `gas_limit`（设定上限）收费 |
+| **未使用 Gas 退还** | ✅ 退还 `gas_limit - gas_used` 的部分 | ❌ 不退还，全额按 `gas_limit` 扣除 |
+| **Block Gas Limit** | ~30M gas | 200M gas（6.7x） |
+| **Transaction Gas Limit** | 无硬性上限（受 block limit 约束） | 30M gas |
+| **最低 Base Fee** | 动态，可低至 1 wei | 100 MON-gwei (`100 × 10⁻⁹ MON`) |
+| **Base Fee 调整机制** | 最大 ±12.5%/block | 更慢增长、更快下降的指数控制器 |
+| **区块出块时间** | ~12s | 400ms |
+| **最终确认时间** | ~12min（64 slots） | 800ms |
+| **吞吐量** | ~15-30 tps | 10,000 tps |
+| **合约代码大小上限** | 24 KB | 128 KB |
+| **Init Code 大小上限** | 48 KB | 256 KB |
+| **Blob 交易 (EIP-4844)** | ✅ 支持 | ❌ 不支持 |
+| **全局 Mempool** | ✅ 有 | ❌ 无（Local Mempool，仅转发给后续几个 leader） |
+
+**为什么 Monad 按 gas_limit 收费？**
+
+这是 Monad 实现异步执行（Asynchronous Execution）的关键设计。在异步执行模型下，leader 构建区块和 validator 投票发生在交易执行之前。如果按 `gas_used` 收费，恶意用户可以提交一个 `gas_limit` 极高但实际消耗极少 gas 的交易，占据大量区块空间却不支付相应费用，形成 DoS 攻击向量。按 `gas_limit` 收费从根本上消除了这个问题。
+
+### 2.2 Base Fee 控制器设计差异
+
+以太坊的 Base Fee 控制器：
+```
+base_fee_change = ±12.5% per block
+target_block_size = gas_limit / 2
+```
+
+Monad 的 Base Fee 控制器采用了一种更精细的指数平滑算法：
+
+```
+base_price_per_gas(k+1) = max{min_base_price_per_gas, base_price_per_gas(k) · exp(η(k) · (block_gas(k) - target) / block_gas_limit)}
+```
+
+关键参数：
+- `max_step_size = 1/28`
+- `target = 160M`（80% of block_gas_limit）
+- `β = 0.96`
+- `min_base_price_per_gas = 100 MON-gwei`
+
+这意味着 Monad 的 Base Fee **增长更慢、下降更快**，避免了因 base fee 过高导致区块空间利用率不足的问题。对于高频交易场景（如 Monad 上 400ms 出块），这种设计能更好地平衡供需。
+
+### 2.3 EIP-1559 兼容性
+
+Monad 完全兼容 EIP-1559 的 Type 2 交易：
+
+```
+price_per_gas = min(base_price_per_gas + priority_price_per_gas, max_price_per_gas)
+```
+
+开发者在构造交易时仍使用熟悉的 `maxFeePerGas` 和 `maxPriorityFeePerGas` 参数，但需要特别注意：`base_price_per_gas` 的最低值是 100 MON-gwei，这比以太坊的 base fee 高得多，但由于 MON 代币价格与 ETH 不同，实际成本需要综合考虑。
+
+---
+
+## 三、Reserve Balance 机制：Monad 独有的交易保障
+
+这是 Monad 文档中一个非常重要的概念，也是与以太坊的关键差异。
+
+### 3.1 机制原理
+
+Monad 使用 Reserve Balance 机制确保共识阶段纳入的所有交易都能被支付。该机制对交易纳入设置了轻量级约束，并定义了交易在执行阶段会 revert 的特定条件。
+
+### 3.2 对开发者的影响
+
+- 你可能会看到一些交易被纳入链上但最终执行失败（revert），这些交易仍然会支付 gas 费用
+- EIP-7702 委托的 EOA 账户，其余额不能低于 10 MON（除非移除委托）
+- 使用 EIP-7702 委托的合约代码中，`CREATE` 和 `CREATE2` 操作码被禁止
+
+**踩坑记录**：最初我在理解这个机制时，误以为"交易 revert 不收费"是以太坊的通用行为。实际上在以太坊上，revert 的交易也消耗 gas，只是没有 Monad 这么明确地将 `gas_limit` 作为收费基准。在 Monad 上，你需要更谨慎地设置 `gas_limit`，避免因为设置过高而支付不必要的费用。
+
+---
+
+## 四、Monad 上的高性能开发最佳实践
+
+### 4.1 硬编码 Gas Limit
+
+对于 gas 消耗固定的操作（如 ETH/MON 转账固定为 21,000 gas），直接硬编码 `gasLimit` 而非调用 `eth_estimateGas`：
+
+```javascript
+// ✅ 推荐：直接硬编码
+const tx = await walletClient.sendTransaction({
+  to: recipientAddress,
+  value: parseEther('1.0'),
+  gasLimit: BigInt(21000),  // 固定值
+  baseFeePerGas: BigInt(100_000_000_000), // 100 gwei
+  chain: monadChain,
+});
+
+// ❌ 不推荐：每次都调用 eth_estimateGas
+const gas = await publicClient.estimateGas({...}); // 多一次 RPC 往返
+```
+
+**关键警告**：某些钱包（包括 MetaMask）在 `eth_estimateGas` 调用 revert 时，会将 gas limit 设置为一个极高值。在以太坊上这通常不是大问题（只会用实际消耗的 gas），但在 Monad 上这会导致用户支付巨额费用！
+
+### 4.2 并发交易提交
+
+Monad 400ms 出块意味着可以高效处理并发交易：
+
+```javascript
+// ✅ 并发提交多个交易
+const transactionsPromises = Array(BATCH_SIZE)
+  .fill(null)
+  .map(async (_, i) => {
+    return await walletClient.sendTransaction({
+      to: recipientAddress,
+      value: parseEther('0.1'),
+      gasLimit: BigInt(21000),
+      baseFeePerGas: BigInt(100_000_000_000),
+      chain: monadChain,
+      nonce: nonce + Number(i),
+    });
+  });
+
+const hashes = await Promise.all(transactionsPromises);
+```
+
+**注意**：并发提交时需要手动管理 nonce。通过 `eth_getTransactionCount` 查询 nonce 会有网络延迟，建议本地维护 nonce 计数器。
+
+### 4.3 Multicall 优化 eth_call
+
+Monad Testnet 和 Mainnet 都部署了标准的 `Multicall3` 合约：
+
+```
+Multicall3 地址: 0xcA11bde05977b3631167028862bE2a173976CA11
+```
+
+使用 viem 的 multicall 功能：
+
+```typescript
+import { multicall } from 'viem/contract';
+
+const results = await publicClient.multicall({
+  contracts: [
+    { address: tokenA, abi: erc20Abi, functionName: 'balanceOf', args: [userAddress] },
+    { address: tokenB, abi: erc20Abi, functionName: 'balanceOf', args: [userAddress] },
+    { address: tokenA, abi: erc20Abi, functionName: 'allowance', args: [userAddress, spenderAddress] },
+  ],
+});
+```
+
+**重要限制**：Multicall3 内部是串行执行的。如果单个调用很昂贵，不要在一个 Multicall 中塞太多调用。对于批量查询，考虑使用 RPC 的 batch 请求或索引器。
+
+### 4.4 使用索引器替代 eth_getLogs
+
+Monad 高吞吐量意味着链上数据增长极快，反复调用 `eth_getLogs` 效率低下。官方推荐的索引方案：
+
+| 索引器 | 特点 | Monad 网络 ID |
+|--------|------|---------------|
+| **Envio HyperIndex** | 事件驱动，快速索引 | Testnet: 10143, Mainnet: 143 |
+| **The Graph** | 去中心化索引，子图模式 | 支持 Monad |
+| **Allium** | SQL 查询，实时数据流 | 支持 Monad |
+| **thirdweb Insight** | REST API，token 数据丰富 | Chain ID 143 / 10143 |
+
+---
+
+## 五、安全分析：Web3 开发中的合规与防护
+
+### 5.1 智能合约安全关键点
+
+结合 Web3 安全实践手册，以下是在 Monad 上开发时需要特别注意的安全事项：
+
+**1. 私钥管理**
+- 永远不要在代码中硬编码私钥
+- 使用环境变量或硬件钱包
+- 测试网和主网使用不同的钱包
+
+**2. 合约权限控制**
+```solidity
+// 使用 OpenZeppelin 的 AccessControl
+import "@openzeppelin/contracts/access/AccessControl.sol";
+
+contract MyContract is AccessControl {
+    bytes32 public constant ADMIN_ROLE = keccak256("ADMIN_ROLE");
+    
+    constructor() {
+        _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
+        _grantRole(ADMIN_ROLE, msg.sender);
+    }
+    
+    function sensitiveAction() external onlyRole(ADMIN_ROLE) {
+        // 只有管理员能调用
+    }
+}
+```
+
+**3. 重入攻击防护**
+```solidity
+import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
+
+contract MyContract is ReentrancyGuard {
+    function withdraw() external nonReentrant {
+        // 防止重入攻击
+    }
+}
+```
+
+### 5.2 链上安全威胁
+
+根据 Web3 实习手册的安全指南，以下是常见的 Web3 安全威胁：
+
+| 攻击类型 | 描述 | 防护措施 |
+|----------|------|----------|
+| **钓鱼攻击** | 伪造网站/邮件获取私钥 | 验证 URL、不点击可疑链接 |
+| **剪贴板木马** | 替换复制的钱包地址 | 转账前核对完整地址 |
+| **社交工程** | 假冒好友/客服 | 不在社交平台透露敏感信息 |
+| **供应链攻击** | 恶意依赖包/插件 | 审计依赖、使用官方渠道 |
+| **Punycode 钓鱼** | 相似域名欺骗 | 仔细检查域名字符 |
+
+**踩坑记录**：在本地开发环境中，我曾因为图方便直接将私钥写在 `.env` 文件中并提交到 Git。虽然测试网资金不多，但这是一个严重的安全习惯问题。现在我使用 `git-secrets` 钩子在提交前自动扫描敏感信息，并将 `.env` 加入 `.gitignore`。
+
+---
+
+## 六、Monad 网络信息速查
+
+### 6.1 Testnet 配置
+
+```json
+{
+  "chainId": 10143,
+  "networkName": "Monad Testnet",
+  "currencySymbol": "MON",
+  "rpcUrl": "https://rpc.testnet.monad.xyz",
+  "blockExplorer": "https://testnet.monadvision.com"
+}
+```
+
+### 6.2 已部署的规范合约
+
+| 合约名称 | 地址 |
+|----------|------|
+| Multicall3 | `0xcA11bde05977b3631167028862bE2a173976CA11` |
+| Wrapped MON | 见官方文档 |
+| Permit2 | 见官方文档 |
+| EntryPoint v0.6/0.7/0.8 | 见官方文档 |
+| Safe v1.4.1 | 见官方文档 |
+
+---
+
+## 七、个人思考与总结
+
+### 7.1 对异步执行的理解
+
+Monad 最让我印象深刻的设计是**异步执行**——共识和执行的流水线化。传统区块链（包括以太坊）是同步的：先执行交易，再共识出块。Monad 反过来：先共识确认交易的有效性（通过 Reserve Balance 保证能支付），然后异步执行。这将执行的时间预算从共识时间中解耦，大幅提升了吞吐量。
+
+### 7.2 对开发者体验的影响
+
+作为一个从以太坊生态转过来的开发者，Monad 的 EVM 兼容性意味着大部分 Solidity 代码和工具链可以直接使用。但 Gas 机制的差异（按 gas_limit 收费）是一个需要特别注意的设计决策，它要求开发者在前端和合约层面都要更精确地管理 gas。
+
+### 7.3 本周计划
+
+Week 2 的重点是智能合约进阶和前端交互。接下来几天我会：
+1. 在 Monad Testnet 上部署一个完整的 DApp
+2. 实践 Multicall 和并发交易的最佳实践
+3. 研究 Monad 的 Parallel Execution 如何影响合约设计
+4. 完成一个 Mini Demo 的原型
+
+---
+
+**学习时长**: 约 3 小时  
+**参考资料**: Monad 官方文档 (docs.monad.xyz)、ethereum.org Gas 文档、Web3 实习手册安全章节
+
+
 <!-- Content_END -->
