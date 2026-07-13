@@ -15,8 +15,18 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-13
+<!-- DAILY_CHECKIN_2026-07-13_START -->
+-   账户抽象钱包AA
+    
+-   去中心化自主身份DID
+    
+-   现实资产上链RWA
+<!-- DAILY_CHECKIN_2026-07-13_END -->
+
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 1. Web3的信任体系脱离了中心化机构的信用背书，依靠密码学与节点共识形成信任最小化环境，实现了无需中介即可完成价值交互。
 
 2. 智能合约奉行代码即规则，一旦部署上链便无法人为篡改，能够自动履约，重构了传统契约的执行逻辑。
@@ -31,6 +41,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
 
+
 1.  NFT：插画，头像，权益
     
 2.  NFT凭证只有一份
@@ -40,6 +51,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 1.  Dapp 的架构主要由三个核心部分组成：**前端，智能合约，数据检索器**
@@ -54,6 +66,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 -   monad公链高性能EVM兼容L1
     
 -   并行EVM＋异步流水线执行
@@ -63,6 +76,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
