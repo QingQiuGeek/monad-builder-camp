@@ -15,8 +15,32 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-14
+<!-- DAILY_CHECKIN_2026-07-14_START -->
+0713 Day06-
+
+Week2学习记录：
+
+收获的知识——
+
+一、Week 2｜线上活动｜实时参加 7.13-Web3 技术如何从 0 到 1 用 AI 开发，主要查看了线上文档进行学习，以及OpenAI辅助模型、Notion项目管理工具辅助；
+
+二、参与Zoom线上活动“Week 2｜线上活动｜观看回放｜Web3 技术如何从 0 到 1 用 AI 开发：
+
+遇到的问题——
+
+线上会议由于网络卡顿等原因中间断掉后一直没加载出来；
+
+三接下来计划——
+
+确认开发主要方向；
+
+![Day07两个环节的任务-0.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Cool-CoCo/images/2026-07-13-1783958492018-Day07_______-0.png)
+<!-- DAILY_CHECKIN_2026-07-14_END -->
+
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
+
 0713 Day06-
 
 Week2学习记录：
@@ -39,6 +63,7 @@ Week2学习记录：
 # 2026-07-12
 <!-- DAILY_CHECKIN_2026-07-12_START -->
 
+
 20260712自由打卡：
 
 今日记录——
@@ -56,6 +81,7 @@ Week2学习记录：
 <!-- DAILY_CHECKIN_2026-07-11_START -->
 
 
+
 20260711任务打卡：
 
 今日内容——
@@ -71,6 +97,7 @@ Week2学习记录：
 
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 
 
 
@@ -95,6 +122,7 @@ Day05（2026-07-10）学习记录：
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 
 
@@ -156,6 +184,7 @@ Day04学习记录：
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -310,6 +339,7 @@ Day04学习记录：
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
