@@ -15,13 +15,20 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-13
+<!-- DAILY_CHECKIN_2026-07-13_START -->
+参加分享会**Web3 技术如何从 0 到 1 用 AI 开发**
+<!-- DAILY_CHECKIN_2026-07-13_END -->
+
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 学习第一周内容
 <!-- DAILY_CHECKIN_2026-07-11_END -->
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 参加**从「裸奔」到「受控」：AI Agent 高危案例解析与安全防线构建**分享会  
 
@@ -32,11 +39,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- DAILY_CHECKIN_2026-07-08_START -->
 
 
+
 参加**AI Agent 如何拥有支付能力**分享会
 <!-- DAILY_CHECKIN_2026-07-08_END -->
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
@@ -47,6 +56,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
