@@ -15,13 +15,22 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-13
+<!-- DAILY_CHECKIN_2026-07-13_START -->
+# 利用AI辅助DApp开发
+
+**规范驱动开发：先对齐意图，再生成代码**
+<!-- DAILY_CHECKIN_2026-07-13_END -->
+
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 继续合约的部署
 <!-- DAILY_CHECKIN_2026-07-11_END -->
 
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 
 # Remix IDE开发
 
@@ -57,6 +66,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 
 # 智能合约开发
@@ -181,6 +191,7 @@ Solidity 是状态机编程，每一行代码的执行都需要消耗资源（Ga
 
 
 
+
 # 第一次测试网整个交易过程
 
 ### 交易详情解析
@@ -214,6 +225,7 @@ Solidity 是状态机编程，每一行代码的执行都需要消耗资源（Ga
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
@@ -298,6 +310,7 @@ Solidity 是状态机编程，每一行代码的执行都需要消耗资源（Ga
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
