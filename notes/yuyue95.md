@@ -15,13 +15,20 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-13
+<!-- DAILY_CHECKIN_2026-07-13_START -->
+Remix 写 `MessageBoard` 合约 → 编译 → MetaMask 切 Sepolia → 水龙头领测试币 → `Injected Provider - MetaMask` 部署 → 在 Sepolia Etherscan 用 tx hash 和合约地址查看 **Events 日志** → 写前端用 ABI 实例化合约,`.call()` 读(免费)、`.send()` 写(要 gas 和签名)。
+<!-- DAILY_CHECKIN_2026-07-13_END -->
+
 # 2026-07-12
 <!-- DAILY_CHECKIN_2026-07-12_START -->
+
 今天继续看文档，但是只看了一小点，实在太忙了。下周恢复正常学习进度
 <!-- DAILY_CHECKIN_2026-07-12_END -->
 
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 
 今天依旧学习手册
 <!-- DAILY_CHECKIN_2026-07-11_END -->
@@ -30,11 +37,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- DAILY_CHECKIN_2026-07-10_START -->
 
 
+
 今天看了实习手册
 <!-- DAILY_CHECKIN_2026-07-10_END -->
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 
 
@@ -47,11 +56,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 今天转账了，还没有写合约，明天写一下
 <!-- DAILY_CHECKIN_2026-07-08_END -->
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
