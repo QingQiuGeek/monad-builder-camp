@@ -15,8 +15,14 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-13
+<!-- DAILY_CHECKIN_2026-07-13_START -->
+开始做自己的一个web3项目，结合ai来做
+<!-- DAILY_CHECKIN_2026-07-13_END -->
+
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 看monad文档
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/cointem/images/2026-07-10-1783688842340-image.png)
@@ -25,11 +31,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
 
+
 agent在web3的应用和约束，就是harness工程
 <!-- DAILY_CHECKIN_2026-07-09_END -->
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 了解agent支付体系以及目前的一些落地应用
@@ -40,6 +48,7 @@ agent在web3的应用和约束，就是harness工程
 
 
 
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/cointem/images/2026-07-07-1783434555839-image.png)
 
 完成合约创建
@@ -47,6 +56,7 @@ agent在web3的应用和约束，就是harness工程
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
