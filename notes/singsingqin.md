@@ -15,8 +15,35 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-13
+<!-- DAILY_CHECKIN_2026-07-13_START -->
+可以写成这种**日志打卡风格**，既简洁又有成长主线：
+
+* * *
+
+## Day 2 学习日志｜AI Coding × Web3
+
+今天学习了 **《如何从 0 到 1 使用 AI 开发 Web3 应用》**，相比昨天搭建 Obsidian 知识管理系统，今天更侧重于 **AI 协同开发**。
+
+主要收获：
+
+-   学习了 AI Coding 的完整开发流程：**需求分析 → 技术选型 → 任务拆分 → 代码生成 → 调试优化 → Demo 部署**。
+    
+-   了解了 **ChatGPT、Claude、Cursor** 在开发中的不同定位，学会根据场景选择合适的 AI 工具。
+    
+-   认识到 AI 不只是代码生成工具，更是能够参与需求分析、项目设计、开发和文档整理的开发伙伴。
+    
+-   对 AI 在 Web3 开发中的应用有了更清晰的认识，包括智能合约编写、DApp 前端开发、Bug 调试和文档生成等。
+    
+
+### 今日感悟
+
+昨天搭建的是**知识管理系统**，今天学习的是**AI 开发工作流**。知识沉淀帮助我建立学习体系，而 AI 协同开发则帮助我把知识真正转化为项目实践。下一步将结合 Cursor、Claude 和 ChatGPT，完成一个完整的 Web3 Demo，并持续沉淀到 Obsidian 与 GitHub。
+<!-- DAILY_CHECKIN_2026-07-13_END -->
+
 # 2026-07-12
 <!-- DAILY_CHECKIN_2026-07-12_START -->
+
 结合你这几天的学习记录，以及你的长期目标（**前端 DApp 开发 → GitHub 开源 → Web3 Builder → AI Coding**），我建议你 **Week 2 完全走 Dev（Tech）方向**。
 
 你的目标不应该只是完成课程任务，而是把 Week 2 变成一周的**作品集（Portfolio）建设**。
@@ -519,6 +546,7 @@ Resume
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
 
+
 结合你目前的学习路线（**前端 → DApp → Web3 → AI Coding**）以及今天的内容（**Claude Code 使用、合约部署**），我建议你的 Tech 学习方向可以围绕 **「DApp 前端复刻 + GitHub 开源项目学习」** 展开，而不是只做零散的知识点学习。
 
 下面是一份适合作为每日学习计划、Build Log 和长期 Roadmap 的整理。
@@ -887,6 +915,7 @@ Monad
 
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 
 
 结合你提供的课程大纲、分享会内容、Demo 演示（Monad Buddy）、以及几场 Co-learning 的技术分享，可以看出这一周的目标并不是**教会大家所有 Web3 技术**，而是**建立一个 Web3 Builder 的完整学习闭环**：从认知 → 工具 → 钱包 → 链上交互 → 合约开发 → Demo → Build Log。
@@ -1507,6 +1536,7 @@ AI 知识库管理。
 
 
 
+
 # 个人学习打卡日志（优化排版 + 完整补充 Web3 DApp 前端学习规划）
 
 ## 一、长期个人目标定位
@@ -1741,6 +1771,7 @@ AI 知识库管理。
 
 
 
+
 [BuildAnything](https://buildanything.space/)
 
 1.  闲鱼：发布信息5条，发布一个上线连接
@@ -1964,6 +1995,7 @@ AI Agent
 
 
 
+
 1.  博客搭建，(10%)  
     不想买云服务器.......
     
@@ -2032,6 +2064,7 @@ eg：web3Careerbuild
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
