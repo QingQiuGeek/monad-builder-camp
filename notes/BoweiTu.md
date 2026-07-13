@@ -15,13 +15,26 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-13
+<!-- DAILY_CHECKIN_2026-07-13_START -->
+今天系统梳理了Monad公链相关基础内容，弄懂了L1底层链和通用API、MCP协议的层级区别：API是通用互联网调用接口，MCP是专门适配大模型交互的协议。
+
+学习了链上跨链资产逻辑，不同代币通过LayerZero、CCIP、Hyperlane等桥部署到Monad，用户可通过原生桥前端或聚合跨链工具完成资产划转。
+
+动手看懂最简Solidity链上待办合约结构，区分状态存储、读写函数，人工排查编译报错、权限控制、数据覆盖三类常见安全隐患，学会用AI生成合约初稿后人工校验修正。
+
+顺带理清链上代币列表文件来源，看懂主网Chain ID、RPC节点、区块浏览器等开发者配置参数，分清限频公共RPC与商用高性能节点的使用场景。
+<!-- DAILY_CHECKIN_2026-07-13_END -->
+
 # 2026-07-12
 <!-- DAILY_CHECKIN_2026-07-12_START -->
+
 学习了智能合约相关内容 注册了Meta Mask并转给自己了第一笔资金
 <!-- DAILY_CHECKIN_2026-07-12_END -->
 
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 
 学习了以太坊的技术演进 数据分片 Layer2等等还有**Pectra 与后续扩容**
 <!-- DAILY_CHECKIN_2026-07-11_END -->
@@ -30,11 +43,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- DAILY_CHECKIN_2026-07-09_START -->
 
 
+
 学习了Web3和Web3.0之间的关系相关知识 非常有趣！
 <!-- DAILY_CHECKIN_2026-07-09_END -->
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -47,11 +62,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 今天我学习了Monad 主网链配置文档，包含链基础参数、RPC 节点、区块浏览器、标准合约地址、开发配套资源等等知识点 感到受益匪浅
 <!-- DAILY_CHECKIN_2026-07-07_END -->
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
