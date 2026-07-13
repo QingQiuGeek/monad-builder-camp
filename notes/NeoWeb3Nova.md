@@ -15,8 +15,31 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-13
+<!-- DAILY_CHECKIN_2026-07-13_START -->
+今日完成：  
+\- 确定 Dev / Tech 主方向。  
+\- 提交三份产出：  
+\- submissions/week-02-tech/[role-choice-card.md](http://role-choice-card.md)  
+\- submissions/week-02-tech/[week-2-role-log.md](http://week-2-role-log.md)  
+\- submissions/week-02-tech/[ai-collaboration-log.md](http://ai-collaboration-log.md)  
+\- 提交今日打卡：  
+\- daily/[2026-07-13.md](http://2026-07-13.md)  
+\- 明确本周最小 Demo：基于 Foundry 管理、带前端页面的最小可运行原型。  
+\- 明确 AI 协作原则：方向人工拍板，执行交给 AI。  
+\- 推送到 remote：NeoWeb3Nova/Web3SummerInternshipProgram-MonadBuilderCamp.git，分支 master。
+
+[https://github.com/NeoWeb3Nova/Web3SummerInternshipProgram-MonadBuilderCamp](https://github.com/NeoWeb3Nova/Web3SummerInternshipProgram-MonadBuilderCamp)  
+  
+明日计划：  
+\- 在 experiments/week-02-contract/ 初始化 Foundry 项目。  
+\- 编写第一个 Solidity 合约并通过本地测试。  
+\- 记录第一条代码协作相关的 AI Collaboration Log。
+<!-- DAILY_CHECKIN_2026-07-13_END -->
+
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 今天是 Web3 Summer Internship Program / Monad Builder Camp 的 Day 5，主题是「AI 工具与 Vibe Coding 入门」。  
   
 今日完成：  
@@ -42,6 +65,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 今天是 Web3 Summer Internship Program / Monad Builder Camp 的 Day 4，主题是“第一笔 Monad Testnet 链上交易准备”。  
   
@@ -90,6 +114,7 @@ Testnet 虽然没有真实资产价值，但流程非常接近真实链上开发
 <!-- DAILY_CHECKIN_2026-07-08_START -->
 
 
+
 今日完成：  
 1\. 根据 Week 1 Day 3 任务，整理 Monad Testnet 配置清单：RPC URL、Chain ID、Explorer、Faucet。  
 2\. 在本地项目建立/更新了网络配置提交物 submissions/week-01/[network-config.md](http://network-config.md) 和实验记录 experiments/monad-wallet-setup/[README.md](http://README.md)。  
@@ -113,6 +138,7 @@ Testnet 虽然没有真实资产价值，但流程非常接近真实链上开发
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
@@ -149,6 +175,7 @@ Day: Day 2
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
