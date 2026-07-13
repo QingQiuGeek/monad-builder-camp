@@ -15,19 +15,27 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-13
+<!-- DAILY_CHECKIN_2026-07-13_START -->
+选定了第二周的方向并制作了一个 Notion 的模板以备学习使用
+<!-- DAILY_CHECKIN_2026-07-13_END -->
+
 # 2026-07-12
 <!-- DAILY_CHECKIN_2026-07-12_START -->
+
 今天在补 buildanything 里第一部分的知识
 <!-- DAILY_CHECKIN_2026-07-12_END -->
 
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
 
+
 把 web3 手册里智能合约那一章全部阅读完了，补充理论知识
 <!-- DAILY_CHECKIN_2026-07-11_END -->
 
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 
 
 周五了，总结一下这周学的内容吧。
@@ -44,11 +52,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 今天把 AI 生成的 solidity 合约成功写进 remix 并部署到链上了，感觉要正儿八经写出一个 Todo 并让他又可以实践的内容还是一个挺复杂麻烦的过程，但最后完成的时候还是非常有成就感的，也算是对智能合约有了一个更加深入的认识了
 <!-- DAILY_CHECKIN_2026-07-09_END -->
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -65,11 +75,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 今天实实在在地把昨天交的内容落实了大半，首先是在metamask 上创建钱包，因为直接用的 chrome 插件所以钱包以及交易信息都会显示在屏幕右侧，非常清晰方便。点一下 Faucet 再把私钥贴过去就可以领水了，截至现在领了 50 块不知道以后能不能接着领，每笔交易完成后都会有一个transaction，在里面可以看到交易相关的东西如哈希值，from 哪个私钥 to 哪个私钥还有 gas 的值等等。接下来就是去用 remix 和 ai 自己部署一个 solidity 和智能合约了，慢慢来吧
 <!-- DAILY_CHECKIN_2026-07-07_END -->
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
