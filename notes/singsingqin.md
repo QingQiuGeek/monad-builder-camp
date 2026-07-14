@@ -15,8 +15,63 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-14
+<!-- DAILY_CHECKIN_2026-07-14_START -->
+## Day 2 学习打卡总结｜Builder Track 开启：Research × Open Source
+
+今天正式进入 **Web3 暑期实习计划 Week 2 Builder Track**，课程围绕 **Research** 与 **Open Source** 两个主题展开，让我对未来 Web3 开发者的成长路径有了更清晰的认识。
+
+### 1\. 从研究到公共知识：AI 时代 Web3 Researcher
+
+本次分享让我认识到，Web3 Research 的价值不仅是查阅资料，而是将信息转化为经过验证、可公开传播的 **Public Knowledge（公共知识）**。Research 的完整流程应该是：
+
+> **获取信息 → 理解协议 → 验证事实 → 输出知识 → 服务社区。**
+
+AI 可以帮助完成资料检索、内容整理和初稿生成，但真正的价值仍来自研究者对信息的判断、交叉验证和独立思考。对于我来说，即使主方向是 **Developer（Tech）**，Research 能力依然是必备能力。未来我希望坚持将每一次学习 Monad、Ethereum、Moss 等协议的过程整理成 Build Log、GitHub README 或 Obsidian 知识库，逐步积累自己的 **Public Knowledge** 和 **Proof of Work**。
+
+* * *
+
+### 2\. 从第一个 PR 开始：如何成为 Web3 开源贡献者
+
+第二场分享让我更加理解了 **GitHub Contribution** 的意义。在 Web3 生态中，团队更关注的是开发者是否拥有 **GitHub、Pull Request、Demo、技术文章、社区贡献** 等可验证成果，而不仅是学历或证书。
+
+开源贡献并不只是写代码，也可以是完善文档、修复 Bug、提交 Issue、优化 README 等。完成一次 PR，本质上是学习真实项目的协作流程，包括：
+
+-   阅读 README 和 CONTRIBUTING  
+    
+-   Fork → Clone → 创建分支  
+    
+-   提交 Commit 与 Pull Request  
+    
+-   接受 Code Review 并持续优化  
+    
+
+分享还以 **Moss** 开源项目为实践案例，鼓励大家通过真实项目参与 GitHub 协作，积累属于自己的 Web3 Portfolio。
+
+* * *
+
+### 3\. 今日最大的收获
+
+我最大的感受是：**Monad 提供的不只是一次课程实践，而是一次进入 Web3 开源生态的机会。**
+
+通过参与 Moss 等开源项目，我们不仅能够提升技术能力，还能培养工程化思维、团队协作能力和持续输出的习惯。每一次 PR、每一次学习记录、每一次公开分享，都会成为未来求职、参与 Hackathon 或加入 Web3 团队的重要 **Proof of Work**。
+
+* * *
+
+## 明日计划
+
+-   阅读 Moss 项目 README 与贡献指南，理解项目整体架构。  
+    
+-   熟悉 GitHub 开源协作流程（Fork → PR → Review → Merge）。  
+    
+-   尝试寻找一个 `good first issue` 或文档优化任务，完成自己的第一个开源贡献。  
+    
+-   将学习内容继续整理到 Obsidian 和 GitHub，持续积累属于自己的 **Web3 Portfolio**。
+<!-- DAILY_CHECKIN_2026-07-14_END -->
+
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
+
 可以写成这种**日志打卡风格**，既简洁又有成长主线：
 
 * * *
@@ -43,6 +98,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-12
 <!-- DAILY_CHECKIN_2026-07-12_START -->
+
 
 结合你这几天的学习记录，以及你的长期目标（**前端 DApp 开发 → GitHub 开源 → Web3 Builder → AI Coding**），我建议你 **Week 2 完全走 Dev（Tech）方向**。
 
@@ -547,6 +603,7 @@ Resume
 <!-- DAILY_CHECKIN_2026-07-11_START -->
 
 
+
 结合你目前的学习路线（**前端 → DApp → Web3 → AI Coding**）以及今天的内容（**Claude Code 使用、合约部署**），我建议你的 Tech 学习方向可以围绕 **「DApp 前端复刻 + GitHub 开源项目学习」** 展开，而不是只做零散的知识点学习。
 
 下面是一份适合作为每日学习计划、Build Log 和长期 Roadmap 的整理。
@@ -915,6 +972,7 @@ Monad
 
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 
 
 
@@ -1537,6 +1595,7 @@ AI 知识库管理。
 
 
 
+
 # 个人学习打卡日志（优化排版 + 完整补充 Web3 DApp 前端学习规划）
 
 ## 一、长期个人目标定位
@@ -1772,6 +1831,7 @@ AI 知识库管理。
 
 
 
+
 [BuildAnything](https://buildanything.space/)
 
 1.  闲鱼：发布信息5条，发布一个上线连接
@@ -1996,6 +2056,7 @@ AI Agent
 
 
 
+
 1.  博客搭建，(10%)  
     不想买云服务器.......
     
@@ -2064,6 +2125,7 @@ eg：web3Careerbuild
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
