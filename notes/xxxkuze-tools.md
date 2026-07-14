@@ -15,8 +15,35 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-14
+<!-- DAILY_CHECKIN_2026-07-14_START -->
+Build Anything 构建并发布你的第一个应用，我使用了Replit账号，创建之后，输入了我的prompt
+
+```
+为我建一个个人网站，名称为“zhang”，以及一段简短的自我介绍
+一个写着"用 AI 构建事物"的链接，指向我的推特（https://x.com/xxxkuze145801）
+和 GitHub（https://github.com/xxxkuze-tools）。 
+深色主题，紫色强调色。简洁，极简设计。使其适配移动设备。
+```
+
+过了一会，右侧就展示了页面的效果，我点击按钮，也能正常跳转到我的推特和GitHub，然后我又叫智能体帮我改点内容，输入了prompt
+
+```
+加大字体，增加一个亮/暗模式切换，在手机上看起来更好
+```
+
+又成功实现了，亮/暗模式的切换。紧接着，发布到互联网上，点击右上角的 Publish 按钮，给出一个建议的 `.replit.app` 域名。点 Publish 确认。Replit 接下来会走一遍简短的部署流程（provision、安全扫描、build、bundle、promote），然后给你一个实时 URL。这个地址是有效的，只有29天。
+
+总结：
+
+Vibecoing的一个完整循环流程：
+
+配置->描述->AI构建->审视->迭代->推送->部署
+<!-- DAILY_CHECKIN_2026-07-14_END -->
+
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
+
 总结了下Week1 作品与方向的选择
 
 [https://app.notion.com/p/Week-1-39c564177da180448929f7c7e3b366f7](https://app.notion.com/p/Week-1-39c564177da180448929f7c7e3b366f7)
@@ -25,11 +52,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 # 2026-07-12
 <!-- DAILY_CHECKIN_2026-07-12_START -->
 
+
 今天去buildanything官方跟着步骤教程，学习下通过 AI 编程协作开发。
 <!-- DAILY_CHECKIN_2026-07-12_END -->
 
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 
 
 ## 今天总结下这周的内容
@@ -76,6 +105,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 
 
 
@@ -138,6 +168,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 听了Coooder老师的co learning，今天学习使用AI Coding来做一个智能合约项目，首先我选择codex来做，首先创建一个文件目录，用来存放项目，然后导入进去codex，在这个项目里面与它对话，内容：\*\*帮我做一个发行nft的智能合约，\*\*等待codex完成（过程中有些指令需要确认）
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/xxxkuze-tools/images/2026-07-09-1783579549303-image.png)
@@ -183,6 +214,7 @@ copy .env.example .env
 
 
 
+
 今天学习用 AI 生成一个最小 Solidity 合约，我选择了每日打卡合约，写了个提示词，让chatgpt给我生成 Solidity ^0.8.20 的代码，CheckIn包含totalCount（累计打卡次数），lastCheckIn（最后打卡时间），streak（连续打卡天数），然后是三个函数，checkIn() -> 用户每天只能打卡一次，canCheckIn() -> 判断今天是否还能打卡，getMyRecord() -> 查看自己的打卡信息，AI生成的合约代码，人工检查了Remix 能编译通过，三个函数与 Prompt 一致，数据类型正确，没有不必要的库，变量命名和注释读得懂。然后部署到Remix。大概的流程：Remix 新建 `ChecklnContract.sol` → 编译 `0.8.20` → **Deploy & Run Transactions** → Browser Extension 连 Rabby → 选 Monad Testnet → Deploy，交互Remix **Deployed Contracts** 里：蓝点函数 **call**（如 getMyRecord），橙点函数 **transact**（如 checkIn）。Write 后在区块链浏览器查看确认交易 Status 为 Success。
 <!-- DAILY_CHECKIN_2026-07-08_END -->
 
@@ -195,11 +227,13 @@ copy .env.example .env
 
 
 
+
 听了7.6晚上参加「Co-learning」线上活动，自己尝试在浏览器上安装MetaMask插件，创建钱包，添加 Monad Testnet 网络，添加成功之后，复制钱包地址，打开区块浏览器，我看到的页面信息，**Address**：我的钱包地址，一串 `0x` 开头的字符，**Balance**：当前账户余额，刚创建时应该是 `0 MON`**，Transactions：**历史交易列表，空钱包时这里是空的。从而**我理解链上产品和普通互联网产品最大的区别是**：普通互联网产品的数据主要存在平台自己的服务器里，而链上产品的关键操作会记录在区块链上，可以通过区块浏览器查询。接着继续了解**行业赛道全览和Web3 工作方式。**
 <!-- DAILY_CHECKIN_2026-07-07_END -->
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
