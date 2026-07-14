@@ -15,8 +15,14 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-14
+<!-- DAILY_CHECKIN_2026-07-14_START -->
+今日听了两个公开课
+<!-- DAILY_CHECKIN_2026-07-14_END -->
+
 # 2026-07-12
 <!-- DAILY_CHECKIN_2026-07-12_START -->
+
 今天看了直播然后按照模块做了任务然后复习了一下前面的课程
 <!-- DAILY_CHECKIN_2026-07-12_END -->
 
@@ -24,11 +30,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- DAILY_CHECKIN_2026-07-11_START -->
 
 
+
 补了漏掉的一些内容 然后准备今天复习一下
 <!-- DAILY_CHECKIN_2026-07-11_END -->
 
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 
 
 
@@ -41,11 +49,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 今天参加了今天7点钟的会议 学习了今日的任务 并且完成了前几天的钱包创建 然后完成了My First NFT
 <!-- DAILY_CHECKIN_2026-07-09_END -->
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
