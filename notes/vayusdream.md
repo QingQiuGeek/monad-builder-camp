@@ -26,10 +26,26 @@ Web3 暑期实习计划 - Monad Buidler Camp
 -   [https://grokipedia.com/page/DeSci\_Asia](https://grokipedia.com/page/DeSci_Asia)
     
 -   提交details—》测试—〉当有其他人tag grok时，会回答与你相关的research问题
+    
+-   [https://x.com/grok/status/2026658750908473389](https://x.com/grok/status/2026658750908473389)
+    
+
+### 专业化的资料申请项目
+
+-   [https://giveth.io/](https://giveth.io/)
+    
+-   [https://www.gccofficial.org/en/project](https://www.gccofficial.org/en/project)
+    
+-   [https://x.com/GCCofCommons/status/2069627888169791759](https://x.com/GCCofCommons/status/2069627888169791759)
+    
+-   [https://maearth.com/](https://maearth.com/)
+    
+-   [https://www.ai4pg.com/](https://www.ai4pg.com/)
 <!-- DAILY_CHECKIN_2026-07-14_END -->
 
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
+
 
 # D6
 
@@ -71,6 +87,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 # D5 例会
 
 待看实操笔记：
@@ -98,6 +115,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 # D4 AI Agent高危示例&安全防线构建
 
 -   自动化到自主化的威胁演变
@@ -111,6 +129,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -171,6 +190,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 # D2
 
 ## 以太坊协议层
@@ -190,6 +210,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
