@@ -15,8 +15,14 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-14
+<!-- DAILY_CHECKIN_2026-07-14_START -->
+我今天的学习笔记 都搬到notion上了，完成了week2的一个任务：[https://app.notion.com/p/What-s-Moss-AI-Agent-Web3-39db3dad4b488081b206f04b0fa9fd90?source=copy\_link](https://app.notion.com/p/What-s-Moss-AI-Agent-Web3-39db3dad4b488081b206f04b0fa9fd90?source=copy_link)
+<!-- DAILY_CHECKIN_2026-07-14_END -->
+
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
+
 开始看开源项目 moss：
 
 首先先了解一些概念：1、MEV：最大可提取价值；2、验证节点：买了很多昂贵的服务器、全天候开机维护 Monad 网络运行的机构或个人；3、**去中心化金融：Defi**;4、区块链里的特例：稳定币，usdc，其余有些币的价格就是波动的，和供求关系有关；5、Defi套利层：它们只在“交易所”、“借贷池”这些充满了公共资金和波动价格的地方打架。它们打架产生的“插队费”油水，最终通过流动性质押协议（如 `aPriori`），反哺给了在生态里存钱的普通用户；6、poS：权益证明；7、calldata 调用数据：只读的、一次性的
@@ -34,6 +40,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-12
 <!-- DAILY_CHECKIN_2026-07-12_START -->
+
 
 这次将我的项目部署到了github上，上传了我的第一个项目，刚开始原本是打算让claude替我完成的，但是api接的deepseek可能是能力不足，一直失败，所以选择手动部署，遇到问题问ai，这里记录下一些心得什么的：
 
@@ -72,6 +79,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- DAILY_CHECKIN_2026-07-11_START -->
 
 
+
 休息日ing
 <!-- DAILY_CHECKIN_2026-07-11_END -->
 
@@ -81,11 +89,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 今天没学什么，但是打个卡
 <!-- DAILY_CHECKIN_2026-07-10_END -->
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 
 
@@ -126,6 +136,7 @@ ps：记得还要把私钥改成自己的
 
 
 
+
 今天主要学习了以太坊，和回顾了昨天的内容。
 
 1、老师先是带领我们回顾了一下钱包的设置，推荐了一个好用的钱包phantom；
@@ -149,6 +160,7 @@ ps：记得还要把私钥改成自己的
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
