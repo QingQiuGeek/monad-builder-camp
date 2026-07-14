@@ -15,19 +15,27 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-14
+<!-- DAILY_CHECKIN_2026-07-14_START -->
+今天我在线实时观看了**从研究到公共知识：AI 时代 Web3 Researcher 的成长之路**课程，同时我还补交了两个来自Week1的任务。
+<!-- DAILY_CHECKIN_2026-07-14_END -->
+
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 今天我阅读了Monad的官方文档以及Web3实习手册中的行业赛道全览和社区运营指南部分。
 <!-- DAILY_CHECKIN_2026-07-10_END -->
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
 
+
 今天我观看了**AI Agent 高危案例解析与安全构建**的课程回放，同时我还阅读了Web3实习手册中智能合约开发的部分内容。
 <!-- DAILY_CHECKIN_2026-07-09_END -->
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 今天我观看了课程**AI Agent 如何拥有支付能力**的回放。Jack老师介绍了专为智能体打造的支付协议，解决其无身份和银行卡的痛点，支持安全高效的微支付 。同时，我还阅读了Web3 实习手册中的安全与合规部分。
@@ -38,11 +46,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 今天我观看了**普通开发者如何进入以太坊协议层**的课程回放，同时我阅读了Web3实习手册中的工作方式和岗位全景图部分。我完成了Web3常用工具软件（X，Github，Telegram，Discord，Notion，Claude Code）的安装配置。同时我还阅读了BuildAnything中的Vibe Coding入门指南。
 <!-- DAILY_CHECKIN_2026-07-07_END -->
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
