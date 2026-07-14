@@ -15,8 +15,22 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-14
+<!-- DAILY_CHECKIN_2026-07-14_START -->
+# 学习记录
+
+1.WEB3职业方向：ops、dev、research的职责和职业发展
+
+2.WEB3简历构建方向：参与社媒讨论、输出观点，构建影响力；PR&issue等开源贡献；黑客松积累作品；协议层研究
+
+3.规范提交MOSS PR Skills：[https://github.com/mattpocock/skills](https://github.com/mattpocock/skills)
+
+4.补充Monad Demo Idea方案文档链接：[https://github.com/WendyYuHuan/Ducoments/blob/main/Monad\_Pet\_Adventure\_%E6%96%B9%E6%A1%88%E6%96%87%E6%A1%A3.md](https://github.com/WendyYuHuan/Ducoments/blob/main/Monad_Pet_Adventure_%E6%96%B9%E6%A1%88%E6%96%87%E6%A1%A3.md)
+<!-- DAILY_CHECKIN_2026-07-14_END -->
+
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
+
 # 学习记录
 
 1.Monad高频交互Demo Idea：
@@ -30,6 +44,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-12
 <!-- DAILY_CHECKIN_2026-07-12_START -->
+
 
 # 学习记录
 
@@ -596,6 +611,7 @@ contract NFTBadge {
 <!-- DAILY_CHECKIN_2026-07-11_START -->
 
 
+
 # 学习记录
 
 1.Web3实习手册文档阅读
@@ -609,6 +625,7 @@ AI生成NFT Badge合约并部署，完成Week1课程任务
 
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 
 
 
@@ -629,6 +646,7 @@ AI生成NFT Badge合约并部署，完成Week1课程任务
 
 
 
+
 # 学习记录
 
 1.AI高危案例分享会及Co-learning
@@ -642,6 +660,7 @@ AI生成NFT Badge合约并部署，完成Week1课程任务
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -669,6 +688,7 @@ AI生成NFT Badge合约并部署，完成Week1课程任务
 
 
 
+
 # 学习记录
 
 1.  《普通开发者如何进入以太坊协议层》分享会及co-learning（Codex演示自动部署智能合约）
@@ -685,6 +705,7 @@ Codex部署合约实操
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
