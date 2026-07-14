@@ -479,7 +479,7 @@ By completing the program, participants will leave with:
 | [jinxtt8023-cyber](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/jinxtt8023-cyber.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [iSanae1](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/iSanae1.md) | ⭕️ | ✅ | ⭕️ | ✅ | ✅ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [ilovezerotwo02](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/ilovezerotwo02.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | |
-| [zz-wa](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/zz-wa.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | |
+| [zz-wa](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/zz-wa.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Crazyjelly0505](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/Crazyjelly0505.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lpdsg](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/lpdsg.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | |
 | [1079723608-alt](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/1079723608-alt.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -816,6 +816,7 @@ By completing the program, participants will leave with:
 | [summer-sheep](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/summer-sheep.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [arcnapan](https://github.com/IntensiveCoLearning/monad-builder-camp/blob/main/notes/arcnapan.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
