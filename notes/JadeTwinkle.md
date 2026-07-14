@@ -15,8 +15,16 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-14
+<!-- DAILY_CHECKIN_2026-07-14_START -->
+todo：
+
+参加「**从研究到公共知识：AI 时代 Web3 Researcher 的成长之路**」线上活动
+<!-- DAILY_CHECKIN_2026-07-14_END -->
+
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
+
 **1\. 从“生成代码”到“规范驱动 (SDD)”的范式转变** Cooper 在分享中提到的 SDD（规范驱动开发）让我感触很深。这与我日常负责产品全生命周期管理、输出 PRD 的核心逻辑高度契合。在使用多模态 AI 框架进行快速原型构建时，我越来越意识到“先对齐意图”的决定性作用。
 
 通过在项目中建立全局的 Agent 配置文件（如 `agents.md`）来锁定架构边界和业务规则，本质上就是将产品的五步业务理解框架前置化。AI 时代的产品核心并不在于去手动敲写底层的智能合约或模型接口，而是通过严谨的规则设计，结合 TDD（测试驱动开发）提供明确的验收标准，从而构建出一套能够快速纠错的 Vibe Coding 工作流。
@@ -32,11 +40,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- DAILY_CHECKIN_2026-07-10_START -->
 
 
+
 今天主要是参加例会！一会结束来写笔记心得
 <!-- DAILY_CHECKIN_2026-07-10_END -->
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 
 
@@ -86,6 +96,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 今日todo：
 
 -   理解 DevRel / Builder / 生态连接者的角色。
@@ -106,6 +117,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 今日todo：
 
 -   完成 Web3 常用工具安装和账号准备。
@@ -117,6 +129,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
