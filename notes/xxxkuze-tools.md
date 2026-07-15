@@ -15,8 +15,48 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-15
+<!-- DAILY_CHECKIN_2026-07-15_START -->
+Build Anything
+
+**让你的应用具备生产级品质**
+
+-   **完善产品体验**：做好响应式设计、SEO、Open Graph 分享卡片、无障碍支持、深色模式、自定义域名等，让应用更专业、更容易被发现。
+    
+-   **补齐核心能力**：引入数据库、用户认证、文件存储、支付、邮件通知等真实产品必备功能，尤其不要自己实现认证系统，而应使用成熟服务。
+    
+-   **保障稳定与安全**：使用环境变量管理密钥，配置 CI/CD 和测试环境，并做好错误处理、日志追踪、备份、输入校验、HTTPS 和 API 限流，保证系统可靠且不易被攻击。
+    
+-   **优化性能并满足法律要求**：通过图片优化、缓存和 Core Web Vitals 提升性能，同时准备隐私政策、服务条款和 Cookie 合规等法律文件。
+    
+-   **核心观点**：生产级软件不仅仅是写代码，而是需要整合大量基础设施和第三方服务，共同保证产品能够稳定、安全地服务真实用户。
+    
+
+**为什么要构建去中心化应用？**
+
+-   **传统应用依赖大量中心化服务**（如数据库、支付、云服务等），这些服务都可能宕机、封号、修改规则甚至停止运营，本质上都需要信任第三方。
+    
+-   **去中心化应用将信任交给网络和代码**，应用运行在由众多节点组成的区块链网络上，而不是某一家公司的服务器，因此没有单点故障，也不容易被关闭或审查。
+    
+-   **区块链真正有价值的应用场景**并非投机，而是解决现实问题，例如抗审查通信、不可篡改身份与投票、用户自主拥有数据、AI 内容真实性验证以及无法被平台收回的数字资产所有权等。
+    
+-   **目前真正面向大众的杀手级 dApp 还没有出现**。文章认为，技术已经具备，真正缺少的是既懂用户体验又懂去中心化技术的开发者，这也是未来最大的机会。
+    
+
+**什么是 Monad？**
+
+-   **Monad 继承了以太坊生态**，支持 Solidity 和 EVM，因此以太坊上的智能合约、开发工具和教程几乎都可以直接使用，大大降低了开发门槛。
+    
+-   **性能是 Monad 的最大特点**：支持约 **10,000 TPS**、约 **800ms 最终确认（Finality）**，交易费用低，让 dApp 的使用体验更接近普通 Web 应用。
+    
+-   **速度并非靠牺牲去中心化换来**。Monad 通过较低的节点硬件要求和新的共识机制（MonadBFT），支持更多验证者参与网络，兼顾性能与去中心化。
+    
+-   **智能合约是 dApp 的核心**。应用逻辑部署到区块链后，由整个网络执行，而不是运行在某家公司的服务器上，因此代码公开透明、不可随意修改或下线。网络的原生代币 **MON** 用于支付 Gas 和参与质押（Staking）。
+<!-- DAILY_CHECKIN_2026-07-15_END -->
+
 # 2026-07-14
 <!-- DAILY_CHECKIN_2026-07-14_START -->
+
 Build Anything 构建并发布你的第一个应用，我使用了Replit账号，创建之后，输入了我的prompt
 
 ```
@@ -44,6 +84,7 @@ Vibecoing的一个完整循环流程：
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
 
+
 总结了下Week1 作品与方向的选择
 
 [https://app.notion.com/p/Week-1-39c564177da180448929f7c7e3b366f7](https://app.notion.com/p/Week-1-39c564177da180448929f7c7e3b366f7)
@@ -53,11 +94,13 @@ Vibecoing的一个完整循环流程：
 <!-- DAILY_CHECKIN_2026-07-12_START -->
 
 
+
 今天去buildanything官方跟着步骤教程，学习下通过 AI 编程协作开发。
 <!-- DAILY_CHECKIN_2026-07-12_END -->
 
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 
 
 
@@ -105,6 +148,7 @@ Vibecoing的一个完整循环流程：
 
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 
 
 
@@ -169,6 +213,7 @@ Vibecoing的一个完整循环流程：
 
 
 
+
 听了Coooder老师的co learning，今天学习使用AI Coding来做一个智能合约项目，首先我选择codex来做，首先创建一个文件目录，用来存放项目，然后导入进去codex，在这个项目里面与它对话，内容：\*\*帮我做一个发行nft的智能合约，\*\*等待codex完成（过程中有些指令需要确认）
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/xxxkuze-tools/images/2026-07-09-1783579549303-image.png)
@@ -215,6 +260,7 @@ copy .env.example .env
 
 
 
+
 今天学习用 AI 生成一个最小 Solidity 合约，我选择了每日打卡合约，写了个提示词，让chatgpt给我生成 Solidity ^0.8.20 的代码，CheckIn包含totalCount（累计打卡次数），lastCheckIn（最后打卡时间），streak（连续打卡天数），然后是三个函数，checkIn() -> 用户每天只能打卡一次，canCheckIn() -> 判断今天是否还能打卡，getMyRecord() -> 查看自己的打卡信息，AI生成的合约代码，人工检查了Remix 能编译通过，三个函数与 Prompt 一致，数据类型正确，没有不必要的库，变量命名和注释读得懂。然后部署到Remix。大概的流程：Remix 新建 `ChecklnContract.sol` → 编译 `0.8.20` → **Deploy & Run Transactions** → Browser Extension 连 Rabby → 选 Monad Testnet → Deploy，交互Remix **Deployed Contracts** 里：蓝点函数 **call**（如 getMyRecord），橙点函数 **transact**（如 checkIn）。Write 后在区块链浏览器查看确认交易 Status 为 Success。
 <!-- DAILY_CHECKIN_2026-07-08_END -->
 
@@ -228,11 +274,13 @@ copy .env.example .env
 
 
 
+
 听了7.6晚上参加「Co-learning」线上活动，自己尝试在浏览器上安装MetaMask插件，创建钱包，添加 Monad Testnet 网络，添加成功之后，复制钱包地址，打开区块浏览器，我看到的页面信息，**Address**：我的钱包地址，一串 `0x` 开头的字符，**Balance**：当前账户余额，刚创建时应该是 `0 MON`**，Transactions：**历史交易列表，空钱包时这里是空的。从而**我理解链上产品和普通互联网产品最大的区别是**：普通互联网产品的数据主要存在平台自己的服务器里，而链上产品的关键操作会记录在区块链上，可以通过区块浏览器查询。接着继续了解**行业赛道全览和Web3 工作方式。**
 <!-- DAILY_CHECKIN_2026-07-07_END -->
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
