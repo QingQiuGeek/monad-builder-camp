@@ -15,8 +15,86 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-15
+<!-- DAILY_CHECKIN_2026-07-15_START -->
+# Web3运营
+
+-   **Web3 运营核心定位与全链路工作逻辑**
+    
+    -   **运营核心价值**
+        
+        -   表层工作认知：运营并非仅包含发推、拉群、办活动等零散动作，需覆盖从策划到收尾的全流程，需匹配项目周期调整工作强度。
+            
+        -   核心本质定位：是串联 B 端项目方、合作方与 C 端用户的粘合剂，核心目标为实现生态用户拉新、留存、粘性提升，完成增长 KPI。
+            
+        -   用户路径设计：需搭建完整的用户转化链路，覆盖从首次触达、报名入群、参与活动、动手开发到长期留存的全流程体验。
+            
+    -   **全流程工作节点**
+        
+        -   前期筹备阶段：对接项目方撰写活动方案，明确目标人群、活动形式、嘉宾配置，同步完成合作方 BD 对接工作。
+            
+        -   中期落地阶段：完成多渠道宣发、用户招募、社区日常运营、活动现场执行，可通过 OBS 转推扩大公域覆盖范围。
+            
+        -   后期收尾阶段：跟进高潜开发者与项目，对接孵化、实习资源，完成活动数据复盘并向项目方交付正式反馈报告。
+            
+    -   **不同团队的岗位特征**
+        
+        -   大厂运营：岗位细分明确，可分为内容、渠道、社群、活动、BD 等多个独立方向，各岗位权责边界清晰。
+            
+        -   初创团队运营：多为一人多岗，除技术类专项工作外，需覆盖策划、对接、宣发、用户运营等绝大多数环节的工作。
+            
+    
+    ![](https://my.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2Q0MzU2OTk1YjA2YWRiZGIyYWM0M2Y3NGQ2MjkyMTFfR1cySmUwTXR2bnB3SlR1QlRzazZQZXhwUVdJMGpmWGxfVG9rZW46T29QbWJDbFNDb045RzF4MGN3R2NqbG01bktKXzE3ODQxMjg4NjU6MTc4NDEzMjQ2NV9WNA&add_watermark=true&scene_type=CCM_DOUBAO)![](https://my.feishu.cn/space/api/box/stream/download/asynccode/?code=NDFlY2MwNjJjYjRiZDRlNzg3ZmEzZjAxNzVjMGNmMjZfNGs2emEyamh5TWc2V1NVcWo4eFZoSlhPa1lRaWZkUXVfVG9rZW46REMwNmJKY1Z2b0ZRQXB4SlFWbGNyeHZQbmpoXzE3ODQxMjg4NjU6MTc4NDEzMjQ2NV9WNA&add_watermark=true&scene_type=CCM_DOUBAO)
+    -   **公链项目运营特征**：当前公链处于基建阶段，运营核心服务对象为开发者群体，通过开发者生态建设完成用户积累，后续再覆盖普通消费用户。
+        
+-   **Web3 运营能力建设与入行路径**
+    
+    -   **入行基础要求**
+        
+        -   岗位需求情况：Web3 领域运营为需求最高的两类岗位之一，所有项目方、活动平台均有稳定的运营岗位缺口。
+            
+        -   背景限制说明：无严格的专业背景要求，非技术、商科等背景均可入行，核心看重实操经验与项目履历匹配度。
+            
+    -   **经验积累方法**
+        
+        -   官方活动参与：优先参与 LF 道等平台发起的官方实习计划、黑客松活动，通过 1 个月左右的周期建立完整的行业认知。
+            
+        -   实操经验获取：可主动报名活动运营组，完整参与从 0 到 1 策划项目活动的全流程，后续 mini 黑客松可主动报名参与筹备。
+            
+    -   **个人作品集搭建**
+        
+        -   核心阵地选择：优先搭建公开 Twitter 账号，作为 Web3 领域的个人公开名片，是求职时的核心背书材料。
+            
+        -   起步内容方向：可从记录实习计划学习日常、项目参与心得起步，无需产出深度内容，保持账号活跃度即可。
+            
+        -   国内平台注意事项：国内平台需规避“Web3”关键词，可选择 B 站、视频号发布区块链相关内容，避免流量受限。
+            
+    -   **高阶能力加成**：若运营人员同时掌握技术理解、BD 对接、活动策划三类能力，可获得远高于普通运营的薪资水平与职业发展空间。
+        
+-   **运营实操工具与工作方法**
+    
+    -   **AI 工具应用方案**
+        
+        -   多工具互补策略：可搭配 GPT、Cloze、Twitter 内置 Grok 三类工具互补使用，覆盖调研、文案、物料制作等全场景需求。
+            
+        -   定制化 AI 配置：可对接自有工作平台（如 Notion、飞书）搭建专属 AI Agent，在 TG 群内直接调用完成内容修改、数据整理工作。
+            
+        -   核心使用原则：AI 仅作为信息收集与内容产出的辅助工具，核心工作逻辑与判断仍需依托运营人员自身的经验与思路。
+            
+    -   **数据统计方法**
+        
+        -   常规活动统计：无需复杂的自动化统计工具，可通过 WCB 等报名平台后台、报名表单渠道选项完成基础数据归集。
+            
+        -   核心统计指标：重点统计社媒曝光量、报名人数、活动参与人数、项目提交量、高潜用户数等核心业务指标即可。
+            
+        -   精细化统计方案：若需统计多运营人员的转化效率，可通过平台企业号的分节点专属链接实现，当前无通用全链路自动化统计工具。
+            
+    -   **通用协同工具要求**：Web3 领域通用协同工具包括 Twitter、TG、Zoom、Notion、Google 全家桶，从业者需提前熟悉相关工具的使用逻辑。
+<!-- DAILY_CHECKIN_2026-07-15_END -->
+
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
+
 # AI开发与Web3技术栈分享
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Flora-hihihi/images/2026-07-13-1783956058670-image.png)
@@ -46,6 +124,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 
 # Web3 安全与合规
 
@@ -924,6 +1003,7 @@ EOS 链上赌博平台 BigGame
 <!-- DAILY_CHECKIN_2026-07-09_START -->
 
 
+
 # 行业赛道
 
 -   DeFi
@@ -992,6 +1072,7 @@ EOS 链上赌博平台 BigGame
 
 
 
+
 # AI agent支付领域的产品探索
 
 -   **已落地试点案例**
@@ -1047,6 +1128,7 @@ DAO ：Decentralized Autonomous Organization
 
 
 
+
 # 普通人如何进入以太坊协议链
 
 ## 学习路径（建地图 → 懂流程 → 找入口）
@@ -1083,6 +1165,7 @@ DAO ：Decentralized Autonomous Organization
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
