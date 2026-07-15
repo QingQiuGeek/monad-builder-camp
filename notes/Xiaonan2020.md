@@ -15,8 +15,18 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-15
+<!-- DAILY_CHECKIN_2026-07-15_START -->
+参加
+
+「**如何在 Web3 世界里开启你的第一段运营经历？**」线上活动
+
+「Co-learning」
+<!-- DAILY_CHECKIN_2026-07-15_END -->
+
 # 2026-07-14
 <!-- DAILY_CHECKIN_2026-07-14_START -->
+
 **实时参加 7.14｜**
 
 **从研究到公共知识：AI 时代 Web3 Researcher 的成长之路**
@@ -27,6 +37,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
 
+
 参加 Web3 技术如何从 0 到 1 用 AI 开发 会议  
 学习BuildAnything课程
 <!-- DAILY_CHECKIN_2026-07-13_END -->
@@ -35,11 +46,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- DAILY_CHECKIN_2026-07-12_START -->
 
 
+
 打卡
 <!-- DAILY_CHECKIN_2026-07-12_END -->
 
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 
 
 
@@ -52,11 +65,13 @@ ai辅助做线上合约应用
 
 
 
+
 打卡
 <!-- DAILY_CHECKIN_2026-07-10_END -->
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 
 
@@ -74,11 +89,13 @@ ai辅助做线上合约应用
 
 
 
+
 补课补课
 <!-- DAILY_CHECKIN_2026-07-08_END -->
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
