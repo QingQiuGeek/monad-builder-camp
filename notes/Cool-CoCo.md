@@ -51,6 +51,8 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 b本次课程对于想要希望进入 社区运营、DevRel、市场增长、内容创作 等方向，或者想了解 AI 如何帮助运营工作的同学来说，这场分享非常适合我们。参与会议截图：
 
+![Day09-从0到1开始运营 线上会议截图6-讨论项目解决方案.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Cool-CoCo/images/2026-07-15-1784131191294-Day09-_0_1___________6-________.png)![Day09-线上学习记录（2）.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Cool-CoCo/images/2026-07-15-1784131219800-Day09-_______2_.png)
+
 遇到的问题——
 
 通过会议聊天知道了本次活动有学习群，但这几天的学习并没有在活动网站上看到有添加学习交流群的提示，希望助教或者审批员看到后拉我进群一下，希望能在群里跟大家一起交流和更多探讨、激发这次活动中的所学、所获
@@ -64,6 +66,7 @@ b本次课程对于想要希望进入 社区运营、DevRel、市场增长、内
 
 # 2026-07-14
 <!-- DAILY_CHECKIN_2026-07-14_START -->
+
 
 0713 Day06-
 
@@ -88,6 +91,7 @@ Week2学习记录：
 
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
+
 
 
 
@@ -116,6 +120,7 @@ Week2学习记录：
 
 
 
+
 20260712自由打卡：
 
 今日记录——
@@ -131,6 +136,7 @@ Week2学习记录：
 
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 
 
 
@@ -158,6 +164,7 @@ Week2学习记录：
 
 
 
+
 Day05（2026-07-10）学习记录：
 
 本次学习主要围绕 “Web3 实习计划例会｜学员总结+Co-Learning”的线上会议目标，通过线上Zoom会议进行今日学习任务：
@@ -178,6 +185,7 @@ Day05（2026-07-10）学习记录：
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 
 
@@ -242,6 +250,7 @@ Day04学习记录：
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -399,6 +408,7 @@ Day04学习记录：
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
