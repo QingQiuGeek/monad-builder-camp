@@ -15,13 +15,47 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-15
+<!-- DAILY_CHECKIN_2026-07-15_START -->
+**1\. “两条线”研究法**
+
+-   **线 A（规范线）**：读 EIP（以太坊改进提案）或 MIP（Monad 改进提案）。理解底层的“游戏规则”是怎么被制定出来的。
+    
+-   **线 B（产品线）**：从 DefiLlama Top TVL 中挑一个协议（如 Uniswap、Morpho），研究真实产品是怎么落地的。
+    
+
+**2\. 认知护城河：区分事实与判断** 在写 Research 时，必须清晰地给自己的每一句话打标签，这是专业度的体现：
+
+-   **事实**：“Uniswap V3 引入了集中流动性机制。”（无可争议）
+    
+-   **数据**：“该协议当前 TVL 为 45 亿美金。”（可验证）
+    
+-   **假设**：“如果 Gas 费下降 90%，该协议的日活可能会增加 3 倍。”（有逻辑前提，待验证）
+    
+-   **推断**：“基于过去 3 个月的资金流向，主力资金正在从 L1 转移至 L2。”（基于数据的延伸）
+    
+-   **个人判断**：“我认为 Morpho 的杠杆模型优于 Aave，值得长期持有。”（主观观点）
+    
+
+> 📝 **Research 产出模板：Research Question Card**
+> 
+> -   **研究对象**：\[如：Morpho Blue\]
+>     
+> -   **核心研究问题 (RQ)**：\[如：Morpho Blue 是如何通过“孤立风险池”设计来降低坏账风险的？\]
+>     
+> -   **资料边界（只看这 5 个来源）**：1. Morpho 官方白皮书 2. DefiLlama 数据面板 3. 两篇 Messari 深度研报 4. 以太坊区块浏览器 5. Monad Docs（对比视角）
+>
+<!-- DAILY_CHECKIN_2026-07-15_END -->
+
 # 2026-07-14
 <!-- DAILY_CHECKIN_2026-07-14_START -->
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/SelinaAnn/images/2026-07-14-1784037939936-image.png)
 <!-- DAILY_CHECKIN_2026-07-14_END -->
 
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
+
 
 # **🛠️ AI-assisted Dev Plan**
 
@@ -90,11 +124,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- DAILY_CHECKIN_2026-07-12_START -->
 
 
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/SelinaAnn/images/2026-07-12-1783819303776-image.png)
 <!-- DAILY_CHECKIN_2026-07-12_END -->
 
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 
 
 
@@ -145,6 +181,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 ### **从“交易”到“合约”的思维跃迁**
 
 在 DAY 3，你通过钱包发起了一笔**转账交易**。今天，你将部署一个**智能合约**，它本质上是一段**自动执行、不可篡改的代码**，被永久存储在区块链上。理解以下核心概念的关联，是今天学习的关键。
@@ -168,11 +205,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/SelinaAnn/images/2026-07-09-1783601532564-image.png)
 <!-- DAILY_CHECKIN_2026-07-09_END -->
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -209,11 +248,13 @@ Block Explorer（区块浏览器）是链上的“搜索引擎”，它将底层
 
 
 
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/SelinaAnn/images/2026-07-07-1783431460944-image.png)
 <!-- DAILY_CHECKIN_2026-07-07_END -->
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
