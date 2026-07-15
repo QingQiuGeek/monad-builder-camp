@@ -15,8 +15,66 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-15
+<!-- DAILY_CHECKIN_2026-07-15_START -->
+学习了DeSci相关的内容/学习手册，Dapp开发流程
+
+### Traditional Web vs. Web3 (DApp) Architecture
+
+The fundamental difference lies in where the backend logic and data are stored.
+
+-   **Traditional (Web2):** Your frontend talks to a centralized backend server via APIs. The server processes logic and reads/writes to a centralized database (like PostgreSQL or MongoDB). The company controls the server and the data.
+    
+-   **Decentralized (Web3/DApp):** The frontend talks to a decentralized blockchain via a Web3 provider. The "backend" logic is defined by smart contracts, and the "database" is the blockchain itself. No single entity controls the network.
+    
+
+### The Standard DApp Architecture
+
+A typical DApp consists of three main components:
+
+1.  **The Frontend:** The user interface (built with React, Vue, etc.). It looks and acts like a normal website, but it requires a specific library (like ethers.js or web3.js) to understand blockchain data.
+    
+2.  **The Smart Contract (The Backend):** The immutable code deployed on the blockchain. It contains the core business logic (e.g., how tokens are transferred, how votes are counted). It replaces the centralized server.
+    
+3.  **The Web3 Provider (The Bridge):** Because a normal web browser cannot directly talk to a blockchain node, it needs a bridge. Wallets like MetaMask inject a provider object into the browser, allowing the frontend to send transactions to the blockchain on the user's behalf.
+    
+
+1
+
+User Interaction
+
+The action begins
+
+A user clicks a button on the frontend (e.g., "Mint NFT").
+
+2
+
+Provider Connection
+
+The bridge is crossed
+
+The frontend uses a library (like ethers.js) and the Web3 Provider (MetaMask) to create a transaction request.
+
+3
+
+Wallet Signature
+
+User authorization
+
+MetaMask pops up, asking the user to sign the transaction with their private key and pay the gas fee.
+
+4
+
+Blockchain Execution
+
+The smart contract runs
+
+The transaction is broadcast to the network. Miners/validators execute the smart contract code and record the state change on the blockchain.
+<!-- DAILY_CHECKIN_2026-07-15_END -->
+
 # 2026-07-14
 <!-- DAILY_CHECKIN_2026-07-14_START -->
+
 学习solidity的各种函数  
 听了两场分享会，对Desci方向很感兴趣，阅读了一些相关资料，再研究研究，看能不能从传统科研往这个方向发展
 <!-- DAILY_CHECKIN_2026-07-14_END -->
@@ -24,11 +82,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
 
+
 做了一个小项目来更好的学习和实践如何接入钱包，如何用agent管理钱包，以及各环节的安全审查
 <!-- DAILY_CHECKIN_2026-07-13_END -->
 
 # 2026-07-12
 <!-- DAILY_CHECKIN_2026-07-12_START -->
+
 
 
 ### 智能合约标准化部署 SOP
@@ -58,6 +118,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 
 
 
@@ -110,6 +171,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 学习了怎么写智能合约，搭建了本地开发环境，基本上能看懂简单的合约，各种不同的语言都了解了一下。  
 
 1. 什么是智能合约？ —— “不会耍赖的自动售货机” 
@@ -152,6 +214,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 跟着web3实习手册学习，查漏补缺，逐个击破，夯实基础
 
 学习了TEE和ZK，在解决信任场景的时候可以搭配使用
@@ -167,12 +230,14 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 1，写简单的合约，部署合约，Remix（直接用AI也行，反正以后合约都是AI写）  
 2，听了老师分享会，学习了关于EPF (Ethereum Protocol Fellowship) 和 EIP（Ethereum Improvement Proposal），学习路线、研究方向等等
 <!-- DAILY_CHECKIN_2026-07-07_END -->
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
