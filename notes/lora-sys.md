@@ -15,19 +15,27 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-15
+<!-- DAILY_CHECKIN_2026-07-15_START -->
+day10 认真研读lxdao 组织的 运营最佳方案 学到了运营相关的知识 受益匪浅
+<!-- DAILY_CHECKIN_2026-07-15_END -->
+
 # 2026-07-14
 <!-- DAILY_CHECKIN_2026-07-14_START -->
+
 day9: 今天完成梳理，开始认真思考自己的研究方向，目前是dev 方向， 打开moss 项目，首先需要学习一下github 的 了解一下布局啥的
 <!-- DAILY_CHECKIN_2026-07-14_END -->
 
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
 
+
 day7: 学习 区块链共识算法，继续打磨，自己vibe coding dao app
 <!-- DAILY_CHECKIN_2026-07-13_END -->
 
 # 2026-07-12
 <!-- DAILY_CHECKIN_2026-07-12_START -->
+
 
 
 day6：继续合约，调试自己的website,
@@ -40,11 +48,13 @@ day6：继续合约，调试自己的website,
 
 
 
+
 day5 今天参与 分享会 看见小伙伴的作品 感觉很厉害 自己重新学习合约的详细设计 设计我自己的dao app ui 用户交互 ui ux 提升体验感
 <!-- DAILY_CHECKIN_2026-07-10_END -->
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 
 
@@ -67,6 +77,7 @@ day 4 :
 
 
 
+
 day3 : 今日制作自己的dao app onchaintodo app
 
 在ai 帮助下，成功 部署合约到 monad 测试网
@@ -76,6 +87,7 @@ day3 : 今日制作自己的dao app onchaintodo app
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
@@ -97,6 +109,7 @@ day2 ;测试网领取测试币
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
