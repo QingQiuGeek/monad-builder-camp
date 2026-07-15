@@ -15,8 +15,57 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-15
+<!-- DAILY_CHECKIN_2026-07-15_START -->
+## **今日进度：完成 Moss 项目的业务理解 + 全链路实操**
+
+从手写代码到 agent 自主调用,完整走了一遍 Moss([github.com/nishuzumi/moss](http://github.com/nishuzumi/moss))的两种用法:先在 play.ts 里手写 discover → load → action → simulate 四步;再通过 `.mcp.json` 把 Moss 的 MCP 服务器接入 Claude Code,让 agent 纯靠四个 MCP 工具自主跑通"1 MON 能换多少 USDC"(本地 mainnet fork 实测)。同步完成任务:⭐ Star 仓库、README 精读、理解分享文案。
+
+## **核心收获**
+
+**1\. Moss 是什么(纠正过两轮的理解)**
+
+-   链上协议的操作原本只能人手点 DApp 或程序员手写代码拼交易;Moss 把它们封装成 agent 可直接调用的标准能力,并在 agent 与签名器之间强制加一道"先声明、后对账"的安全门。
+    
+-   方向链条:**链上协议 → 适配器封装 → MCP 等渠道 → agent**——不是"把 API 上链",MCP 也只是送货渠道不是被转化对象。
+    
+
+**2\. 四步流程是 Moss 自己的设计,不是 MCP 的功能**
+
+-   这四步是 `@themoss/core` 库的 API:写代码可直接调(play.ts 验证,全程无 MCP);mcp-server 只是把它们原样包成四个工具。
+    
+-   discover/load 是便利层(黄页 + 说明书);安全门落在 action(产出带 expects 资金合同、confirms 回执凭据、planHash 防篡改指纹的未签名 Plan)与 simulate(真实链况模拟,实际资金流逐项对账 expects,有 warning 一律停)两步。
+    
+
+**3\. 完整安全模型还有三条工具之外的防线**
+
+-   expects 模板由适配器作者写死在 @Capability,agent 改不了;Moss 永不签名永不发送,私钥始终在钱包;意图对齐归 agent——零警告只代表"和声明一致",还要核对"和用户要的一致"。
+    
+
+**4\. 实测数据(本地 mainnet fork)**
+
+-   action 声明:最多出 1 MON、至少收 0.022414 USDC(报价扣 1% 滑点);simulate 实测:收 0.022641 USDC,零警告,planHashValid,资金只流向 Kuru 路由,gas 约 21.8 万。
+    
+-   对比实验:模拟器不接 observer 会如实报 CONFIRMATION\_MISSING——跳过的检查不默认放过,这个设计细节很见功底。
+    
+
+**5\. 环境坑:Monad 版 Foundry**
+
+-   官方 anvil 缺 Monad 的 gas 模型/opcode 定价/预编译,fork 脚本直接拒绝;官方 foundryup 的 `--network` 参数已废弃,需用 Category Labs 的安装器另装(详见单独的工具链切换笔记)。
+    
+
+## **个人思考**
+
+-   今天最大的收获是理解被纠正的过程本身:从"把服务转成 MCP"到"把 API 上链"再到"链上协议接给 agent + 签名前机器对账"——每一轮都是靠实操(play.ts 的类型报错、fork 实测、observer 对比)把抽象概念落到具体输出上才纠过来的。
+    
+-   Moss 的本质不是"封装",而是**把安全从"人审查代码"变成"机器审查资金流声明"**——人看不懂 calldata,但机器能逐项核对"最多出多少、至少进多少、钱流向谁"。这个思路对所有 AI × 资金类产品都适用。
+    
+-   看好的应用场景:自然语言 DeFi 入口、AI 理财助手的策略自动化、claim→swap→supply 多步组合、DAO 金库"AI 提案、机器验证、人类签名"的代理执行。
+<!-- DAILY_CHECKIN_2026-07-15_END -->
+
 # 2026-07-14
 <!-- DAILY_CHECKIN_2026-07-14_START -->
+
 ## **今日进度：Week 2 Day 2｜排查 Moss monorepo 构建问题 + 撰写 Week 3 Role Statement**
 
 一句话总结：一次真实的 pnpm monorepo 报错排查，加上一份把 Week 1–2 产出转成 Week 3 组队筹码的角色声明。
@@ -61,6 +110,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
 
+
 # 2026-07-13
 
 ## 今日进度：完成 Week 2 职业方向选择提交，搭建 AI 协作记录 + 学习记录归档体系
@@ -101,6 +151,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-12
 <!-- DAILY_CHECKIN_2026-07-12_START -->
+
 
 
 # **残酷共学打卡 · 2026-07-11**
@@ -158,6 +209,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 ## **今日进度：monad-clicker 加登录系统，并用真实使用数据修了一串前端 bug**
 
 昨天把「为什么需要频繁交互」的场景论证做完之后，今天把 monad-clicker 从 Demo 推进到「能被人反复实际使用」的状态：加了 MetaMask 登录（会话代签），然后没有止步于"能跑"，而是自己连续实测/连点/换账号，揪出了 6 个真实 bug 并逐一修复，最后把改动推到了 GitHub，也把 Week 1 Build Log 整理提交。
@@ -199,6 +251,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 
 
 
@@ -253,6 +306,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 
 
@@ -315,6 +369,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -387,6 +442,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 \## Week 1 打卡｜部署 NFTBadge 到 Monad Testnet
 
 \### 今天做了什么
@@ -426,6 +482,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
