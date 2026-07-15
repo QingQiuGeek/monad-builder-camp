@@ -15,8 +15,142 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-15
+<!-- DAILY_CHECKIN_2026-07-15_START -->
+# D8
+
+智能合约的常用函数涵盖语言内置功能、标准接口以及安全实践中的通用模块。以以太坊 Solidity 为例，常用的函数和模式主要分为以下几类：
+
+1.  特殊函数
+    
+
+-   constructor()：构造函数，只在合约部署时执行一次，用于初始化状态变量。
+    
+-   receive()：接收函数，当向合约发送纯以太币（calldata 为空）时自动触发，必须声明为 payable。
+    
+-   fallback()：回退函数，当调用的函数不存在，或直接转账却没有 receive 时触发。可按需声明为 payable。
+    
+
+2.  全局变量和内置方法
+    
+
+-   msg.sender：当前调用者地址。
+    
+-   msg.value：随调用发送的 wei 数量。
+    
+-   block.timestamp：当前区块时间戳，block.number 为区块号。
+    
+-   address(this).balance：当前合约的以太币余额。
+    
+-   keccak256(...)：计算 Keccak-256 哈希，广泛用于签名验证、标识生成。
+    
+-   abi.encode(...)、abi.encodePacked(...)、abi.decode(...)：ABI 编解码，用于打包参数或解析返回值。
+    
+-   ecrecover(hash, v, r, s)：从签名恢复地址，常用于验证链下签名。
+    
+-   地址类型的成员：.balance 查余额；.transfer(amount) 转账（仅 2300 gas，失败会回退）；.send(amount) 转账并返回布尔值；.call{value: amount}("") 低级调用，可转发所有 gas，推荐使用并检查返回值。
+    
+-   new 关键字：部署新合约实例。
+    
+
+3.  错误处理
+    
+
+-   require(condition, "reason")：校验输入与外部调用的返回值，失败则回退并退还剩余 gas。
+    
+-   revert("reason")：主动回退交易，可提供原因或抛出自定义错误。
+    
+-   assert(condition)：检查内部错误和不变量，失败会消耗全部 gas（Panic 类型）。
+    
+
+4.  状态可变性修饰符（影响函数读写权限）
+    
+
+-   view：声明函数不修改状态，可读取状态变量。
+    
+-   pure：既不读取也不修改状态，仅做纯计算。
+    
+-   payable：允许函数接收以太币，转账相关函数必须附加。
+    
+-   自定义 modifier：如 onlyOwner 限制调用者、nonReentrant 防止重入攻击。
+    
+
+5.  标准代币接口函数（ERC-20）  
+    几乎所有同质化代币都需要实现：
+    
+
+-   totalSupply() view returns (uint256)：总供应量。
+    
+-   balanceOf(address account) view returns (uint256)：账户余额。
+    
+-   transfer(address recipient, uint256 amount) returns (bool)：直接转账。
+    
+-   allowance(address owner, address spender) view returns (uint256)：查询授权额度。
+    
+-   approve(address spender, uint256 amount) returns (bool)：授权他人动用代币。
+    
+-   transferFrom(address sender, address recipient, uint256 amount) returns (bool)：从已授权账户转移代币。
+    
+
+6.  标准 NFT 接口函数（ERC-721）
+    
+
+-   balanceOf(address owner) view returns (uint256)：拥有 NFT 的数量。
+    
+-   ownerOf(uint256 tokenId) view returns (address)：特定 NFT 的拥有者。
+    
+-   safeTransferFrom(address from, address to, uint256 tokenId)：安全转移，会检查接收方是否可处理 NFT。
+    
+-   transferFrom(address from, address to, uint256 tokenId)：普通转移。
+    
+-   approve(address to, uint256 tokenId)：授权某个 NFT 给指定地址。
+    
+-   setApprovalForAll(address operator, bool approved)：批量授权或撤销。
+    
+-   getApproved(uint256 tokenId) view returns (address)：查询单个 NFT 授权地址。
+    
+-   isApprovedForAll(address owner, address operator) view returns (bool)：查询全权授权状态。
+    
+
+7.  事件与日志
+    
+
+-   event 定义：如 event Transfer(address indexed from, address indexed to, uint256 value);
+    
+-   emit 触发：emit Transfer(msg.sender, to, amount); 日志被记录到交易收据中，供链下前端监听。
+    
+
+8.  合约间低级调用函数
+    
+
+-   call：调用其他合约函数，可附带以太币，返回 (bool success, bytes memory data)。
+    
+-   delegatecall：以当前合约的存储上下文执行目标合约逻辑，常用于代理合约。
+    
+-   staticcall：只读静态调用，不允许修改状态，类似 view 调用。
+    
+
+9.  常见安全库函数（OpenZeppelin 等）
+    
+
+-   Address.sendValue(address payable recipient, uint256 amount)：安全发送以太币，内部使用 call 并检查成功。
+    
+-   SafeERC20 的 safeTransfer、safeTransferFrom、safeApprove：封装了 ERC-20 操作，避免部分代币因不返回布尔值或返回 false 而导致静默失败。
+    
+-   重入锁函数：nonReentrant 修饰器通过状态变量防止同一函数被重入。
+    
+
+10.  算术与溢出控制
+     
+
+-   Solidity 0.8 起默认开启溢出检查，直接使用 +、-、\* 等运算符会在溢出时自动回退。如需跳过检查，可使用 unchecked { ... } 块包裹。
+    
+-   早期版本依赖 SafeMath 库函数如 .add()、.sub()、.mul()，现在已经内化。
+<!-- DAILY_CHECKIN_2026-07-15_END -->
+
 # 2026-07-14
 <!-- DAILY_CHECKIN_2026-07-14_START -->
+
 # D7
 
 ## 区块链+research
@@ -93,6 +227,7 @@ monad上的mcp协议是把dapp交互抽象成agent可调用的能力
 
 
 
+
 # D6
 
 ## WEB3技术地图
@@ -139,6 +274,7 @@ monad上的mcp协议是把dapp交互抽象成agent可调用的能力
 
 
 
+
 # D5 例会
 
 待看实操笔记：
@@ -172,6 +308,7 @@ monad上的mcp协议是把dapp交互抽象成agent可调用的能力
 
 
 
+
 # D4 AI Agent高危示例&安全防线构建
 
 -   自动化到自主化的威胁演变
@@ -185,6 +322,7 @@ monad上的mcp协议是把dapp交互抽象成agent可调用的能力
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -257,6 +395,7 @@ monad上的mcp协议是把dapp交互抽象成agent可调用的能力
 
 
 
+
 # D2
 
 ## 以太坊协议层
@@ -276,6 +415,7 @@ monad上的mcp协议是把dapp交互抽象成agent可调用的能力
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
