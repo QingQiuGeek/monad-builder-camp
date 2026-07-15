@@ -15,8 +15,72 @@ Java后端开发工程师
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-15
+<!-- DAILY_CHECKIN_2026-07-15_START -->
+**全模态统一离散化建模**：MOSS团队提出的核心技术路线是将语音、图像、视频等连续信号离散化为类似文本的Token，使不同模态复用统一的Next-Token Prediction训练范式。这与主流“模态独立编码+后期拼接”方案的本质区别在于**表示统一性**——并非简单拼接，而是让不同模态在模型内部共享同一套表示空间。
+
+**情境智能（Context Intelligence）**：邱锡鹏提出大模型发展的核心方向是输入维度的扩展，将外部多模态信息高效整合进模型的有效上下文窗口。这包括感知层、表示层、交付层、持久化层、反馈闭环五个环节。
+
+**MOSS-Speech端到端语音模型**：去掉传统ASR+TTS三段级联，让模型直接感知原始语音信号，避免语音转文本过程中的信息损失（情绪、语气等）。
+
+### **4.3 部署与使用**
+
+硬件需求：
+
+| 精度 | 推理显存 | 最长序列(2048) |
+| --- | --- | --- |
+| FP16 | 31GB | 81GB |
+| Int8 | 16GB | 46GB |
+| Int4 | 7.8GB | 26GB |
+
+基本使用示例：
+
+python
+
+```
+from transformers import AutoTokenizer, AutoModelForCausalLM
+
+tokenizer = AutoTokenizer.from_pretrained("fnlp/moss-moon-003-sft", trust_remote_code=True)
+model = AutoModelForCausalLM.from_pretrained("fnlp/moss-moon-003-sft", trust_remote_code=True).half().cuda()
+model = model.eval()
+
+meta_instruction = "You are an AI assistant whose name is MOSS...."
+query = meta_instruction + "<|Human|>: 你好<eoh>\n<|MOSS|>:"
+inputs = tokenizer(query, return_tensors="pt")
+inputs = {k: v.cuda() for k, v in inputs.items()}
+outputs = model.generate(**inputs, do_sample=True, temperature=0.7, top_p=0.8, max_new_tokens=256)
+response = tokenizer.decode(outputs[0][inputs.input_ids.shape[1]:], skip_special_tokens=True)
+```
+
+### **4.4 项目结构**
+
+```
+MOSS/
+├── SFT_data/              # 微调数据集
+│   ├── conversations/
+│   │   ├── conversation_without_plugins/  # 基础对话数据
+│   │   └── conversation_with_plugins/     # 插件增强数据
+├── examples/              # 示例展示
+├── requirements.txt       # 依赖管理
+└── 模型加载/推理代码       # 在transformers中通过trust_remote_code加载
+```
+
+### **4.5 可能的贡献方向**
+
+1.  **文档改进**：完善中文README、补充部署教程、添加API文档示例
+    
+2.  **量化部署优化**：MOSS已支持Int4/Int8量化，可进一步优化边缘设备部署方案
+    
+3.  **插件扩展**：在现有的搜索引擎、文生图、计算器、解方程基础上，开发新插件（如数据库查询、代码执行等）
+    
+4.  **数据集贡献**：MOSS团队计划开源完整微调数据，可协助数据清洗和标注
+    
+5.  **多模态适配**：MOSS团队正推进全模态统一建模，可参与特定模态（如视频理解）的适配工作
+<!-- DAILY_CHECKIN_2026-07-15_END -->
+
 # 2026-07-14
 <!-- DAILY_CHECKIN_2026-07-14_START -->
+
 **. 传统云平台：开发效率首选**
 
 这是最主流、也是对接智能合约最方便的方式。你的前端代码（HTML/CSS/JS）逻辑和普通Web应用完全一样，只是多了一步**通过** `ethers.js` **或** `web3.js` **等库连接钱包和调用合约**。
@@ -59,6 +123,7 @@ Java后端开发工程师
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
 
+
 本周最小可交付产出是什么？  
 一个可运行的Demo
 
@@ -76,6 +141,7 @@ Week 3 我可以在团队中承担什么角色？
 
 # 2026-07-12
 <!-- DAILY_CHECKIN_2026-07-12_START -->
+
 
 
 ### 1\. 基础设施与成本控制
@@ -160,6 +226,7 @@ Week 3 我可以在团队中承担什么角色？
 
 
 
+
 ### 1\. 虚拟机 (VM) 差异
 
 -   合约代码大小：
@@ -205,6 +272,7 @@ Week 3 我可以在团队中承担什么角色？
 
 
 
+
 Monad与以太坊虚拟机在字节码层面完全兼容。以太坊上的智能合约可以直接部署到Monad上，现有的Solidity、Vyper等编程语言也全部支持，可以继续使用已有钱包（如MetaMask）、开发框架和RPC API接口，获得性能提升。
 
 Monad的性能：10,000 TPS（每秒交易数）、400毫秒的出块时间和800毫秒的交易最终性。这比以太坊主网快了数个量级。
@@ -225,6 +293,7 @@ Monad的性能：10,000 TPS（每秒交易数）、400毫秒的出块时间和80
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 
 
@@ -269,6 +338,7 @@ Transaction Hash (交易哈希)
 
 
 
+
 Transaction Hash: 交易唯一标识
 
 Status: 交易是否成功
@@ -296,6 +366,7 @@ Gas Limit & Usage: Gas 限制和使用量
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
@@ -337,6 +408,7 @@ Gas Limit & Usage: Gas 限制和使用量
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
