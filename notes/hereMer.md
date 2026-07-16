@@ -15,8 +15,63 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-16
+<!-- DAILY_CHECKIN_2026-07-16_START -->
+**2026/07/16 - 最小合约打卡：AI 生成留言板**
+
+1.  **Prompt**
+    
+
+“用 Solidity 0.8.20 写个最简单的留言板合约，记录留言者地址、内容和时间戳。需包含发布和查看函数。”
+
+2.  **AI输出结构**
+    
+
+使用 Struct 打包留言数据，Array 存储所有记录，包含一读一写两个函数。
+
+3.  **合约源码**
+    
+
+// SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.20;
+
+contract Guestbook {
+
+struct Message { address sender; string content; uint256 timestamp; }
+
+Message\[\] public messages;
+
+function leaveMessage(string memory \_content) public {
+
+require(bytes(\_content).length > 0, "Empty"); // 人工添加：拦截空消息
+
+messages.push(Message(msg.sender, \_content, block.timestamp));
+
+}
+
+function getAllMessages() public view returns (Message\[\] memory) { return messages; }
+
+}
+
+4.  **人工修改**
+    
+
+给leaveMessage函数加了require限制，禁止发空内容，防止产生链上垃圾并浪费Gas。
+
+5.  **AI代码需人工检查的三个点**
+    
+
+• 异常输入处理：AI常忽略边界情况（需手动防空值）。
+
+• Gas爆表隐患：getAllMessages会全量读取数组，数据量大时会卡死报错，实操需改分页。
+
+• 恶意防刷机制：AI缺乏安全意识，未限制发送频率，易遭机器刷屏。
+<!-- DAILY_CHECKIN_2026-07-16_END -->
+
 # 2026-07-15
 <!-- DAILY_CHECKIN_2026-07-15_START -->
+
 ### 2026/07/15 - AI 辅助生成“打卡合约”
 
 **操作流**
@@ -35,6 +90,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
 
+
 **2026/07/13 - 建构链上基础认知**
 
 **AI 辅助与审查**
@@ -50,6 +106,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- DAILY_CHECKIN_2026-07-11_START -->
 
 
+
 **2026/07/11 - 智能合约的搭建与落成**
 
 **合约全链路生命周期拆解**
@@ -63,6 +120,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 
 
 
@@ -98,6 +156,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 2026/07/09 - 链上第二步：完成首笔测试网转账与链上查证
 
 **概述**
@@ -125,6 +184,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 2026/07/07 - 链上第一步：专用钱包与测试网配置
 
 **概述**
@@ -142,6 +202,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
