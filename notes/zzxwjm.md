@@ -15,13 +15,20 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-16
+<!-- DAILY_CHECKIN_2026-07-16_START -->
+完成第一份pr，研究research track的预测任务
+<!-- DAILY_CHECKIN_2026-07-16_END -->
+
 # 2026-07-15
 <!-- DAILY_CHECKIN_2026-07-15_START -->
+
 开始理解moss，开始正式进入week2
 <!-- DAILY_CHECKIN_2026-07-15_END -->
 
 # 2026-07-14
 <!-- DAILY_CHECKIN_2026-07-14_START -->
+
 
 1.  重新确定 Week 2 主方向  
     选择 **Research** 作为主方向，Dev 作为辅助能力，重点关注协议、治理和链上指标。
@@ -63,11 +70,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 打卡
 <!-- DAILY_CHECKIN_2026-07-13_END -->
 
 # 2026-07-12
 <!-- DAILY_CHECKIN_2026-07-12_START -->
+
 
 
 
@@ -98,6 +107,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 
 
 
@@ -567,6 +577,7 @@ completed: true
 
 
 
+
 **分享笔记：一个新手如何理解 Web3**
 
 **1\. 我的起点**
@@ -709,6 +720,7 @@ Web3 试图改变一部分信任结构：
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 
 
@@ -888,11 +900,13 @@ I still feel that Web3 has many layers and the user experience is not very intui
 
 
 
+
 学习ai agent支付，先打卡
 <!-- DAILY_CHECKIN_2026-07-08_END -->
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
@@ -912,6 +926,7 @@ I still feel that Web3 has many layers and the user experience is not very intui
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
