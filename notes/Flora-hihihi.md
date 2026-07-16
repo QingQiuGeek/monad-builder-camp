@@ -15,8 +15,40 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-16
+<!-- DAILY_CHECKIN_2026-07-16_START -->
+## **🛠️ Tech Track**
+
+Build product prototypes, front-end applications, smart contracts, and on-chain interactions with the help of AI coding tools.
+
+## **📢 Ops Track**
+
+Focus on community operations, campaign design, user feedback collection, content production, and growth experiments around Web3 products.
+
+## **🔍 Research Track**
+
+Produce research reports and analyses on project directions, ecosystem case studies, user needs, market trends, and emerging sectors.
+
+## **Learning Goal**
+
+Rather than simply acquiring knowledge, participants will produce tangible **Proof of Work**, including:
+
+-   GitHub Repositories
+    
+-   Product Demos
+    
+-   Research Documents
+    
+-   Operations & Growth Plans
+    
+-   Content Articles
+    
+-   Data Reports and Analytics
+<!-- DAILY_CHECKIN_2026-07-16_END -->
+
 # 2026-07-15
 <!-- DAILY_CHECKIN_2026-07-15_START -->
+
 # Web3运营
 
 -   **Web3 运营核心定位与全链路工作逻辑**
@@ -95,6 +127,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
 
+
 # AI开发与Web3技术栈分享
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Flora-hihihi/images/2026-07-13-1783956058670-image.png)
@@ -124,6 +157,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 
 
 # Web3 安全与合规
@@ -1004,6 +1038,7 @@ EOS 链上赌博平台 BigGame
 
 
 
+
 # 行业赛道
 
 -   DeFi
@@ -1073,6 +1108,7 @@ EOS 链上赌博平台 BigGame
 
 
 
+
 # AI agent支付领域的产品探索
 
 -   **已落地试点案例**
@@ -1129,6 +1165,7 @@ DAO ：Decentralized Autonomous Organization
 
 
 
+
 # 普通人如何进入以太坊协议链
 
 ## 学习路径（建地图 → 懂流程 → 找入口）
@@ -1165,6 +1202,7 @@ DAO ：Decentralized Autonomous Organization
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
