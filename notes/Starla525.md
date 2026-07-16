@@ -15,13 +15,20 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-16
+<!-- DAILY_CHECKIN_2026-07-16_START -->
+-   合规RWA实体资产上链，连接现实经济
+<!-- DAILY_CHECKIN_2026-07-16_END -->
+
 # 2026-07-15
 <!-- DAILY_CHECKIN_2026-07-15_START -->
+
 -   模块化区块链（把链拆成结算层，执行层，数据存储DA层）
 <!-- DAILY_CHECKIN_2026-07-15_END -->
 
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
+
 
 -   账户抽象钱包AA
     
@@ -32,6 +39,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 
 
 1. Web3的信任体系脱离了中心化机构的信用背书，依靠密码学与节点共识形成信任最小化环境，实现了无需中介即可完成价值交互。
@@ -50,6 +58,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 1.  NFT：插画，头像，权益
     
 2.  NFT凭证只有一份
@@ -59,6 +68,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -77,6 +87,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 -   monad公链高性能EVM兼容L1
     
 -   并行EVM＋异步流水线执行
@@ -86,6 +97,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
