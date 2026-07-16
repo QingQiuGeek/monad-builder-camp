@@ -15,8 +15,20 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-16
+<!-- DAILY_CHECKIN_2026-07-16_START -->
+1.  测试网交易
+    
+2.  vibe coding课程学习完毕
+    
+3.  直播回看：ai时代researcher, ai时代web3运营，builder path
+    
+4.  项目链接：[https://github.com/ComAsUare/LearnMonadBuild](https://github.com/ComAsUare/LearnMonadBuild)
+<!-- DAILY_CHECKIN_2026-07-16_END -->
+
 # 2026-07-14
 <!-- DAILY_CHECKIN_2026-07-14_START -->
+
 参加ai时代researcher和moss直播分享
 
 项目：[https://github.com/ComAsUare/LearnMonadBuild/](https://github.com/ComAsUare/LearnMonadBuild/t)
@@ -42,6 +54,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
+
 
 1.参加ai开发与实践直播分享
 
@@ -96,6 +109,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-12
 <!-- DAILY_CHECKIN_2026-07-12_START -->
+
 
 
 实习手册整理：
@@ -209,6 +223,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 1.  实习手册整理
     
 2.  monad主网钱包，转账试用
@@ -296,6 +311,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 1、进入epf回放观看。
 
 2、实习手册看完
@@ -342,6 +358,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 观看agent支付、进入epf两个分享。
 
 ```markdown
@@ -378,6 +395,7 @@ ai高效，安全的支付是核心问题；
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
