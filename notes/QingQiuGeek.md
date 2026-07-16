@@ -1255,36 +1255,38 @@ Week 2 的重点是智能合约进阶和前端交互。接下来几天我会：
 
 
 <!-- DAILY_CHECKIN_2026-07-16_START -->
-# Day 11 | Week 2 | Hardhat 本地开发 + Monad 合约测试
+# Day 11 | Week 2 | 测试与调试：Hardhat + Monad Testnet 实战
 
 ## 今天干了啥
 
-从 Remix 转到 Hardhat。Remix 适合快速验证，但工程化开发必须用 Hardhat。今天在本地搭了 Hardhat 环境，写了一个 ERC-20 合约，跑通了本地测试和 Monad Testnet 部署。
+从 Remix 迁移到 Hardhat。Remix 点点鼠标能用，但项目大了之后必须上工程化工具。今天搭了 Hardhat 环境，写了一个带铸造限额的 ERC-20 合约，跑了单元测试，部署到 Monad Testnet。
 
 ## Hardhat 环境搭建
 
 ```bash
 mkdir monad-lab && cd monad-lab
 npm init -y
-npm install --save-dev hardhat @nomicfoundation/hardhat-toolbox
+npm install --save-dev hardhat @nomicfoundation/hardhat-toolbox @openzeppelin/contracts
 npx hardhat init
 ```
 
-选 "Create a JavaScript project"，生成默认结构：
+选 "Create a JavaScript project"。目录结构：
 
 ```
 monad-lab/
 ├── contracts/          # Solidity 合约
 ├── scripts/            # 部署脚本
-├── test/               # 测试文件
+├── test/               # 测试
 ├── hardhat.config.js   # 配置
-└── package.json
+├── .env                # 私钥（不要提交到 Git）
+└── .gitignore
 ```
 
-**hardhat.config.js 关键配置：**
+**hardhat.config.js：**
 
 ```javascript
 require("@nomicfoundation/hardhat-toolbox");
+require("dotenv").config();
 
 module.exports = {
   solidity: "0.8.24",
@@ -1292,17 +1294,20 @@ module.exports = {
     monad_testnet: {
       url: "https://testnet-rpc.monad.xyz",
       chainId: 10143,
-      accounts: [process.env.PRIVATE_KEY]  // 不要把私钥硬编码！
+      accounts: [process.env.PRIVATE_KEY]
     }
   }
 };
 ```
 
-私钥放 `.env` 文件，加到 `.gitignore`。我第一次忘了加，差点推到 GitHub。
+**.env（不要提交）：**
+```
+PRIVATE_KEY=你的私钥
+```
+
+第一次提交差点把 .env 推上去。加到 .gitignore 是第一件事。
 
 ## ERC-20 合约：MonadToken
-
-写一个简单的 ERC-20，用 OpenZeppelin：
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -1313,11 +1318,11 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract MonadToken is ERC20, Ownable {
     uint256 public constant MAX_SUPPLY = 1_000_000 * 10**18;
-    mapping(address => uint256) public mintedAmount;
     uint256 public constant MAX_MINT_PER_TX = 10_000 * 10**18;
+    mapping(address => uint256) public mintedAmount;
 
     constructor() ERC20("MonadToken", "MONAD") Ownable(msg.sender) {
-        _mint(msg.sender, 100_000 * 10**18);  // 初始铸造 10 万给部署者
+        _mint(msg.sender, 100_000 * 10**18);
     }
 
     function mint(uint256 amount) external {
@@ -1329,11 +1334,11 @@ contract MonadToken is ERC20, Ownable {
 }
 ```
 
-几个安全设计：
-- `MAX_SUPPLY` 硬顶，防止无限增发
-- `MAX_MINT_PER_TX` 限制单次铸造量
-- `mintedAmount` 追踪每个地址的铸造量（可以扩展为限额）
-- 用 OpenZeppelin 的 `Ownable`，只有 owner 能调用受限函数
+设计要点：
+- `MAX_SUPPLY` 硬顶 100 万，防无限增发
+- `MAX_MINT_PER_TX` 单次最多铸 1 万
+- `mintedAmount` 记录每个地址铸造量，方便后续做限额
+- `Ownable` 限制 owner 权限（生产环境建议换 `AccessControl` 多角色）
 
 ## 测试
 
@@ -1350,89 +1355,80 @@ describe("MonadToken", function () {
     token = await Token.deploy();
   });
 
-  it("should have correct initial supply", async function () {
+  it("初始供应量 10 万", async function () {
     expect(await token.totalSupply()).to.equal(ethers.parseEther("100000"));
   });
 
-  it("should allow minting within limits", async function () {
+  it("正常铸造", async function () {
     await token.connect(addr1).mint(ethers.parseEther("1000"));
     expect(await token.balanceOf(addr1.address)).to.equal(ethers.parseEther("1000"));
   });
 
-  it("should reject minting over per-tx limit", async function () {
+  it("超过单次限额应 revert", async function () {
     await expect(token.connect(addr1).mint(ethers.parseEther("10001")))
       .to.be.revertedWith("Invalid amount");
+  });
+
+  it("超过总量上限应 revert", async function () {
+    await expect(token.connect(addr1).mint(ethers.parseEther("900001")))
+      .to.be.revertedWith("Exceeds max supply");
   });
 });
 ```
 
-跑测试：
-```bash
+```
 npx hardhat test
-```
-
-输出：
-```
 MonadToken
-    ✓ should have correct initial supply
-    ✓ should allow minting within limits
-    ✓ should reject minting over per-tx limit
-
-  3 passing
+    ✓ 初始供应量 10 万
+    ✓ 正常铸造
+    ✓ 超过单次限额应 revert
+    ✓ 超过总量上限应 revert
+  4 passing
 ```
 
-## Monad vs 以太坊：测试层面的区别
+## Monad vs 以太坊：测试层面
 
-| 维度 | 以太坊 Hardhat | Monad Hardhat |
-|------|---------------|---------------|
-| 本地网络 | `npx hardhat node` | 使用 Monad Foundry（自定义版本） |
-| 区块时间 | 按需出块（instant mining） | 模拟 1 秒出块 |
-| Gas 行为 | 按 gas_used | 按 gas_limit（本地测试也要注意） |
-| 合约大小限制 | 24 KB | 128 KB |
-| 测试框架 | 完全兼容 | 完全兼容（同一套代码） |
+| 维度 | 以太坊 Hardhat | Monad |
+|------|---------------|-------|
+| 本地网络 | `npx hardhat node` | Monad Foundry（自定义版本） |
+| 区块时间 | 按需出块 | 模拟 1 秒出块 |
+| Gas 行为 | 按 gas_used | 按 gas_limit |
+| 测试代码 | 完全兼容 | 完全兼容 |
 
-**关键点：** Monad 提供了自定义的 Foundry 工具链，确保本地开发环境与链上行为一致。普通 Hardhat 也能用，但 Gas 行为可能有差异。
+**关键区别：** Monad 提供了自定义 Foundry 工具链确保本地行为与链上一致。普通 Hardhat 能用，但 Gas 行为可能有差异。
 
 ## 部署到 Monad Testnet
-
-```javascript
-// scripts/deploy.js
-const hre = require("hardhat");
-
-async function main() {
-  const Token = await hre.ethers.getContractFactory("MonadToken");
-  const token = await Token.deploy();
-  await token.waitForDeployment();
-  console.log("MonadToken deployed to:", await token.getAddress());
-}
-
-main().catch(console.error);
-```
 
 ```bash
 npx hardhat run scripts/deploy.js --network monad_testnet
 ```
 
-部署完去 MonadVision 搜索合约地址验证。
+输出：
+```
+MonadToken deployed to: 0x...
+```
+
+去 MonadVision 搜索合约地址验证。
 
 ## 踩坑记录
 
-1. **Gas 费用比预期高**：在 Monad Testnet 部署 ERC-20 花了约 0.05 MON。比以太坊便宜很多，但比预估的高，因为 OpenZeppelin 合约代码量大
-2. **`waitForDeployment()` vs `deployed()`**：Hardhat 新版用 `waitForDeployment()`，旧教程用 `deployed()`，后者已废弃
-3. **测试覆盖率**：写测试比写合约花的时间多 3 倍。安全相关的测试（边界条件、权限检查）不能省
+1. **`waitForDeployment()` vs `deployed()`**：Hardhat 新版用前者，旧教程用后者已废弃
+2. **Gas 费用**：部署 ERC-20 花了约 0.05 MON，比以太坊便宜但比预估高（OpenZeppelin 合约代码量大）
+3. **测试覆盖率**：写测试比写合约花的时间多 3 倍，但安全相关的测试不能省
+4. **`.env` 泄露**：差点推到 Git，第一件事加 .gitignore
 
 ## 安全思考
 
-1. **`Ownable` 的局限**：单 owner 模式有单点故障风险。生产环境应该用 `AccessControl`（多角色）或多签钱包
-2. **`mint` 函数的权限**：当前任何人都能 mint（只要在限额内）。如果要做 ICO 或空投，应该限制 mint 权限
-3. **重入攻击防护**：ERC-20 标准函数（transfer/approve）没有外部调用，所以不存在重入风险。但如果合约扩展了 `receive()` 或与其他合约交互，必须加 ReentrancyGuard
-4. **测试覆盖的盲区**：没有测试 `MAX_SUPPLY` 边界（刚好到上限的情况），这个应该补上
+1. **`Ownable` 单点故障**：生产环境用 `AccessControl` 或多签
+2. **`mint` 权限**：当前任何人都能铸造，生产环境应限制
+3. **重入攻击**：ERC-20 标准函数没有外部调用，安全。但扩展 `receive()` 或与其他合约交互时必须加 ReentrancyGuard
+4. **测试盲区**：没测 `MAX_SUPPLY` 边界情况，明天补上
 
 ## 明天计划
 
-1. 把 ERC-20 合约升级为可暂停（Pausable）
-2. 学习 Monad 上的 Multicall3 批量调用
-3. 写一个简单的前端用 viem 连接合约
+1. 合约升级：加 Pausable（可暂停）
+2. 学习 Monad Multicall3 批量调用
+3. 用 viem 写前端连接合约
 4. 整理 Week 2 Build Log
 
 <!-- DAILY_CHECKIN_2026-07-16_END -->
