@@ -15,8 +15,123 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-16
+<!-- DAILY_CHECKIN_2026-07-16_START -->
+## **今日进度：完成 Moss GitHub 探索，并把三个 Week 2 任务收束成一个 MCP 安全预览原型**
+
+今天没有急着继续写 Adapter，而是先把 Moss 的代码架构、GitHub 治理方式和 PR review 过程系统读了一遍，并完成三份相互关联的 Week 2 提交：
+
+1.  GitHub 探索日志：理解 Maintainer 如何组织项目；
+    
+2.  开源贡献计划：确定 Dev Builder 的本周 PR 方向；
+    
+3.  AI-assisted Dev Plan：把同一份贡献包装成最小 AI × Web3 原型。
+    
+
+最终把三个任务收束成同一个交付物：**Moss Safe Action Preview**——用户用自然语言要求“把 0.01 MON 包装成 WMON，只预览、不发送”，Agent 依次调用 `discover → load → action → simulate`，展示 Receipt、Warnings 和安全结论，停在签名边界之前。
+
+* * *
+
+## **核心收获**
+
+**1\. Maintainer 管理的不只是代码，而是整套“协作接口”**
+
+-   Moss 用 pnpm monorepo 按依赖方向划分 `core`、`simulator`、`erc`、`system`、协议包和 `mcp-server`，每层包边界都在阻止不应该出现的依赖进入该层。
+    
+-   README 定义项目承诺和风险边界，ADR 记录设计取舍，CONTRIBUTING 固化 Definition of Done，Issue 标签表达任务类型、难度和信息完备度。新人从理解项目到提交 PR，每一步都有对应文档承接。
+    
+-   `needs-design` 和 `ready-for-agent` 不是普通进度标签，而是在按“信息是否完备”切分工作：设计决策留给人，规格已经明确的执行工作才适合交给 Agent。
+    
+
+**2\. PR #31 的本质是从“类别对账”升级为“原始证据穷尽覆盖”**
+
+-   旧模型使用 Plan：多笔 `UnsignedTx` 平铺在 `txs` 数组中，再用结构化 `expects` 和模拟后的 effects 做 reconcile。它并不是完全不检查计划外行为——对资金流出、授权和 NFT 等已建模类别存在 `UNDECLARED_*` 检查。
+    
+-   真正的限制是：旧模型只认识 effects 层预先定义的类别，原始 trace 会先被压缩成几个桶；没有被建模的自定义事件可能在汇总阶段丢失。
+    
+-   新模型直接保留模拟产生的原始 Change，要求 Receipt 对每条 Change 按**对象身份、数量和顺序**逐一认领。任何无法解释的事件都会失败并产生 Warning，安全模型从“检查我认识的类别”变成“任何不认识的东西都拒绝通过”。
+    
+
+**3\. Capability Tree 把交易与解释责任绑定在一起**
+
+-   每个 Capability 节点必须且只能直接拥有一个 TransactionNode；如果操作需要多笔独立交易，就用子 Capability 组织。
+    
+-   Kuru 使用 ERC20 作为输入时，需要先 `approve` 再 `swap`：`erc20.approve` 是带有自己 `approveReceipt` 的子 Capability，Kuru 根节点直接拥有 Router swap 交易。展开时深度优先执行，天然得到 approve → swap 的顺序。
+    
+-   Multicall 不是“一个 TransactionNode 里放多个 UnsignedTx”，而是一笔交易的 calldata 内部打包多个合约动作。从链上看仍然只有一次签名、一个 nonce、一个 TransactionNode，但可能产生多条 Change。
+    
+-   当前 Moss 仓库并没有真正实现 multicall Adapter；它只在 `CONTEXT.md` 和 protocol onboarding 文档中作为未来协议接入时的建模规则出现。
+    
+
+**4\. Handle → Change → Receipt 构成一条“构建 → 取证 → 解释”的证据链**
+
+-   Handle 是 ABI 的类型化入口：`read` 真正读取状态，`call` 用 `eth_call` 预览写方法返回值，默认路径只编码 calldata、生成 TransactionNode，不签名也不发送。
+    
+-   Change 是从 `debug_traceCall` 调用树里提取的原始证据，目前只有 Event 和原生 MON 转账两类；采集阶段不负责解释，并通过排序和冻结保证证据稳定。
+    
+-   Receipt 是纯函数，只能根据收到的 `readonly Change[]` 得出 Outcome 和文本。它既不能声称发生了 Change 中不存在的事，也不能跳过无法识别的 Change。
+    
+-   三层分别被限制了一种能力：Handle 不能执行真实交易，Change 采集时不能解释，Receipt 解释时不能查询外部状态。正是这些限制拼成了一条可复现、可审计的安全链路。
+    
+
+**5\. Moss 提供安全证据，但不能替钱包强制执行安全策略**
+
+-   从 PR #40 的 Maintainer review 中确认：Moss 可以提供 simulation evidence 和 Warnings，但它不控制钱包或签名行为。
+    
+-   消费应用可以选择模拟零次、一次或多次；示例钱包中的“签名前重新模拟”只能算应用层策略，不能宣传成 Moss 自动提供的安全保证。
+    
+-   更准确的安全模型是：**能力封装 + 机器验证 + 消费方执行策略**。保证必须和控制权位于同一层，不能把应用层的选择描述成框架层承诺。
+    
+
+* * *
+
+## **本周贡献方向**
+
+选择 Dev Builder 的“完善 Demo + 提交 PR”方向，以 [Issue #55](https://github.com/nishuzumi/moss/issues/55) 为切入点，计划实现一个可运行的 MCP 端到端示例：
+
+```
+ 用户意图
+   → discover：发现 WMON wrap capability
+   → load：读取参数、风险和能力说明
+   → action：生成未签名 Capability
+   → simulate：通过 Monad RPC 执行 debug_traceCall
+   → 检查 Receipt 和 Warnings
+   → READY FOR REVIEW / DO NOT SIGN
+```
+
+本周真实实现 MCP Client、四工具调用、WMON calldata、真实模拟以及成功/失败测试；自然语言解析在自动化测试中使用固定 Tool Plan，钱包签名、交易广播、前端和多协议路由暂时 mock 或不实现。
+
+这样既能形成一个最小 AI × Web3 原型，也能整理成 Moss 的开源贡献 PR，而不是为三个课程任务分别制造三份互不相关的产出。
+
+* * *
+
+## **今日产出**
+
+-   [GitHub 探索日志](https://app.notion.com/p/Week-2-Challenge-GitHub-39fc278534e58113ad14cd6571fc0a35?pvs=21)
+    
+-   [开源贡献计划](https://app.notion.com/p/Week-2-Challenge-39fc278534e581a28896dc477d0188ec?pvs=21)
+    
+-   [AI-assisted Dev Plan](https://app.notion.com/p/Week-2-AI-assisted-Dev-Plan-39fc278534e5811690c8c87eaca27e65?pvs=21)
+    
+-   [Moss PR #31 技术研究笔记](https://app.notion.com/p/Moss-PR-31-Capability-Receipt-39ec278534e5812bac83ecfdba71b660?pvs=21)
+    
+
+* * *
+
+## **个人思考**
+
+-   今天最大的收获不是又记住了一批术语，而是把“安全”拆成了证据、解释和执行权三个层次。Moss 能证明模拟中发生了什么，但最终是否调用模拟、是否在 Warning 时停下，仍取决于上层应用和钱包。
+    
+-   阅读技术项目不能只看当前源码，也不能只相信 Issue 或第一次解释。今天对旧 Plan 的理解就经历了“先推测 → 找 base commit → 读取真实旧代码 → 修正结论”的过程。对于架构迁移，删除掉的代码往往比新代码更能解释“为什么要改”。
+    
+-   三个课程任务看似不同，其实分别对应“理解项目 → 计划贡献 → 定义用户原型”。把它们统一到同一个 MCP Workflow Demo 后，课程文档不再是额外作业，而是实际 PR 的设计说明、验收标准和完成证明。
+    
+-   今天完成的是调研与计划，不把计划冒充产出。真正的 Proof of Work 仍然是后续代码、测试结果和 Pull Request。
+<!-- DAILY_CHECKIN_2026-07-16_END -->
+
 # 2026-07-15
 <!-- DAILY_CHECKIN_2026-07-15_START -->
+
 ## **今日进度：完成 Moss 项目的业务理解 + 全链路实操**
 
 从手写代码到 agent 自主调用,完整走了一遍 Moss([github.com/nishuzumi/moss](http://github.com/nishuzumi/moss))的两种用法:先在 play.ts 里手写 discover → load → action → simulate 四步;再通过 `.mcp.json` 把 Moss 的 MCP 服务器接入 Claude Code,让 agent 纯靠四个 MCP 工具自主跑通"1 MON 能换多少 USDC"(本地 mainnet fork 实测)。同步完成任务:⭐ Star 仓库、README 精读、理解分享文案。
@@ -66,6 +181,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 # 2026-07-14
 <!-- DAILY_CHECKIN_2026-07-14_START -->
 
+
 ## **今日进度：Week 2 Day 2｜排查 Moss monorepo 构建问题 + 撰写 Week 3 Role Statement**
 
 一句话总结：一次真实的 pnpm monorepo 报错排查，加上一份把 Week 1–2 产出转成 Week 3 组队筹码的角色声明。
@@ -111,6 +227,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- DAILY_CHECKIN_2026-07-13_START -->
 
 
+
 # 2026-07-13
 
 ## 今日进度：完成 Week 2 职业方向选择提交，搭建 AI 协作记录 + 学习记录归档体系
@@ -151,6 +268,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-12
 <!-- DAILY_CHECKIN_2026-07-12_START -->
+
 
 
 
@@ -210,6 +328,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 ## **今日进度：monad-clicker 加登录系统，并用真实使用数据修了一串前端 bug**
 
 昨天把「为什么需要频繁交互」的场景论证做完之后，今天把 monad-clicker 从 Demo 推进到「能被人反复实际使用」的状态：加了 MetaMask 登录（会话代签），然后没有止步于"能跑"，而是自己连续实测/连点/换账号，揪出了 6 个真实 bug 并逐一修复，最后把改动推到了 GitHub，也把 Week 1 Build Log 整理提交。
@@ -251,6 +370,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 
 
 
@@ -306,6 +426,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 
 
@@ -369,6 +490,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -443,6 +565,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 \## Week 1 打卡｜部署 NFTBadge 到 Monad Testnet
 
 \### 今天做了什么
@@ -482,6 +605,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
