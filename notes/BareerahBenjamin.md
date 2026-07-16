@@ -15,8 +15,14 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-16
+<!-- DAILY_CHECKIN_2026-07-16_START -->
+今天整理了一下DEV方向任务的文档然后提交
+<!-- DAILY_CHECKIN_2026-07-16_END -->
+
 # 2026-07-15
 <!-- DAILY_CHECKIN_2026-07-15_START -->
+
 今天重读了以太坊的官方文档，复习了一下之前在 EPF 实习计划中看过的内容，然后查看了 Moss 项目的仓库
 
 ![e6d264171346544cb980b74227defafa.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/BareerahBenjamin/images/2026-07-15-1784106505580-e6d264171346544cb980b74227defafa.png)
@@ -25,6 +31,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 # 2026-07-14
 <!-- DAILY_CHECKIN_2026-07-14_START -->
 
+
 今天主要听了晚上的课，然后在做DEV方向的demo
 <!-- DAILY_CHECKIN_2026-07-14_END -->
 
@@ -32,11 +39,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- DAILY_CHECKIN_2026-07-13_START -->
 
 
+
 今天完成了 Role Choice Card，AI Collabration Log 和 ERP Reading Card.
 <!-- DAILY_CHECKIN_2026-07-13_END -->
 
 # 2026-07-12
 <!-- DAILY_CHECKIN_2026-07-12_START -->
+
 
 
 
@@ -49,11 +58,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 晚点发笔记，打卡先补个
 <!-- DAILY_CHECKIN_2026-07-10_END -->
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 
 
@@ -426,6 +437,7 @@ Monad 在设计时对比了两种签名方式的优缺点：
 
 
 
+
 # RaptorCast
 
 ### 1\. 什么是 RaptorCast？
@@ -552,6 +564,7 @@ Monad 提供的部分快速实时数据源会直接报告 **Proposed** 状态下
 
 
 
+
 # 异步 I / O（**Asynchronous I/O）**
 
 CPU 在通信进行的同时继续并发执行其它操作。
@@ -637,6 +650,7 @@ Unhappy Path（Fault Handling）
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
