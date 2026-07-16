@@ -15,8 +15,16 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-16
+<!-- DAILY_CHECKIN_2026-07-16_START -->
+![截屏2026-07-16 20.47.26.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/snh48-syq/images/2026-07-16-1784206130555-__2026-07-16_20.47.26.png)
+
+学习了web3运营向的时候，树立了web3方向不只是学习技术安全也是一大重要板块的意识
+<!-- DAILY_CHECKIN_2026-07-16_END -->
+
 # 2026-07-14
 <!-- DAILY_CHECKIN_2026-07-14_START -->
+
 今天的分享会了解了ai和web3结合起来做research的一些工具和使用方法展示，还深入了解了此次夏令营的三大方向的具体应用案例
 
 ![截屏2026-07-14 19.19.21.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/snh48-syq/images/2026-07-14-1784041075153-__2026-07-14_19.19.21.png)![截屏2026-07-14 20.05.39.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/snh48-syq/images/2026-07-14-1784041155575-__2026-07-14_20.05.39.png)
@@ -24,6 +32,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
+
 
 今天学习了解了ai和web3如何交叉使得大家都可以接触项目，完成自己的项目，从0开始每一个步骤合理运用ai，ai就是那个项目的码农，web3就是它使用的底层逻辑，以及人需要做出的监督和决策
 
@@ -34,6 +43,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- DAILY_CHECKIN_2026-07-10_START -->
 
 
+
 ![截屏2026-07-10 19.06.53.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/snh48-syq/images/2026-07-10-1783699070895-__2026-07-10_19.06.53.png)
 
 今天学习了学员们的分享，学习了大家优秀的整理落地能力
@@ -41,6 +51,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 
 
@@ -55,6 +66,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 今天学习了remix如何部署/交互，连接metamask钱包，部署到monad测试网上，并且部署交互合约
 
 ![截屏2026-07-08 17.50.17.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/snh48-syq/images/2026-07-08-1783522578595-__2026-07-08_17.50.17.png)
@@ -62,6 +74,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
@@ -82,6 +95,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
