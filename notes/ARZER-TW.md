@@ -15,8 +15,57 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-16
+<!-- DAILY_CHECKIN_2026-07-16_START -->
+2026.07.16
+
+主題：節點同步與網路層（statesync、blocksync、peer discovery）
+
+**Statesync**
+
+-   定位：Monad 吞吐量下，從創世重放歷史不可行；節點初始化改為向其他節點複製近期狀態，只重放最後一段
+    
+-   角色：同步中的節點為 client，向已同步的 validator（server）請求資料；server 依 MonadDb 節點級版本 metadata 快速鎖定需要傳送的 subtrie，讀取請求高度可平行
+    
+-   範圍：MonadDb 儲存的資料中，僅「參與 active set 所需」的子集會納入 statesync
+    
+-   分工：資料切成 chunk，每個 chunk 綁定一個 server 直到同步完成；server 從可用 peer 隨機選取，client 同時維持設定上限內的 session 數；server 無回應則 timeout 改派其他節點
+    
+-   順序：client 從最久未更新的狀態開始請求、往最新收斂；server 以 client 當前最新區塊為基準只傳 diff
+    
+-   收斂流程：tip 是移動目標，statesync 期間新進區塊先暫存；一輪結束後若 target 距 tip 小於 statesync\_threshold（預設 600 塊），statesync 結束並驗證 state root，剩餘區塊改走 blocksync 補齊；距離仍大則再跑一輪
+    
+-   信任模型：現階段 client 信任 server 回傳的資料（含 state root、parent hash）；server 依 stake weight 從驗證者集隨機抽樣，也可白名單指定已知供應者；逐 server 驗證機制實作中，屆時遇到壞資料只需丟棄並重試受影響的 prefix
+    
+
+**Blocksync**
+
+-   定位：補齊缺失區塊；判定方式為觀察到 QC 引用了本地不存在的區塊
+    
+-   兩種觸發場景：RaptorCast chunk 收不足導致漏塊；statesync 完成後追 last mile
+    
+-   節點恢復、full node 升格 validator 等維運流程的停機時間，主要就取決於 statesync／blocksync 的耗時
+    
+
+**Peer Discovery**
+
+-   用途：新 validator 或 full node 加入網路時連上既有節點，開始接收共識訊息並追上鏈頂
+    
+-   身分結構：節點產生 MonadNameRecord，內含 NameRecord 與以 secp 金鑰對其做的簽章；NameRecord 記錄 IPv4 位址、port 資訊與序號，目前僅支援 IPv4
+    
+-   兩種 wire format：舊版所有協定共用單一 port；新版支援依協定（TCP、UDP 等）分別標記的多 port
+    
+
+**補充：區塊傳播機制對比（FAQ）**
+
+-   Ethereum 走 libp2p gossip，重複訊息多、路徑迂迴，區塊傳播預算以秒計
+    
+-   Solana Turbine 與 RaptorCast 同屬 erasure coding、切 MTU chunk、broadcast tree 的做法；差異在 Monad 用 Raptor code（Turbine 用 Reed-Solomon）、Monad 是兩層樹且所有其他 validator 皆為第一層節點（Turbine 樹較深、結構較鬆）、Monad 對區塊送達有 BFT 保證
+<!-- DAILY_CHECKIN_2026-07-16_END -->
+
 # 2026-07-14
 <!-- DAILY_CHECKIN_2026-07-14_START -->
+
 2026.07.14
 
 主題：執行層架構（asynchronous execution、optimistic parallel execution、JIT、MonadDb）
@@ -82,6 +131,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
+
 
 ### 2026.07.13
 
@@ -150,11 +200,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- DAILY_CHECKIN_2026-07-12_START -->
 
 
+
 假日水個打卡
 <!-- DAILY_CHECKIN_2026-07-12_END -->
 
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 
 
 
@@ -183,11 +235,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 先打卡晚點補充筆記
 <!-- DAILY_CHECKIN_2026-07-10_END -->
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -221,6 +275,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
@@ -273,6 +328,7 @@ warm access 維持 100 不變。受影響的是 BALANCE、EXTCODE 系列、CALL 
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
