@@ -15,8 +15,23 @@ timezone: UTC+8
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-17
+<!-- DAILY_CHECKIN_2026-07-17_START -->
+今天给大家分享了：
+
+| Level | 项目类型 | 难度 | 需要掌握的技术 | AI 能帮什么 | 人必须解决的问题 | 典型项目 | 应用 / 工具 | 官网 | 配置需求 |
+| L1 静态页面 | 展示型网站 | ⭐ | HTML、CSS、JavaScript、Tailwind | 生成页面代码、修改样式、生成动画 | 审美、需求描述、简单修改 | 个人主页、Landing Page、宣传页 | Vercel | https://vercel.com | ✅ 需要配置（部署、域名、环境变量） |
+| L2 交互式前端 | 有状态的Web App | ⭐⭐ | React/Vue、组件、Router、State、API 调用 | 生成组件、处理交互逻辑、调用接口 | 理解数据流、解决Bug、组织代码 | Chatbot、小工具、Dashboard | React / Vue | https://react.devhttps://vuejs.org | ⚙️ 本地配置（安装依赖、项目环境） |
+| L3 全栈应用 | 前后端+数据库 | ⭐⭐⭐ | Node/Python 后端、REST API、SQL、数据库设计、CRUD | 生成接口、数据库操作、基础业务逻辑 | 设计数据结构、排查前后端问题 | 博客、笔记系统、CMS | Supabase | https://supabase.com | ✅ 需要配置（创建数据库、连接API、环境变量） |
+| L4 产品级应用 | 多用户真实产品 | ⭐⭐⭐⭐ | Auth、JWT/OAuth、权限系统、文件存储、支付、第三方服务 | 快速生成登录、支付接入、业务功能 | 安全设计、用户隔离、异常处理 | SaaS、电商、社交平台 | Supabase AuthStripeOAuthRBAC | https://supabase.com/authhttps://stripe.comhttps://oauth.net | ✅ 需要配置（账号系统、API Key、权限规则、Webhook） |
+| L5 工程化系统 | 可长期运行的软件 | ⭐⭐⭐⭐⭐ | Docker、Linux、CI/CD、Testing、Logging、Monitoring、Redis、消息队列 | 自动写配置、生成测试、辅助排错 | 架构设计、性能、安全、线上问题处理 | 企业系统、高流量应用 | DockerGitHub ActionsAWSGrafana | https://www.docker.comhttps://github.com/features/actionshttps://aws.amazon.comhttps://grafana.com | ⚙️+✅ 需要配置（服务器、部署流水线、监控系统） |
+| L6 AI 协同开发 | AI 作为主要编码者 | ⭐⭐⭐⭐⭐⭐ | Cursor/Claude Code/Codex、Agent Workflow、代码审查、自动测试、Git 工作流 | 完成大量开发任务、重构代码、生成测试 | 定义架构、拆任务、审核AI 输出、防止项目失控 | 复杂 AI 产品、长期迭代项目 | CursorClaude CodeCodexGitHub Copilot | https://cursor.comhttps://www.anthropic.com/claude-codehttps://openai.com/codexhttps://github.com/features/copilot | ⚙️ 本地配置（安装工具、账号、模型权限） |
+| L7 AI 软件工厂 | AI 自动生产软件 | ⭐⭐⭐⭐⭐⭐⭐ | Multi-Agent、自动部署、自动监控、自动评估、自动优化系统 | 从需求到代码到运维自动完成 | 目标制定、安全控制、系统治理 | AI 开发平台、自主运营系统 | LangGraphCrewAIAutoGenAI Agent 平台 | https://langchain-ai.github.io/langgraph/https://www.crewai.comhttps://microsoft.github.io/autogen/ | ✅ 需要配置（Agent 工作流、模型、工具链） |
+<!-- DAILY_CHECKIN_2026-07-17_END -->
+
 # 2026-07-16
 <!-- DAILY_CHECKIN_2026-07-16_START -->
+
 今天学习了运营向的小知识，还对智能合约有了一定的了解～
 
 * * *
