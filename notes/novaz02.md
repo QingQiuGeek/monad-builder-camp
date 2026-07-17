@@ -15,8 +15,16 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-17
+<!-- DAILY_CHECKIN_2026-07-17_START -->
+今天参与了colearning会议yoyo讲了运营方向让内容被看见被理解而不是单纯的写作文章对我有了启发，long分享了开发者运营需要关注哪些用户的反馈以及GitHub要经常刷干货
+
+同时自己之前做的作业也开始整理成推文公开在推特进行学习
+<!-- DAILY_CHECKIN_2026-07-17_END -->
+
 # 2026-07-16
 <!-- DAILY_CHECKIN_2026-07-16_START -->
+
 本次活动参加了谁是卧底对对以太坊技术协议我抽到了ERC721，ERC-721 是以太坊上的一种非同质化代币标准，主要用来制作 NFT。
 
 它规定了智能合约应该怎样记录和转移“独一无二”的链上资产。每个 ERC-721 代币都有自己的 Token ID，因此彼此可以区分，价值也不一定相同。对以太坊协议有了更深刻的理解
@@ -26,6 +34,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-15
 <!-- DAILY_CHECKIN_2026-07-15_START -->
+
 
 本次为 Mona 实习计划开展的 Web3 运营主题分享会，围绕运营实操逻辑、入行方法、工具使用等内容答疑，核心要点如下：
 
@@ -68,6 +77,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-14
 <!-- DAILY_CHECKIN_2026-07-14_START -->
+
 
 
 本次为科研成长主题分享会，主讲人薛伊芙围绕科研原则、AI 工具应用、Web3 科研工具、落地路径等内容展开分享，内容如下：
@@ -154,6 +164,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 今天colearning做了销售扮演角色对区块链应用场景有了更深刻理解
 
 \- 区块链核心定义：本质是异步、强一致性的可编程金融平台，由多节点共同维护，无需信任单一中心即可达成交易共识。
@@ -167,11 +178,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 今天要到了小海老师黑客松的作品demo万物皆可预测，对黑客松产品介绍有了具体了解如何用视频来介绍产品demo
 <!-- DAILY_CHECKIN_2026-07-12_END -->
 
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 
 
 
@@ -230,6 +243,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 本次为 Web3 及 AI 安全基础设施服务商 GoPlus 主办的 AI Agent 安全主题分享会，通过真实高危案例拆解风险并给出落地防护方案，内容如下：
 
 \- AI Agent 安全风险的核心本质
@@ -252,6 +266,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 ![whiteboard_exported_image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/novaz02/images/2026-07-08-1783524110244-whiteboard_exported_image.png)
 <!-- DAILY_CHECKIN_2026-07-08_END -->
 
@@ -265,11 +280,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 今天主要是对**EPF 项目介绍**：EPF 是聚焦以太坊协议层的学习实践项目，分为有津贴的入选通道和无门槛的公开参与通道，核心围绕以太坊共识、网络、密码学等内容开展。中途听着有些专业名词还是听着有些云里雾里需要加强记忆以及学习，同时colearning讲到了vibecoding
 <!-- DAILY_CHECKIN_2026-07-07_END -->
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
