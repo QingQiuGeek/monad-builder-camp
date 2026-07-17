@@ -15,8 +15,30 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-17
+<!-- DAILY_CHECKIN_2026-07-17_START -->
+### 2026/07/17 - AI Agent框架Moss
+
+**项目简介**
+
+Moss是一个专为构建AI Agent设计的开发框架，提供了一套从开发到运行的完整生命周期管理工具。已在GitHub完成Star。
+
+**核心问题**
+
+单独的大语言模型（LLM）通常只有“大脑”而缺乏“手脚”。Moss解决了大模型在实际应用中如何稳定调用外部工具、管理复杂上下文记忆、以及执行多步逻辑规划的工程痛点。
+
+**核心能力**
+
+提供了标准化的“脚手架”，简化了Agent的任务编排逻辑、状态管理以及与外部环境（API/工具）交互的接口门槛。
+
+**可能应用场景**
+
+全自动化的客服中枢、专属的个人学习/日程助理，甚至可以结合最近接触的智能合约，做一个“全自动链上数据抓取与交易执行”的Web3代理机器人。
+<!-- DAILY_CHECKIN_2026-07-17_END -->
+
 # 2026-07-16
 <!-- DAILY_CHECKIN_2026-07-16_START -->
+
 **2026/07/16 - 最小合约打卡：AI 生成留言板**
 
 1.  **Prompt**
@@ -72,6 +94,7 @@ function getAllMessages() public view returns (Message\[\] memory) { return mess
 # 2026-07-15
 <!-- DAILY_CHECKIN_2026-07-15_START -->
 
+
 ### 2026/07/15 - AI 辅助生成“打卡合约”
 
 **操作流**
@@ -91,6 +114,7 @@ function getAllMessages() public view returns (Message\[\] memory) { return mess
 <!-- DAILY_CHECKIN_2026-07-13_START -->
 
 
+
 **2026/07/13 - 建构链上基础认知**
 
 **AI 辅助与审查**
@@ -107,6 +131,7 @@ function getAllMessages() public view returns (Message\[\] memory) { return mess
 
 
 
+
 **2026/07/11 - 智能合约的搭建与落成**
 
 **合约全链路生命周期拆解**
@@ -120,6 +145,7 @@ function getAllMessages() public view returns (Message\[\] memory) { return mess
 
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 
 
 
@@ -157,6 +183,7 @@ function getAllMessages() public view returns (Message\[\] memory) { return mess
 
 
 
+
 2026/07/09 - 链上第二步：完成首笔测试网转账与链上查证
 
 **概述**
@@ -185,6 +212,7 @@ function getAllMessages() public view returns (Message\[\] memory) { return mess
 
 
 
+
 2026/07/07 - 链上第一步：专用钱包与测试网配置
 
 **概述**
@@ -202,6 +230,7 @@ function getAllMessages() public view returns (Message\[\] memory) { return mess
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
