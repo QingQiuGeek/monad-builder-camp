@@ -16,8 +16,103 @@ Web3小趴菜一枚^ ^
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-17
+<!-- DAILY_CHECKIN_2026-07-17_START -->
+# 2026-07-17
+
+## 今天做了什么
+
+### 1\. 深入阅读 Moss 项目
+
+读了 Moss 的完整 README、中文 README、CONTEXT.md（领域词汇表）、agent-skill.md（Agent 安全规则）和 getting-started.md（新手教程）。
+
+核心理解：
+
+-   Moss 是 Monad 链上 AI Agent 和协议之间的"安全翻译官"
+    
+-   四步流程：discover → load → action → simulate
+    
+-   关键设计：永远不签名、不发送，只构建和模拟
+    
+-   用"银行双签"类比：Agent 是业务员填材料，人类是客户签字
+    
+
+（简单联想一下，这个设计和 EIV 项目的安全思路其实是一脉相承的——都是把"决策"和"执行"分离。EIV 是 Agent 决策后链上验证，Moss 是 Agent 组装交易后人类签名。底层逻辑是相通的。🤔）
+
+### 2\. 完成 GitHub 探索日志
+
+对比分析了三个 GitHub 项目：
+
+-   **Moss**（58 stars）— 应用层，Agent-协议交互框架
+    
+-   **Solidity**（25,683 stars）— 语言层，智能合约编译器
+    
+-   **Hardhat**（8,494 stars）— 工具层，以太坊开发环境
+    
+
+最大发现：Moss 和 Hardhat 都提供了 `AGENTS.md`——专门为 AI Agent 参与开源开发而设计。这说明"AI 参与开源"正在成为趋势。
+
+还找到了 Moss Issue [#77（建议添加中文](#77（建议添加中文) FAQ），这个 Issue 直接和我的体验相关。
+
+### 3\. 制定 Moss 开源贡献计划
+
+以 Ops Builder（Content Producer）身份，制定了一份贡献计划：
+
+-   **P0**：撰写中文 FAQ 文档（对接 Issue [#77）](#77）)
+    
+-   **P1**：给 getting-started.zh-CN.md 提改进建议
+    
+-   **P1**：写小红书 Moss 项目介绍帖
+    
+
+选择这个方向的原因：我就是那个"中文新手"，我踩过的坑就是 FAQ 的最佳素材。不需要会写代码，但需要真正理解项目。
+
+* * *
+
+## 核心收获
+
+### 收获 1：开源项目的"三件套"
+
+不管项目大小，成熟的开源项目都有三个核心文件：
+
+-   README.md（招牌和菜单）
+    
+-   CONTRIBUTING.md（招聘启事）
+    
+-   SECURITY.md（报警按钮）
+    
+
+这就像一家店铺——你进门先看菜单，想帮忙看招聘启事，发现安全问题按报警按钮。
+
+### 收获 2：三个项目代表 Web3 开发栈的不同层次
+
+-   Solidity = 语言层（语法）
+    
+-   Hardhat = 工具层（工具箱）
+    
+-   Moss = 应用层（翻译官）
+    
+
+理解了这个层次关系，就知道自己在哪个层次切入最合适——对我来说是应用层，因为不需要懂编译器原理，只需要理解"Agent 怎么安全地操作链上协议"。
+
+### 收获 3：贡献开源不一定要写代码
+
+Moss Issue [#77（中文](#77（中文) FAQ）说明：好的文档、教程、翻译，对开源项目的贡献价值不亚于代码。尤其是一个正在成长期的项目，降低新手门槛比增加功能更重要。
+
+（这个认知对我很重要——之前总觉得"贡献开源 = 提 PR 修 Bug"，现在理解了，写文档、做教程、整理 FAQ 也是正经的开源贡献。💡）
+
+* * *
+
+## 还没搞懂的
+
+-   Moss 的 Capability tree 嵌套机制具体怎么工作？（比如 ERC-20 approve + swap 的嵌套）
+    
+-   Moss 的 Receipt 验证和 EIV 的链上 attestation 在技术实现上有什么异同？
+<!-- DAILY_CHECKIN_2026-07-17_END -->
+
 # 2026-07-16
 <!-- DAILY_CHECKIN_2026-07-16_START -->
+
 # 2026-07-16
 
 ## 今天做了什么
@@ -156,6 +251,7 @@ Web3小趴菜一枚^ ^
 
 # 2026-07-15
 <!-- DAILY_CHECKIN_2026-07-15_START -->
+
 
 # 2026-07-15
 
@@ -346,6 +442,7 @@ Web3小趴菜一枚^ ^
 <!-- DAILY_CHECKIN_2026-07-14_START -->
 
 
+
 # 2026-07-14
 
 ## Harberger Agent Quota 项目评估与 Pivot 改造笔记
@@ -486,6 +583,7 @@ uint256 public constant MAX_TAX_RATE_BPS = 5000; // 50% 年化上限
 
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
+
 
 
 
@@ -847,6 +945,7 @@ DApp · 钱包 · 后端服务 · 索引器
 
 
 
+
 # 2026-07-12
 
 **方向标签**：AI + Web3 / 机制设计 / Agentic Finance
@@ -947,6 +1046,7 @@ DApp · 钱包 · 后端服务 · 索引器
 
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 
 
 
@@ -1191,6 +1291,7 @@ AI 审查（Claude）发现零押金窗口问题
 
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 
 
 
@@ -1534,6 +1635,7 @@ function canDelete() public view returns (bool) {
 
 
 
+
 # 2026-07-09
 
 ## 今日任务
@@ -1604,6 +1706,7 @@ function canDelete() public view returns (bool) {
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -2076,6 +2179,7 @@ To（接收方）: 0x7f1a8...524db（我的账户1）
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
