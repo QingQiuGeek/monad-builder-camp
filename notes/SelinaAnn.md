@@ -15,8 +15,30 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-17
+<!-- DAILY_CHECKIN_2026-07-17_START -->
+**1\. 什么是 AI-assisted Web3 Prototype？** 你不再是苦力，而是**架构师 + 审计员**。你用 Cursor/ChatGPT 写脚手架、生成基础合约、解释报错；你负责把模块拼起来，并确保不把私钥喂给 AI。
+
+**2\. 终极心法：三栏 Scope 控制表** 在写任何代码前，必须把功能填入下面三个盒子里。**这是本周不熬夜、能交差的唯一保障。**
+
+| 边界类型 | 定义 | 举例（假设做“链上投票 DApp”） |
+| --- | --- | --- |
+| ✅ Real (真实现实) | 必须写真实逻辑，这是本周核心交付物。 | 1. 写 Solidity 投票合约并部署到 Monad。2. 前端用 ethers.js 真正调用合约投票。 |
+| 🧱 Mock (模拟/写死) | 假装能跑，底层是假数据。为了展示完整流程，但不花时间做底层。 | 1. 候选人列表不动态读取，直接前端写死 ["Alice", "Bob"]。2. 用户的钱包余额，直接写死为 "100 MON"。 |
+| 🚫 Out of Scope (绝不碰) | 本周绝对不碰。哪怕你觉得“加个登录界面也就 5 分钟”。 | 1. 复杂的代币经济学（如按持币量加权）。2. 后台管理系统。3. 精美的 UI 动画。 |
+
+**3\. 推荐的最小技术栈 (Week 2 限定)**
+
+-   **合约**：Solidity + **Remix IDE**（别折腾本地 Hardhat/Foundry 环境配置了，Remix 能省 80% 时间）。
+    
+-   **前端**：原生 HTML/JS，或者最简单的 React (Vite)。
+    
+-   **交互库**：**ethers.js**（文档最多，AI 生成代码准确率最高）。
+<!-- DAILY_CHECKIN_2026-07-17_END -->
+
 # 2026-07-16
 <!-- DAILY_CHECKIN_2026-07-16_START -->
+
 **1\. 活动定义的 5 个核心锚点**
 
 -   **活动目标**：是为了解决“新人不懂怎么用钱包”（教育），还是“给新上线的测试网引流”（传播）？
@@ -44,6 +66,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-15
 <!-- DAILY_CHECKIN_2026-07-15_START -->
+
 
 **1\. “两条线”研究法**
 
@@ -79,11 +102,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- DAILY_CHECKIN_2026-07-14_START -->
 
 
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/SelinaAnn/images/2026-07-14-1784037939936-image.png)
 <!-- DAILY_CHECKIN_2026-07-14_END -->
 
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
+
 
 
 
@@ -156,11 +181,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/SelinaAnn/images/2026-07-12-1783819303776-image.png)
 <!-- DAILY_CHECKIN_2026-07-12_END -->
 
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 
 
 
@@ -215,6 +242,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 ### **从“交易”到“合约”的思维跃迁**
 
 在 DAY 3，你通过钱包发起了一笔**转账交易**。今天，你将部署一个**智能合约**，它本质上是一段**自动执行、不可篡改的代码**，被永久存储在区块链上。理解以下核心概念的关联，是今天学习的关键。
@@ -240,11 +268,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/SelinaAnn/images/2026-07-09-1783601532564-image.png)
 <!-- DAILY_CHECKIN_2026-07-09_END -->
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -285,11 +315,13 @@ Block Explorer（区块浏览器）是链上的“搜索引擎”，它将底层
 
 
 
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/SelinaAnn/images/2026-07-07-1783431460944-image.png)
 <!-- DAILY_CHECKIN_2026-07-07_END -->
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
