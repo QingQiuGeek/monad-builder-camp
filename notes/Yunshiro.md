@@ -15,8 +15,16 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-17
+<!-- DAILY_CHECKIN_2026-07-17_START -->
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Yunshiro/images/2026-07-17-1784290477168-image.png)
+
+优化前端视觉，链上2048
+<!-- DAILY_CHECKIN_2026-07-17_END -->
+
 # 2026-07-16
 <!-- DAILY_CHECKIN_2026-07-16_START -->
+
 今天给Moss提了一条pr，给kuru适配器添加了限价单功能
 
 [feat(kuru): add limit order support by Yunshiro · Pull Request #51 · nishuzumi/moss](https://github.com/nishuzumi/moss/pull/51)
@@ -25,6 +33,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 # 2026-07-15
 <!-- DAILY_CHECKIN_2026-07-15_START -->
 
+
 链上2048开发
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Yunshiro/images/2026-07-15-1784120813826-image.png)
@@ -32,6 +41,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-14
 <!-- DAILY_CHECKIN_2026-07-14_START -->
+
 
 
 晚上参加分享会，了解了三大赛道的职业方向和职责
@@ -46,6 +56,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 [https://github.com/Yunshiro/Monad-Buidler-Camp-Jeong/blob/main/notes/week2/chain2048-%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3.md](https://github.com/Yunshiro/Monad-Buidler-Camp-Jeong/blob/main/notes/week2/chain2048-%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3.md)
 
 链上2048游戏方案、思路
@@ -53,6 +64,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-12
 <!-- DAILY_CHECKIN_2026-07-12_START -->
+
 
 
 
@@ -73,6 +85,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 做了一个链上五子棋，游玩地址：[https://gomoku-onchain.vercel.app/](https://gomoku-onchain.vercel.app/)
 
 github repo：[https://github.com/Yunshiro/gomoku-contract](https://github.com/Yunshiro/gomoku-contract)
@@ -80,6 +93,7 @@ github repo：[https://github.com/Yunshiro/gomoku-contract](https://github.com/Y
 
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 
 
 
@@ -98,11 +112,13 @@ github repo：[https://github.com/Yunshiro/gomoku-contract](https://github.com/Y
 
 
 
+
 今天做了一个需求清单，链上五子棋：[https://github.com/Yunshiro/Monad-Buidler-Camp-Jeong/blob/main/notes/链上五子棋需求清单.md](https://github.com/Yunshiro/Monad-Buidler-Camp-Jeong/blob/main/notes/链上五子棋需求清单.md)
 <!-- DAILY_CHECKIN_2026-07-09_END -->
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -125,6 +141,7 @@ github repo：[https://github.com/Yunshiro/gomoku-contract](https://github.com/Y
 
 
 
+
 今天产出一个简单的DAPP，Monad测试网链上留言板，部署在：[https://message-board-ui.vercel.app/](https://message-board-ui.vercel.app/)
 
 repo地址：[Yunshiro/message-board-ui](https://github.com/Yunshiro/message-board-ui)
@@ -138,6 +155,7 @@ repo地址：[Yunshiro/message-board-ui](https://github.com/Yunshiro/message-boa
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
