@@ -15,8 +15,160 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-17
+<!-- DAILY_CHECKIN_2026-07-17_START -->
+# 2026-07-17｜残酷共学笔记
+
+## 今日主题
+
+Moss：从理解“可验证执行”，到沉淀教程、提交 Proof of Work，并参与真实的开源 Review。
+
+## 今天完成了什么
+
+今天围绕 Moss 完成了三类工作：
+
+1.  梳理 Moss 的核心定位，明确它不是替 Agent 直接签名和发送交易，而是通过 `discover → load → action → simulate`，把协议交互变成可发现、可构建、可模拟和可验证的 Capability。
+    
+2.  完成一份 Moss 新手教程，内容包括环境配置、wrap/swap Demo、MCP 接入、Warning 处理、安全检查、FAQ 和首次 PR 流程。目前教程已经整理成可直接发布的 GitHub README。
+    
+3.  围绕已提交的 [Moss PR #72](https://github.com/nishuzumi/moss/pull/72)，整理了 Pull Request 作业、Proof of Work、文档到代码骨架以及 Moss 项目介绍文章。同时参与 [Issue #7](https://github.com/nishuzumi/moss/issues/7) 的协作讨论，并深入 Review 了 [PR #56](https://github.com/nishuzumi/moss/pull/56) 的 Clober Protocol Adapter 实现。
+    
+
+在阅读 PR #56 后，我向作者提交了五项需要进一步确认的问题：
+
+-   ERC-20 剩余授权不足时，是否需要兼容必须先清零再重新授权的 Token；
+    
+-   动态推导 BookId 的方案是否有意替代 Issue 要求的 curated market catalog；
+    
+-   使用 `BookViewer.getExpectedOutput` 是否能够替代对实际写入路径的 `eth_call` 模拟；
+    
+-   获取 Token decimals 时是否必须同时依赖可选的 `name()` 和 `symbol()`；
+    
+-   是否应该为 BookId、unit size、fee policy、报价路径和授权逻辑补充维护注释与官方来源。
+    
+
+## 今天学到的关键内容
+
+### 1\. “模拟成功”不等于“执行可信”
+
+Moss 会记录交易模拟产生的 Event 和 native MON transfer，再由 Protocol 将这些 Change 解析成 Receipt。Core 还会检查 Receipt 是否完整、按原始顺序覆盖所有 Change。
+
+但零 Warning 只代表观察到的变化得到了完整解释，不代表交易一定符合用户意图。最终仍然需要核对资产、数量、接收方、授权额度、滑点和 Protocol 选择。
+
+### 2\. Bound Protocol 解决的是“协议身份参数化”
+
+PR #72 处理的不是普通方法参数，而是 Protocol 在运行时绑定 Token、Market 或合约地址的问题。
+
+今天进一步理解了几个关键约束：
+
+-   Binding 与每次调用的方法参数必须分离；
+    
+-   Binding 应在执行 Protocol 或请求 RPC 前完成校验；
+    
+-   Factory 每次创建独立引用，不能随意缓存实例；
+    
+-   Binding 只解码一次，避免非幂等转换产生不同结果；
+    
+-   Receipt parser 必须保持纯净，不能访问 Runtime 或动态 Handle。
+    
+
+### 3\. 一个 Protocol Adapter 不只是增加一个函数
+
+阅读 PR #56 后，我发现一个完整的 Protocol Adapter 需要同时处理：
+
+-   Protocol、Capability 与 Query 设计；
+    
+-   ABI 来源及可复现生成；
+    
+-   官方合约地址与链上 Bytecode 核验；
+    
+-   ERC-20 Approval 和特殊 Token 行为；
+    
+-   Quote、滑点与部分成交保护；
+    
+-   Capability tree 的交易归属和执行顺序；
+    
+-   Receipt 与原始 Change 的完整覆盖；
+    
+-   运行时测试、编译期测试和 Live Monad 测试；
+    
+-   MCP Server 接入、文档与 Changeset。
+    
+
+这说明 Adapter Review 不能只看主流程能否运行，还需要检查边界资产、协议假设和 Issue 验收标准是否真正一致。
+
+### 4\. 开源贡献不只等于提交代码
+
+今天回复 Maintainer 建议时，我意识到协作中的表达同样重要。
+
+当一个 Issue 已经有其他贡献者提交实现时，更合适的做法不是直接接管，而是先与作者协调，再通过复现、补充测试和边界分析参与 Review，避免重复劳动。
+
+PR 是否最终 Merge 也不是衡量贡献的唯一标准。公开的需求分析、代码差异、测试证据、Review 意见和协作记录，都可以构成可验证的 Proof of Work。
+
+## AI 帮助了什么，我人工校正了什么
+
+AI 帮我快速阅读仓库文档、梳理 Pull Request、生成文章结构、代码骨架和教程初稿。
+
+人工校正主要集中在：
+
+-   使用 Moss 当前的 Capability、Change、Receipt 和 Outcome 领域语言，避免引用已经过时的设计；
+    
+-   核对 Node、pnpm、RPC 和测试要求；
+    
+-   补充“零 Warning 不等于用户授权”的安全边界；
+    
+-   收紧 Bound Protocol Factory、Binding 校验和 Receipt 纯度要求；
+    
+-   区分已经确认的问题与仍待作者澄清的 Review 方向；
+    
+-   通过本地边界测试验证 zero-reset Approval 和缺少 Token metadata 等情况；
+    
+-   调整 GitHub 回复措辞，使其符合真实开源协作语境。
+    
+
+这让我进一步认识到，AI 可以提高阅读和生成效率，但最终产出是否符合项目架构、测试要求和协作规范，仍然需要人工判断和证据支持。
+
+## PR 与 Issue 最新状态
+
+-   [PR #72](https://github.com/nishuzumi/moss/pull/72) 目前仍为 Open Draft，尚未合并。关联 Issue #61 已添加 `maintainer-only` 标签，后续由 Maintainer 主导，PR 能否继续推进暂不确定。
+    
+-   [PR #56](https://github.com/nishuzumi/moss/pull/56) 目前仍为 Open Draft，尚未合并。我提交的五项 Review 问题已经发布，正在等待作者或 Maintainer 回复。
+    
+
+## 当前卡点
+
+-   PR #72 的离线构建、类型检查和测试已经通过，但 Live Monad 检查曾被本机 TLS 证书链错误 `UNABLE_TO_GET_ISSUER_CERT_LOCALLY` 阻塞。
+    
+-   Issue #61 已被标记为 `maintainer-only`，PR #72 的后续处理方式还不明确。
+    
+-   PR #56 的五项审查意见已经提交，目前需要等待作者或 Maintainer 回复。
+    
+-   Moss 新手教程已经完成，但还没有上传到公开 GitHub 仓库。
+    
+
+## 明日计划
+
+-   完成 **Week 2｜Challenge｜为 Moss 新增一个 Protocol Adapter**；
+    
+-   完成 **Week 2｜Prototype Evidence**；
+    
+-   完成 **Week 2｜Dev Portfolio Pack**；
+    
+-   解决 RPC TLS 问题，补齐 Live Monad 验证。
+    
+
+## 今日复盘
+
+今天最大的收获不是又完成了几份文案，而是把“阅读文档—理解架构—实现代码—验证测试—提交 PR—参与 Review—编写教程”串成了一条完整路径。
+
+PR #72 的状态变化也提醒我：真实开源协作并不完全按照个人计划推进。Issue 的权限、Maintainer 的安排、其他贡献者的实现以及 Review 反馈，都可能改变最终结果。
+
+真正有价值的 Proof of Work，不只是代码数量，也不只是一枚 Merge 标记，而是能否公开说明：为什么这样设计、如何验证、发现了什么问题，以及还有哪些边界尚未解决。
+<!-- DAILY_CHECKIN_2026-07-17_END -->
+
 # 2026-07-16
 <!-- DAILY_CHECKIN_2026-07-16_START -->
+
 ## **今日进度：完成 Moss GitHub 探索，并把三个 Week 2 任务收束成一个 MCP 安全预览原型**
 
 今天没有急着继续写 Adapter，而是先把 Moss 的代码架构、GitHub 治理方式和 PR review 过程系统读了一遍，并完成三份相互关联的 Week 2 提交：
@@ -132,6 +284,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 # 2026-07-15
 <!-- DAILY_CHECKIN_2026-07-15_START -->
 
+
 ## **今日进度：完成 Moss 项目的业务理解 + 全链路实操**
 
 从手写代码到 agent 自主调用,完整走了一遍 Moss([github.com/nishuzumi/moss](http://github.com/nishuzumi/moss))的两种用法:先在 play.ts 里手写 discover → load → action → simulate 四步;再通过 `.mcp.json` 把 Moss 的 MCP 服务器接入 Claude Code,让 agent 纯靠四个 MCP 工具自主跑通"1 MON 能换多少 USDC"(本地 mainnet fork 实测)。同步完成任务:⭐ Star 仓库、README 精读、理解分享文案。
@@ -182,6 +335,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- DAILY_CHECKIN_2026-07-14_START -->
 
 
+
 ## **今日进度：Week 2 Day 2｜排查 Moss monorepo 构建问题 + 撰写 Week 3 Role Statement**
 
 一句话总结：一次真实的 pnpm monorepo 报错排查，加上一份把 Week 1–2 产出转成 Week 3 组队筹码的角色声明。
@@ -228,6 +382,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 # 2026-07-13
 
 ## 今日进度：完成 Week 2 职业方向选择提交，搭建 AI 协作记录 + 学习记录归档体系
@@ -268,6 +423,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-12
 <!-- DAILY_CHECKIN_2026-07-12_START -->
+
 
 
 
@@ -329,6 +485,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 ## **今日进度：monad-clicker 加登录系统，并用真实使用数据修了一串前端 bug**
 
 昨天把「为什么需要频繁交互」的场景论证做完之后，今天把 monad-clicker 从 Demo 推进到「能被人反复实际使用」的状态：加了 MetaMask 登录（会话代签），然后没有止步于"能跑"，而是自己连续实测/连点/换账号，揪出了 6 个真实 bug 并逐一修复，最后把改动推到了 GitHub，也把 Week 1 Build Log 整理提交。
@@ -370,6 +527,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 
 
 
@@ -426,6 +584,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 
 
@@ -490,6 +649,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -566,6 +726,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 \## Week 1 打卡｜部署 NFTBadge 到 Monad Testnet
 
 \### 今天做了什么
@@ -605,6 +766,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
