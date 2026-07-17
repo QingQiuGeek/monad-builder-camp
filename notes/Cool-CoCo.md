@@ -15,8 +15,38 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-17
+<!-- DAILY_CHECKIN_2026-07-17_START -->
+Day12学习记录：
+
+2026年7月17日22:56:00
+
+今日学习收获——
+
+一、听了几位同学的线上分享，学习补充了一些知识，比如同学从积分任务聊到对内容运营的理解、Vibe Coding的水平分级和使用AI进行线上Coding的大概流程和项目演示、作为Web3行业的新人 如何结合已有经历，用Web3能理解的方式表达出来，转化为Web3竞争力、跨Agent统一记忆层的Skill、Web3行业简历撰写和求职经历分享 等；
+
+二、知道了下一周的课程规划，即找队友组队+做出一个mini demo；
+
+三、会后聊天，了解到更多关于Web3行业中KOL、BD、及生态的一些东西，对于要不要进入Web3行业以及能递推；联想到其他行业方面的一些操作有了更多了解。
+
+遇到的问题——
+
+暂无，可能就是前面网络不好没有听到前面同学完整的线上分享；
+
+上周和这周线上Co-learning的课程PPT希望能再看看，希望助教或前面上课的老师可以在学习页面或者学习活动群里给群里上传分享一下，方便会议由于不可抗力因素没有听完整或没加载出来而错过重要课程内容的同学们后期补充学习。感谢φ(>ω<\*)
+
+接下来计划——
+
+继续跟着课程学习，确定下来接下来的方向，找可以互补的团队队友
+
+  
+
+![Day12-项目共享、所有本次会议分享内容的同学.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Cool-CoCo/images/2026-07-17-1784301982114-Day12-__________________.png)![Day12-Week3学习计划.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Cool-CoCo/images/2026-07-17-1784302103925-Day12-Week3____.png)![Day12-苏生分享，luma活动、跑会、关注行业活动、黑客松活动.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Cool-CoCo/images/2026-07-17-1784302205368-Day12-_____luma__________________.png)
+<!-- DAILY_CHECKIN_2026-07-17_END -->
+
 # 2026-07-16
 <!-- DAILY_CHECKIN_2026-07-16_START -->
+
 今日学习： 参与线上Co-learning会议，很有趣的寓教于乐的学习形式，通过谁是卧底的游戏让我们对Web3行业的基础知识有了更进一步的理解； 参与截图如下：
 
 ![Day11-ERC-20和ERC-721.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Cool-CoCo/images/2026-07-16-1784217433503-Day11-ERC-20_ERC-721.png)![Day11-区别.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Cool-CoCo/images/2026-07-16-1784217524023-Day11-__.png)![Day11-线上会议参与截图6、连麦可以加分.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Cool-CoCo/images/2026-07-16-1784217553442-Day11-________6_______.png)
@@ -40,6 +70,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-15
 <!-- DAILY_CHECKIN_2026-07-15_START -->
+
 
 
 2026-07-15 学习记录：
@@ -95,6 +126,7 @@ b本次课程对于想要希望进入 社区运营、DevRel、市场增长、内
 
 
 
+
 0713 Day06-
 
 Week2学习记录：
@@ -118,6 +150,7 @@ Week2学习记录：
 
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
+
 
 
 
@@ -152,6 +185,7 @@ Week2学习记录：
 
 
 
+
 20260712自由打卡：
 
 今日记录——
@@ -167,6 +201,7 @@ Week2学习记录：
 
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 
 
 
@@ -200,6 +235,7 @@ Week2学习记录：
 
 
 
+
 Day05（2026-07-10）学习记录：
 
 本次学习主要围绕 “Web3 实习计划例会｜学员总结+Co-Learning”的线上会议目标，通过线上Zoom会议进行今日学习任务：
@@ -220,6 +256,7 @@ Day05（2026-07-10）学习记录：
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 
 
@@ -287,6 +324,7 @@ Day04学习记录：
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -447,6 +485,7 @@ Day04学习记录：
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
