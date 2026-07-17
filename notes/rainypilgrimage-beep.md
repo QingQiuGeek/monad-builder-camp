@@ -15,8 +15,16 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-17
+<!-- DAILY_CHECKIN_2026-07-17_START -->
+-   完成提交 **Product-to-Market Brief**
+    
+-   周五例会分享
+<!-- DAILY_CHECKIN_2026-07-17_END -->
+
 # 2026-07-16
 <!-- DAILY_CHECKIN_2026-07-16_START -->
+
 -   完成 EIP Reading Card
     
 -   co-Learning
@@ -27,6 +35,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 # 2026-07-15
 <!-- DAILY_CHECKIN_2026-07-15_START -->
 
+
 -   参加 7.15如何在 Web3 世界里开启你的第一段运营经历
     
 -   colearning
@@ -36,6 +45,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-14
 <!-- DAILY_CHECKIN_2026-07-14_START -->
+
 
 
 ```
@@ -49,6 +59,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
+
 
 
 
@@ -69,6 +80,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 -   在 Monad Testnet 完成 LearningCheckin 合约部署与读写验证，并围绕受限 Agent 的预算、授权、支付与验收边界完成 Monad 产品方向分析，提出低频 MVP 与后续验证问题。
     
 -   撰写完成并提交Mini Demo 0
@@ -76,6 +88,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 
 
 
@@ -92,6 +105,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 
 
 
@@ -116,6 +130,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 -   完成智能合约实践，部署第一个 Monad 合约
     
 -   按进度学习BuildAnything
@@ -127,6 +142,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -155,6 +171,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 -   完成 Week 1 前置准备任务进入 Web3 与链上世界。
     
 -   创建了课程专用钱包。
@@ -174,6 +191,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
