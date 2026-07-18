@@ -15,8 +15,115 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-18
+<!-- DAILY_CHECKIN_2026-07-18_START -->
+```
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+/**
+ * @title OnchainTodo
+ * @dev 链上待办事项管理合约，支持用户独立的 Todo 列表管理
+ */
+contract OnchainTodo {
+    
+    struct Todo {
+        string content;   // 任务内容
+        bool isCompleted; // 是否完成
+        uint256 createdAt;// 创建时间戳
+    }
+
+    // 存储每个地址对应的 Todo 数组
+    mapping(address => Todo[]) private userTodos;
+
+    // 事件：当任务被创建时触发
+    event TodoCreated(address indexed user, uint256 indexed todoId, string content);
+    // 事件：当任务状态被切换时触发
+    event TodoStatusToggled(address indexed user, uint256 indexed todoId, bool isCompleted);
+    // 事件：当任务内容被更新时触发
+    event TodoUpdated(address indexed user, uint256 indexed todoId, string newContent);
+
+    /**
+     * @dev 创建一个新的 Todo 任务
+     * @param _content 任务内容
+     */
+    function createTodo(string calldata _content) external {
+        require(bytes(_content).length > 0, "Content cannot be empty");
+        
+        userTodos[msg.sender].push(Todo({
+            content: _content,
+            isCompleted: false,
+            createdAt: block.timestamp
+        }));
+
+        emit TodoCreated(msg.sender, userTodos[msg.sender].length - 1, _content);
+    }
+
+    /**
+     * @dev 切换 Todo 任务的完成状态
+     * @param _index 任务在数组中的索引
+     */
+    function toggleComplete(uint256 _index) external {
+        require(_index < userTodos[msg.sender].length, "Todo does not exist");
+        
+        Todo storage todo = userTodos[msg.sender][_index];
+        todo.isCompleted = !todo.isCompleted;
+
+        emit TodoStatusToggled(msg.sender, _index, todo.isCompleted);
+    }
+
+    /**
+     * @dev 更新已有 Todo 任务的内容
+     * @param _index 任务在数组中的索引
+     * @param _newContent 新的任务内容
+     */
+    function updateTodoContent(uint256 _index, string calldata _newContent) external {
+        require(_index < userTodos[msg.sender].length, "Todo does not exist");
+        require(bytes(_newContent).length > 0, "Content cannot be empty");
+
+        Todo storage todo = userTodos[msg.sender][_index];
+        todo.content = _newContent;
+
+        emit TodoUpdated(msg.sender, _index, _newContent);
+    }
+
+    /**
+     * @dev 获取调用者所有的 Todo 任务（供外部前端/客户端调用，不消耗 Gas）
+     */
+    function getMyTodos() external view returns (Todo[] memory) {
+        return userTodos[msg.sender];
+    }
+
+    /**
+     * @dev 获取调用者特定索引的 Todo 任务
+     * @param _index 任务在数组中的索引
+     */
+    function getTodo(uint256 _index) external view returns (string memory content, bool isCompleted, uint256 createdAt) {
+        require(_index < userTodos[msg.sender].length, "Todo does not exist");
+        Todo memory todo = userTodos[msg.sender][_index];
+        return (todo.content, todo.isCompleted, todo.createdAt);
+    }
+}
+```
+
+你是一个资深的智能合约安全审计员和 Solidity 开发工程师。请帮我编写一个基于 Solidity 0.8.20 以上版本的 Onchain Todo（链上待办事项）智能合约。
+
+核心需求：
+
+1\. 每个用户只能管理属于自己的 Todo 任务（隔离性）。
+
+2\. Todo 任务包含：任务内容（string）、是否完成（bool）、创建时间（uint256）。
+
+3\. 包含以下核心功能：创建任务、切换任务完成状态（Toggle）、更新任务内容、获取用户的所有任务。
+
+4\. 严格注意 Gas 优化与安全性（防范越权漏洞）。
+
+输出要求：包含完整的合约源码，使用 MIT 开源协议，代码中附带清晰的中文注释。
+<!-- DAILY_CHECKIN_2026-07-18_END -->
+
 # 2026-07-16
 <!-- DAILY_CHECKIN_2026-07-16_START -->
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/CarterLeven/images/2026-07-16-1784207177537-image.png)
 
 我们可以在链上产品透明的看到详细信息，并且完全真实不可篡改。
@@ -26,6 +133,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-15
 <!-- DAILY_CHECKIN_2026-07-15_START -->
+
 
 # 运营更多是解决问题、连接资源、创造价值，让生态持续增长
 
@@ -62,6 +170,7 @@ Web3 的运营本质上是“连接产品、开发者、社区与生态，让 Bu
 
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
+
 
 
 # Web3 技术分享：如何从 0 到 1 使用 AI 开发
@@ -165,6 +274,7 @@ Web3 的运营本质上是“连接产品、开发者、社区与生态，让 Bu
 
 
 
+
 周末对本周知识进行简单复习  
 例如周五分享的web3求职注意事项  
 一、 求职与招聘基础（岗位与简历）
@@ -207,6 +317,7 @@ Milk Road | 海外： 海外非常火爆、文风幽默有趣的 Web3 日报（N
 
 
 
+
 ## 为什么 Monad 改变了高频交互的竞技场？
 
 以往我们谈论高性能公链，往往只关注单体 TPS 的数字增加。但 Monad 的真正价值在于，它为了跑通“异步执行”而被迫对以太坊的底层规则进行了大刀阔斧的重构。正是这些硬性的技术改动，彻底打破了传统 Web3 应用“操作必弹窗、等待必转圈、高频必瘫痪”的魔咒，让去中心化产品第一次具备了比肩中心化互联网体验的可能。
@@ -232,6 +343,7 @@ Milk Road | 海外： 海外非常火爆、文风幽默有趣的 Web3 日报（N
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 
 
@@ -302,6 +414,7 @@ ai会出现自己的想法，幻觉
 
 
 
+
 **7/7**
 
 ## 【普通开发者如何进入以太坊协议层】
@@ -343,6 +456,7 @@ ai会出现自己的想法，幻觉
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
