@@ -15,8 +15,14 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-18
+<!-- DAILY_CHECKIN_2026-07-18_START -->
+打卡打卡
+<!-- DAILY_CHECKIN_2026-07-18_END -->
+
 # 2026-07-17
 <!-- DAILY_CHECKIN_2026-07-17_START -->
+
 今天主要围绕 **Moss Adapter 开源贡献** 和 **GitHub PR 提交流程** 完成学习与实践。
 
 今天继续深入参与 Moss 开源项目，不只是停留在阅读文档或整理内容，而是真正尝试为项目新增一个 Adapter。通过阅读 Moss 的项目结构、已有 Adapter 实现方式和协议接入逻辑，我对 Moss 如何通过 Adapter 扩展 AI Agent 能力有了更清晰的理解。每新增一个 Adapter，就相当于让 AI Agent 多支持一种链上协议、工具或服务。
@@ -26,11 +32,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- DAILY_CHECKIN_2026-07-16_START -->
 
 
+
 打卡打卡
 <!-- DAILY_CHECKIN_2026-07-16_END -->
 
 # 2026-07-15
 <!-- DAILY_CHECKIN_2026-07-15_START -->
+
 
 
 
@@ -75,6 +83,7 @@ Moss 的价值不只是帮助 Agent 调用链上协议，更重要的是限制 A
 
 
 
+
 今天看完了实习手册感觉收获满满
 <!-- DAILY_CHECKIN_2026-07-14_END -->
 
@@ -85,11 +94,13 @@ Moss 的价值不只是帮助 Agent 调用链上协议，更重要的是限制 A
 
 
 
+
 打卡打卡
 <!-- DAILY_CHECKIN_2026-07-13_END -->
 
 # 2026-07-12
 <!-- DAILY_CHECKIN_2026-07-12_START -->
+
 
 
 
@@ -108,11 +119,13 @@ Moss 的价值不只是帮助 Agent 调用链上协议，更重要的是限制 A
 
 
 
+
 打卡打卡
 <!-- DAILY_CHECKIN_2026-07-11_END -->
 
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 
 
 
@@ -135,11 +148,13 @@ Moss 的价值不只是帮助 Agent 调用链上协议，更重要的是限制 A
 
 
 
+
 打卡
 <!-- DAILY_CHECKIN_2026-07-09_END -->
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -199,11 +214,13 @@ Web3 岗位大致分为技术岗和非技术岗。
 
 
 
+
 听了jack老师的讲解，对eth协议方面有了更深的了解
 <!-- DAILY_CHECKIN_2026-07-07_END -->
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
