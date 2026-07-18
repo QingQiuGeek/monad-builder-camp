@@ -15,8 +15,50 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-18
+<!-- DAILY_CHECKIN_2026-07-18_START -->
+## **一、面试准备通用框架**
+
+### **1\. 基础认知准备（所有岗位必备）**
+
+1.  **了解目标项目**
+    
+    -   花 2-3 小时深入了解项目背景、核心产品、商业模式
+        
+    -   准备能用一句话简洁描述项目的核心价值
+        
+    -   了解项目最新动态和发展阶段
+        
+2.  **理解行业基础**
+    
+    -   掌握区块链、以太坊、DeFi、NFT 等基本概念
+        
+    -   了解 Web3 与传统互联网的主要区别
+        
+    -   熟悉常见的 Web3 术语和工具
+        
+3.  **梳理个人经历**
+    
+    -   整理学习经历、项目经历、实习经历
+        
+    -   每个经历都要能说出：背景、行动、结果、收获
+        
+    -   准备 2-3 个最能体现能力的具体案例
+        
+
+### **2\. 通用面试技巧**
+
+| 环节 | 准备要点 | 实用建议 |
+| --- | --- | --- |
+| 自我介绍 | 1 分钟精简版本 | 姓名 + 专业背景 + 核心技能 + 求职动机 |
+| 项目介绍 | 3-5 分钟详细版本 | 使用 STAR 法则：情境、任务、行动、结果 |
+| 技术问答 | 基础概念 + 实际应用 | 承认不懂，表达学习意愿和方法 |
+| 反问环节 | 准备 3-5 个问题 | 关注团队、项目、成长机会 |
+<!-- DAILY_CHECKIN_2026-07-18_END -->
+
 # 2026-07-16
 <!-- DAILY_CHECKIN_2026-07-16_START -->
+
 ## **🛠️ Tech Track**
 
 Build product prototypes, front-end applications, smart contracts, and on-chain interactions with the help of AI coding tools.
@@ -48,6 +90,7 @@ Rather than simply acquiring knowledge, participants will produce tangible **Pro
 
 # 2026-07-15
 <!-- DAILY_CHECKIN_2026-07-15_START -->
+
 
 
 # Web3运营
@@ -130,6 +173,7 @@ Rather than simply acquiring knowledge, participants will produce tangible **Pro
 
 
 
+
 # AI开发与Web3技术栈分享
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Flora-hihihi/images/2026-07-13-1783956058670-image.png)
@@ -159,6 +203,7 @@ Rather than simply acquiring knowledge, participants will produce tangible **Pro
 
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 
 
 
@@ -1043,6 +1088,7 @@ EOS 链上赌博平台 BigGame
 
 
 
+
 # 行业赛道
 
 -   DeFi
@@ -1114,6 +1160,7 @@ EOS 链上赌博平台 BigGame
 
 
 
+
 # AI agent支付领域的产品探索
 
 -   **已落地试点案例**
@@ -1172,6 +1219,7 @@ DAO ：Decentralized Autonomous Organization
 
 
 
+
 # 普通人如何进入以太坊协议链
 
 ## 学习路径（建地图 → 懂流程 → 找入口）
@@ -1208,6 +1256,7 @@ DAO ：Decentralized Autonomous Organization
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
