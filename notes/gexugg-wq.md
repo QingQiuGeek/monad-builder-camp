@@ -15,8 +15,14 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-18
+<!-- DAILY_CHECKIN_2026-07-18_START -->
+今日终于可以开始学习
+<!-- DAILY_CHECKIN_2026-07-18_END -->
+
 # 2026-07-16
 <!-- DAILY_CHECKIN_2026-07-16_START -->
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/gexugg-wq/images/2026-07-16-1784205101157-image.png)
 
 今日小游戏打卡类似狼人杀，也挺有意思
@@ -24,6 +30,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-15
 <!-- DAILY_CHECKIN_2026-07-15_START -->
+
 
 可以从以下三个部分进行工作流变更
 
@@ -34,11 +41,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- DAILY_CHECKIN_2026-07-14_START -->
 
 
+
 Research：判断方向对不对 Ops：让用户愿不愿意参与 Dev：把产品真正做出来
 <!-- DAILY_CHECKIN_2026-07-14_END -->
 
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
+
 
 
 
@@ -51,11 +60,13 @@ pdd的编程理念能够帮助理解测试和边界的理解
 
 
 
+
 确认好目标是做一个假学习监督助手，将基于openhands基础上实现
 <!-- DAILY_CHECKIN_2026-07-12_END -->
 
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 
 
 
@@ -74,11 +85,13 @@ Mini Demo 0：Monad FocusProof Agent
 
 
 
+
 我认识到裸奔状态下的智能体存在提示词注入、越权工具调用、自主执行不可控等高危风险，了解了对Agent做权限管控、结构化输出约束、流程校验的安全构建思路。
 <!-- DAILY_CHECKIN_2026-07-09_END -->
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -107,11 +120,13 @@ Mini Demo 0：Monad FocusProof Agent
 
 
 
+
 ![faf35fdce29f9006cf9b3549f2863e3b.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/gexugg-wq/images/2026-07-07-1783406763416-faf35fdce29f9006cf9b3549f2863e3b.jpg)
 <!-- DAILY_CHECKIN_2026-07-07_END -->
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
