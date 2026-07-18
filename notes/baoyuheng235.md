@@ -15,8 +15,14 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-18
+<!-- DAILY_CHECKIN_2026-07-18_START -->
+今天深入学习了现代 AI 驱动开发工作流（AI-assisted Dev Workflow）与开源项目阅读的底层逻辑及工程规范。真正的“人机协同”并非盲目让 AI 堆砌业务代码，而是由 AI 充当高效画图员，利用 Cursor 的 Context Awareness（上下文感知）精准吞吐文档，并在 [计划模式](https://cursor.com/docs/agent/plan-mode#plan) 下完成 Task Decomposition（任务拆解）与 Code Skeleton Generation（代码骨架生成），在编译受阻时快速解释错误；而我作为总设计师，牢记“尚未理解就开始修改”的失败模式，严格把控核心的工程直觉，以测试驱动开发（TDD）的理念进行代码的运行、修改与逻辑验证，并完成 `AI Collaboration Log` 的规范记录。同时，将这种规范性逆向运用到开源项目的阅读中，由宏观到微观层层剥离 `README`、`Issues`、`Pull Requests` 和 `Code Structure` 的逻辑链路，构建起清晰的代码库心智模型，为后续的高效工程交付与作品集组队打下了扎实的 Proof of Work 基础。
+<!-- DAILY_CHECKIN_2026-07-18_END -->
+
 # 2026-07-17
 <!-- DAILY_CHECKIN_2026-07-17_START -->
+
 今天我使用 Solidity 语言编写并成功在 Remix 环境下部署了名为 `MessageBoard`（留言板）的智能合约。在部署过程中，我深入分析了交易哈希、合约地址生成、运行时字节码以及 Gas 消耗等区块链底层回执信息，并通过控制台日志成功验证了合约初始化时抛出的默认留言事件 `"Hello ETH Pandas"`。
 
 随后，我对合约暴露的 `messages(address, uint256)` 公共访问器进行了功能与边界测试。在传入索引 `1` 遭遇经典的 `revert` 报错后，我精准诊断出其本质是数组越界引起的底层异常，并举一反三地厘清了 `Value`（交易面值）与 `Gas Fee`（燃油费）的本质区别，明确了由于未声明 `payable` 关键字，在后续写入留言时必须保持 `Value` 为 0 的开发规范。
@@ -25,11 +31,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 # 2026-07-15
 <!-- DAILY_CHECKIN_2026-07-15_START -->
 
+
 今天重点翻看了 Github 上的 MOSS 开源项目，照着文档跑代码。代码实际效果和文档对不上，靠 AI 排障后顺利解决。不过后面的步骤说明看得一头雾水，只能继续借助 AI 辅助学习，先完整吃透项目，再准备提交 PR。
 <!-- DAILY_CHECKIN_2026-07-15_END -->
 
 # 2026-07-14
 <!-- DAILY_CHECKIN_2026-07-14_START -->
+
 
 
 今天参与了两场会议。
@@ -41,6 +49,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
+
 
 
 
@@ -57,11 +66,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 # 主要学习了重要的区块链概念，掌握了基本vibe coding的能力
 <!-- DAILY_CHECKIN_2026-07-12_END -->
 
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 
 
 
@@ -82,11 +93,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 今天主要是参加了两场会议，其中ai agent的安全问题非常值得注意，我们在架构设计中缺少了对 AI 的敬畏与对安全的防御，它随时都会变成现实。智能体给予了 AI 改变现实世界的“手”和“脚”，而我们作为架构师，必须为它装上名为“安全”的铁轨与刹车阀来保证安全，不能让人工智能操控人类的第一步真正发生。agent guard的理念让我非常受到启发，或许我们可以从更多角度思考如何为市场创造需求。
 <!-- DAILY_CHECKIN_2026-07-09_END -->
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -111,6 +124,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 选一个长期扎根的方向（比如“改善某个客户端的测试可靠性”），在这个领域里修文档、补测试、提小 PR，把学习变成一个持续输出、社区可见的过程。先利用 EPF Wiki 建立宏观地图，然后挑一个最简单的本地工具或客户端模块，让它在你的电脑上成功跑起来。
 
 昨天学会了在链上“走路”（钱包转账），今天完成了第一次在链上运行自己审查的程序。下一步将探索合约与前端的连接交互！
@@ -118,6 +132,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
