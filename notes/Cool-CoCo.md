@@ -20,10 +20,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 Day13 2026年7月18日 （休息日，自由打卡）学习记录：
 
 使用Notion和Ai coding了一个关于个人学习计划+每周活动SOP内置、最后呈现团队项目执行排期及项目呈现和复盘的一个游戏化复古像素风视觉呈现网页，所有记录可在线填写并储存在本地浏览器，希望用像玩游戏一样追踪本次的“Web3 Career Build”学习旅程。
+
+![Day13休息日-自由打卡（1）.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Cool-CoCo/images/2026-07-18-1784390397072-Day13___-_____1_.png)
 <!-- DAILY_CHECKIN_2026-07-18_END -->
 
 # 2026-07-17
 <!-- DAILY_CHECKIN_2026-07-17_START -->
+
 
 Day12学习记录：
 
@@ -56,6 +59,7 @@ Day12学习记录：
 
 
 
+
 今日学习： 参与线上Co-learning会议，很有趣的寓教于乐的学习形式，通过谁是卧底的游戏让我们对Web3行业的基础知识有了更进一步的理解； 参与截图如下：
 
 ![Day11-ERC-20和ERC-721.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Cool-CoCo/images/2026-07-16-1784217433503-Day11-ERC-20_ERC-721.png)![Day11-区别.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Cool-CoCo/images/2026-07-16-1784217524023-Day11-__.png)![Day11-线上会议参与截图6、连麦可以加分.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Cool-CoCo/images/2026-07-16-1784217553442-Day11-________6_______.png)
@@ -79,6 +83,7 @@ Day12学习记录：
 
 # 2026-07-15
 <!-- DAILY_CHECKIN_2026-07-15_START -->
+
 
 
 
@@ -142,6 +147,7 @@ b本次课程对于想要希望进入 社区运营、DevRel、市场增长、内
 
 
 
+
 0713 Day06-
 
 Week2学习记录：
@@ -165,6 +171,7 @@ Week2学习记录：
 
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
+
 
 
 
@@ -207,6 +214,7 @@ Week2学习记录：
 
 
 
+
 20260712自由打卡：
 
 今日记录——
@@ -222,6 +230,7 @@ Week2学习记录：
 
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 
 
 
@@ -263,6 +272,7 @@ Week2学习记录：
 
 
 
+
 Day05（2026-07-10）学习记录：
 
 本次学习主要围绕 “Web3 实习计划例会｜学员总结+Co-Learning”的线上会议目标，通过线上Zoom会议进行今日学习任务：
@@ -283,6 +293,7 @@ Day05（2026-07-10）学习记录：
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 
 
@@ -354,6 +365,7 @@ Day04学习记录：
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -518,6 +530,7 @@ Day04学习记录：
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
