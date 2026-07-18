@@ -15,14 +15,44 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-18
+<!-- DAILY_CHECKIN_2026-07-18_START -->
+### 自动做市商 (AMM) 与流动性池
+
+传统的中心化交易所使用订单薄（Order Book）来匹配买家和卖家。但在去中心化世界中，为了提高效率和去中心化程度，AMM 应运而生。AMM 依靠流动性池（Liquidity Pools）运作。流动性池是智能合约中锁定的资金，通常由一对代币组成（例如 ETH 和 USDC）。
+
+用户（称为流动性提供者，LP）将等值的两种代币存入池中。交易者在这个池子中进行交易，而不是与特定的买家或卖家交易。作为提供流动性的回报，LP 可以获得交易者支付的交易费，这就是流动性挖矿（Yield Farming）的基础收益来源之一。
+
+### 恒定乘积公式 (Constant Product Formula)
+
+AMM 如何决定代币的价格呢？最经典的算法是 Uniswap V2 推广的恒定乘积公式：**x \* y = k**。
+
+-   **x** = 池中代币 A 的数量
+    
+-   **y** = 池中代币 B 的数量
+    
+-   **k** = 恒定乘积（在没有新的流动性添加或移除时，这个值保持不变）
+    
+
+当交易者从池中买走代币 A（x 减少），为了保持 k 不变，必须向池中放入代币 B（y 增加）。这种数量变化决定了代币的相对价格。
+
+### 无常损失 (Impermanent Loss)
+
+无常损失是 LP 面临的最大风险之一。当你向 AMM 池提供流动性时，如果池中代币的价格（相对于你存入时的价格）发生变化，你此时撤回流动性所得到的代币总价值，会**低于**你当初如果只是将这些代币一直持有在钱包里的总价值。这种差额就是无常损失。
+
+它之所以被称为“无常”，是因为如果代币价格最终回到了你最初存入时的水平，这个损失就会消失。但这在加密市场剧烈波动的情况下很难发生。
+<!-- DAILY_CHECKIN_2026-07-18_END -->
+
 # 2026-07-17
 <!-- DAILY_CHECKIN_2026-07-17_START -->
+
 参加了这周例会和co-learning  
 完成了上一个项目，今天浅浅休息一下，周末继续
 <!-- DAILY_CHECKIN_2026-07-17_END -->
 
 # 2026-07-16
 <!-- DAILY_CHECKIN_2026-07-16_START -->
+
 
 继续学习DeSci相关内容以及和医药大佬聊了它未来的应用方向
 
@@ -93,6 +123,7 @@ contract DeployScript is Script {
 <!-- DAILY_CHECKIN_2026-07-15_START -->
 
 
+
 学习了DeSci相关的内容/学习手册，Dapp开发流程
 
 ### Traditional Web vs. Web3 (DApp) Architecture
@@ -153,6 +184,7 @@ The transaction is broadcast to the network. Miners/validators execute the smart
 
 
 
+
 学习solidity的各种函数  
 听了两场分享会，对Desci方向很感兴趣，阅读了一些相关资料，再研究研究，看能不能从传统科研往这个方向发展
 <!-- DAILY_CHECKIN_2026-07-14_END -->
@@ -163,11 +195,13 @@ The transaction is broadcast to the network. Miners/validators execute the smart
 
 
 
+
 做了一个小项目来更好的学习和实践如何接入钱包，如何用agent管理钱包，以及各环节的安全审查
 <!-- DAILY_CHECKIN_2026-07-13_END -->
 
 # 2026-07-12
 <!-- DAILY_CHECKIN_2026-07-12_START -->
+
 
 
 
@@ -200,6 +234,7 @@ The transaction is broadcast to the network. Miners/validators execute the smart
 
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 
 
 
@@ -258,6 +293,7 @@ The transaction is broadcast to the network. Miners/validators execute the smart
 
 
 
+
 学习了怎么写智能合约，搭建了本地开发环境，基本上能看懂简单的合约，各种不同的语言都了解了一下。  
 
 1. 什么是智能合约？ —— “不会耍赖的自动售货机” 
@@ -303,6 +339,7 @@ The transaction is broadcast to the network. Miners/validators execute the smart
 
 
 
+
 跟着web3实习手册学习，查漏补缺，逐个击破，夯实基础
 
 学习了TEE和ZK，在解决信任场景的时候可以搭配使用
@@ -321,12 +358,14 @@ The transaction is broadcast to the network. Miners/validators execute the smart
 
 
 
+
 1，写简单的合约，部署合约，Remix（直接用AI也行，反正以后合约都是AI写）  
 2，听了老师分享会，学习了关于EPF (Ethereum Protocol Fellowship) 和 EIP（Ethereum Improvement Proposal），学习路线、研究方向等等
 <!-- DAILY_CHECKIN_2026-07-07_END -->
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
