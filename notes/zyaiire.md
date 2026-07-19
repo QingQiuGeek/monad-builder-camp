@@ -15,8 +15,267 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-19
+<!-- DAILY_CHECKIN_2026-07-19_START -->
+如果你说的是 **Web3 硬件钱包公司 OneKey**（而不是德国做 IoT 安全的同名公司），那么它目前算是**华人团队中最成功的硬件钱包品牌之一**，也是全球少数能够和 Ledger、Trezor、Tangem 等品牌竞争的公司。
+
+## 公司概况
+
+-   **成立时间**：2019 年，2020 年开始正式运营。([维基百科](https://zh.wikipedia.org/wiki/OneKey?utm_source=chatgpt.com))
+    
+-   **总部**：香港（Cyberport 数码港）。([OneKey](https://shop.onekey.so/pages/about-us?utm_source=chatgpt.com))
+    
+-   **创始人**：Yishi Wang（王一石）。([CoinCarp](https://www.coincarp.com/fundraising/onekey-undisclosed/?utm_source=chatgpt.com))
+    
+-   **定位**：
+    
+    -   开源硬件钱包（Hardware Wallet）
+        
+    -   多链软件钱包
+        
+    -   Web3 自托管（Self-custody）生态
+        
+
+它的核心理念其实就是一句 Web3 圈子最经典的话：
+
+> **Not your keys, not your coins.**
+
+也就是说，不把资产放在交易所，而是由用户自己掌握私钥。
+
+* * *
+
+## 产品
+
+OneKey 的产品线主要有两类：
+
+### 1\. 硬件钱包
+
+类似于：
+
+-   Ledger Nano X
+    
+-   Trezor Safe 5
+    
+
+主要负责：
+
+-   离线保存私钥
+    
+-   离线签名交易
+    
+-   防止电脑、中毒、钓鱼导致私钥泄漏
+    
+
+* * *
+
+### 2\. OneKey App
+
+支持：
+
+-   Windows
+    
+-   macOS
+    
+-   Linux
+    
+-   iOS
+    
+-   Android
+    
+-   Chrome Extension
+    
+
+可以：
+
+-   管理钱包
+    
+-   Swap
+    
+-   Staking
+    
+-   NFT
+    
+-   DeFi
+    
+-   DApp
+    
+
+支持 60+ 条区块链，例如：
+
+-   Bitcoin
+    
+-   Ethereum
+    
+-   Solana
+    
+-   Base
+    
+-   Arbitrum
+    
+-   BNB Chain
+    
+-   Sui
+    
+-   Aptos
+    
+
+等等。([GitHub](https://github.com/onekeyhq?utm_source=chatgpt.com))
+
+* * *
+
+## 最大特点：100% 开源
+
+这是 OneKey 一直强调的卖点。
+
+包括：
+
+-   App
+    
+-   Firmware
+    
+-   Hardware Design
+    
+
+很多代码都公开在 GitHub 上。
+
+GitHub 组织：
+
+-   OneKeyHQ
+    
+-   70+ repositories
+    
+-   App Monorepo
+    
+-   Firmware
+    
+
+都可以公开审计。([GitHub](https://github.com/onekeyhq?utm_source=chatgpt.com))
+
+这一点和：
+
+-   Trezor（开源）
+    
+-   Ledger（部分闭源）
+    
+
+形成了比较明显的区别。
+
+* * *
+
+## 融资情况
+
+OneKey 在过去几年融资速度非常快。
+
+公开信息包括：
+
+-   **2022 年**：Series A，约 2000 万美元融资。([CB Insights](https://www.cbinsights.com/company/onekey-1?utm_source=chatgpt.com))
+    
+-   **2023 年**：A+，估值约 8500 万美元，由 IOSG Ventures 领投。([CoinCarp](https://www.coincarp.com/fundraising/onekey-extended-series-a/?utm_source=chatgpt.com))
+    
+-   **2025 年**：Series B，由 **YZi Labs（原 Binance Labs）** 领投，公司估值约 **1.5 亿美元**。([OneKey](https://onekey.so/blog/zh-CN/updates/onekey-secures-series-b-funding/?utm_source=chatgpt.com))
+    
+
+投资方包括：
+
+-   Coinbase Ventures
+    
+-   Dragonfly
+    
+-   Ribbit Capital
+    
+-   IOSG Ventures
+    
+-   YZi Labs（原 Binance Labs）
+    
+
+其中，OneKey 官方还特别提到，它曾获得 **Coinbase Ventures 对硬件钱包团队的投资**。([OneKey](https://shop.onekey.so/pages/about-us?utm_source=chatgpt.com))
+
+* * *
+
+## 市场定位
+
+目前全球硬件钱包市场，大概可以分成几个梯队：
+
+| 公司 | 特点 |
+| --- | --- |
+| Ledger | 全球市场份额最大，生态成熟，但部分代码闭源 |
+| Trezor | 最老牌，完全开源 |
+| Tangem | NFC 卡片钱包，主打易用 |
+| OneKey | 华人团队，开源、多链体验优秀 |
+| Keystone | Air-gapped（二维码签名）方案 |
+
+OneKey 在亚洲（尤其是中文用户）中的影响力相对较强，而在欧美市场也在持续扩张。([OneKey](https://onekey.so/blog/zh-CN/updates/onekey-secures-series-b-funding/?utm_source=chatgpt.com))
+
+* * *
+
+## 为什么很多开发者喜欢 OneKey？
+
+它比较符合 Web3 开发者的偏好：
+
+-   完全开源
+    
+-   UI/UX 比较现代
+    
+-   软件钱包体验接近 MetaMask
+    
+-   硬件钱包无缝连接
+    
+-   多链支持更新很快
+    
+-   对新公链支持积极
+    
+
+因此不少开发者会把它作为：
+
+-   MetaMask 的替代
+    
+-   Ledger 的补充
+    
+-   开发测试钱包
+    
+
+* * *
+
+## 团队规模
+
+根据官方披露，截至 2025 年：
+
+-   全球约 **60 人**
+    
+-   分布在：
+    
+    -   香港
+        
+    -   欧洲
+        
+    -   中东
+        
+    -   巴西等地区
+        
+-   采用远程协作模式较多。([OneKey](https://onekey.so/blog/zh-CN/updates/onekey-secures-series-b-funding/?utm_source=chatgpt.com))
+    
+
+* * *
+
+## 从 Web3 行业来看，它属于什么级别？
+
+如果按行业影响力来划分：
+
+-   **顶级（Tier 1）**：Ledger、Trezor
+    
+-   **第一梯队（Tier 1.5）**：**OneKey、Tangem、Keystone**
+    
+-   **第二梯队**：SafePal、Ellipal 等
+    
+
+对于华人团队而言，OneKey 可以说是目前最具国际影响力的硬件钱包公司之一，产品、安全性和资本背景都比较突出。
+
+结合你之前关注的 **Monad、Fluxa、Agent Wallet** 等 Web3 基础设施方向来看，OneKey 更偏向 **钱包基础设施（Wallet Infrastructure）**。钱包是整个 Web3 生态的入口，因此它在行业中的战略地位比很多单一 DeFi 或应用项目更底层、更稳定。
+<!-- DAILY_CHECKIN_2026-07-19_END -->
+
 # 2026-07-18
 <!-- DAILY_CHECKIN_2026-07-18_START -->
+
 如果把 **FluxA** 放在整个 AI Agent 行业来看，我认为它不是在做一个普通的 Agent，而是在做 **Agent Economy（Agent 经济）里的支付基础设施（Payment Infrastructure）**。
 
 这条赛道我认为**天花板很高，但风险也非常高**。
@@ -535,6 +794,7 @@ Agent
 # 2026-07-17
 <!-- DAILY_CHECKIN_2026-07-17_START -->
 
+
 ## 实现 Cadence：单时隙版本
 
 Cadence究竟是什么
@@ -588,6 +848,7 @@ Cadence的一个时隙是如何工作的
 
 # 2026-07-14
 <!-- DAILY_CHECKIN_2026-07-14_START -->
+
 
 
 ## 加密钱包
@@ -737,6 +998,7 @@ Cadence的一个时隙是如何工作的
 
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
+
 
 
 
@@ -901,6 +1163,7 @@ gas 的作用:
 
 
 
+
 # 从“裸奔”到受控：AI Agent高危，案例解析与安全构建
 
 AgentGuard
@@ -918,6 +1181,7 @@ ai agent安全防线看起来 coding agent 也会做
 
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 
 
 
@@ -976,6 +1240,7 @@ layer 2 和 layer 1 之间的关系是什么（嘉宾说 layer 2 处理的交易
 
 
 
+
 epf都是自学的，epf 和智能合约相比更偏向于密码学和数学的知识，会更难。  
 可以做执行层和共识层去找上面的 issue 然后去进行修。
 
@@ -1004,6 +1269,7 @@ metamask 等钱包就是构建在以太坊之上的应用
 
 
 
+
 很早之前用过 okx wallet，第一次用小狐狸。  
   
 之前还是主要通过交易的用户用钱包，完全没有想过区块链底层技术有这么多的方向。  
@@ -1013,6 +1279,7 @@ metamask 等钱包就是构建在以太坊之上的应用
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -1044,6 +1311,7 @@ SVP 是一个 AI Native 链，有 agent的 mcp 能够有强力的安全边界。
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
