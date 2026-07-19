@@ -15,13 +15,20 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-19
+<!-- DAILY_CHECKIN_2026-07-19_START -->
+预习Week3内容
+<!-- DAILY_CHECKIN_2026-07-19_END -->
+
 # 2026-07-18
 <!-- DAILY_CHECKIN_2026-07-18_START -->
+
 今日预习Week3内容
 <!-- DAILY_CHECKIN_2026-07-18_END -->
 
 # 2026-07-17
 <!-- DAILY_CHECKIN_2026-07-17_START -->
+
 
 参加 Web3 实习计划例会
 
@@ -32,11 +39,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- DAILY_CHECKIN_2026-07-16_START -->
 
 
+
 参加7.16 co-learning
 <!-- DAILY_CHECKIN_2026-07-16_END -->
 
 # 2026-07-15
 <!-- DAILY_CHECKIN_2026-07-15_START -->
+
 
 
 
@@ -55,11 +64,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 今天学习了一个开源项目：Moss，并撰写了一篇Moss介绍
 <!-- DAILY_CHECKIN_2026-07-14_END -->
 
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
+
 
 
 
@@ -72,6 +83,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-12
 <!-- DAILY_CHECKIN_2026-07-12_START -->
+
 
 
 
@@ -92,11 +104,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 今日复习week1所学
 <!-- DAILY_CHECKIN_2026-07-11_END -->
 
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 
 
 
@@ -121,6 +135,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 今日目标：
 
 参加会议：**AI Agent 高危案例解析与安全防线构建**
@@ -132,6 +147,7 @@ co-learning
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -174,6 +190,7 @@ co-learning
 
 
 
+
 今日目标：
 
 1.  参加**普通开发者如何进入以太坊协议层**线上meeting
@@ -183,6 +200,7 @@ co-learning
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
