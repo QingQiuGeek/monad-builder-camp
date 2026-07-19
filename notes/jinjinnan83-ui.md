@@ -15,13 +15,20 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-19
+<!-- DAILY_CHECKIN_2026-07-19_START -->
+使用AI agent进行钱包开发
+<!-- DAILY_CHECKIN_2026-07-19_END -->
+
 # 2026-07-18
 <!-- DAILY_CHECKIN_2026-07-18_START -->
+
 地推的经验，线下bd
 <!-- DAILY_CHECKIN_2026-07-18_END -->
 
 # 2026-07-17
 <!-- DAILY_CHECKIN_2026-07-17_START -->
+
 
 用AI agent搭建项目的时候，用SDD框架搭建可以提高效率
 <!-- DAILY_CHECKIN_2026-07-17_END -->
@@ -30,11 +37,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- DAILY_CHECKIN_2026-07-16_START -->
 
 
+
 运营的流程：用户对接，notion做定期的日志，活动的策划与运营，BD等
 <!-- DAILY_CHECKIN_2026-07-16_END -->
 
 # 2026-07-14
 <!-- DAILY_CHECKIN_2026-07-14_START -->
+
 
 
 
@@ -47,11 +56,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 钱包的部署，metamask，发起第一笔交易，领取了5个测试币，并且给我的第二个钱包转了0.1mon
 <!-- DAILY_CHECKIN_2026-07-12_END -->
 
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 
 
 
@@ -72,6 +83,7 @@ NFT：数字产权
 
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 
 
 
@@ -246,6 +258,7 @@ Amount 不仅能看到转账金额，还有当次交易付给
 
 
 
+
 音频围绕 AI Agent 支付基础设施的架构、落地进展、生态布局及行业趋势展开分享答疑，核心内容如下：
 
 -   **Agent 支付核心架构**
@@ -325,6 +338,7 @@ Amount 不仅能看到转账金额，还有当次交易付给
 
 
 
+
 -   **Agent 支付核心架构**
     
     -   **全链路能力分层**
@@ -394,6 +408,7 @@ Amount 不仅能看到转账金额，还有当次交易付给
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
