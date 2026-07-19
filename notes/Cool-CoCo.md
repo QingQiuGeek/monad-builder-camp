@@ -24,10 +24,13 @@ Day14 2026年7月19日 休息日，自由打卡）学习记录：
 补充温习前几日的知识；
 
 网页优化前后部分截图对比+在线借助网页后的项目相关视觉吸引看到我这个打卡记录的朋友们，希望能和跟我技术方面（AI Coding / 设计）互补的队友们共创一个有意思的项目雏形
+
+![Day14休息日-自由打卡（1）.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Cool-CoCo/images/2026-07-19-1784476801304-Day14___-_____1_.png)![Day14休息日-自由打卡（2）.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Cool-CoCo/images/2026-07-19-1784476820904-Day14___-_____2_.png)![Day14休息日-自由打卡（4）借小网页后面的团队项目展示区 在线求队友.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Cool-CoCo/images/2026-07-19-1784476835883-Day14___-_____4_____________________.png)![Day14休息日-自由打卡（4）借小网页后面的团队项目展示区 吸引队友，希望和互补的队友们共创一个有意思的项目雏形.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Cool-CoCo/images/2026-07-19-1784476849078-Day14___-_____4__________________________________________.png)
 <!-- DAILY_CHECKIN_2026-07-19_END -->
 
 # 2026-07-18
 <!-- DAILY_CHECKIN_2026-07-18_START -->
+
 
 
 Day13 2026年7月18日 （休息日，自由打卡）学习记录：
@@ -39,6 +42,7 @@ Day13 2026年7月18日 （休息日，自由打卡）学习记录：
 
 # 2026-07-17
 <!-- DAILY_CHECKIN_2026-07-17_START -->
+
 
 
 
@@ -77,6 +81,7 @@ Day12学习记录：
 
 
 
+
 今日学习： 参与线上Co-learning会议，很有趣的寓教于乐的学习形式，通过谁是卧底的游戏让我们对Web3行业的基础知识有了更进一步的理解； 参与截图如下：
 
 ![Day11-ERC-20和ERC-721.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Cool-CoCo/images/2026-07-16-1784217433503-Day11-ERC-20_ERC-721.png)![Day11-区别.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Cool-CoCo/images/2026-07-16-1784217524023-Day11-__.png)![Day11-线上会议参与截图6、连麦可以加分.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/Cool-CoCo/images/2026-07-16-1784217553442-Day11-________6_______.png)
@@ -100,6 +105,7 @@ Day12学习记录：
 
 # 2026-07-15
 <!-- DAILY_CHECKIN_2026-07-15_START -->
+
 
 
 
@@ -169,6 +175,7 @@ b本次课程对于想要希望进入 社区运营、DevRel、市场增长、内
 
 
 
+
 0713 Day06-
 
 Week2学习记录：
@@ -192,6 +199,7 @@ Week2学习记录：
 
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
+
 
 
 
@@ -240,6 +248,7 @@ Week2学习记录：
 
 
 
+
 20260712自由打卡：
 
 今日记录——
@@ -255,6 +264,7 @@ Week2学习记录：
 
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 
 
 
@@ -302,6 +312,7 @@ Week2学习记录：
 
 
 
+
 Day05（2026-07-10）学习记录：
 
 本次学习主要围绕 “Web3 实习计划例会｜学员总结+Co-Learning”的线上会议目标，通过线上Zoom会议进行今日学习任务：
@@ -322,6 +333,7 @@ Day05（2026-07-10）学习记录：
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 
 
@@ -396,6 +408,7 @@ Day04学习记录：
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -563,6 +576,7 @@ Day04学习记录：
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
