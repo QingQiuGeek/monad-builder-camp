@@ -15,8 +15,16 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-20
+<!-- DAILY_CHECKIN_2026-07-20_START -->
+![截屏2026-07-20 23.19.38.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/snh48-syq/images/2026-07-20-1784560874019-__2026-07-20_23.19.38.png)
+
+今天的分享会了解了比较成熟的ai工作流，明白了ai只是业务的辅助工具，并不是用非常复杂炫酷的计算机技巧去做人要做的工作，但是ai确实让一个人可以做的事情变得更多
+<!-- DAILY_CHECKIN_2026-07-20_END -->
+
 # 2026-07-19
 <!-- DAILY_CHECKIN_2026-07-19_START -->
+
 学习了GitHub探索日志
 
 [https://github.com/snh48-syq/monad-builder-camp/blob/main/GitHub-Exploration-Log-Hardhat.md](https://github.com/snh48-syq/monad-builder-camp/blob/main/GitHub-Exploration-Log-Hardhat.md)
@@ -25,6 +33,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 # 2026-07-17
 <!-- DAILY_CHECKIN_2026-07-17_START -->
 
+
 ![截屏2026-07-17 17.36.10.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/snh48-syq/images/2026-07-17-1784294838621-__2026-07-17_17.36.10.png)
 
 今天学习了如何去自学研究一个GitHub项目的说明从不同角度去提炼这个项目的核心作用，以及了解了moss是一个赋予ai agent特定功能的协议
@@ -32,6 +41,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-16
 <!-- DAILY_CHECKIN_2026-07-16_START -->
+
 
 
 ![截屏2026-07-16 20.47.26.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/snh48-syq/images/2026-07-16-1784206130555-__2026-07-16_20.47.26.png)
@@ -44,6 +54,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 今天的分享会了解了ai和web3结合起来做research的一些工具和使用方法展示，还深入了解了此次夏令营的三大方向的具体应用案例
 
 ![截屏2026-07-14 19.19.21.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/snh48-syq/images/2026-07-14-1784041075153-__2026-07-14_19.19.21.png)![截屏2026-07-14 20.05.39.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/snh48-syq/images/2026-07-14-1784041155575-__2026-07-14_20.05.39.png)
@@ -51,6 +62,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
+
 
 
 
@@ -67,6 +79,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 ![截屏2026-07-10 19.06.53.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/snh48-syq/images/2026-07-10-1783699070895-__2026-07-10_19.06.53.png)
 
 今天学习了学员们的分享，学习了大家优秀的整理落地能力
@@ -74,6 +87,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-09
 <!-- DAILY_CHECKIN_2026-07-09_START -->
+
 
 
 
@@ -94,6 +108,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 今天学习了remix如何部署/交互，连接metamask钱包，部署到monad测试网上，并且部署交互合约
 
 ![截屏2026-07-08 17.50.17.png](https://raw.githubusercontent.com/IntensiveCoLearning/monad-builder-camp/main/assets/snh48-syq/images/2026-07-08-1783522578595-__2026-07-08_17.50.17.png)
@@ -101,6 +116,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
@@ -124,6 +140,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
