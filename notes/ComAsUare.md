@@ -15,8 +15,68 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-21
+<!-- DAILY_CHECKIN_2026-07-21_START -->
+参加building in AI era和stevie project两场直播分享
+
+笔记：
+
+```markdown
+datadance：数据隐私公链
+    erc7962, 钱包
+    用户数据如何通过agent打通，安全的使用，更好权限(permissioness)管理。传统互联网数据流的再次进化
+    1. lifecapsules.ai 
+        各个app数据->记忆agent；人的情感、精神世界、阅历、感想。保存、管理、跨平台分享。
+        各大互联网平台数据入口的抢夺；互联网分享精神不再，割裂世界。
+        通用建议；上下文不丢失,得到累积
+
+    2. 蒸馏
+        输入messy, 输出清晰的
+    3. 竞品
+        1. windows recall , open    recall （反对，不认同）
+            百分百监控，隐私侵犯->大众反感
+            垃圾数据累积
+        2. 主动捕获（认为认同）
+            ai twin
+            用户主动选择（快捷键）才会记录
+            有了高质量数据，尊重隐私
+        3. 本地优先（认为并非对手）
+            obisidian。cursor
+            本地，隐私好，门槛高
+        当前产品都存在没有解决问题
+    4. 迭代的lifecapsules,像个思想种子的平台
+        相关方向产品很多，现状鱼龙混杂
+    
+    5. ai在语言之外的数据，边缘的数据，不容易采集的数据，是ai另一个方向。
+        模拟是更好的实践，从主体、客体抽离，获得新的视角。
+        非语言、非对齐(non liberal) ai方向。
+
+很多都是不确定的，对当前流行的观点应该保持质疑精神。
+1. ai做什么，不能做什么->我能让ai做什么。
+    具体业务场景
+    业务>流程>规则>ai
+2. agent进入经济工作
+    人不是直接面对软件
+3. 沟通：不要试图教育老板和客户，没有收益且难度高。与人性有关
+4.当前仍然没有高用户群体的agent web3应用。
+    未来意义。
+    行业现状：寻找需求远远大于技术
+
+5. 案例： 企业微信部署agent, 进入销售流程。转化率低
+    私域 用户数据 ， 公域 产品信息 注入agent。
+    信任是agent未来重要方向。不能只有a2a信任，没有人对agent的信任。
+
+6. https://app.virtuals.io/
+    AI 代理界的代币发行与交易中心。
+    发行agent, 交易agent代币
+
+7. memory 行业共性难点。各大大厂memory架构
+```
+<!-- DAILY_CHECKIN_2026-07-21_END -->
+
 # 2026-07-19
 <!-- DAILY_CHECKIN_2026-07-19_START -->
+
 1.学习数据库原理后构建清单应用
 
 2.  dao投票系统合约部署到monad测试网上
@@ -26,6 +86,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-18
 <!-- DAILY_CHECKIN_2026-07-18_START -->
+
 
 1.  builder anthing学习
     
@@ -112,6 +173,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- DAILY_CHECKIN_2026-07-16_START -->
 
 
+
 1.  测试网交易
     
 2.  vibe coding课程学习完毕
@@ -123,6 +185,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-14
 <!-- DAILY_CHECKIN_2026-07-14_START -->
+
 
 
 
@@ -151,6 +214,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
+
 
 
 
@@ -208,6 +272,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-12
 <!-- DAILY_CHECKIN_2026-07-12_START -->
+
 
 
 
@@ -327,6 +392,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 1.  实习手册整理
     
 2.  monad主网钱包，转账试用
@@ -417,6 +483,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 1、进入epf回放观看。
 
 2、实习手册看完
@@ -466,6 +533,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 观看agent支付、进入epf两个分享。
 
 ```markdown
@@ -502,6 +570,7 @@ ai高效，安全的支付是核心问题；
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
