@@ -15,19 +15,73 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-22
+<!-- DAILY_CHECKIN_2026-07-22_START -->
+主題：交易生命週期總覽（串接前面各篇）
+
+**1\. 建構與簽署**
+
+-   前端組好交易後交給錢包簽署；多數錢包以 `eth_estimateGas` 自動填 gas limit，用戶可手動覆寫；gas price 由用戶指定，單位是每 gas 的原生代幣數
+    
+-   銜接 gas pricing 篇：Monad 按 limit 全額收費，錢包在 estimateGas 遇 revert 時塞大 limit 的行為，在這個階段就決定了實際成本風險
+    
+
+**2\. 提交與轉發**
+
+-   交易經 `eth_sendTransaction` / `eth_sendRawTransaction` 送入 RPC 節點，該節點成為 owner node
+    
+-   RPC 做靜態有效性檢查（簽章、nonce、gas limit 不超過單筆上限等）後，轉發給接下來 N 個 leader；各 leader 重複同樣檢查後放入自己的 local mempool
+    
+-   若這批 leader 出的塊都沒收錄，owner node 換下一批 N 個 leader 重送，最多 K 輪（主網 N、K 皆為 3）
+    
+-   銜接 local mempool 篇：全程沒有全域 mempool
+    
+
+**3\. 進塊前的動態檢查**
+
+-   leader 選入交易前確認帳戶餘額足以支付 gas，依據是共識時的餘額驗證規則（含 reserve balance）
+    
+-   銜接 reserve balance 篇：這筆保留額就是 async execution 下共識端敢在未執行狀態收單的擔保
+    
+
+**4\. 傳播與終局**
+
+-   leader 出塊，經 RaptorCast 對外廣播
+    
+-   區塊依序 Proposed →（1 塊後）Voted →（2 塊後）Finalized；Finalized 即代表交易正式寫入歷史
+    
+-   文件的關鍵表述：順序一旦確定，交易的真值（成功或失敗、結果為何）即已確定，執行只是把它算出來
+    
+-   銜接 MonadBFT 篇：Voted 即具投機終局性，回滾僅限可證明的 leader equivocation
+    
+
+**5\. 執行與結果**
+
+-   節點收到區塊即可開始投機執行，不需等 finality
+    
+-   樂觀平行執行、依原順序序列提交，結果等同逐筆序列執行
+    
+-   全網執行一致性由 D=3 的 delayed merkle root 驗證，對應 Verified 狀態；receipt 與 log 隨執行產出，經 RPC 對外提供
+    
+-   銜接執行層篇：這段的效率來自 parallel execution 與 MonadDb 的組合
+<!-- DAILY_CHECKIN_2026-07-22_END -->
+
 # 2026-07-19
 <!-- DAILY_CHECKIN_2026-07-19_START -->
+
 假日打卡
 <!-- DAILY_CHECKIN_2026-07-19_END -->
 
 # 2026-07-18
 <!-- DAILY_CHECKIN_2026-07-18_START -->
 
+
 假日請假
 <!-- DAILY_CHECKIN_2026-07-18_END -->
 
 # 2026-07-16
 <!-- DAILY_CHECKIN_2026-07-16_START -->
+
 
 
 2026.07.16
@@ -78,6 +132,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-14
 <!-- DAILY_CHECKIN_2026-07-14_START -->
+
 
 
 
@@ -146,6 +201,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-13
 <!-- DAILY_CHECKIN_2026-07-13_START -->
+
 
 
 
@@ -220,11 +276,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 假日水個打卡
 <!-- DAILY_CHECKIN_2026-07-12_END -->
 
 # 2026-07-11
 <!-- DAILY_CHECKIN_2026-07-11_START -->
+
 
 
 
@@ -259,11 +317,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 
 
+
 先打卡晚點補充筆記
 <!-- DAILY_CHECKIN_2026-07-10_END -->
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -300,6 +360,7 @@ Web3 暑期实习计划 - Monad Buidler Camp
 
 # 2026-07-07
 <!-- DAILY_CHECKIN_2026-07-07_START -->
+
 
 
 
@@ -355,6 +416,7 @@ warm access 維持 100 不變。受影響的是 BALANCE、EXTCODE 系列、CALL 
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
