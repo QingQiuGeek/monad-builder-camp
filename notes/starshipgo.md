@@ -15,8 +15,22 @@ Web3 暑期实习计划 - Monad Buidler Camp
 ## Notes
 
 <!-- Content_START -->
+# 2026-07-22
+<!-- DAILY_CHECKIN_2026-07-22_START -->
+## **Define Together：从很多想法中选出一个可做的问题**
+
+### **🎯 学习目标**
+
+-   从“我们想做什么”转向“用户遇到了什么问题”。
+    
+-   用 Research / Ops / Dev 三个视角共同检查想法。
+    
+-   把大项目压缩为一周内可以完成的 Mini Demo Scope。
+<!-- DAILY_CHECKIN_2026-07-22_END -->
+
 # 2026-07-21
 <!-- DAILY_CHECKIN_2026-07-21_START -->
+
 ### **学习目标**
 
 -   将 Week 2 Role Statement 转化为一张简洁的 Builder Profile。
@@ -32,11 +46,13 @@ Web3 暑期实习计划 - Monad Buidler Camp
 <!-- DAILY_CHECKIN_2026-07-20_START -->
 
 
+
 Dev Portfolio Pack：汇总 Dev Plan、代码 / repo、README、运行证据、AI Collaboration Log、Known Issues、Week 3 开发角色
 <!-- DAILY_CHECKIN_2026-07-20_END -->
 
 # 2026-07-19
 <!-- DAILY_CHECKIN_2026-07-19_START -->
+
 
 
 
@@ -50,6 +66,7 @@ Dev Portfolio Pack：汇总 Dev Plan、代码 / repo、README、运行证据、A
 
 # 2026-07-18
 <!-- DAILY_CHECKIN_2026-07-18_START -->
+
 
 
 
@@ -72,11 +89,13 @@ Dev Portfolio Pack：汇总 Dev Plan、代码 / repo、README、运行证据、A
 
 
 
+
 keep working on moss
 <!-- DAILY_CHECKIN_2026-07-17_END -->
 
 # 2026-07-16
 <!-- DAILY_CHECKIN_2026-07-16_START -->
+
 
 
 
@@ -108,11 +127,13 @@ getting read to show proof of work
 
 
 
+
 Learning everything about MOSS
 <!-- DAILY_CHECKIN_2026-07-15_END -->
 
 # 2026-07-14
 <!-- DAILY_CHECKIN_2026-07-14_START -->
+
 
 
 
@@ -152,11 +173,13 @@ Learning everything about MOSS
 
 
 
+
 Learning AI tools for chain products
 <!-- DAILY_CHECKIN_2026-07-13_END -->
 
 # 2026-07-12
 <!-- DAILY_CHECKIN_2026-07-12_START -->
+
 
 
 
@@ -204,11 +227,13 @@ Keeping up with the week1 content
 
 
 
+
 复习上周学习内容
 <!-- DAILY_CHECKIN_2026-07-11_END -->
 
 # 2026-07-10
 <!-- DAILY_CHECKIN_2026-07-10_START -->
+
 
 
 
@@ -264,11 +289,13 @@ Finish homework, watch re-play of the sessions
 
 
 
+
 继续学习技术，做好作品集，等内推机会
 <!-- DAILY_CHECKIN_2026-07-09_END -->
 
 # 2026-07-08
 <!-- DAILY_CHECKIN_2026-07-08_START -->
+
 
 
 
@@ -331,11 +358,13 @@ Finish homework, watch re-play of the sessions
 
 
 
+
 把学习以太坊协议加入学习计划中！
 <!-- DAILY_CHECKIN_2026-07-07_END -->
 
 # 2026-07-06
 <!-- DAILY_CHECKIN_2026-07-06_START -->
+
 
 
 
